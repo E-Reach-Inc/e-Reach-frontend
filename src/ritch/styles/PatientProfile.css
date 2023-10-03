@@ -1,0 +1,99 @@
+*{
+  margin: 0px;
+  /* padding: 0px; */
+}
+
+.patient-profile-main-con{
+  display: flex;
+    height: 100vh;
+    background-color: #e0ecef;
+   
+}
+
+.patient-profile-inner-con{
+width: 100%;
+
+}
+
+.patient-profile-inner-div{
+    margin-left: 80px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    border-radius: 10px;
+    border: 1px solid #368db2;
+    width: 85%;
+    height: 450px;
+    background-color:#FFFFFF;
+}
+
+.patient-profile-img-upload-btn{
+  border-radius: 5px;
+  margin-top: 30px;
+  margin-left: 42px;
+  height: 25px;
+  width: 75px;
+  cursor: pointer;
+ 
+  border: 1px solid#368db2;
+}
+
+.patient-profile-img-upload-btn:hover{
+  background-color: #ADD8E6;
+  color: white;
+}
+
+
+.patient-profile-image{
+    width: 10rem;
+    height: 10rem; 
+    border: solid 3pt #e0ecef; 
+    border-radius: 50%;
+    padding: 0.2rem;
+    margin: 1rem;
+}
+
+.patient-profile-image img{
+   
+    width: 10rem;
+    height:10rem; 
+    border-radius: 50%;
+    margin: 0%;
+    background-color: rgb(203, 206, 211);
+      }
+      
+
+      .patient-biodata{
+        display: flex;
+        padding-top: 5px;
+        background-color: white;       
+      }
+
+      .patient-biodata-input{
+        margin-left: 40px;
+        width: 500px;
+       
+       
+      }
+
+      .patient-biodata-input label{
+        /* color: #368db2; */
+        /* font-size: larger; */
+       
+      }
+
+      
+    .patient-biodata-field {
+        margin-top: 15px;
+        font-size: larger;
+    
+    }
+
+    .patient-title{
+        padding-top: 5px;
+        font-size: 20px;
+        margin-left: 50px;
+        /* color: #368db2; */
+        /* color: white; */
+        
+    }
+  

@@ -1,0 +1,48 @@
+
+.patient-appointment-two-table{
+    height: 40vh;
+    width: 37%;
+    margin-top: 30px;
+   
+   
+}
+
+
+
+.patient-appointment-two-title{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.patient-appointment-two-table-header{
+    font-weight: bold; 
+    height: 50px;
+    position: sticky;
+    background-color: #368db2;
+    padding: 10px; 
+    text-align: center; 
+    border: 1px solid whitesmoke;
+}
+
+
+.patient-appointment-two-table-data{
+    padding: 10px; 
+    text-align: left; 
+    border: 1px solid whitesmoke;
+   
+}
+
+.patient-appointment-two-table-data tr:nth-child(even){
+    background-color: #e7e5f1f6; 
+}
+
+.patient-appointment-two-table-data td{
+    white-space: normal; 
+    word-wrap: break-word; 
+   
+    max-width: 50px; 
+}
+
+
+
+
