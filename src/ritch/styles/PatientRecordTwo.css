@@ -1,0 +1,60 @@
+
+
+.patient-record-two-table{
+    margin-top: 10px;
+    /* width: 60%;  */
+  
+}
+.prfl{
+    width: 55%;
+  margin-right: 15px;
+  border-radius: 10px;
+  height: 248px; 
+  overflow: hidden;
+  margin-left: 7px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.26);
+  background-color: white;
+  padding:  1rem;
+  display: flex;
+ 
+}
+
+.patient-record-two-table-header{
+    font-weight: bold; 
+    height: 50px;
+    position: sticky;
+    background-color: #368db2;
+    padding: 10px; 
+    text-align: left; 
+    border: 1px solid whitesmoke;
+    
+
+}
+
+.patient-record-two-title{
+    margin-top: 15px;
+    text-align: left;
+}
+
+.patient-med-logs-two{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.patient-record-two-table-data{
+    padding: 10px; 
+    text-align: left; 
+    border: 1px solid whitesmoke;
+
+}
+
+.patient-record-two-table-data tr:nth-child(even){
+    background-color: #e7e5f1f6;
+}
+
+.patient-record-two-table-data td{
+    white-space: normal; 
+    word-wrap: break-word; 
+    /* max-width: 200px;  */
+}
+
