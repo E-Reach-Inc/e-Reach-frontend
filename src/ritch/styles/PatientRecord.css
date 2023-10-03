@@ -5,6 +5,24 @@
     width: 100%; 
   
 }
+.patient-record-outter-div{
+    display: flex;
+}
+.patient-record-inner-div{
+    width: 100%;
+    
+}
+.patient-record-inner-con{
+    margin-left: 80px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    border-radius: 25px;
+    border: 1px solid #368db2;
+    width: 85%;
+    height: 450px;
+    background-color: #FFFFFF;
+    
+}
 
 .patient-record-table-header{
     font-weight: bold; 
@@ -19,7 +37,8 @@
 
 .patient-record-title{
     margin-top: 15px;
-    text-align: center;
+    margin-left: 20px;
+    text-align: left;
 }
 
 .patient-med-logs{

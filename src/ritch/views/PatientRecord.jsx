@@ -2,6 +2,7 @@ import React from "react";
 import PatientNavBar from "./PatientNavBar";
 import action from '../patient-icons/patient-eye-view.svg'
 import '../styles/PatientRecord.css'
+import PatientSideBar from "./PatientSideBar";
 
 
 
@@ -14,16 +15,16 @@ const PatientRecord = () =>{
                 <PatientSideBar/> 
             </div>
            
-           <div className="patient-profile-inner-div">
+           <div className="patient-record-inner-div">
+
+
               <div>
               <PatientNavBar/>
               </div>
 
-              <div>
-                
-              </div>
-           
-    <h1 className="patient-record-title">Patient Record</h1>
+              <div  className="patient-record-inner-con">
+
+              <h1 className="patient-record-title">Patient Record</h1>
     <h3 className="patient-med-logs">Medical logs</h3>
         <table className="patient-record-table">
 
@@ -46,6 +47,10 @@ const PatientRecord = () =>{
                </tr>
           </tbody>
         </table>
+
+              </div>
+           
+    
             </div>     
         
     </div>
