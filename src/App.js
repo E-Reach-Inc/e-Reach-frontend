@@ -9,6 +9,7 @@ import PatientRecord from './ritch/views/PatientRecord';
 // import PatientNavBar from './ritch/views/PatientNavBar';
 // import PatientSignUp from './ritch/views/PatientSignUp';
 // import PatientView from './ritch/views/PatientView';
+import HospitalAdminSignUp from "./bola/views/auth/hospitalAdminSignUp";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       {/* <PatientAppointmentTwo/> */}
       {/* <PatientRecordTwo/> */}
        
+      <HospitalAdminSignUp/>
     </div>
   );
 }
