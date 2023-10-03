@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import {DoctorSideBar} from "./coco/views/doctor/doctorSideBar"
+import {SearchBar} from "./coco/views/doctor/doctorSearchBar";
+import {DoctorProfileOne} from "./coco/views/doctor/doctorProfileOne";
+import {ActiveLogsTableOne} from "./coco/views/doctor/doctorViewActiveLogsOne";
+import {PatientAppointmentOne} from "./coco/views/doctor/viewPatientAppointmentOne";
+import {ViewPatientRecordOne} from "./coco/views/doctor/viewPatientRecordOne";
+import {DoctorDashboard} from "./coco/views/doctor/doctorDashBoard";
+import {DoctorRegistration} from "./coco/views/auth/DoctorRegistration";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+          <Routes>
+                <Route path='/' element={<p>Home</p>}/>
+                <Route path='/doctor-side-bar' element={<DoctorSideBar/>}/>
+                <Route path='/doctor-search-bar' element={<SearchBar/>}/>
+                <Route path='/doctor-profile-one' element={<DoctorProfileOne/>}/>
+                <Route path='/doctor-active-logs-one' element={<ActiveLogsTableOne/>}/>
+                <Route path='/doctor-patient-appointment-one' element={<PatientAppointmentOne/>}/>
+                <Route path='/doctor-patient-record-one' element={<ViewPatientRecordOne/>}/>
+                <Route path='/doctor-dashboard' element={<DoctorDashboard/>}/>
+                    <Route path='/doctor-registration' element={<DoctorRegistration/>}/>
+          </Routes>
+      </Router>
   );
 }
 
