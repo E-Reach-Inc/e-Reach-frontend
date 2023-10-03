@@ -1,0 +1,61 @@
+.vie-con{
+    display: flex;
+}
+.vie-holder{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+    margin: 11px 5px 10px 38px;
+    background-color: white;
+    height: 14rem;
+    width: 29rem;
+    border-radius: 10px;
+}
+.vie-button{
+    display: flex;
+    margin-top: 20px;
+}
+.vie-text{
+    margin-left: 10px;
+}
+.browse-all-vie{
+    margin-left: auto;
+    margin-right: 10px;
+}
+.browse-all-vie button{
+    width: 100px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: #368db2;
+    color: white;
+    padding: 5px;
+}
+.vie-table {
+    width: 100%;
+    border-collapse: collapse;
+    /*border-spacing: 0 20px;*/
+    margin-top: 20px;
+}
+
+.vie-table th,
+.vie-table td {
+    border: 1px solid whitesmoke;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.vie-table th {
+    background-color: #368db2;
+    color: white;
+}
+
+.vie-table tr:nth-child(even) {
+    font-size: 12px;
+    background-color: #f2f2f2;
+}
+
+.vie-table tr:nth-child(odd) {
+    font-size: 12px;
+    background-color: white;
+}

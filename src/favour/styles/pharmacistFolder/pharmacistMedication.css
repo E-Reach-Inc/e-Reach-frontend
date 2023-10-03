@@ -1,0 +1,87 @@
+.first-con{
+    background-color: #e0ecef;
+    /*height: 100vh;*/
+}
+.medi-con{
+    display: flex;
+}
+#appont{
+    margin-left: 10px;
+    margin-top: 16px;
+}
+.medi-holder{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.22);
+    margin: 11px 5px 10px 19px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 49px;
+    margin-top: 20px;
+    height: 80vh;
+    width: 90%;
+}
+.search-bar-two{
+    padding: 6px;
+    flex: 1;
+    margin-top: 15px;
+    background-color: #e0ecef;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+.search-button-two{
+    background-color: #368db2;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+.medi-button{
+    display: flex;
+    margin-top: 20px;
+}
+.medi-text{
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.browse-all-medi{
+    margin-left: auto;
+    margin-right: 10px;
+}
+.browse-all-medi button{
+    width: 100px;
+    height: 30px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #368db2;
+    color: white;
+    padding: 5px;
+}
+.medi-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0 20px;
+    margin-top: 30px;
+}
+
+.medi-table th,
+.medi-table td {
+    border: 1px solid whitesmoke;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.medi-table th {
+    background-color: #368db2;
+    color: white;
+}
+
+.medi-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.medi-table tr:nth-child(odd) {
+    background-color: white;
+}
