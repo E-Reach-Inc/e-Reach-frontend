@@ -1,0 +1,129 @@
+.doc-side-bar{
+    border: 1px solid #368db2;
+    box-shadow: 0px 0 5px rgba(173, 216, 230, 0.5);
+    border-radius: 0 10px 10px 0;
+    padding: 2px;
+    background-color: white;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    height: 99vh;
+    width:  230px;
+}
+.doc-side-bar img {
+    width: 100px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.doc-dashboard:hover:after,.doc-Profile:hover:after,
+.doc-Appointment:hover:after, .doc-View-Patient-Record:hover:after,
+.doc-View-Active-Logs:hover:after, .doc-Messaging:hover:after,
+.doc-Settings:hover:after, .doc-Logout:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.doc-dashboard:after, .doc-Profile:after,
+.doc-Appointment:after, .doc-View-Patient-Record:after,
+.doc-View-Active-Logs:after, .doc-Messaging:after,
+.doc-Settings:after, .doc-Logout:after{
+    content: '';
+    position: absolute;
+    border-spacing: 30px;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ADD8E6;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.doc-dashboard, .doc-Profile,
+.doc-Appointment, .doc-View-Patient-Record,
+.doc-View-Active-Logs, .doc-Messaging,
+.doc-Settings, .doc-Logout{
+    cursor: pointer;
+    margin-top: 3px;
+    justify-content: space-evenly;
+    display: flex;
+    position: relative;
+    color: #ADD8E6;
+}
+
+.doc-Settings{
+    cursor: pointer;
+    display: flex;
+    margin-top: 120px;
+    justify-content: space-evenly;
+}
+
+.doc-dashboard img, .doc-Profile img,
+.doc-Appointment img, .doc-View-Patient-Record img,
+.doc-View-Active-Logs img, .doc-Messaging img,
+.doc-Settings img, .doc-Logout img{
+    width: 25px;
+    margin-right: 8px;
+}
+
+#link-doc-dashboard{
+    margin-top: 23px;
+    color: #368db2;
+    font-weight: bolder;
+    margin-right: 60px;
+    text-decoration: none;
+}
+
+#link-to-doc-profile{
+    margin-top: 23px;
+    color: #368db2;
+    font-weight: bolder;
+    margin-right: 90px;
+    text-decoration: none;
+}
+#link-to-Appointment{
+    margin-top: 23px;
+    color: #368db2;
+    font-weight: bolder;
+    margin-right: 45px;
+    text-decoration: none;
+}
+
+#link-to-patient-record{
+    margin-top: 23px;
+    color: #368db2;
+    font-weight: bolder;
+    margin-right: 27px;
+    text-decoration: none;
+}
+
+#link-to-active-logs{
+    margin-top: 23px;
+    color: #368db2;
+    font-weight: bolder;
+    margin-right: 57px;
+    text-decoration: none;
+}
+
+#link-to-messaging{
+    margin-top: 23px;
+    color: #368db2;
+    font-weight: bolder;
+    margin-right: 72px;
+    text-decoration: none;
+}
+
+#link-to-settings{
+    margin-top: 23px;
+    color: #368db2;
+    font-weight: bolder;
+    margin-right: 72px;
+    text-decoration: none;
+}
+
+#link-to-logout{
+    margin-top: 23px;
+    color: #368db2;
+    font-weight: bolder;
+    margin-right: 68px;
+    text-decoration: none;
+}
