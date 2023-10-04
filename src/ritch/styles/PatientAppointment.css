@@ -41,28 +41,20 @@
     text-align: center; 
     border: 1px solid whitesmoke;
 }
-
-
 .patient-appointment-table-data{
     /* padding: 10px;  */
     text-align: left; 
-    border: 1px solid whitesmoke;
-   
+    border: 1px solid whitesmoke; 
 }
-
 .patient-appointment-table-data tr:nth-child(even){
     background-color: #e7e5f1f6; 
 }
-
 .patient-appointment-table-data td{
     white-space: normal; 
     word-wrap: break-word; 
     max-width: 200px; 
 }
 
-/* .patient-td{
-    height: 40px;
-} */
 
 
 
