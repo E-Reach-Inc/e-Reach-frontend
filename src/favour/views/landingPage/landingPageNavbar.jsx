@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 
 export const LandingPageNavbar = () => {
     const navigate = useNavigate();
-    const hadleButtonClick =()=>{
+    const handleButtonClick =()=>{
         navigate("/HospitalAdminSignUp")
     }
     return (
@@ -23,7 +23,7 @@ export const LandingPageNavbar = () => {
                         </ul>
                     </div>
                     <div>
-                        <button id="Register-button" onClick={hadleButtonClick}>Register</button>
+                        <button id="Register-button" onClick={handleButtonClick}>Register</button>
                     </div>
                 </nav>
             </div>
