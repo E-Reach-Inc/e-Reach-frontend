@@ -1,0 +1,75 @@
+.major-appoint-frame{
+    /*border: 1px solid #368db2;*/
+    justify-content: space-evenly;
+    background-color: white;
+    box-shadow: rgba(3, 3, 50, 0.72) 0px 3px 10px;
+    border-radius: 10px;
+    height: 37vh;
+    width: 500px;
+}
+
+.appoint-browse-navigate-button{
+    display: flex;
+}
+
+.appoint-text{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.appoint-text h3{
+    font-weight: bold;
+    font-size: small;
+}
+.browse-all-appoint-button{
+    margin-left: auto;
+    margin-right: 10px;
+}
+#browse-all-appoint-button-doc{
+    color:#368db2;
+    border-color: #368db2;
+    transition: background-color;
+    transition-duration: 200ms;
+    cursor: pointer;
+    outline: none;
+    height: 40px;
+    width: 120px;
+    left: 181px;
+    margin-top: 10px;
+    margin-left: 120px;
+    border-radius: 5px;
+    padding: 8px 16px 8px 16px;
+    /*box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);*/
+    font-weight: bold;
+    font-size: x-small;
+}
+#browse-all-appoint-button-doc:hover{
+    /*box-shadow: inset 200px 0 0 0 #368db2;*/
+    background-color: #e6f7fa;
+}
+.appoint-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0 20px;
+    margin-top: 20px;
+}
+
+.appoint-table th,
+.appoint-table td {
+    border: 1px solid whitesmoke;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.appoint-table th {
+    background-color: #368db2;
+    color: white;
+}
+.appoint-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+    font-size: 12px;
+}
+.appoint-table tr:nth-child(odd) {
+    font-size: 12px;
+    background-color: white;
+}
