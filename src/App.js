@@ -30,8 +30,13 @@ function App() {
               <Route path='/doctor-patient-record-one' element={<ViewPatientRecordOne/>}/>
               <Route path='/doctor-active-logs-one' element={<ActiveLogsTableOne/>}/>
               <Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>
-
-          </Routes>
+              <Route path='/' element={<LandingPageMainBody/>}/>
+              <Route path='/pharmacist-default-dashboard' element={<PharmacistDefaultDashboard/>}/>
+                <Route path='/pharmacist-dashboard' element={<PharmacistDashboard/>}/>
+                <PatientRecord/>
+                <Route path={"hospital-admin-signup"} element={<HospitalAdminSignUp/>}></Route>
+                <Route path={"/"} element={<LandingPageMainBody/>}></Route>
+            </Routes>
       </Router>
   );
 }
