@@ -2,8 +2,6 @@
 
 .patient-record-two-table{
     margin-top: 10px;
-    /* width: 60%;  */
-  
 }
 .prfl{
     width: 55%;
@@ -55,6 +53,5 @@
 .patient-record-two-table-data td{
     white-space: normal; 
     word-wrap: break-word; 
-    /* max-width: 200px;  */
 }
 
