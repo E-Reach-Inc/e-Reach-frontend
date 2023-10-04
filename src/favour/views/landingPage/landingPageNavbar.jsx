@@ -27,6 +27,6 @@ export const LandingPageNavbar = () => {
                     </div>
                 </nav>
             </div>
-         </div>
+        </div>
     )
 }
