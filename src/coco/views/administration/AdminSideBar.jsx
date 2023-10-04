@@ -5,6 +5,7 @@ import adminProfile from "../../../coco/assets/icons/doc-profile.svg"
 import adminMessaging from "../../../coco/assets/icons/doc-messaging.svg"
 import adminSetting from "../../../coco/assets/icons/doc-settings.svg"
 import adminLogout from "../../../coco/assets/icons/doc-logout.svg"
+import adminUsers from "../../../coco/assets/icons/admin-users.svg"
 import {Link} from "react-router-dom";
 import "../../../coco/styles/administration/AdminSideBar.css"
 export  const AdminSideBar = () =>{
@@ -15,11 +16,15 @@ export  const AdminSideBar = () =>{
                 <div className= "admin-inner-side-bar">
                     <div className= "admin-dashboard">
                         <img src={adminDashboard} alt={"dashboard"}/>
-                        <Link to={""} id= "link-admin-dashboard">Dashboard</Link></div>
+                        <Link to={"/admin-dashboard"} id= "link-admin-dashboard">Dashboard</Link></div>
 
                     <div className= "admin-Profile">
                         <img src={adminProfile} alt={"profile"}/>
                         <Link to={""} id="link-to-admin-profile">Profile</Link></div>
+
+                    <div className= "admin-Users">
+                        <img src={adminUsers} alt={"users"}/>
+                        <Link to={""} id="link-to-users">Users</Link></div>
 
 
                     <div className= "admin-Messaging">
