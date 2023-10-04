@@ -18,7 +18,6 @@ function App() {
             <Router>
           <Routes>
             <Route path='/' element={<LandingPageMainBody/>}/>
-            <Route path='*' element={<p>Page Not Found</p>}/>
             <Route path='/pharmacist-side-bar' element={<PharmacistSideBar/>}/>
             <Route path='/pharmacist-default-dashboard' element={<PharmacistDefaultDashboard/>}/>
              <Route path='/pharmacist-dashboard' element={<PharmacistDashboard/>}/>
@@ -27,8 +26,8 @@ function App() {
              <Route path='/pharmacist-appointment' element={<PharmacistAppointment/>}/>
              <Route path='/pharmacist-medication' element={<PharmacistMedication/>}/>
              <Route path='/pharmacist-view-record' element={<PharmacistViewRecord/>}/>
-             <PatientRecord/>
-            <HospitalAdminSignUp/>
+             <Route path='/patient-record' element={<PatientRecord/>}></Route>
+            <Route path='/hospital-admin-signup' element={<HospitalAdminSignUp/>}></Route>
           </Routes>
       </Router>
       
