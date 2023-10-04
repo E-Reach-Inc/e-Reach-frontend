@@ -1,0 +1,102 @@
+.Doc-Profile-Main-Frame {
+    height: 100vh;
+    background-color: #e0ecef;
+    display: flex;
+}
+.doc-profile-image {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    margin-left: 40px;
+    margin-top: 15px;
+    justify-content: start;
+    overflow: hidden;
+    border:1px solid #368db2;
+    border-radius: 50%;
+    padding: 0.2rem;
+}
+.doc-profile-details-holder{
+    margin-top: 40px;
+    margin-left: 55px;
+
+}
+
+.doc-profile-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: rgb(203, 206, 211);
+}
+
+.doc-biodata {
+    display: flex;
+    margin-top: 10px;
+    margin-right: 268px;
+}
+
+.doc-left-profile{
+    margin-left: 80px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    border-radius: 25px;
+    border: 1px solid #368db2;
+    width: 85%;
+    height: 450px;
+    background-color: #FFFFFF;
+}
+
+.doc-biodata-field {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+
+.doc-biodata-field label {
+    font-weight: bold;
+    font-family: "DM SANS", sans-serif;
+    /*color: #368db2;*/
+}
+#doc-name{
+    margin-top: 20px;
+}
+
+.doc-title{
+    margin-left: 35px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+.doc-title h2{
+    font-family: "DM SANS", sans-serif;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.doc-bio-input{
+    margin-left: 40px;
+    margin-top: 20px;
+
+}
+
+#upload-image-doc{
+    color:#368db2;
+    border-color: #368db2;
+    transition: background-color;
+    transition-duration: 200ms;
+    cursor: pointer;
+    outline: none;
+    height: 40px;
+    width: 120px;
+    left: 181px;
+    margin-top: 20px;
+    margin-left: 90px;
+    border-radius: 5px;
+    padding: 8px 16px 8px 16px;
+    /*box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);*/
+    font-weight: bold;
+    font-size: x-small;
+}
+
+#upload-image-doc:hover {
+    background-color: #e6f7fa;
+}
