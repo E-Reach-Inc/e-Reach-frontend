@@ -4,7 +4,6 @@ import { PharmacistDefaultDashboard } from './favour/views/pharmacistFolder/phar
 import { LandingPageMainBody } from './favour/views/landingPage/landingPageMainBody';
 import PatientRecord from './ritch/views/PatientRecord';
 import HospitalAdminSignUp from "./bola/views/auth/hospitalAdminSignUp";
-import {LandingPageMainBody} from "./favour/views/landingPage/landingPageMainBody";
 
 
 function App() {
