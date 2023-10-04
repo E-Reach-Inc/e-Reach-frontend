@@ -5,6 +5,7 @@ import {useNavigate} from "react-router-dom";
 export const PharmacistViewRecordsDashboard =()=>{
     const viewlog = [
         {
+            
             Date: 'Favour chiemela',
             Name: 'Consultation',
             Result: '22/12/2023',
