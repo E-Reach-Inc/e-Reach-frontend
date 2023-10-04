@@ -3,7 +3,10 @@ import {AdminSearchBar} from "./AdminSearchBar"
 import {AdminSideBar} from "./AdminSideBar"
 import {useNavigate} from "react-router-dom";
 import "../../../coco/styles/administration/HospitalAdminDashboard.css"
-import AdminPatientIcon from "../../assets/icons/admin-create-patient.svg"
+import AdminPatientIcon from "../../assets/images/patient.svg"
+import AdminDoctorIcon from "../../assets/images/doctor.svg"
+import AdminPatientRecord from "../../../coco/assets/images/records.svg"
+import AdminPatientLogs from "../../../coco/assets/icons/admin-logs.svg"
 
 
 const HospitalAdminDashboard = () => {
@@ -34,14 +37,18 @@ const HospitalAdminDashboard = () => {
                             <button id="click-patient-button" onClick={handleClickForPatient}>Add a New Patient</button>
                         </div>
                         <div className="practitioner-frame-admin">
+                            <img src={AdminDoctorIcon} alt="doctor"/>
                             <button id="click-practitioner-button" onClick={handleClickForPractitioner}>Add a New Practitioner</button>
                         </div>
                     </div>
                     <div className="second-admin-sub-activity">
                         <div className="patient-record-frame">
+                            <img src={AdminPatientRecord} alt="record"/>
+
                             <button id="click-records-button" onClick={handleClickForRecords}>View Patient Records</button>
                         </div>
                         <div className="patient-log-frame">
+                            <img src={AdminPatientLogs} alt="record"/>
                             <button id="click-log-button" onClick={handleClickForAdmin}>Activate New Patient Log</button>
                         </div>
 
