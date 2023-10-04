@@ -1,6 +1,5 @@
 import {useEffect, useRef} from "react";
 
-
 function UploadWidget() {
     const cloudinaryRef = useRef()
     const widgetRef = useRef()
