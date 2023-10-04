@@ -2,6 +2,8 @@ import React from 'react'
 import {AdminSearchBar} from "./AdminSearchBar"
 import {AdminSideBar} from "./AdminSideBar"
 import {useNavigate} from "react-router-dom";
+import "../../../coco/styles/administration/HospitalAdminDashboard.css"
+import AdminPatientIcon from "../../assets/icons/admin-create-patient.svg"
 
 
 const HospitalAdminDashboard = () => {
@@ -13,7 +15,7 @@ const HospitalAdminDashboard = () => {
         navigate("/doctor-registration")
     }
     function handleClickForRecords(){
-        navigate("/")
+        navigate("/patient-record")
     }
     function handleClickForAdmin(){
         navigate("/doctor-registration")
@@ -28,18 +30,19 @@ const HospitalAdminDashboard = () => {
                 <div className="Admin-Activity-Frame">
                     <div className="first-admin-sub-activity">
                         <div className="patient-frame-admin">
-                            <button onClick={handleClickForPatient}>Add a New Patient</button>
+                            <img src={AdminPatientIcon} alt="patient"/>
+                            <button id="click-patient-button" onClick={handleClickForPatient}>Add a New Patient</button>
                         </div>
                         <div className="practitioner-frame-admin">
-                            <button onClick={handleClickForPractitioner}>Add a New Practitioner</button>
+                            <button id="click-practitioner-button" onClick={handleClickForPractitioner}>Add a New Practitioner</button>
                         </div>
                     </div>
                     <div className="second-admin-sub-activity">
                         <div className="patient-record-frame">
-                            <button onClick={handleClickForRecords}>Add a New Patient Record</button>
+                            <button id="click-records-button" onClick={handleClickForRecords}>View Patient Records</button>
                         </div>
                         <div className="patient-log-frame">
-                            <button onClick={handleClickForAdmin}>Activate New Patient Log</button>
+                            <button id="click-log-button" onClick={handleClickForAdmin}>Activate New Patient Log</button>
                         </div>
 
                     </div>

@@ -30,7 +30,13 @@
     cursor: pointer;
 }
 .log-text{
+    margin-top: 10px;
     margin-left: 20px;
+}
+
+.log-text h3{
+    font-weight: bold;
+    font-size: small;
 }
 .browse-all-log-button{
     margin-left: auto;

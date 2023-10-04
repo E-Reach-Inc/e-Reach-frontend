@@ -12,7 +12,13 @@
 
 }
 .doc-profile-text{
+    margin-top: 10px;
     margin-left: 20px;
+}
+
+.doc-profile-text h3{
+    font-weight: bold;
+    font-size: small;
 }
 .doc-profile-holder-section2{
     display: flex;
