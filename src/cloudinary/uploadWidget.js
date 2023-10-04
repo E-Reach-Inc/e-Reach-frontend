@@ -1,4 +1,3 @@
-
 import {useEffect, useRef} from "react";
 
 
@@ -24,5 +23,5 @@ function UploadWidget() {
             Upload
         </button>
     )
-};
+}
 export default UploadWidget

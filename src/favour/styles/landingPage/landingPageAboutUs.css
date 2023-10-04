@@ -1,0 +1,70 @@
+.about-Image{
+    width: 50vw;
+    margin-top: 20px;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+#who-we-are{
+    width: 600px;
+    margin-right: 29px;
+    line-height: 35px;
+}
+#who-started{
+    width: 600px;
+    line-height: 35px
+}
+#who-promise{
+    width: 600px;
+    line-height: 35px
+}
+#our-story{
+    color: #368db2;
+    font-size: 1.5rem;
+    margin-top: 60px;
+    font-weight: 700;
+    margin-left: 13rem;
+}
+#what-we-promise{
+    color: #368db2;
+    font-size: 1.5rem;
+    margin-top: 60px;
+    font-weight: 700;
+    margin-left: 10rem;
+}
+.writeUp{
+
+}
+#about-us{
+    color: #368db2;
+    font-size: 1.5rem;
+    margin-top: 60px;
+    font-weight: 700;
+    margin-left: 13rem;
+}
+#our{
+    color: #368db2;
+    font-size: 1.9rem;
+    margin-top: 10px;
+    font-weight: 700;
+}
+.ourService{
+    margin-left: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+#our-service{
+    color: #368db2;
+    font-size: 1.5rem;
+    margin-top: 60px;
+    font-weight: 700;
+}
+#electronic{
+    width: 500px;
+    margin-top: 20px;
+    line-height: 30px;
+}
+.our-service-image{
+    width: 60vw;
+}
