@@ -5,7 +5,6 @@ import "../../../coco/styles/doctor/doctorViewActiveLogsOne.css"
 import ViewLog from "../../../coco/assets/icons/doc-view-log.svg"
 import EditLog from "../../../coco/assets/icons/doc-edit-log.svg"
 import ActiveLogPopUp from "./activeLogPopUp";
-import MedicalLogModal from "../../../coco/views/patient/MedicalLogPopUp"
 
 export const ActiveLogsTableOne = () => {
     const [activeLogsButtonPopUp, setActiveLogsButtonPopUp] = useState(false);

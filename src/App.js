@@ -45,7 +45,8 @@ function App() {
               <Route path='/patient-record' element={<PatientRecord/>}/>
               <Route path='/patient-appointment' element={<PatientAppointment/>}/>
               <Route path='/patient-signUp' element={<PatientSignUp/>}/>
-              <Route path='/patient-medicalLog' element={<MedicalLogModal/>}/>
+              <Route path='/admin-create-medical-log' element={<MedicalLogModal/>}/>
+
          </Routes>
       </Router>
   );
