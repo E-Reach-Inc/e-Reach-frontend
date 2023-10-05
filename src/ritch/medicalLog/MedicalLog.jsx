@@ -75,9 +75,10 @@ const MedicalLog = () => {
           <div key={log.id}>
           </div>
         ))}
-        {/* <TestLog /> */}
+       
+        <TestLog />
         <PrescriptionLog prescriptions={prescriptions} />
-        {/* <DoctorsReport /> */}
+        <DoctorsReport />
       </div>
     </div>
   );
