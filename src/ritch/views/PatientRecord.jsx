@@ -23,6 +23,7 @@ const PatientRecord = () =>{
                   toast.info("No records found", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
                 else {
                     patientsRecords.push(response.data)
+                    sessionStorage.setItem("records", response.data)
                 }
             })
             .catch(failureResponse => {
@@ -70,7 +71,7 @@ const PatientRecord = () =>{
             <tr>
               <th>Date Created</th>
               <th>Last Time Updated</th>
-              <th>Hospital Name</th>
+              <th>Patient Identification Number</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -90,11 +91,10 @@ const PatientRecord = () =>{
               
           </tbody>
         </table>
-
-              </div>
+        </div>
            
     
-            </div>     
+        </div>     
         
     </div>
     )
