@@ -3,14 +3,13 @@
     top: 17%;
     left: 10%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    background-color: rgba(0, 0, 0, 0.5);
-    background-color: #f00;
     z-index: 1000; 
     overflow-y: auto;
   }
   .popup-inner {
     background-color: white;
     padding: 20px;
+    margin-left: 150px;
     border-radius: 5px;
     width: 590px; 
     height: 550px;
