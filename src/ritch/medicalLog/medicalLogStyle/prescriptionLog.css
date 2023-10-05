@@ -4,12 +4,35 @@
     border: 1px solid gray;
     width: 450px;
     justify-content: space-between;
-
 }
+
 .prescription-inputs{
-   border: 1px solid red;
+    margin-top: 10px;
+    width: 250px;
+    height: 50px;
 }
-
-.prescription-inputs-con{
-    background-color: green;
+.input-dosage #dosage{
+    margin-top: 20px;
+    width: 250px;
+    height: 50px;
+}
+.input-frequency #dosageFrequency{
+    margin-top: 20px;
+    width: 250px;
+    height: 50px;
+}
+#start{
+    font-weight: bolder;
+    font-size: 25px;
+}
+#startdate{
+    width: 250px;
+    height: 50px;
+}
+#prescriptiondate{
+    width: 250px;
+    height: 50px;
+}
+.addButton{
+        
 }

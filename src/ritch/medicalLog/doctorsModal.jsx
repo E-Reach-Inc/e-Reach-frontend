@@ -71,50 +71,54 @@ import '../medicalLog/medicalLogStyle/doctorsModal.css'
             <div className="prescription-log-modal">
               <div className="prescription-compartment">
                     <h2>Prescription Log</h2>
-
-                    <div className="prescription-inputs-con">
-                   
-
-<select value={selectedMedication} onChange={handleMedicationChange} className='select-input'>
-   <option value="">Select Medication</option>
-    {prescriptions.map((prescription) => (
-  <option key={prescription.id} value={prescription.medicationName}>
-   {prescription.medicationName}
-  </option>
-   ))}
- </select>
-
-<input
-   type="text"
-   placeholder="Dosage"
-  value={dosage}
- onChange={handleDosageChange}
-/>
-<input
-type="text"
-placeholder="Dosage Frequency"
-value={dosageFrequency}
-onChange={handleDosageFrequencyChange}
-/>
-<p>Start date</p>
-<input
-type="date"
-placeholder="Start Date "
-value={startDate}
-onChange={handleStartDateChange}
-/>
-<p>Prescription date</p>
-<input
-type="date"
-placeholder="Prescription Date"
-value={prescriptionDate}
-onChange={handlePrescriptionDateChange}
-/>
-<button onClick={handleAddPrescription}>Add</button>
-
-
-                    </div>
-                <ul>
+                <div className="prescription-inputs">
+                   <select value={selectedMedication} onChange={handleMedicationChange} className='prescription-inputs'>
+                      <option value="">Select Medication</option>
+                       {prescriptions.map((prescription) => (
+                     <option key={prescription.id} value={prescription.medicationName}>
+                      {prescription.medicationName}
+                     </option>
+                      ))}
+                    </select>
+                </div>
+                  <div className="input-dosage">
+                  <input
+                      type="text"
+                      placeholder="Dosage"
+                      id='dosage'
+                     value={dosage}
+                    onChange={handleDosageChange}
+                    />
+                  </div>
+                 <div className="input-frequency">
+                 <input
+                   type="text"
+                   placeholder="Dosage Frequency"
+                   id='dosageFrequency'
+                   value={dosageFrequency}
+                   onChange={handleDosageFrequencyChange}
+                  />
+                 </div>
+                 <p id='start'>Start date</p>
+                <input
+                  type="date"
+                  placeholder="Start Date "
+                  value={startDate}
+                  id='startdate'
+                  onChange={handleStartDateChange}
+                />
+                <p id='start'>Prescription date</p>
+               <input
+                 type="date"
+                placeholder="Prescription Date"
+                value={prescriptionDate}
+                id='prescriptiondate'
+                onChange={handlePrescriptionDateChange}
+               />
+                  <div className="addButton">
+                      <button onClick={handleAddPrescription}>Add</button>
+                  </div>          
+           <ul>
                {prescriptions.map((prescription, index) => (
              <li key={index}>
               <input
