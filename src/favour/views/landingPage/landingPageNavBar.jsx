@@ -7,7 +7,7 @@ export const LandingPageNavbar = () => {
     const navigate = useNavigate();
     
     const handleButtonClick =()=>{
-        navigate("/HospitalAdminSignUp")
+        navigate("/hospital-admin-signup")
     }
     return (
         <div className="nav-wrapper">
