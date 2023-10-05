@@ -36,7 +36,7 @@ function App() {
                                        
                 
               <Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>
-              <Route path={"hospital-admin-signup"} element={<HospitalAdminSignUp/>}>
+              <Route path={"hospital-admin-signup"} element={<HospitalAdminSignUp/>}/>
                 
                 
               <Route path='/doctor-dashboard' element={<DoctorDashboard/>}/>
@@ -65,10 +65,12 @@ function App() {
               <Route path='/patient-appointment' element={<PatientAppointment/>}/>
               <Route path='/patient-signUp' element={<PatientSignUp/>}/>
               <Route path='/patient-medicalLog' element={<MedicalLogModal/>}/>
+              <Route path='/medical-log' element={<MedicalLog/>}/>
               <Route path='/patient-registration' element={<PatientSignUp/>}/>
              
             </Routes>
-        <Router/>
+        </Router>
+        </div>
 
   );
 }

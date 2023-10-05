@@ -24,8 +24,8 @@ const PatientRecord = () =>{
 
               <div  className="patient-record-inner-con">
 
-              <h1 className="patient-record-title">Patient Record</h1>
-    <h3 className="patient-med-logs">Medical logs</h3>
+             
+    <h3 className="patient-med-logs">Records</h3>
         <table className="patient-record-table">
 
           <thead className="patient-record-table-header">
@@ -37,6 +37,14 @@ const PatientRecord = () =>{
             </tr>
           </thead>
           <tbody className="patient-record-table-data">
+               <tr>
+                <td>scvh653rghngg</td>
+                <td>asd345tyhjoo</td>
+                <td>sdfhhjjj</td>
+                <td><a href="link to backend here">
+                  <img src={action}/></a>
+              </td>
+               </tr>
                <tr>
                 <td>scvh653rghngg</td>
                 <td>asd345tyhjoo</td>

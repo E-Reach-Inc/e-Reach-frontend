@@ -16,10 +16,12 @@ const PatientAppointment = () =>{
           </div>
             <div className="patient-appointment-body-div">
             <PatientNavBar/>
-            <h1 className="patient-appointment-title">Patient Appointment(s)</h1>
+            <h1 className="patient-appointment-title">Appointment(s)</h1>
 
             <div className="patient-appointment-body-inner-div">
-           
+
+           <div className="Patient-appointment-inner-table-con">
+              
             <table className="patient-appointment-table">
               <thead className="patient-appointment-table-header">
                 <tr>
@@ -58,7 +60,61 @@ const PatientAppointment = () =>{
                     <td><a href="link to backend here">
                       <img src={action}/></a>
                   </td>
+                   </tr> 
+                   <tr>
+                    <td>Eniola</td>
+                    <td>scvh653rghn</td>
+                    <td>asd345tyhj</td>
+                    <td>sdfghn56</td>
+                    <td><a href="link to backend here">
+                      <img src={action}/></a>
+                  </td>
+                   </tr>
+                   <tr>
+                    <td>Eniola</td>
+                    <td>scvh653rghn</td>
+                    <td>asd345tyhj</td>
+                    <td>sdfghn56</td>
+                    <td><a href="link to backend here">
+                      <img src={action}/></a>
+                  </td>
+                   </tr>
+                   <tr>
+                    <td>Eniola</td>
+                    <td>scvh653rghn</td>
+                    <td>asd345tyhj</td>
+                    <td>sdfghn56</td>
+                    <td><a href="link to backend here">
+                      <img src={action}/></a>
+                  </td>
                    </tr> <tr>
+                    <td>Eniola</td>
+                    <td>scvh653rghn</td>
+                    <td>asd345tyhj</td>
+                    <td>sdfghn56</td>
+                    <td><a href="link to backend here">
+                      <img src={action}/></a>
+                  </td>
+                   </tr>
+                   <tr>
+                    <td>Eniola</td>
+                    <td>scvh653rghn</td>
+                    <td>asd345tyhj</td>
+                    <td>sdfghn56</td>
+                    <td><a href="link to backend here">
+                      <img src={action}/></a>
+                  </td>
+                   </tr>
+                   <tr>
+                    <td>Eniola</td>
+                    <td>scvh653rghn</td>
+                    <td>asd345tyhj</td>
+                    <td>sdfghn56</td>
+                    <td><a href="link to backend here">
+                      <img src={action}/></a>
+                  </td>
+                   </tr>
+                    <tr>
                     <td>Eniola</td>
                     <td>scvh653rghn</td>
                     <td>asd345tyhj</td>
@@ -69,6 +125,8 @@ const PatientAppointment = () =>{
                    </tr>
               </tbody>
             </table>
+
+           </div>
             </div>
             
             </div>

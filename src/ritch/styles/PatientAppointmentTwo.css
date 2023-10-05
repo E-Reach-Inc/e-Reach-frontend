@@ -1,22 +1,67 @@
 
 .patient-appointment-two-table{
-    height: 40vh;
-    width: 37%;
-    margin-top: 30px;
+    width: 100%;
+    
    
    
+   
+   
+}
+.patient-appointment-two-table-outer-con{
+   
+    width: 100%;
+    height: 42.5vh;
+    /* border: 1px solid#368db2; */
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.22);
+    
+    
+    overflow-y: auto;
+    
+
+}
+
+ .patient-appointment-two-table-inner-con{
+    border-radius: 5px;
+    max-height: 300px;
+    
+
+
+} 
+
+.patient-appointment-two-table-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.patient-appointment-two-table-top button{
+    background-color: #2196F3; 
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 8px;
+    height: 25px;
+    width: 80px;
+    cursor: pointer;
+    border: 1px solid#368db2;
+
+}
+.patient-appointment-two-table-top button:hover{
+    background-color: #ADD8E6;
+    color: white;
+
 }
 
 
 
 .patient-appointment-two-title{
-    margin-top: 20px;
+    margin-top: 2px;
     margin-left: 20px;
 }
 
 .patient-appointment-two-table-header{
     font-weight: bold; 
-    height: 50px;
+    height: 30px;
     position: sticky;
     background-color: #368db2;
     padding: 10px; 
@@ -26,7 +71,7 @@
 
 
 .patient-appointment-two-table-data{
-    padding: 10px; 
+    /* padding: 10px;  */
     text-align: left; 
     border: 1px solid whitesmoke;
    
@@ -41,6 +86,24 @@
     word-wrap: break-word; 
    
     max-width: 50px; 
+}
+
+::-webkit-scrollbar{
+    width: 2px;
+    height: 2px;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: transparent;
+    border-radius: inherit;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#368db2;
 }
 
 

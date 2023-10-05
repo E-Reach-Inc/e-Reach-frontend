@@ -1,10 +1,17 @@
+
+
 .patient-profile-two-main-con{
+  background-color: white;
+  
+}
+
+/* .patient-profile-two-main-con{
       height: 40vh;
       width: 37%;
       border: 1px solid#368db2;
       border-radius: 5px;
      
-  }
+  } */
   .patient-profile-two-upload-btn{
     border-radius: 5px;
     margin-top: 10px;
@@ -12,30 +19,27 @@
     height: 19px;
     width: 60px;
     cursor: pointer;
-    color: #368db2;
+  
     border: 1px solid#368db2;
   }
+ 
 
-  
+ 
   .patient-profile-two-upload-btn:hover{
     background-color: #ADD8E6;
     color: white;
   }
   
   
-  /* 
-  .patient-profile-inner-con{
-    justify-content: center;
-  } */
-  
   .patient-two-profile-image{
       width: 3rem;
       height: 3rem; 
-      /* overflow: hidden; */
       border: solid 3pt #e0ecef; 
       border-radius: 50%;
       padding: 0.2rem;
       margin: 1rem;
+     
+      
   }
   
   .patient-two-profile-image img{
@@ -49,49 +53,45 @@
         
   
         .patient-two-biodata{
-          /* margin-top: 20px; */
+          /* display: flex; */
+          margin-top: 2px;
+          width: 100%;
+       
+         
+          
+    
+        }
+        .patient-two-profile-mid-con{
           display: flex;
-          /* padding-top: 30px; */
-          background-color: white;
-          
-         
-          
-          
-          
-          
-         
+       
         }
   
         .patient-two-biodata-input{
-          margin-top: 15px;
           margin-left: 40px;
-          /* height: 200%; */
-          /* background-color: rgb(245, 245, 252); */
           width: 100%;
          
          
          
         }
-  
-        .patient-two-biodata-input label{
-          color: #368db2;
-          /* background-color: red;    */
-        }
-  
         
     
   
       .patient-two-title{
-          padding-top: 5px;
-          font-size: 20px;
-          margin-left: 50px;
+          font-size: 17px;
+          margin-left:25px;
          
           
       }
 
       .patient-profile-two-inner-con{
-        height: 45%;
-        color: #368db2;
+        height: 42.4vh;
+        border-radius: 5px;
+        border-bottom-left-radius: 10px;
+        border: 1px solid white;
+        
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.22);
+       
+        
        
       }
     
