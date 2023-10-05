@@ -26,7 +26,8 @@ const PatientProfile= () =>{
 
 
      const openUploadWidget = () => {
-       const imageUrl = <UploadWidget/>
+       const imageUrl = UploadWidget();
+      
         return imageUrl
      }
     
@@ -46,7 +47,7 @@ const PatientProfile= () =>{
 
                     
             <div className="patient-title">
-              <h2>Patient Information</h2>
+              <h2>Bio Data</h2>
             </div>
     
             <div className="patient-biodata">
@@ -56,12 +57,13 @@ const PatientProfile= () =>{
                 ) : (
                   <img src={maleImage} alt="Patient" />
                 )}
+                <UploadWidget/>
 
-                <div >
+                {/* <div >
                   <form onClick={openUploadWidget}>
-                    <button className="patient-profile-img-upload-btn">Upload</button>
+                    <button onClick={()=>{console.log("hello")}} className="patient-profile-img-upload-btn">Upload</button>
                   </form>
-                </div>
+                </div> */}
               </div>
     
               <div className="patient-biodata-input">

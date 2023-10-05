@@ -7,6 +7,8 @@
 }
 .patient-record-outter-div{
     display: flex;
+    /* height: 500px; */
+    overflow-y: auto;
 }
 .patient-record-inner-div{
     width: 100%;
@@ -14,19 +16,21 @@
 }
 .patient-record-inner-con{
     margin-left: 80px;
-    margin-top: 40px;
+    height: 500px;
+    margin-top: 30px;
     margin-bottom: 60px;
     border-radius: 25px;
     border: 1px solid #368db2;
     width: 85%;
-    height: 450px;
+    max-height: 450px;
     background-color: #FFFFFF;
+
     
 }
 
 .patient-record-table-header{
     font-weight: bold; 
-    height: 50px;
+    height: 40px;
     position: sticky;
     background-color: #368db2;
     padding: 10px; 
@@ -61,5 +65,23 @@
     white-space: normal; 
     word-wrap: break-word; 
     max-width: 200px; 
+}
+
+::-webkit-scrollbar{
+    width: 2px;
+    height: 2px;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: transparent;
+    border-radius: inherit;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #368db2;
 }
 

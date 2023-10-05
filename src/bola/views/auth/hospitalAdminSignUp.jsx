@@ -1,10 +1,11 @@
 import React, {useState} from 'react'
 import InputFamily from './inputFamily';
-import "../../styles/hospitalAdminSIgnUp.css"
+import "../../styles/auth/hospitalAdminSIgnUp.css"
 import axios from "axios";
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import eReachLogo from "../../assets/images/EReachLogoNoB.svg"
+import UploadWidget from '../../../cloudinary/uploadWidget';
 
 function HospitalAdminSignUp() {
 
@@ -51,11 +52,13 @@ function HospitalAdminSignUp() {
             axios.post("http://localhost:8080/api/v1/hospital-admin/register-hospital/", hospitalSignUpDetails)
                  .then(successResponse => {
                      console.log(successResponse)
+                     console.log("hospital email is: "+successResponse.data.hospitalEmail);
                      setRegistrationCompleted(true)
-                     alert(successResponse)
-                 })
+                     localStorage.setItem("hospitalEmail", successResponse.data.hospitalEmail)
+                     toast.success(successResponse.data.message, {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
+                })
                  .catch(failureResponse => {
-                     toast.error(failureResponse.message, {position: toast.POSITION.TOP_CENTER, autoClose: 20000})
+                     toast.error("Registration Failed", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
                  })
                  .finally(recovery => {
                     
@@ -68,29 +71,37 @@ function HospitalAdminSignUp() {
     function handleChangeForAllInputs(event){
     
         let eventTarget = event.target;
-        if(event.target.id === 'adminEmail' || event.target.id === 'hospitalEmail'){
-            const emailPattern = /^(?=.*@)(?=.{6,}$)(gmail\.com|outlook\.com|yahoo\.com|mail\.ru|qq\.com|live\.com|163\.com|163\.net|icloud\.com|aol\.com|hotmail\.com|yandex\.com|zoho\.com|protonmail\.com|gmx\.com|gmx\.net|mail\.com|rediff\.com|naver\.com|web\.de)$/i
-            console.log("It is ==> ", emailPattern.test( "alaabdulmalik03@gmail.com"))
-            let currently = eventTarget.checkValidity();
-            console.log('currently', currently);
-            if (currently) {
-                let regExp = new RegExp(emailPattern, 'i');
-                if (regExp.test(eventTarget.value) === false) { 
-                  eventTarget.setCustomValidity(`
-                                                  Invalid email:: criteria for a valid email includes the following
-                                                  1.) email must not contain any white space
-                                                  2.) email domain must be a valid domain and valid domain which are accepted by our system includes gmai.com, yahoo.com
-                                                  outlook.com, mail.ru, qq.com, live.com, 163.com, 163.net, icloud.com,aol.com, hotmail.com, 
-                                                  yandex.com, zoho.com, protonmail.com, gmx.com, gmx.net, mail.com, rediff.com, naver.com, web.de
-                                                  3.) email must be a valid email syntax, like contain an '@', which separate
-                                                  4.) the domain from the user name.
-                                                `);
-                  eventTarget.reportValidity();
-                }
-                setData((previousValue)=>({...previousValue, [eventTarget.id]: eventTarget.value}))
-            }
-        }
-        else if (event.target.name === 'Password'){
+        setData((previousValue)=>({...previousValue, [eventTarget.id]: eventTarget.value}))
+        // if(event.target.id === 'adminEmail' || event.target.id === 'hospitalEmail'){
+        //     const emailPattern = /^(?=.*@)(?=.{6,}$)(gmail\.com|outlook\.com|yahoo\.com|mail\.ru|qq\.com|live\.com|163\.com|163\.net|icloud\.com|aol\.com|hotmail\.com|yandex\.com|zoho\.com|protonmail\.com|gmx\.com|gmx\.net|mail\.com|rediff\.com|naver\.com|web\.de)$/i
+        //     console.log("It is ==> ", emailPattern.test( "alaabdulmalik03@gmail.com"))
+        //     let currently = eventTarget.checkValidity();
+        //     console.log('currently', currently);
+        //     if (currently) {
+        //         let regExp = new RegExp(emailPattern, 'i');
+        //         if (regExp.test(eventTarget.value) === false) { 
+        //           eventTarget.setCustomValidity(`
+        //                                           Invalid email:: criteria for a valid email includes the following
+        //                                           1.) email must not contain any space
+        //                                           2.)
+        //                                           email domain must be a valid domain and valid domain which are accepted by our system includes gmai.com,
+        //                                           yahoo.com
+        //                                           outlook.com, mail.ru,
+        //                                           qq.com, live.com, 163.com, 163.net, icloud.com,aol.com, hotmail.com,
+        //                                           yandex.com, zoho.com,
+        //                                           protonmail.com, gmx.com, gmx.net, mail.com, rediff.com, naver.com, web.de
+        //                                           3.)
+        //                                           email must be a valid email syntax, like contain an '@', which separate
+        //                                           4.)
+        //                                           the domain from the username.
+        //                                         `);
+        //           eventTarget.reportValidity();
+        //           setData((previousValue)=>({...previousValue, [eventTarget.id]: eventTarget.value}))
+        //         }
+        //         setData((previousValue)=>({...previousValue, [eventTarget.id]: eventTarget.value}))
+        //     }
+        // }
+        /*else*/ if (event.target.name === 'Password'){
             let eventTarget = event.target;
             const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$<%&()?*!]).{8,12}$/
             let currently = eventTarget.checkValidity();
@@ -146,7 +157,9 @@ function HospitalAdminSignUp() {
       { name: 'State', type: 'text', value: 'Lagos', id: 'state' },
     ]
 
-    return ( registrationCompleted === false ? (
+    return ( 
+        <div className="Main-Div">
+        {registrationCompleted === false ? (
           <div className='Main-Registration-Form'>
             <ToastContainer/>
               <div className="Header-Frame">
@@ -164,8 +177,7 @@ function HospitalAdminSignUp() {
                           <div className={"step-progress-bar"} key={step}>
                               <div className="step">
                                   <div 
-                                      className={index <= currentStep ? 'progress-bar-circle active-progress-bar': "progress-bar-circle"} 
-                                      data-title={index === currentStep ? step : undefined}>{index + 1}</div>
+                                      className={index <= currentStep ? 'progress-bar-circle active-progress-bar': "progress-bar-circle"}>{index + 1}</div>
                               </div>
                               {index < 2 && (<div className={index < currentStep ? 'progress-horizontal-bar active-horizontal-bar' : 'progress-horizontal-bar'}>
                               </div>)}
@@ -207,6 +219,7 @@ function HospitalAdminSignUp() {
                         <button type="button" onClick={handlePreviousButtonClick}>previous</button>
                         <button type="submit" onClick={handleSignUpFormSubmission}>submit</button>
                       </div>}
+                      {/* <UploadWidget/> */}
                   </div>
               </form>
           </div>) : (
@@ -216,7 +229,8 @@ function HospitalAdminSignUp() {
                   <p id="reg-two">You will receive an email shortly to activate your hospital's account, please click the activate button to your the account.</p>
               </div>
           </div>)
-    );
+    }
+    </div>);
 }
   
 

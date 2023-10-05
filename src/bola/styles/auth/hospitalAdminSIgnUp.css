@@ -1,4 +1,19 @@
 /* MAIN FORM  */
+.Main-Div{
+    flex-direction: column;
+    place-content: center;
+    margin: 0;
+    align-items: center;
+    align-content: center;
+    min-height: 100vh;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    overflow: hidden;
+    background: radial-gradient(#FFFFFF, rgb(227, 239, 239),rgb(54, 141, 178) );
+}
+
 .Main-Registration-Form{
     width: 50vw;
     height: 90vh;
@@ -97,7 +112,7 @@
     font-size: 15px;
     content: attr(data-title);
     position: absolute;
-    top: calc(40% + 0.75rem);
+    top: calc(37% + 0.75rem);
     color: rgb(43, 159, 226);
     width: 100px;
     text-align: center;
@@ -124,7 +139,7 @@
 .Registration-Form-Element{
    display: flex;
    flex-direction: column;
-   border-style: solid;
+   /* border-style: solid; */
    height: 60%;
    margin-top: 50px;
    width: 85%;
