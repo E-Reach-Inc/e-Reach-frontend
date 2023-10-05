@@ -34,7 +34,7 @@ export const PharmacistSideBar = () =>{
                     </div>
 
                     <div className= "medial-log" >
-                        <img src={medical} alt={"medical"}/><Link to={"/pharmacist-view-record"} id= "link-ViewLog">View Records</Link>
+                        <img src={medical} alt={"medical"}/><Link to={"/pharmacist-view-records"} id= "link-ViewLog">View Records</Link>
                     </div>    
                     <div className= "drug">
                         <img src={drugs} alt={"drugs"}/><Link to={"/Drugs"} id= "link-drugs">Add Drugs</Link>
