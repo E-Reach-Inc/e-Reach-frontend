@@ -18,7 +18,7 @@ const PopUp = ({ isOpen, onClose, log, prescriptions }) => {
     };
  
     return (
-        <>
+        <>    
             <div className="overlay"></div>
             <div className={`popup ${isOpen ? 'open' : 'closed'}`}>
                 <div className="popup-content">
@@ -40,6 +40,7 @@ const PopUp = ({ isOpen, onClose, log, prescriptions }) => {
                                     className={"custom-checkbox"} 
                                     onChange={addPrescriptionToDispensed}
                                     />
+                              {/* <label htmlFor={`checkbox${index}`}></label> */}
                               <button id='button' onClick={() => togglePrescriptionDetails(index)}>View Dosage</button>
                              </div>
                               {prescriptionDetailsVisible[index] && (

@@ -78,7 +78,7 @@ export const PharmacistViewRecord = () => {
           prescriptionDate:'12/10/2023'
         },
         {
-            medicationName: 'Panadol',
+            medicationName: 'Codine',
             dosage: '500mg',
             dosageFrequency: 'Once daily',
             startDate: '12/10/2023',
