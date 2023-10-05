@@ -43,7 +43,7 @@
 .Input_Style::after {
     content: "\u{1F4E6}";
     position: absolute;
-    right: 10px; /* Adjust the right position as needed */
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
@@ -54,15 +54,14 @@
     display: flex;
     justify-content: end;
 }
-input:focus{
+.Input_Style:focus{
     background-color: #368db2;
     color: aliceblue;
     font-size: 20px;
 }
-input:valid{
+.Input_Style:valid{
     border-color: #368db2;
 }
 .Invalid_Input:focus{
     border-color: #ff000f;
 }
-/* textarea::after{} */
