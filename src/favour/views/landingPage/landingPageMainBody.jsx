@@ -1,7 +1,7 @@
 import "../../styles/landingPage/landingPageMainBody.css"
 import React, { useEffect, useState } from 'react';
 import backgroundImg from "../../assets/landingPageImage/image2.svg"
-import {LandingPageNavbar} from "./landingPageNavBar"
+import {LandingPageNavbar} from "./landingPageNavBar.jsx"
 import {LandingPageFooter} from "./landingPageFooter"
 import {LandingPageAboutUs} from "./landingPageAboutUs";
 

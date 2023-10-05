@@ -1,63 +1,39 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import eReachLogo from "../../../coco/assets/images/EReachLogoNoB.svg"
-import "../../../coco/styles/auth/DoctorRegistration.css"
-export const DoctorRegistration = () => {
+import "../../styles/auth/PractitionerRegistration.css"
+import {toast} from "react-toastify";
+export const PractitionerRegistration = () => {
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
         role: '',
         phoneNumber: '',
         email: '',
-        password: '',
-        confirmPassword: '',
     });
 
-    const [passwordMatch, setPasswordMatch] = useState(true);
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value,
-        });
-    };
-
-    const handlePasswordChange = (e) => {
-        const newPassword = e.target.value;
-        setFormData({
-            ...formData,
-            password: newPassword,
-        });
-        setPasswordMatch(newPassword === formData.confirmPassword);
-    };
-
-    const handlePasswordConfirmationChange = (e) => {
-        const newConfirmPassword = e.target.value;
-        setFormData({
-            ...formData,
-            confirmPassword: newConfirmPassword,
-        });
-        setPasswordMatch(formData.password === newConfirmPassword);
-    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (formData.password === formData.confirmPassword) {
             try {
-                const response = await axios.post('/api/register', formData);
-                if (response.status === 200) {
-                    alert('Registration successful. Ready for submission.');
-                } else {
-                    alert('Registration failed. Please try again.');
-                }
+               await axios.post('http://localhost:8080/api/v1/hospital-admin/invite-practitioner/', formData)
+                   .then(successResponse => {
+                       toast.success(
+                           successResponse+' Registration successful. Ready for submission.',
+                           {position: toast.POSITION.TOP_CENTER, autoClose: 5000});
+
+                    })
+                   .catch(failureResponse => {
+                       toast.error(
+                           failureResponse+' Registration failed. Please try again.',
+                           {position: toast.POSITION.TOP_CENTER, autoClose: 5000});
+                    })
+                    .finally();
             } catch (error) {
                 console.error('Error during registration:', error);
-                alert('Registration failed. Please try again.');
+                toast.error(error, toast.error('Registration failed. Please try again.',
+                    {position: toast.POSITION.TOP_CENTER, autoClose: 5000}));
             }
-        } else {
-            alert('Passwords do not match. Please try again.');
-        }
     };
 
     return(
@@ -76,8 +52,7 @@ export const DoctorRegistration = () => {
                             <div>
                                 <p className="Doc-name-tag">First name:</p>
                                 <label htmlFor="first_name"></label>
-                                <input className="Doc-input-name-style" type="text" id="first_name" placeholder="example: John" onChange={handleChange}
-                                       required/>
+                                <input className="Doc-input-name-style" type="text" id="first_name" placeholder="example: John" required/>
                             </div>
 
                             <div>
@@ -105,20 +80,7 @@ export const DoctorRegistration = () => {
                             <p className="Doc-name-tag-input-email">Email address:</p>
                             <label htmlFor="email_address"></label>
                             <input className="Doc-input-style" type="email" id="email_address" placeholder="example: sample@gmail.com" required/>
-
-                            <p className="Doc-name-tag-input-password">Password:</p>
-                            <label htmlFor="password"></label>
-                            <input className="Doc-input-style" type="password" id="password" onChange={handlePasswordChange}  placeholder="*****" required/>
-
-                            <p className="Doc-name-tag-input-confirm-password">Confirm Password:</p>
-                            <label htmlFor="confirm_password"></label>
-                            <input className="Doc-input-style" type="password" id="confirm_password" onChange={handlePasswordConfirmationChange}
-                                   placeholder="*****" required/>
                         </div>
-
-                        {!passwordMatch && (
-                            <p style={{ color: 'red' }}>Passwords do not match.</p>
-                        )}
                     </form>
                 </div>
                 <div className="Button-frame">
