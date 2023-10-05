@@ -11,7 +11,7 @@ import HospitalAdminSignUp from "./bola/views/auth/hospitalAdminSignUp";
 import {DoctorDashboard} from "./coco/views/doctor/doctorDashBoard";
 import {PractitionerRegistration} from "./coco/views/auth/PractitionerRegistration";
 import HospitalAdminDashboard from "./coco/views/administration/HospitalAdminDashboard";
-import {PharmacistDefaultDashboard} from "./favour/views/pharmacistFolder/pharmacistDefaultDashboard";
+// import {PharmacistDefaultDashboard} from "./favour/views/pharmacistFolder/pharmacistDefaultDashboard";
 import PatientSignUp from "./ritch/views/PatientSignUp";
 import LoginPage from "./coco/views/auth/PractitionerLogIn";
 import {ActiveLogsTableOne} from "./coco/views/doctor/doctorViewActiveLogsOne";
@@ -22,6 +22,7 @@ import PatientView from "./ritch/views/PatientView"
 import PatientProfile from "./ritch/views/PatientProfile"
 import PatientAppointment from "./ritch/views/PatientAppointment"
 import {MedicalLogModal} from "./coco/views/patient/MedicalLogPopUp";
+import MedicalLog from "./ritch/medicalLog/MedicalLog";
 
 
 
