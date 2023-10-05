@@ -7,8 +7,9 @@
     border-radius: 10px;
     margin: 20px 10px 10px 40px;
     height: 17rem;
+    overflow-y: auto;
     width: 29rem;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.22);
 }
 .app-button{
     display: flex;

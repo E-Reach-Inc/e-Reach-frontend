@@ -4,6 +4,7 @@
 .vie-holder{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
     margin: 11px 5px 10px 38px;
+    overflow-y: auto;
     background-color: white;
     height: 14rem;
     width: 29rem;

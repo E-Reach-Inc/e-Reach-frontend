@@ -68,7 +68,7 @@ export const PharmacistMedicineDashBoard =()=>{
     ]
     const navigate = useNavigate();
     const handleButtonClick =()=>{
-        navigate("/Medication")
+        navigate("/pharmacist-medication")
     }
     return(
         <div>

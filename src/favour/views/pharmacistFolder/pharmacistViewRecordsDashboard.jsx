@@ -54,11 +54,26 @@ export const PharmacistViewRecordsDashboard =()=>{
             Name: 'Consultation',
             Result: '22/12/2023',
         },
+        {
+            Date: 'Favour chiemela',
+            Name: 'Consultation',
+            Result: '22/12/2023',
+        },
+        {
+            Date: 'Favour chiemela',
+            Name: 'Consultation',
+            Result: '22/12/2023',
+        },
+        {
+            Date: 'Favour chiemela',
+            Name: 'Consultation',
+            Result: '22/12/2023',
+        },
 
     ]
     const navigate = useNavigate();
     const handleButtonClick =()=>{
-        navigate("/viewlog")
+        navigate("/pharmacist-view-records")
     }
     return(
         <div>
