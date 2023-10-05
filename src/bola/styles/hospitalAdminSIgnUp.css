@@ -1,19 +1,4 @@
-/* body{
-    flex-direction: column;
-    place-content: center;
-    margin: 0;
-    align-items: center;
-    align-content: center;
-    min-height: 100vh;
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    justify-content: center;
-    overflow: hidden;
-    background: radial-gradient(#FFFFFF, rgb(227, 239, 239),rgb(54, 141, 178) );
-} */
-
-/* MAIN FORM */
+/* MAIN FORM  */
 .Main-Registration-Form{
     width: 50vw;
     height: 90vh;

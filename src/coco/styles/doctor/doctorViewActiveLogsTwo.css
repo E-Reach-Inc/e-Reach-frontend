@@ -1,0 +1,92 @@
+.major-log-frame{
+    /*border: 1px solid #368db2;*/
+    justify-content: space-evenly;
+    background-color: white;
+    box-shadow: rgba(3, 3, 50, 0.72) 0px 3px 10px;
+    border-radius: 10px;
+    height: 37vh;
+    width: 500px;
+}
+.log-browse-navigate-button{
+    display: flex;
+    margin-top: 20px;
+}
+.search-bar-two{
+    background-color: #e0ecef;
+    padding: 6px;
+    flex: 1;
+    margin-left: 190px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+.search-button-two{
+    background-color: #368db2;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.log-text{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.log-text h3{
+    font-weight: bold;
+    font-size: small;
+}
+.browse-all-log-button{
+    margin-left: auto;
+    margin-right: 10px;
+}
+#browse-all-log-button-doc{
+    color:#368db2;
+    border-color: #368db2;
+    transition: background-color;
+    transition-duration: 200ms;
+    cursor: pointer;
+    outline: none;
+    height: 40px;
+    width: 120px;
+    left: 181px;
+    margin-top: 10px;
+    margin-left: 120px;
+    border-radius: 5px;
+    padding: 8px 16px 8px 16px;
+    /*box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);*/
+    font-weight: bold;
+    font-size: x-small;
+}
+#browse-all-log-button-doc:hover{
+    /*box-shadow: inset 200px 0 0 0 #368db2;*/
+    background-color: #e6f7fa;
+}
+.log-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0 20px;
+    margin-top: 20px;
+}
+
+.log-table th,
+.log-table td {
+    border: 1px solid whitesmoke;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.log-table th {
+    background-color: #368db2;
+    color: white;
+}
+.log-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+    font-size: 12px;
+}
+.log-table tr:nth-child(odd) {
+    font-size: 12px;
+    background-color: white;
+}

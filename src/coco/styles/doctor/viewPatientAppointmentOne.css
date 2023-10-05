@@ -1,0 +1,92 @@
+.Doc-Appoint-Main-Frame {
+    height: 100vh;
+    overflow: hidden;
+    background-color: #e0ecef;
+    display: flex;
+}
+.doc-Appoint-side-bar-hold{
+    display: flex;
+}
+.doc-Appoint-details-holder{
+    margin-top: 40px;
+    margin-left: 55px;
+}
+.Appoint-left-profile{
+    margin-left: 80px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    border-radius: 25px;
+    border: 1px solid #368db2;
+    width: 85%;
+    height: 450px;
+    background-color: #FFFFFF;
+}
+.Appoint-title{
+    margin-left: 35px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    display: flex;
+}
+.Appoint-title h2{
+    font-family: "DM SANS", sans-serif;
+    font-weight: bold;
+    font-size: xx-large;
+}
+.doc-appoint-search-bar{
+    padding: 6px;
+    /*flex: 1;*/
+    margin-top: 5px;
+    margin-left: 40px;
+    height: 45px;
+    outline: none;
+    border: 1px solid #368db2;
+    border-radius: 35px;
+    width: 445px;
+}
+.doc--appoint-search-button{
+    background-color: #368db2;
+    color: white;
+    border: none;
+    border-radius: 35px;
+    padding: 5px 10px;
+    cursor: pointer;
+    height: 40px;
+    margin-left: 5px;
+    margin-top: 8px;
+}
+
+.Appoint-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0 20px;
+    margin-top: 20px;
+}
+
+.Appoint-table th,
+.Appoint-table td {
+    border: 1px solid whitesmoke;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.Appoint-table th {
+    background-color: #368db2;
+    color: white;
+}
+.Appoint-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+    font-size: 12px;
+}
+.Appoint-table tr:nth-child(odd) {
+    font-size: 12px;
+    background-color: white;
+}
+
+#action-buttons{
+    width: 20px;
+    height: 20px;
+    color: #368db2;
+}
+#action-buttons:hover {
+    background-color: #a0b0af;
+}
