@@ -1,0 +1,85 @@
+.admin-main-frame{
+    background-color: whitesmoke;
+    display: flex;
+}
+
+.first-admin-sub-activity{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    /*border: 2px solid #010C80;*/
+    height: 250px;
+}
+.Admin-Activity-Frame{
+    margin-top: 40px;
+}
+
+.second-admin-sub-activity{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    /*border: 2px solid #010C80;*/
+    height: 260px;
+}
+
+.patient-frame-admin{
+    margin-left: 10px;
+    width: 500px;
+    height: 245px;
+    box-shadow: rgba(1.5, 1.5, 50, 0.32) 0px 3px 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.practitioner-frame-admin{
+    margin-left: 30px;
+    width: 500px;
+    height: 245px;
+    box-shadow: rgba(1.5, 1.5, 50, 0.32) 0px 3px 5px;
+}
+
+.patient-frame-admin img{
+    width: 500px;
+    height: 205px;
+}
+
+.patient-record-frame{
+    margin-left: 10px;
+    width: 500px;
+    height: 245px;
+    box-shadow: rgba(1.5, 1.5, 50, 0.32) 0px 3px 5px;
+    overflow: hidden;
+    position: relative;
+}
+.patient-log-frame{
+    margin-left: 30px;
+    width: 500px;
+    height: 245px;
+    box-shadow: rgba(1.5, 1.5, 50, 0.32)0px 3px 5px;
+}
+
+#click-patient-button, #click-practitioner-button,
+#click-records-button, #click-log-button{
+    color:#368db2;
+    border-color: #368db2;
+    transition: background-color;
+    transition-duration: 200ms;
+    cursor: pointer;
+    outline: none;
+    height: 40px;
+    width: 120px;
+    left: 181px;
+    margin-top: 20px;
+    margin-left: 190px;
+    border-radius: 5px;
+    padding: 8px 16px 8px 16px;
+    /*box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);*/
+    font-weight: bold;
+    font-size: x-small;
+}
+
+#click-patient-button:hover{
+    background-color: #e6f7fa;
+}
