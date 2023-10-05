@@ -1,48 +1,102 @@
 
 
 .patient-record-two-table{
-    margin-top: 10px;
-    /* width: 60%;  */
+    width: 100%;
+   
+   
   
 }
-.prfl{
-    width: 55%;
-  margin-right: 15px;
-  border-radius: 10px;
-  height: 248px; 
-  overflow: hidden;
-  margin-left: 7px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.26);
-  background-color: white;
-  padding:  1rem;
-  display: flex;
- 
+
+.patient-record-two-table-outter-con{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.22);
+    border-radius: 5px;
+    width: 100%;
+    background-color: white;
+    overflow-y: auto;
+   
+
+   
+}
+.patient-table-two-top-con{
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.patient-med-logs-two{
+    margin-left: 20px;
+   
+    
+}
+.patient-med-logs-two h2{
+  
+   font-size: 15px;
+    
+}
+
+
+.patient-record-two-med-logs{
+    display: flex;
+    justify-content: space-between;
+    padding:5px;
+   
+   
+}
+::-webkit-scrollbar{
+    width: 2px;
+    height: 2px;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: transparent;
+    border-radius: inherit;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#368db2;
+}
+
+.patient-record-two-med-logs button{
+    background-color: #2196F3; 
+    border-radius: 5px;
+    height: 25px;
+    margin-top: 5px;
+    margin-right: 5px;
+    width: 80px;
+    cursor: pointer;
+    border: 1px solid#368db2;
+
+}
+.patient-record-two-med-logs button:hover{
+    background-color: #ADD8E6;
+    color: white;
+}
+.patient-record-two-inner-con{
+   
+    border-radius: 10px;
+    max-height: 180px;
+    
+    
 }
 
 .patient-record-two-table-header{
     font-weight: bold; 
-    height: 50px;
+    height: 30px;
     position: sticky;
     background-color: #368db2;
-    padding: 10px; 
-    text-align: left; 
+    text-align: center; 
     border: 1px solid whitesmoke;
     
 
 }
 
-.patient-record-two-title{
-    margin-top: 15px;
-    text-align: left;
-}
 
-.patient-med-logs-two{
-    margin-top: 10px;
-    margin-left: 20px;
-}
 
 .patient-record-two-table-data{
-    padding: 10px; 
     text-align: left; 
     border: 1px solid whitesmoke;
 
@@ -55,6 +109,6 @@
 .patient-record-two-table-data td{
     white-space: normal; 
     word-wrap: break-word; 
-    /* max-width: 200px;  */
+ 
 }
 

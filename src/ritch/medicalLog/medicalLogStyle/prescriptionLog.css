@@ -1,0 +1,15 @@
+.prescription-log-modal-two{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid gray;
+    width: 450px;
+    justify-content: space-between;
+
+}
+.prescription-inputs{
+   border: 1px solid red;
+}
+
+.prescription-inputs-con{
+    background-color: green;
+}

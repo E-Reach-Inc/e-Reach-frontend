@@ -1,24 +1,42 @@
 
+
+
+
 .patient-appointment-table{
     margin-top: 30px;
     width: 100%; 
    
+    
+   
 }
+
+.Patient-appointment-inner-table-con{
+      height: 40vh;
+      overflow:auto;
+      width: 100%;
+}
+
 
 .patient-appointment-title{
     margin-top: 20px;
     margin-left: 50px;
-    /* text-align: center; */
+   
 }
 .patient-appointment-table-outer-con{
     display: flex;
-    background-color: #e0ecef;
-    height: 100vh;
+    height: 60vh;
+    
+   
 }
+
+
 .patient-appointment-body-div{
     width: 100%;
+
 }
 .patient-appointment-body-inner-div{
+   
+    max-height: 300px;
     display: flex;
     margin-left: 60px;
     margin-top: 20px;
@@ -44,9 +62,12 @@
 
 
 .patient-appointment-table-data{
-    /* padding: 10px;  */
+ 
     text-align: left; 
     border: 1px solid whitesmoke;
+  
+    
+
    
 }
 
@@ -60,9 +81,25 @@
     max-width: 200px; 
 }
 
-/* .patient-td{
-    height: 40px;
+/* }
+::-webkit-scrollbar{
+    width: 2px;
+    height: 2px;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: transparent;
+    border-radius: inherit;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#368db2;
 } */
+
 
 
 

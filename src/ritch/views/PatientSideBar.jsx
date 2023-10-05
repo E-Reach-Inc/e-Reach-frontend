@@ -7,6 +7,7 @@ import appointment from '../patient-icons/patient-appointment-icon.svg'
 import settings from '../patient-icons/patient-settings.svg'
 import logout from '../patient-icons/patient-log-out.svg'
 import '../styles/PatientSideBar.css'
+import { Link } from "react-router-dom";
 
 
 
@@ -25,39 +26,35 @@ const PatientSideBar  = () => {
              
                 <div className="patient-menu-item"  id="patient-dashboard-icon">
                 <img src={dashboard} alt=""   />
-                <span >Dashboard</span>
-                {/* <Link className="side-text"to = {"/patientDashboard"}>Dashboard</Link> */}
+                <Link className="side-text"to = {"/patient-view"}>Dashboard</Link>
                 </div>
 
                 <div className="patient-menu-item">
                     <img src={profile} alt="" />
-                    <span >Patient profile</span>
-                    {/* <Link className="side-text"to = {"/patientDashboard"}>Dashboard</Link> */}
+                    <Link className="side-text"to = {"/patient-profile"}>Profile</Link>
  
                 </div>
 
                 <div className="patient-menu-item" >
                 <img src={record} alt="" />
-                <span >Record</span>
-                {/* <Link className="side-text" to = {"/patientMedicalrecord"} >Medical Record</Link> */}
+                <Link className="side-text" to = {"/patient-record"} >Medical Record</Link>
 
                 </div>
 
                 <div className="patient-menu-item">
                 <img src={appointment} alt=""/>
-                <span >Appointments</span>
-                {/* <Link className="side-text"to= {"/patientAppointment"}>Appointment</Link> */}
+                <Link className="side-text"to= {"/patient-appointment"}>Appointment</Link>
                 </div>
 
             
                 <div className="patient-menu-item" id="patient-settings-icon"> 
                 <img  src={settings} alt="" />
-                <span >Settings</span>
+                <span>Settings</span>
                 </div>
 
                 <div className="patient-menu-item" id="patient-log-out-icon">
                 <img src={logout} alt="" />
-                <span>Log out</span>
+                <span>Log Out</span>
                 </div>
         </div>
 
