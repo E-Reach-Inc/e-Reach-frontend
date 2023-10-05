@@ -1,6 +1,11 @@
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import { PharmacistDashboard } from './favour/views/pharmacistFolder/pharmacistDashboard';
+import { PharmacistDefaultDashboard } from './favour/views/pharmacistFolder/pharmacistDefaultDashboard';
 import { LandingPageMainBody } from './favour/views/landingPage/landingPageMainBody';
+import { PharmacistProfile} from './favour/views/pharmacistFolder/pharmacistProfile';
+import { PharmacistAppointment } from './favour/views/pharmacistFolder/pharmacistAppointment';
+import {PharmacistMedication} from './favour/views/pharmacistFolder/pharmacistMedication'
+import {PharmacistViewRecord} from './favour/views/pharmacistFolder/pharmacistViewRecord'
 import PatientRecord from './ritch/views/PatientRecord';
 import HospitalAdminSignUp from "./bola/views/auth/hospitalAdminSignUp";
 import {DoctorDashboard} from "./coco/views/doctor/doctorDashBoard";
@@ -19,35 +24,52 @@ import PatientAppointment from "./ritch/views/PatientAppointment"
 import {MedicalLogModal} from "./coco/views/patient/MedicalLogPopUp";
 
 
+
 function App() {
   return (
-      <Router>
-          <Routes>
-              <Route path='/' element={<p>Home</p>}/>
+    <div className="App">
+        <Router>
+            <Routes>
               <Route path='/landing-page' element={<LandingPageMainBody/>}/>
-              <Route path='/pharmacist-default-dashboard' element={<PharmacistDefaultDashboard/>}/>
-              <Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>
-              <Route path='/landing-page' element={<LandingPageMainBody/>}/>
-              <Route path='/doctor-dashboard' element={<DoctorDashboard/>}/>
-              <Route path='/patient-registration' element={<PatientSignUp/>}/>
-              <Route path='/register-practitioner' element={<PractitionerRegistration/>}/>
+              <Route path='/' element={<LandingPageMainBody/>}/>
               <Route path='*' element={<p>Page Not Found</p>}/>
-              <Route path='/pharmacist-dashboard' element={<PharmacistDashboard/>}/>
-              <Route path={"/patient-record"} element={<PatientRecord/>}/>
-              <Route path={"/hospital-admin-signup"} element={<HospitalAdminSignUp/>}/>
-              <Route path={"/practitioner-login"} element={<LoginPage/>}/>
+                                       
+                
+              <Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>
+              <Route path={"hospital-admin-signup"} element={<HospitalAdminSignUp/>}>
+                
+                
+              <Route path='/doctor-dashboard' element={<DoctorDashboard/>}/>
               <Route path={"/doctor-active-logs-one"} element={<ActiveLogsTableOne/>}/>
               <Route path={"/doctor-patient-appointment-one"} element={<PatientAppointmentOne/>}/>
               <Route path={"/doctor-patient-record-one"} element={<ViewPatientRecordOne/>}/>
               <Route path={"/doctor-dashboard"} element={<DoctorProfileOne/>}/>
+                
+
+              <Route path='/pharmacist-default-dashboard' element={<PharmacistDefaultDashboard/>}/>
+              <Route path={"/pharmacist-profile"} element={<PharmacistProfile/>}></Route>
+              <Route path={"/pharmacist-appointment"} element={<PharmacistAppointment/>}></Route>
+              <Route path={"/pharmacist-view-records"} element={<PharmacistViewRecord/>}></Route>
+              <Route path={"/pharmacist-medication"} element={<PharmacistMedication/>}></Route>
+              <Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>
+              <Route path='/pharmacist-dashboard' element={<PharmacistDashboard/>}/>
+                
+                
+              <Route path='/register-practitioner' element={<PractitionerRegistration/>}/>
+              <Route path={"/practitioner-login"} element={<LoginPage/>}/>
+
+                
               <Route path='/patient-view' element={<PatientView/>}/>
               <Route path='/patient-profile' element={<PatientProfile/>}/>
               <Route path='/patient-record' element={<PatientRecord/>}/>
               <Route path='/patient-appointment' element={<PatientAppointment/>}/>
               <Route path='/patient-signUp' element={<PatientSignUp/>}/>
               <Route path='/patient-medicalLog' element={<MedicalLogModal/>}/>
-         </Routes>
-      </Router>
+              <Route path='/patient-registration' element={<PatientSignUp/>}/>
+             
+            </Routes>
+        <Router/>
+
   );
 }
 export default App;

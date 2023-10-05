@@ -5,6 +5,7 @@ import axios from "axios";
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import eReachLogo from "../../assets/images/EReachLogoNoB.svg"
+import UploadWidget from '../../../cloudinary/uploadWidget';
 
 function HospitalAdminSignUp() {
 
@@ -207,6 +208,7 @@ function HospitalAdminSignUp() {
                         <button type="button" onClick={handlePreviousButtonClick}>previous</button>
                         <button type="submit" onClick={handleSignUpFormSubmission}>submit</button>
                       </div>}
+                      <UploadWidget/>
                   </div>
               </form>
           </div>) : (
