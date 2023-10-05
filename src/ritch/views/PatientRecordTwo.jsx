@@ -8,9 +8,15 @@ import '../styles/PatientRecordTwo.css'
 const PatientRecordTwo = () =>{
 
     return(
-        <div >
-    <h1 className="patient-record-two-title">Patient Record</h1>
-    <h3 className="patient-med-logs-two">Medical logs</h3>
+        <div className="patient-record-two-table-outter-con">
+
+          <div className="patient-record-two-med-logs">
+          <h2 className="patient-med-logs-two">Records</h2>
+          <button>Browse All</button>
+          </div>
+          
+          <div className="patient-record-two-inner-con">
+         
         <table className="patient-record-two-table">
 
           <thead className="patient-record-two-table-header">
@@ -30,8 +36,42 @@ const PatientRecordTwo = () =>{
                   <img src={action}/></a>
               </td>
                </tr>
+               <tr>
+                <td>scvh653rghnggg</td>
+                <td>asd345tyhjoooooo</td>
+                <td>sdfhhjjjjjjjjjjj</td>
+                <td><a href="link to backend here">
+                  <img src={action}/></a>
+              </td>
+               </tr>
+               <tr>
+                <td>scvh653rghnggg</td>
+                <td>asd345tyhjoooooo</td>
+                <td>sdfhhjjjjjjjjjjj</td>
+                <td><a href="link to backend here">
+                  <img src={action}/></a>
+              </td>
+               </tr>
+               <tr>
+                <td>scvh653rghnggg</td>
+                <td>asd345tyhjoooooo</td>
+                <td>sdfhhjjjjjjjjjjj</td>
+                <td><a href="link to backend here">
+                  <img src={action}/></a>
+              </td>
+               </tr>
+                <tr>
+                <td>scvh653rghnggg</td>
+                <td>asd345tyhjoooooo</td>
+                <td>sdfhhjjjjjjjjjjj</td>
+                <td><a href="link to backend here">
+                  <img src={action}/></a>
+              </td>
+               </tr>
           </tbody>
         </table>
+          </div>
+        
     </div>
     )
     

@@ -16,13 +16,13 @@
     margin-left: 30px;
 }
 .admin-dashboard:hover:after,.admin-Profile:hover:after, .admin-Messaging:hover:after,
-.admin-Settings:hover:after, .admin-Logout:hover:after {
+.admin-Settings:hover:after, .admin-Logout:hover:after, .admin-Users:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
 .admin-dashboard:after,.admin-Profile:after, .admin-Messaging:after,
-.admin-Settings:after, .admin-Logout:after{
+.admin-Settings:after, .admin-Logout:after, .admin-Users:after{
     content: '';
     position: absolute;
     border-spacing: 30px;
@@ -36,7 +36,7 @@
     transition: transform 0.25s ease-out;
 }
 .admin-dashboard, .admin-Profile,
-.admin-Messaging,
+.admin-Messaging, .admin-Users,
 .admin-Settings, .admin-Logout{
     cursor: pointer;
     margin-top: 3px;
@@ -54,7 +54,7 @@
 }
 
 .admin-dashboard img, .admin-Profile img,
-.admin-Messaging img,
+.admin-Messaging img, .admin-Users img,
 .admin-Settings img, .admin-Logout img{
     width: 25px;
     margin-right: 8px;
@@ -96,5 +96,13 @@
     color: #368db2;
     font-weight: bolder;
     margin-right: 68px;
+    text-decoration: none;
+}
+
+#link-to-users{
+    margin-top: 23px;
+    color: #368db2;
+    font-weight: bolder;
+    margin-right: 104px;
     text-decoration: none;
 }

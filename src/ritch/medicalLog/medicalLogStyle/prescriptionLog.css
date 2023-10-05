@@ -1,0 +1,48 @@
+.prescription-log-modal-two{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid gray;
+    width: 390px;
+    height: 50px;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.prescription-inputs{
+    margin-top: 10px;
+    width: 250px;
+    height: 50px;
+}
+.input-dosage #dosage{
+    margin-top: 20px;
+    width: 250px;
+    height: 80px;
+}
+.input-frequency #dosageFrequency{
+    margin-top: 20px;
+    width: 250px;
+    height: 80px;
+}
+#start{
+     margin-top: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+#startdate{
+    width: 250px;
+    height: 50px;
+}
+#prescriptiondate{
+    width: 250px;
+    height: 50px;
+}
+#addButton{
+    width: 250px;
+    margin-top: 20px;
+    height: 50px;    
+}
+.close-button{
+    width: 250px;
+    margin-top: 20px;
+    height: 50px;
+}

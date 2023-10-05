@@ -32,12 +32,16 @@ const PatientProfileTwo= () =>{
       return (
         <div className="patient-profile-two-main-con">
           <div className="patient-profile-two-inner-con">
-            <div className="patient-two-title">
-              <h2>Patient Information</h2>
-            </div>
+           
+           
     
             <div className="patient-two-biodata">
-              <div className="patient-two-profile-image">
+            <div className="patient-two-title">
+              <h2>Bio Data</h2>
+            </div>
+            <div className="patient-two-profile-mid-con">
+              
+            <div className="patient-two-profile-image">
                 {patientData.gender == "male" ? (
                   <img src={openUploadWidget} alt="Patient" />
                 ) : (
@@ -95,6 +99,8 @@ const PatientProfileTwo= () =>{
                   <span>{patientData.country}</span>
                 </div>
               </div>
+
+            </div>
             </div>
           </div>
         </div>
