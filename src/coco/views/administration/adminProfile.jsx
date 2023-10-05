@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
 import DoctorProfilePic from "../../../coco/assets/icons/doc-profile-man.svg"
-import {DoctorSideBar} from "./doctorSideBar";
-import {SearchBar} from "./doctorSearchBar";
+import {DoctorSideBar} from "../doctor/doctorSideBar";
+import {SearchBar} from "../doctor/doctorSearchBar";
 import "../../../coco/styles/doctor/doctorProfileOne.css"
-import DoctorProfileUpload from "../../../coco/assets/icons/doc-upload-image.svg"
 
 export const DoctorProfileOne =()=>{
     const [doctorData, setDoctorData] = useState({
