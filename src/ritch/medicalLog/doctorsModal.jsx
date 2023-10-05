@@ -115,8 +115,9 @@ import '../medicalLog/medicalLogStyle/doctorsModal.css'
                 id='prescriptiondate'
                 onChange={handlePrescriptionDateChange}
                />
-                  <div className="addButton">
-                      <button id='addButton' onClick={handleAddPrescription}>Add</button>
+                  <div className="add-presc-button">
+                  <button onClick={handleAddPrescription}>Add</button>
+
                   </div>          
            <ul>
                {prescriptions.map((prescription, index) => (
