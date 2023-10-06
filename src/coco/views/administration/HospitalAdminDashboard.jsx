@@ -62,8 +62,6 @@ const HospitalAdminDashboard = () => {
                         <div className="patient-log-frame">
                             <img src={AdminPatientLogs} alt="record"/>
                             <button id="click-log-button" onClick={openPopUp}>Create Patient Log</button>
-                            <button id="click-log-button" onClick={handleClickForCreateNewLog}>Create Patient Log</button>
-
                         </div>
 
                     </div>

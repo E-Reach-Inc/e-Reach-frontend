@@ -40,7 +40,7 @@ export const LandingPageMainBody = () => {
                                 <span className="text sec-text">{text}</span>
                             </div>
                             <div>
-                                <a href="https://github.com" ><button id="Register-button2">Get Started</button></a>
+                                <a href="/hospital-admin-signup" ><button id="Register-button2">Get Started</button></a>
                             </div>
                         </div>
                         <div className="Image-div">
