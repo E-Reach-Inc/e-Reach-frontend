@@ -12,16 +12,26 @@ export const PractitionerRegistration = () => {
         email: '',
     });
 
+    const[registrationCompleted, setRegistrationCompleted] = useState(false)
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        console.log("hello tue tue")
+        const practitionerDetails= {
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            role: 'doctor',
+            phoneNumber: formData.phoneNumber,
+            email: formData.email
+        }
             try {
-               await axios.post('http://localhost:8080/api/v1/hospital-admin/invite-practitioner/', formData)
+               await axios.post('http://localhost:8080/api/v1/hospital-admin/invite-practitioner/', practitionerDetails)
                    .then(successResponse => {
                        toast.success(
                            successResponse+' Registration successful. Ready for submission.',
                            {position: toast.POSITION.TOP_CENTER, autoClose: 5000});
-
+                        setRegistrationCompleted(true)
                     })
                    .catch(failureResponse => {
                        toast.error(
@@ -36,9 +46,20 @@ export const PractitionerRegistration = () => {
             }
     };
 
+    function handleChangeForInputs(event){
+        event.preventDefault();
+        const { name, value } = event.target;
+        setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+        }));
+
+    }
+
     return(
         <div className="Doc-Main-Reg-Frame">
-            <div className="Doc-Sub-Main-Reg-Frame">
+            {registrationCompleted === false ? (
+                <div className="Doc-Sub-Main-Reg-Frame">
                 <div className="Doc-Logo-frame">
                     <img src={eReachLogo} alt={"e-Reach logo"}/>
                 </div>
@@ -52,19 +73,19 @@ export const PractitionerRegistration = () => {
                             <div>
                                 <p className="Doc-name-tag">First name:</p>
                                 <label htmlFor="first_name"></label>
-                                <input className="Doc-input-name-style" type="text" id="first_name" placeholder="example: John" required/>
+                                <input name='firstName' className="Doc-input-name-style" onChange={handleChangeForInputs} type="text" id="first_name" placeholder="example: John" required/>
                             </div>
 
                             <div>
                                 <p className="Doc-name-tag">Last name:</p>
                                 <label htmlFor="last_name"></label>
-                                <input className="Doc-input-name-style" type="text" id="last_name" placeholder="example: MICHAELS" required/>
+                                <input name='lastName' className="Doc-input-name-style" onChange={handleChangeForInputs} type="text" id="last_name" placeholder="example: MICHAELS" required/>
                             </div>
                         </div>
                         <div id="Doc-user_info">
                             <p className="Doc-name-join-tag">You Are Joining As?</p>
                             <label htmlFor="role" id="role">
-                                <select className="Doc-input-role-style">
+                                <select name='role' className="Doc-input-role-style" onSelect={handleChangeForInputs}>
                                     <option disabled>Role</option>
                                     <option>Doctor</option>
                                     <option>Pharmacist</option>
@@ -75,18 +96,24 @@ export const PractitionerRegistration = () => {
 
                             <p className="Doc-name-tag-input-phoneNumber">Phone Number:</p>
                             <label htmlFor="phone_number"></label>
-                            <input className="Doc-input-style" type="text" id="phone_number" placeholder="example: 07000000000" required/>
+                            <input name='phoneNumber' className="Doc-input-style" onChange={handleChangeForInputs} type="text" id="phone_number" placeholder="example: 07000000000" required/>
 
                             <p className="Doc-name-tag-input-email">Email address:</p>
                             <label htmlFor="email_address"></label>
-                            <input className="Doc-input-style" type="email" id="email_address" placeholder="example: sample@gmail.com" required/>
+                            <input name='email' className="Doc-input-style" onChange={handleChangeForInputs} type="email" id="email_address" placeholder="example: sample@gmail.com" required/>
+                        </div>
+                        <div className="Button-frame">
+                            <button id="Doc-submit-button" onSubmit={handleSubmit} type="submit">SUBMIT</button>
                         </div>
                     </form>
                 </div>
-                <div className="Button-frame">
-                    <button id="Doc-submit-button" onSubmit={handleSubmit} type="submit">SUBMIT</button>
-                </div>
             </div>
+            ): (<div className='Main-Registration-Complete-Form'>
+                    <h3 className='Inner-Registration_h3'>Registration Successful</h3>
+                    <p className='Inner-Registration_Ptag'>{formData.role} {formData.firstName+ " " +formData.lastName} is successfully registered as a practitioner
+                    they will receive a mail to login to their account
+                    </p>
+            </div>)}
         </div>
     )
 }
