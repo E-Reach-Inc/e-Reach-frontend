@@ -94,7 +94,7 @@ export const ViewPatientRecordOne= () => {
                         src={ViewLog}
                         alt="view"
                       ></img>
-                      {/* You can add an edit action here if needed */}
+                      
                       {/* <img
                         onClick={() => editRecord(record.patientId)}
                         id="records-action-buttons"
