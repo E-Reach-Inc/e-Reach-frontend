@@ -5,10 +5,10 @@ import "../../../coco/styles/doctor/doctorViewActiveLogsOne.css"
 import ViewLog from "../../../coco/assets/icons/doc-view-log.svg"
 import EditLog from "../../../coco/assets/icons/doc-edit-log.svg"
 import ActiveLogPopUp from "./activeLogPopUp";
-import MedicalLogModal from "../../../coco/views/patient/MedicalLogPopUp"
 import { ToastContainer, toast } from "react-toastify";
 import { getDatabase, get, ref, query, orderByChild, equalTo } from 'firebase/database'; // Import Firebase database functions
 import { db } from "../../../firebaseConfig/firebase";
+
 
 export const ActiveLogsTableOne = () => {
     const [activeLogsButtonPopUp, setActiveLogsButtonPopUp] = useState(false);
