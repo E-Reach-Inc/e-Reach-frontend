@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {AdminSearchBar} from "./AdminSearchBar"
 import {AdminSideBar} from "./AdminSideBar"
 import {useNavigate} from "react-router-dom";
@@ -7,9 +7,11 @@ import AdminPatientIcon from "../../assets/images/patient.svg"
 import AdminDoctorIcon from "../../assets/images/doctor.svg"
 import AdminPatientRecord from "../../../coco/assets/images/records.svg"
 import AdminPatientLogs from "../../../coco/assets/icons/admin-logs.svg"
+import {MedicalLogModal} from "../patient/MedicalLogPopUp";
 
 
 const HospitalAdminDashboard = () => {
+    const [buttonPopUp, setButtonPopUp] = useState(false)
     const navigate = useNavigate()
     function handleClickForPatient(){
         navigate("/patient-registration")
@@ -20,9 +22,19 @@ const HospitalAdminDashboard = () => {
     function handleClickForRecords(){
         navigate("/patient-record")
     }
+
     function handleClickForCreateNewLog(){
         navigate("/admin-create-medical-log")
+
     }
+
+    const openPopUp =() =>{
+        setButtonPopUp(true);
+    }
+    const closePopUp = () => {
+        setButtonPopUp(false)
+    }
+
     return (
         <div className="admin-main-frame">
             <div>
@@ -49,12 +61,15 @@ const HospitalAdminDashboard = () => {
                         </div>
                         <div className="patient-log-frame">
                             <img src={AdminPatientLogs} alt="record"/>
+                            <button id="click-log-button" onClick={openPopUp}>Create Patient Log</button>
                             <button id="click-log-button" onClick={handleClickForCreateNewLog}>Create Patient Log</button>
+
                         </div>
 
                     </div>
                 </div>
             </div>
+            {buttonPopUp && <MedicalLogModal onClose={closePopUp} />}
         </div>
     )
 }

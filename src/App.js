@@ -9,7 +9,7 @@ import PatientRecord from './ritch/views/PatientRecord';
 import HospitalAdminSignUp from "./bola/views/auth/hospitalAdminSignUp";
 import {DoctorDashboard} from "./coco/views/doctor/doctorDashBoard";
 import {PractitionerRegistration} from "./coco/views/auth/PractitionerRegistration";
-import HospitalAdminDashboard from "./coco/views/administration/HospitalAdminDashboard";
+//import {HospitalAdminDashboard} from "./coco/views/administration/HospitalAdminDashboard";
 import ActivateHospitalAdminAccount from "./bola/views/auth/activateHospitalAdminAccount";
 import ActivateHospitalAccount from "./bola/views/auth/activateHospitalAccount";
 import PatientSignUp from "./ritch/views/PatientSignUp";
@@ -26,8 +26,8 @@ import { LandingPageMainBody } from "./favour/views/landingPage/landingPageMainB
 import {ActiveLogsTableOne} from "./coco/views/doctor/doctorViewActiveLogsOne"
 
 
-
 function App() {
+
   return (
       
         <Router>
@@ -35,7 +35,7 @@ function App() {
               <Route path="landing-page" element={<LandingPageMainBody/>}/>
 
               <Route path='*' element={<p>Page Not Found</p>}/>
-              <Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>
+                {/*<Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>*/}
               <Route path='/activate-hospital-account/:token' element={<ActivateHospitalAccount/>}/>
               <Route path='/activate-hospital-admin-account/:token' element={<ActivateHospitalAdminAccount/>}/>
               <Route path={"hospital-admin-signup"} element={<HospitalAdminSignUp/>}/>
@@ -53,7 +53,6 @@ function App() {
               <Route path={"/pharmacist-appointment"} element={<PharmacistAppointment/>}></Route>
               <Route path={"/pharmacist-view-records"} element={<PharmacistViewRecord/>}></Route>
               <Route path={"/pharmacist-medication"} element={<PharmacistMedication/>}></Route>
-              <Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>
               <Route path='/pharmacist-dashboard' element={<PharmacistDashboard/>}/>
   
                 
@@ -72,7 +71,7 @@ function App() {
               <Route path='/patient-registration' element={<PatientSignUp/>}/>  
             </Routes>
         </Router>
-        // </div>
+      
   );
 }
 export default App;
