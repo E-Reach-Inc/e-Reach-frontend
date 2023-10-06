@@ -54,7 +54,7 @@ function App() {
               <Route path='/pharmacist-dashboard' element={<PharmacistDashboard/>}/>
   
                 
-              <Route path='/register-practitioner' element={<PractitionerRegistration/>}/>
+              <Route path='/register-practitioner/:role' element={<PractitionerRegistration/>}/>
               <Route path={"/practitioner-login"} element={<LoginPage/>}/>
 
                 
