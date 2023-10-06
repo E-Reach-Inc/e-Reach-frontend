@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
 import eReachLogo from "../../assets/images/EReachLogoNoB.svg";
 import "../../../coco/styles/auth/PractionerLogin.css"
+import { useParams } from 'react-router';
+
 
 function LoginPage() {
+
+    const parameter = useParams()
+    const param = parameter.role
+
     const [formData, setFormData] = useState({
         username: '',
         identityNumber: '',
@@ -18,7 +24,6 @@ function LoginPage() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Here you can implement authentication logic or handle the form data as needed.
         console.log('Form Data:', formData);
     };
 

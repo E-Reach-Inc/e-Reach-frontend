@@ -3,7 +3,9 @@ import axios from 'axios';
 import eReachLogo from "../../../coco/assets/images/EReachLogoNoB.svg"
 import "../../styles/auth/PractitionerRegistration.css"
 import {toast} from "react-toastify";
+
 export const PractitionerRegistration = () => {
+
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
