@@ -14,6 +14,8 @@ const PatientRecord = () =>{
     useEffect(()=>{
     const patientIdentificationNumber = localStorage.getItem("patientIdentificationNumber")
     const hospitalEmail = localStorage.getItem("hospitalEmail")
+    console.log("hi pin")
+    console.log("hi email")
 
     if(patientIdentificationNumber){
 
@@ -23,7 +25,8 @@ const PatientRecord = () =>{
                   toast.info("No records found", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
                 else {
                     patientsRecords.push(response.data)
-                    sessionStorage.setItem("records", response.data)
+                    localStorage.setItem("records", JSON.stringify(response.data));
+
                 }
             })
             .catch(failureResponse => {
@@ -39,6 +42,8 @@ const PatientRecord = () =>{
                 toast.info("No records found", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
               else {
                   patientsRecords.push(response.data)
+                  localStorage.setItem("records", JSON.stringify(response.data));
+
               }
             })
             .catch(failureResponse => {
@@ -76,18 +81,17 @@ const PatientRecord = () =>{
             </tr>
           </thead>
           <tbody className="patient-record-table-data">
-            {patientsRecords.map((record, index) => {
-               <tbody className="patient-record-table-data">
-                 <tr>
-                 <td>{record.date}</td>
-                 <td>{record.lastTimeUpdated}</td>
-                 <td>{"Hospital Name"}</td>
-                 <td><a href="link to backend here">
-                   <img src={action}/></a>
-               </td>
+          {patientsRecords.map((record, index) => (
+              <tbody className="patient-record-table-data" key={index}>
+                <tr>
+                  <td>{record.date}</td>
+                  <td>{record.lastTimeUpdated}</td>
+                  <td>{record.patientIdentificationNumber}</td>
+                  <td><a href="open popup"><img src={action} /></a></td>
                 </tr>
               </tbody>
-            })}
+          ))}
+
               
           </tbody>
         </table>
