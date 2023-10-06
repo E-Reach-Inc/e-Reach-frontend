@@ -35,7 +35,7 @@ function App() {
 
 
                         <Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>
-                        <Route path={"hospital-admin-signup"} element={<HospitalAdminSignUp/>}/>
+                        <Route path={"/HospitalAdminSignUp"} element={<HospitalAdminSignUp/>}/>
 
 
                         <Route path='/doctor-dashboard' element={<DoctorDashboard/>}/>
