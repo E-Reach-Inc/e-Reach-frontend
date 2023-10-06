@@ -1,5 +1,5 @@
 import {useEffect, useRef} from "react";
-import { toast } from "react-toastify";
+
 
 function UploadWidget() {
     const cloudinaryRef = useRef()
@@ -14,7 +14,7 @@ function UploadWidget() {
             if (!error && result && result.event === 'success') {
                 return result.info.secure_url;
             }
-            else toast.error(error, {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
+            else alert(error)
         })
     }, [])
 

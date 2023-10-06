@@ -23,15 +23,18 @@ const HospitalAdminDashboard = () => {
         navigate("/patient-record")
     }
 
-    function handleClickForCreateRecord(){
+    function handleClickForCreateNewLog(){
         navigate("/admin-create-medical-log")
+
     }
+
     const openPopUp =() =>{
         setButtonPopUp(true);
     }
-    const closePopUp = () =>{
+    const closePopUp = () => {
         setButtonPopUp(false)
     }
+
     return (
         <div className="admin-main-frame">
             <div>
@@ -59,6 +62,8 @@ const HospitalAdminDashboard = () => {
                         <div className="patient-log-frame">
                             <img src={AdminPatientLogs} alt="record"/>
                             <button id="click-log-button" onClick={openPopUp}>Create Patient Log</button>
+                            <button id="click-log-button" onClick={handleClickForCreateNewLog}>Create Patient Log</button>
+
                         </div>
 
                     </div>
