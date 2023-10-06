@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PatientNavBar from "./PatientNavBar";
 import action from '../patient-icons/patient-eye-view.svg'
 import '../styles/PatientRecordTwo.css'
+import axios from "axios";
+import { toast } from "react-toastify";
 
 
 
 const PatientRecordTwo = () =>{
+
+    const [medicalLogs, setMedicalLogs] = useState([])
+    const patientId = localStorage.getItem("patientIdentificationNumber")
+
+    useEffect(()=>{
+        axios.get("http://localhost:8080/api/v1/patient/view-records/"+patientId)
+              .then((response) => {
+                setMedicalLogs(response.data.medicalLogResponses);
+                if(response.status === 200)
+                    toast.success("logs found", {})
+                else toast.info("no logs found")
+            })
+            .catch((error) => {
+                toast.error(error)
+                console.error("Error fetching medical logs:", error);
+            });
+    }, [patientId]);
+              
 
     return(
         <div className="patient-record-two-table-outter-con">
@@ -27,48 +47,19 @@ const PatientRecordTwo = () =>{
               <th>Action</th>
             </tr>
           </thead>
-          <tbody className="patient-record-two-table-data">
-               <tr>
-                <td>scvh653rghnggg</td>
-                <td>asd345tyhjoooooo</td>
-                <td>sdfhhjjjjjjjjjjj</td>
-                <td><a href="link to backend here">
-                  <img src={action}/></a>
-              </td>
-               </tr>
-               <tr>
-                <td>scvh653rghnggg</td>
-                <td>asd345tyhjoooooo</td>
-                <td>sdfhhjjjjjjjjjjj</td>
-                <td><a href="link to backend here">
-                  <img src={action}/></a>
-              </td>
-               </tr>
-               <tr>
-                <td>scvh653rghnggg</td>
-                <td>asd345tyhjoooooo</td>
-                <td>sdfhhjjjjjjjjjjj</td>
-                <td><a href="link to backend here">
-                  <img src={action}/></a>
-              </td>
-               </tr>
-               <tr>
-                <td>scvh653rghnggg</td>
-                <td>asd345tyhjoooooo</td>
-                <td>sdfhhjjjjjjjjjjj</td>
-                <td><a href="link to backend here">
-                  <img src={action}/></a>
-              </td>
-               </tr>
-                <tr>
-                <td>scvh653rghnggg</td>
-                <td>asd345tyhjoooooo</td>
-                <td>sdfhhjjjjjjjjjjj</td>
-                <td><a href="link to backend here">
-                  <img src={action}/></a>
-              </td>
-               </tr>
-          </tbody>
+          {medicalLogs.map((medicalLog, index)=>(
+              <tbody className="patient-record-two-table-data">
+                <tr key={index}>
+                    <td>{medicalLog.dateCreated}</td>
+                    <td>{medicalLog.lastTimeUpdated}</td>
+                    <td>{medicalLog.hospitalName}</td>
+                    <td><a href="link to backend here">
+                      <img src={action}/></a>
+                     </td>
+                </tr>
+              </tbody>
+          ))}
+          
         </table>
           </div>
         
