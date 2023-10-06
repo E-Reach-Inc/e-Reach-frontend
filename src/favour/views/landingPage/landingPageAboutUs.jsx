@@ -43,5 +43,5 @@ export const LandingPageAboutUs = () => {
                 </div>
             </div>
         </div>
-  )
+    )
 }

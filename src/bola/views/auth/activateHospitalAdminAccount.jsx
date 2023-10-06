@@ -1,10 +1,12 @@
 import axios from 'axios'
 import React from 'react'
-import {useParams } from 'react-router'
+import {useNavigate, useParams } from 'react-router'
 import { toast } from 'react-toastify'
 import "../../styles/auth/activateHospitalAdminAccount.css"
 
 const ActivateHospitalAdminAccount = () => {
+
+        const navigate = useNavigate()
         
         const parameter = useParams();
         const wholeToken = parameter.token;
@@ -28,8 +30,11 @@ const ActivateHospitalAdminAccount = () => {
                                 <div className="Inner-Activation-Successful-Frame">
                                         <h3>Account Activation Successful, Welcome On Board </h3>
                                         <p id="Activation-Successful-Frame-Ptag">
-                                                You will receive an email shortly to take you to your dashboard
+                                               click on the button below to take you to your dashboard
                                         </p>
+                                        <button onClick={() => {
+                                                navigate("/admin-dashboard")
+                                        }}>Go To Dashboard</button>
                                 </div>
                         </div>
                 </div>

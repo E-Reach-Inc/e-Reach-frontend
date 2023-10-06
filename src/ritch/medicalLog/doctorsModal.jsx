@@ -14,7 +14,7 @@ import '../medicalLog/medicalLogStyle/doctorsModal.css'
   const [medicationName, setMedicationName] = useState('');
   
   useEffect(() => {
-    // Fetch prescription data from the backend 
+   
     fetch('/api/prescriptions')
       .then((response) => response.json())
       .then((data) => setPrescriptions(data));

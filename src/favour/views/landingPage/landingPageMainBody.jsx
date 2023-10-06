@@ -52,5 +52,5 @@ export const LandingPageMainBody = () => {
                 <LandingPageFooter/>
             </div>
         </div>
-   )
+    )
 }

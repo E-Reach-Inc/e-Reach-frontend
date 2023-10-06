@@ -9,7 +9,7 @@ import PatientRecord from './ritch/views/PatientRecord';
 import HospitalAdminSignUp from "./bola/views/auth/hospitalAdminSignUp";
 import {DoctorDashboard} from "./coco/views/doctor/doctorDashBoard";
 import {PractitionerRegistration} from "./coco/views/auth/PractitionerRegistration";
-import HospitalAdminDashboard from "./coco/views/administration/HospitalAdminDashboard";
+//import {HospitalAdminDashboard} from "./coco/views/administration/HospitalAdminDashboard";
 import ActivateHospitalAdminAccount from "./bola/views/auth/activateHospitalAdminAccount";
 import ActivateHospitalAccount from "./bola/views/auth/activateHospitalAccount";
 import PatientSignUp from "./ritch/views/PatientSignUp";
@@ -22,24 +22,27 @@ import PatientProfile from "./ritch/views/PatientProfile"
 import PatientAppointment from "./ritch/views/PatientAppointment"
 import {MedicalLogModal} from "./coco/views/patient/MedicalLogPopUp";
 import MedicalLog from "./ritch/medicalLog/MedicalLog";
+import {ActiveLogsTableOne} from "./coco/views/doctor/doctorViewActiveLogsOne";
 import { LandingPageMainBody } from "./favour/views/landingPage/landingPageMainBody";
 
 
 
 function App() {
+
   return (
       
         <Router>
             <Routes>
               <Route path='/' element={<LandingPageMainBody/>}/>
               <Route path='*' element={<p>Page Not Found</p>}/>
-              <Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>
+                {/*<Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>*/}
               <Route path='/activate-hospital-account/:token' element={<ActivateHospitalAccount/>}/>
               <Route path='/activate-hospital-admin-account/:token' element={<ActivateHospitalAdminAccount/>}/>
               <Route path={"hospital-admin-signup"} element={<HospitalAdminSignUp/>}/>
                 
                 
               <Route path='/doctor-dashboard' element={<DoctorDashboard/>}/>
+              <Route path={"/doctor-active-logs-one"} element={<ActiveLogsTableOne/>}/>
               <Route path={"/doctor-patient-appointment-one"} element={<PatientAppointmentOne/>}/>
               <Route path={"/doctor-patient-record-one"} element={<ViewPatientRecordOne/>}/>
               <Route path={"/doctor-dashboard"} element={<DoctorProfileOne/>}/>
@@ -47,14 +50,13 @@ function App() {
 
               <Route path='/pharmacist-default-dashboard' element={<PharmacistDefaultDashboard/>}/>
               <Route path={"/pharmacist-profile"} element={<PharmacistProfile/>}></Route>
-              <Route path={"/pharmacist-appointment"} element={<PharmacistAppointment/>}/>
-              <Route path={"/pharmacist-view-records"} element={<PharmacistViewRecord/>}/>
-              <Route path={"/pharmacist-medication"} element={<PharmacistMedication/>}/>
-              <Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>
+              <Route path={"/pharmacist-appointment"} element={<PharmacistAppointment/>}></Route>
+              <Route path={"/pharmacist-view-records"} element={<PharmacistViewRecord/>}></Route>
+              <Route path={"/pharmacist-medication"} element={<PharmacistMedication/>}></Route>
               <Route path='/pharmacist-dashboard' element={<PharmacistDashboard/>}/>
   
                 
-              <Route path='/register-practitioner/:role' element={<PractitionerRegistration/>}/>
+              <Route path='/register-practitioner' element={<PractitionerRegistration/>}/>
               <Route path={"/practitioner-login"} element={<LoginPage/>}/>
 
                 

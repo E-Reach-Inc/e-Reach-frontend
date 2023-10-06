@@ -42,5 +42,5 @@ export const LandingPageFooter = () => {
                 </div>
             </div>
         </div>
-  );
+    );
 };

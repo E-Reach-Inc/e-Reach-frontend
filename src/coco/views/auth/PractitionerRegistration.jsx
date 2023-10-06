@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import eReachLogo from "../../../coco/assets/images/EReachLogoNoB.svg"
 import "../../styles/auth/PractitionerRegistration.css"
-import {toast} from "react-toastify";
+import {ToastContainer, toast} from "react-toastify";
 
 export const PractitionerRegistration = () => {
 
@@ -12,12 +12,13 @@ export const PractitionerRegistration = () => {
         role: '',
         phoneNumber: '',
         email: '',
+        hospitalEmail: ''
     });
 
     const[registrationCompleted, setRegistrationCompleted] = useState(false)
 
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
         console.log("hello tue tue")
         const practitionerDetails= {
@@ -25,22 +26,29 @@ export const PractitionerRegistration = () => {
             lastName: formData.lastName,
             role: 'doctor',
             phoneNumber: formData.phoneNumber,
-            email: formData.email
+            email: formData.email,
+            hospitalEmail: localStorage.getItem("hospitalEmail")
         }
-            try {
-               await axios.post('http://localhost:8080/api/v1/hospital-admin/invite-practitioner/', practitionerDetails)
-                   .then(successResponse => {
-                       toast.success(
-                           successResponse+' Registration successful. Ready for submission.',
-                           {position: toast.POSITION.TOP_CENTER, autoClose: 5000});
-                        setRegistrationCompleted(true)
-                    })
-                   .catch(failureResponse => {
-                       toast.error(
-                           failureResponse+' Registration failed. Please try again.',
-                           {position: toast.POSITION.TOP_CENTER, autoClose: 5000});
-                    })
-                    .finally();
+        try {
+            console.log("hello boys tue tue")
+            axios.post('http://localhost:8080/api/v1/hospital-admin/invite-practitioner/', practitionerDetails)
+                .then(successResponse => {
+                    toast.success(
+                        successResponse+' Registration successful. Ready for submission.',
+                        {position: toast.POSITION.TOP_CENTER, autoClose: 5000}
+                    );
+                    setRegistrationCompleted(true)
+                })
+                .catch(failureResponse => {
+                    console.log("hello girls tue tue")
+                    toast.error(
+                        failureResponse+' Registration failed. Please try again.',
+                        {position: toast.POSITION.TOP_CENTER, autoClose: 5000}
+                    );
+                })
+                .finally(()=>{
+
+                });
             } catch (error) {
                 console.error('Error during registration:', error);
                 toast.error(error, toast.error('Registration failed. Please try again.',
@@ -60,6 +68,7 @@ export const PractitionerRegistration = () => {
 
     return(
         <div className="Doc-Main-Reg-Frame">
+            <ToastContainer/>
             {registrationCompleted === false ? (
                 <div className="Doc-Sub-Main-Reg-Frame">
                 <div className="Doc-Logo-frame">
