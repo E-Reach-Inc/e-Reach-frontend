@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "../styles/PatientSignUp.css"
 import axios from "axios";
 import eReachLogo from "../../ritch/patient-icons/e-Reach-Logo-NoB.svg"
+import { ToastContainer, toast } from "react-toastify";
 
 
 const PatientSignUp = () => {
@@ -47,11 +48,19 @@ const PatientSignUp = () => {
 
       console.log( patientDetails);
     
-      const response = await axios.post
-      ("http://localhost:8080/api/v1/patient/create-patient/", patientDetails);
-      console.log(response.data);
+      const response = await axios.post("http://localhost:8080/api/v1/patient/create-patient/", patientDetails);
+      if(response.status === 200){
+          toast.success("Patient Registration Successful")
+          console.log(response);
+          console.log(response.data);
+      }
+      else{
+        console.log(response);
+      }
+      
+      
     }catch(Error){
-        alert(Error)
+        toast.error(Error)
     }
   }
     const handleSubmit =async () =>{
@@ -181,6 +190,7 @@ const PatientSignUp = () => {
 
   return (
     <div className="patient-form">
+      <ToastContainer/>
         <div className="patient-form-sub-frame">
             <div className="eReach-logo"> 
                <img src={eReachLogo}/>
