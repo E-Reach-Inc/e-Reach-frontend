@@ -10,7 +10,27 @@ import { ToastContainer, toast } from "react-toastify";
 
 const PatientRecord = () =>{
 
-    const patientsRecords = [];
+    const patientsRecords = [
+        {
+            date: "25th/dec/2023",
+            lastTimeUpdated: '12:00:00',
+            patientIdentificationNumber: 'e123456789990',
+            // action: {action},
+        },
+        {
+          date: "25th/dec/2023",
+          lastTimeUpdated: '12:00:00',
+          patientIdentificationNumber: 'e123456789990',
+          // action: {action},
+      },
+      {
+        date: "25th/dec/2023",
+        lastTimeUpdated: '12:00:00',
+        patientIdentificationNumber: 'e123456789990',
+        // action: {action},
+    },
+        
+    ];
     useEffect(()=>{
     const patientIdentificationNumber = localStorage.getItem("patientIdentificationNumber")
     const hospitalEmail = localStorage.getItem("hospitalEmail")
@@ -80,21 +100,21 @@ const PatientRecord = () =>{
               <th>Action</th>
             </tr>
           </thead>
-          <tbody className="patient-record-table-data">
-          {patientsRecords.map((record, index) => (
-              <tbody className="patient-record-table-data" key={index}>
-                <tr>
-                  <td>{record.date}</td>
-                  <td>{record.lastTimeUpdated}</td>
-                  <td>{record.patientIdentificationNumber}</td>
-                  <td><a href="open popup"><img src={action} /></a></td>
-                </tr>
-              </tbody>
-          ))}
-
+          <tbody className="patient-record-table-data">               
+                {patientsRecords.map((patientsRecords, index) => (
+                                <tr key={index}>
+                                    <td >{patientsRecords.date}</td>
+                                    <td >{patientsRecords.lastTimeUpdated}</td>
+                                    <td >{patientsRecords.patientIdentificationNumber}</td>
+                                    <td><a href="open popup"><img src={action} /></a></td>
+                                </tr>
+                  ))}
+                  
               
-          </tbody>
-        </table>
+              </tbody>
+    
+
+          </table>
         </div>
            
     
