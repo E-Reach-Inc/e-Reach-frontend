@@ -22,8 +22,8 @@ import PatientProfile from "./ritch/views/PatientProfile"
 import PatientAppointment from "./ritch/views/PatientAppointment"
 import {MedicalLogModal} from "./coco/views/patient/MedicalLogPopUp";
 import MedicalLog from "./ritch/medicalLog/MedicalLog";
-import {ActiveLogsTableOne} from "./coco/views/doctor/doctorViewActiveLogsOne";
-
+import { LandingPageMainBody } from "./favour/views/landingPage/landingPageMainBody";
+import {ActiveLogsTableOne} from "./coco/views/doctor/doctorViewActiveLogsOne"
 
 
 function App() {
@@ -32,6 +32,8 @@ function App() {
       
         <Router>
             <Routes>
+              <Route path="landing-page" element={<LandingPageMainBody/>}/>
+
               <Route path='*' element={<p>Page Not Found</p>}/>
                 {/*<Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>*/}
               <Route path='/activate-hospital-account/:token' element={<ActivateHospitalAccount/>}/>
@@ -64,11 +66,12 @@ function App() {
               <Route path='/patient-appointment' element={<PatientAppointment/>}/>
               <Route path='/patient-signUp' element={<PatientSignUp/>}/>
               <Route path={'/admin-create-medical-log'} element={<MedicalLogModal/>}/>
+
               <Route path='/medical-log' element={<MedicalLog/>}/>
               <Route path='/patient-registration' element={<PatientSignUp/>}/>  
             </Routes>
         </Router>
-        // </div>
+      
   );
 }
 export default App;
