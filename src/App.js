@@ -15,7 +15,6 @@ import ActivateHospitalAdminAccount from "./bola/views/auth/activateHospitalAdmi
 import ActivateHospitalAccount from "./bola/views/auth/activateHospitalAccount";
 import PatientSignUp from "./ritch/views/PatientSignUp";
 import LoginPage from "./coco/views/auth/PractitionerLogIn";
-import {ActiveLogsTableOne} from "./coco/views/doctor/doctorViewActiveLogsOne";
 import {PatientAppointmentOne} from "./coco/views/doctor/viewPatientAppointmentOne";
 import {ViewPatientRecordOne} from "./coco/views/doctor/viewPatientRecordOne";
 import {DoctorProfileOne} from "./coco/views/doctor/doctorProfileOne";
