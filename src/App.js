@@ -33,7 +33,7 @@ function App() {
       
         <Router>
             <Routes>
-              <Route path="landing-page" element={<LandingPageMainBody/>}/>
+              <Route path="/landing-page" element={<LandingPageMainBody/>}/>
 
               <Route path='*' element={<p>Page Not Found</p>}/>
               <Route path='/' element={<LandingPageMainBody/>}/>

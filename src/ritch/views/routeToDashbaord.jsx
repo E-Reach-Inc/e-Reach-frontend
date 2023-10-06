@@ -6,12 +6,19 @@ const RouteToDashbaord = () => {
         const navigate = useNavigate()
         useEffect(()=>{
                 const PIN = params.PIN;
+                console.log(PIN)
                 localStorage.setItem("patientIdentificationNumber", PIN)
                 navigate("/patient-dashboard")
         }, [])
 
+        function handleClick(){
+                navigate("/patient-dashboard")
+        }
+
         return (
-        <div>routeToDashbaord</div>
+                <div>
+                        <button onClick={handleClick}>Go to your dashboard</button>
+                </div>
         )
 }
 

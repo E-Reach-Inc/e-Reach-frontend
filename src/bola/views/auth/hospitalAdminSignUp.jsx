@@ -48,6 +48,7 @@ function HospitalAdminSignUp() {
             country: data.country,
             postCode: data.postCode
         }
+        
         try {
             axios.post("http://localhost:8080/api/v1/hospital-admin/register-hospital/", hospitalSignUpDetails)
                  .then(successResponse => {

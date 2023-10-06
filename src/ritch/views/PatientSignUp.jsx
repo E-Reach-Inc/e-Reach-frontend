@@ -22,6 +22,8 @@ const PatientSignUp = () => {
 
   const [currentStep, setCurrentStep] = useState(1);
   const [data, setData] = useState(initialValue);
+  const [registrationCompleted, setRegistrationCompleted] = useState(false);
+
 
   const onChangeHandler = (e) => {
     setData((prev) => ({
@@ -50,6 +52,7 @@ const PatientSignUp = () => {
     
       const response = await axios.post("http://localhost:8080/api/v1/patient/create-patient/", patientDetails);
       if(response.status === 200){
+          setRegistrationCompleted(true)
           toast.success("Patient Registration Successful")
           console.log(response);
           console.log(response.data);
@@ -191,25 +194,36 @@ const PatientSignUp = () => {
   return (
     <div className="patient-form">
       <ToastContainer/>
-        <div className="patient-form-sub-frame">
-            <div className="eReach-logo"> 
-               <img src={eReachLogo}/>
-            </div>
 
-            <div className="patient-header-frame-one">
-                <h1 className="patient-text-center">PATIENT SIGN-UP</h1><br/>
-                <h2> Please fill the form below carefully and with <br/>precision.</h2>
-            </div>
+      {registrationCompleted === false ? (
+         <div className="patient-form-sub-frame">
+         <div className="eReach-logo"> 
+            <img src={eReachLogo}/>
+         </div>
 
-            <div className="patient-progress-bar-div">
-                {progressBar()}
-            </div>
+         <div className="patient-header-frame-one">
+             <h1 className="patient-text-center">PATIENT SIGN-UP</h1><br/>
+             <h2> Please fill the form below carefully and with <br/>precision.</h2>
+         </div>
 
-            <div className="patient-conditional-bar-div">
-                {conditional()}
-            </div>
-        
+         <div className="patient-progress-bar-div">
+             {progressBar()}
+         </div>
+
+         <div className="patient-conditional-bar-div">
+             {conditional()}
+         </div>
+     
         </div>
+      ) : (
+        <div className="Registration-Complete-Frame">
+              <div className="Inner-Registration">
+                  <h3>Registration completed </h3>
+                  <p id="reg-two">You will receive an email shortly to activate your hospital's account, please click the activate button to your the account.</p>
+              </div>
+          </div>
+      )}
+       
         
         
     </div>

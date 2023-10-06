@@ -44,11 +44,12 @@ const InputFamily = (props: Props) => {
                                 type={field.type}
                                 placeholder={field.value}
                                 onChange={props.onchange}
-                                required={props.required}
+                                
                                 minLength={field.name === 'Phone Number' ? 11 : undefined}
                                 maxLength={field.name === 'Phone Number' ? 14 : undefined}
                                 pattern={field.name === 'Email' ? emailPattern : undefined}
                                 onInvalid={changeInputAppearanceOnInvalid}
+                                required
                             />
                           {props.icon && (<div className='Icon_Style'>{props.icon}</div>)}
                         </Fragment>
