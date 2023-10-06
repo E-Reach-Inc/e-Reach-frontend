@@ -21,7 +21,6 @@ import PatientView from "./ritch/views/PatientView"
 import PatientProfile from "./ritch/views/PatientProfile"
 import PatientAppointment from "./ritch/views/PatientAppointment"
 import {MedicalLogModal} from "./coco/views/patient/MedicalLogPopUp";
-import {LandingPageMainBody} from "./favour/views/landingPage/"
 import MedicalLog from "./ritch/medicalLog/MedicalLog";
 
 
@@ -65,9 +64,7 @@ function App() {
               <Route path='/patient-signUp' element={<PatientSignUp/>}/>
               <Route path={'/admin-create-medical-log'} element={<MedicalLogModal/>}/>
               <Route path='/medical-log' element={<MedicalLog/>}/>
-              <Route path='/patient-registration' element={<PatientSignUp/>}/>
-                
-                
+              <Route path='/patient-registration' element={<PatientSignUp/>}/>  
             </Routes>
         </Router>
         // </div>
