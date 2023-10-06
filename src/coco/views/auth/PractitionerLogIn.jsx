@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import eReachLogo from "../../assets/images/EReachLogoNoB.svg";
 import "../../../coco/styles/auth/PractionerLogin.css"
-import { useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 function LoginPage() {
 
+    const navigate = useNavigate()
     const parameter = useParams()
-    const param = parameter.role
+    const role = parameter.role
 
     const [formData, setFormData] = useState({
         username: '',
@@ -23,12 +26,33 @@ function LoginPage() {
     };
 
     const handleSubmit = (e) => {
+        const loginData = {
+            username: formData.username,
+            identityNumber: formData.identityNumber,
+            role: role
+        }
         e.preventDefault();
+       try{ axios.post("http://localhost:8080/api/v1/practitioner/login", formData)
+            .then(successResponse => {
+                toast.success("Login Successful", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
+            })
+            .catch(failureResponse => {
+
+            })
+            .finally(()=>{
+                if(role === "doctor")
+                    navigate("doctor-dashboard")
+                else if(role === "pharmacist")
+                    navigate("pharmacist-dashboard")
+            })
         console.log('Form Data:', formData);
+        }catch(error){
+            toast.info(error, {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
     };
 
     return (
         <div className="Doc-login-Main-Reg-Frame">
+            <ToastContainer/>
             <div className="Doc-login-Sub-Main-Reg-Frame">
                 <div className="Doc-login-Logo-frame">
                     <img src={eReachLogo} alt={"e-Reach logo"}/>
@@ -59,6 +83,7 @@ function LoginPage() {
             </div>
         </div>
     );
+    }
 }
 
 export default LoginPage;

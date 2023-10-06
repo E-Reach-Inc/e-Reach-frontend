@@ -20,7 +20,7 @@ const HospitalAdminDashboard = () => {
     function handleClickForRecords(){
         navigate("/patient-record")
     }
-    function handleClickForCreateRecord(){
+    function handleClickForCreateNewLog(){
         navigate("/admin-create-medical-log")
     }
     return (
@@ -49,7 +49,7 @@ const HospitalAdminDashboard = () => {
                         </div>
                         <div className="patient-log-frame">
                             <img src={AdminPatientLogs} alt="record"/>
-                            <button id="click-log-button" onClick={handleClickForCreateRecord}>Create Patient Log</button>
+                            <button id="click-log-button" onClick={handleClickForCreateNewLog}>Create Patient Log</button>
                         </div>
 
                     </div>

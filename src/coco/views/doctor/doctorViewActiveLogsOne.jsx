@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {DoctorSideBar} from "./doctorSideBar";
 import {SearchBar} from "./doctorSearchBar";
 import "../../../coco/styles/doctor/doctorViewActiveLogsOne.css"
@@ -6,10 +6,43 @@ import ViewLog from "../../../coco/assets/icons/doc-view-log.svg"
 import EditLog from "../../../coco/assets/icons/doc-edit-log.svg"
 import ActiveLogPopUp from "./activeLogPopUp";
 import MedicalLogModal from "../../../coco/views/patient/MedicalLogPopUp"
+import { ToastContainer, toast } from "react-toastify";
+import { getDatabase, get, ref, query, orderByChild, equalTo } from 'firebase/database'; // Import Firebase database functions
+import { db } from "../../../firebaseConfig/firebase";
 
 export const ActiveLogsTableOne = () => {
     const [activeLogsButtonPopUp, setActiveLogsButtonPopUp] = useState(false);
     const [selectedActiveLogs, setSelectedActiveLogs] = useState(null);
+    const [activeLogsData, setActiveLogsData] = useState([]); 
+    const hospitalEmail = localStorage.getItem("hospitalEmail");
+
+    useEffect(() => {
+        console.log("hello tue tue")
+        const fetchData = async () => {
+            const logsRef = ref(db, "active_logs");
+            const logsQuery = query(logsRef, orderByChild("hospitalEmail"), equalTo(hospitalEmail));
+        
+            try {
+                const snapshot = await get(logsQuery);
+                if (snapshot.exists()) {
+                    console.log('exists')
+                    const logsArray = [];
+                    snapshot.forEach((childSnapshot) => {
+                        const logData = childSnapshot.val();
+                        logsArray.push(logData);
+                    });
+                    setActiveLogsData(logsArray);
+                }
+                toast.info("you hospital has not created any medical log(s)", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
+            } catch (error) {
+                toast.error("could not fetch logs", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
+                console.error("Error fetching data:", error);
+            }
+        };
+
+        fetchData();
+    }, [hospitalEmail]);
+
 
     const openActiveLogsPopUp = (activeLogsData) => {
         setSelectedActiveLogs(activeLogsData);
@@ -20,13 +53,14 @@ export const ActiveLogsTableOne = () => {
         setSelectedActiveLogs(null);
         setActiveLogsButtonPopUp(false);
     }
-    const activeLogsData = [
-        { date: '2023-09-27', time: '10:00 AM', patientId: 1 },
-        { date: '2023-09-26', time: '03:30 PM', patientId: 2 },
-    ];
+    // const activeLogsData = [
+    //     { date: '2023-09-27', time: '10:00 AM', patientId: 1 },
+    //     { date: '2023-09-26', time: '03:30 PM', patientId: 2 },
+    // ];
 
     return(
         <div className="Doc-Log-Main-Frame">
+            <ToastContainer/>
             <div className="doc-log-side-bar-hold">
                 <DoctorSideBar/>
             </div>

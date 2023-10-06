@@ -2,14 +2,36 @@ import {DoctorSideBar} from "./doctorSideBar";
 import {SearchBar} from "./doctorSearchBar";
 import ViewLog from "../../../coco/assets/icons/doc-view-log.svg";
 import EditLog from "../../../coco/assets/icons/doc-edit-log.svg";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import "../../../coco/styles/doctor/viewPatientRecordOne.css"
 import RecordPopUp from "./recordPopUp"
+import { ToastContainer, toast } from "react-toastify";
+import axios from "axios";
 
 
 export const ViewPatientRecordOne= () => {
     const [recordButtonPopUp, setRecordButtonPopUp] = useState(false);
     const [selectedPatientRecord, setSelectedPatientRecord] = useState(null);
+    const [patientRecordData, setPatientRecordData] = useState([]);
+
+    useEffect(()=>{
+        const hospitalEmail = localStorage.getItem("hospitalEmail");
+        try{axios.get("http://localhost:8080/api/v1/doctor/view-patients-records/"+hospitalEmail)
+            .then(successResponse => {
+                setPatientRecordData(successResponse.data);
+            })
+            .catch(failureResponse => {
+                toast.error("could not fetch logs", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
+                console.log(failureResponse)
+            })  
+            .finally(()=>{
+                toast.info("you hospital has not created any medical log(s)", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
+            })
+        }catch(error){
+            toast.error("could not fetch logs", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
+            console.error("Error fetching data:", error);
+        }
+    }, [])
 
     const openRecordPopUp = (patientRecordData) => {
         setSelectedPatientRecord(patientRecordData);
@@ -20,15 +42,11 @@ export const ViewPatientRecordOne= () => {
         setSelectedPatientRecord(null);
         setRecordButtonPopUp(false);
     }
-    const patientRecordData = [
-        {primaryCentre: 'Hospital A', dateCreated: '2023-09-27', lastUpdated: '10:30 AM', patientId: 1},
-        {primaryCentre: 'Clinic B', dateCreated: '2023-09-26', lastUpdated: '02:45 PM', patientId: 2},
-        {primaryCentre: 'Medical Center C', dateCreated: '2023-09-25', lastUpdated: '09:15 AM', patientId: 3},
-        {primaryCentre: 'Urgent Care D', dateCreated: '2023-09-24', lastUpdated: '11:00 AM', patientId: 4},
-    ];
+    
 
     return(
         <div className="Doc-Records-Main-Frame">
+            <ToastContainer/>
             <div className="doc-Records-side-bar-hold">
                 <DoctorSideBar/>
             </div>
@@ -63,22 +81,29 @@ export const ViewPatientRecordOne= () => {
                             </tr>
                             </thead>
                             <tbody>
-                            {patientRecordData.map((patientRecordData, index) => (
-                                <tr key={index}>
-                                    <td >{patientRecordData.primaryCentre}</td>
-                                    <td >{patientRecordData.dateCreated}</td>
-                                    <td >{patientRecordData.lastUpdated}</td>
-                                    <td >{patientRecordData.patientId}</td>
-                                    <td >
-                                        <img onClick={() => (openRecordPopUp(patientRecordData))}
-                                             id="records-action-buttons" src={ViewLog} alt="view">
-                                        </img>
-                                        {/*<img onClick={() => (patientRecordData.patientId)}*/}
-                                        {/*     id="records-action-buttons" src={EditLog} alt="edit">*/}
-                                        {/*</img>*/}
-                                    </td>
-                                </tr>
-                            ))}
+                            {patientRecordData.map((record, index) => (
+                  <tr key={index}>
+                    <td>{record.primaryCentre}</td>
+                    <td>{record.dateCreated}</td>
+                    <td>{record.lastUpdated}</td>
+                    <td>{record.patientId}</td>
+                    <td>
+                      <img
+                        onClick={() => openRecordPopUp(record)}
+                        id="records-action-buttons"
+                        src={ViewLog}
+                        alt="view"
+                      ></img>
+                      {/* You can add an edit action here if needed */}
+                      {/* <img
+                        onClick={() => editRecord(record.patientId)}
+                        id="records-action-buttons"
+                        src={EditLog}
+                        alt="edit"
+                      ></img> */}
+                    </td>
+                  </tr>
+                ))}
                             </tbody>
                         </table>
                     </div>
