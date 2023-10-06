@@ -33,6 +33,7 @@ function App() {
         <Router>
             <Routes>
               <Route path='*' element={<p>Page Not Found</p>}/>
+              <Route path='/' element={<Lan/>}/>
                 {/*<Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>*/}
               <Route path='/activate-hospital-account/:token' element={<ActivateHospitalAccount/>}/>
               <Route path='/activate-hospital-admin-account/:token' element={<ActivateHospitalAdminAccount/>}/>
