@@ -60,7 +60,7 @@ function App() {
   
                 
               <Route path='/register-practitioner' element={<PractitionerRegistration/>}/>
-              <Route path={"/practitioner-login/:role"} element={<LoginPage/>}/>
+              <Route path={"/practitioner-login"} element={<LoginPage/>}/>
 
                 
               <Route path='/patient-view' element={<PatientView/>}/>
