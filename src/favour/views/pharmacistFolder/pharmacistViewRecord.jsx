@@ -9,6 +9,7 @@ import PopUp from "./pharmacistPopUp";
 export const PharmacistViewRecord = () => {
     const [buttonPopUp, setButtonPopUp] = useState(false);
     const [selectedLog, setSelectedLog] = useState(null);
+    const [prescriptions, setPrescriptions] = useState([])
     // const [viewLog, setViewLog] = useState([]); // Initialize viewLog as an empty array
 
     const viewLog= [
@@ -54,9 +55,43 @@ export const PharmacistViewRecord = () => {
         }
       ]
 
+      const dummyPrescriptions = [
+        {
+          medicationName: 'Paracetamol',
+          dosage: '500mg',
+          dosageFrequency: 'Once daily',
+          startDate: '12/10/2023',
+          prescriptionDate:'12/10/2023'
+        },
+        {
+          medicationName: 'Codine',
+          dosage: '500mg',
+          dosageFrequency: 'Once daily',
+          startDate: '12/10/2023',
+          prescriptionDate:'12/10/2023'
+        },
+        {
+          medicationName: 'Antibiotics',
+          dosage: '500mg',
+          dosageFrequency: 'Once daily',
+          startDate: '12/10/2023',
+          prescriptionDate:'12/10/2023'
+        },
+        {
+            medicationName: 'Codine',
+            dosage: '500mg',
+            dosageFrequency: 'Once daily',
+            startDate: '12/10/2023',
+            prescriptionDate:'12/10/2023'
+        },
+    ]
+
     const openPopup = (log) => {
+        const prescriptionsForLog = dummyPrescriptions; 
+        setPrescriptions(prescriptionsForLog);
         setSelectedLog(log);
         setButtonPopUp(true);
+       
     };
 
     const closePopup = () => {
@@ -96,7 +131,6 @@ export const PharmacistViewRecord = () => {
                             <tr>
                                 <th>Date</th>
                                 <th>Name</th>
-                                <th>Result</th>
                                 <th>Actions</th>
                             </tr>
                             </thead>
@@ -109,7 +143,6 @@ export const PharmacistViewRecord = () => {
                                     }}>
                                     <td>{log.Date}</td>
                                     <td>{log.Name}</td>
-                                    <td>{log.Result}</td>
                                     <td><img src= {ViewIcon} alt="viewIcon"/></td>
                                 </tr>
                             ))}
@@ -118,7 +151,7 @@ export const PharmacistViewRecord = () => {
                     </div>
                 </div>
             </div>
-            <PopUp isOpen={buttonPopUp} onClose={closePopup} log={selectedLog} />
+            <PopUp isOpen={buttonPopUp} onClose={closePopup} log={selectedLog} prescriptions={prescriptions}/>
         </div>
     );
 };

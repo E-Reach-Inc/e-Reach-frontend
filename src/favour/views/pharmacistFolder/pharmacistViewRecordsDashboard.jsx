@@ -5,6 +5,22 @@ import {useNavigate} from "react-router-dom";
 export const PharmacistViewRecordsDashboard =()=>{
     const viewlog = [
         {
+            
+            Date: 'Favour chiemela',
+            Name: 'Consultation',
+            Result: '22/12/2023',
+        },
+        {
+            Date: 'Favour chiemela',
+            Name: 'Consultation',
+            Result: '22/12/2023',
+        },
+        {
+            Date: 'Favour chiemela',
+            Name: 'Consultation',
+            Result: '22/12/2023',
+        },
+        {
             Date: 'Favour chiemela',
             Name: 'Consultation',
             Result: '22/12/2023',
@@ -58,7 +74,7 @@ export const PharmacistViewRecordsDashboard =()=>{
     ]
     const navigate = useNavigate();
     const handleButtonClick =()=>{
-        navigate("/viewlog")
+        navigate("/pharmacist-view-records")
     }
     return(
         <div>

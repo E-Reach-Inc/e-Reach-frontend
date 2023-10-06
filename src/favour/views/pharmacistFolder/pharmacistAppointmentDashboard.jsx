@@ -5,12 +5,78 @@ import {useNavigate} from 'react-router-dom'
 
 
 export const PharmacistAppointmentDashboard =()=>{
-    const [appointments]= useState( [
+    const appointments = [
+        {
+          patientName: 'Favour chiemela', 
+          type: 'Consultation',
+          appointmentDate: '22/12/2023',
+          account: '10001',
+          doctorsName: 'John perry'
+        },
+        {
+          patientName: 'Favour chiemela',
+          type: 'Consultation',
+          appointmentDate: '22/12/2023',
+          account: '10001',
+          doctorsName: 'John perry'
+        },
+         {
+          patientName: 'Favour chiemela',
+          type: 'Consultation',
+          appointmentDate: '22/12/2023',
+          account: '10001',
+          doctorsName: 'John perry'
+        },
+        {
+          patientName: 'Favour chiemela',
+          type: 'Consultation',
+          appointmentDate: '22/12/2023',
+          account: '10001',
+          doctorsName: 'John perry'
+        },
+      {
+          patientName: 'Favour chiemela',
+          type: 'Consultation',
+          appointmentDate: '22/12/2023',
+          account: '10001',
+          doctorsName: 'John perry'
+        },
+      {
+          patientName: 'Favour chiemela',
+          type: 'Consultation',
+          appointmentDate: '22/12/2023',
+          account: '10001',
+          doctorsName: 'John perry'
+        },
+      {
+          patientName: 'Favour chiemela',
+          type: 'Consultation',
+          appointmentDate: '22/12/2023',
+          account: '10001',
+          doctorsName: 'John perry'
+        },
+      {
+          patientName: 'Favour chiemela',
+          type: 'Consultation',
+          appointmentDate: '22/12/2023',
+          account: '10001',
+          doctorsName: 'John perry'
+        },
+      {
+          patientName: 'Favour chiemela',
+          type: 'Consultation',
+          appointmentDate: '22/12/2023',
+          account: '10001',
+          doctorsName: 'John perry'
+        },
+    ]
+    // const [appointments]= useState( [
 
-    ])
+    // ])
     const navigate = useNavigate();
+
     const hadleButtonClick =()=>{
-        navigate("/appointment")
+        navigate("/pharmacist-appointment")
     }
 
     return(
