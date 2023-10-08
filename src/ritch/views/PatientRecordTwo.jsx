@@ -1,8 +1,10 @@
+
 import React, { useEffect, useState } from "react";
 import PatientNavBar from "./PatientNavBar";
 import action from '../patient-icons/patient-eye-view.svg'
 import '../styles/PatientRecordTwo.css'
 import axios from "axios";
+import PatientPopUp from "./PatientPopUp";
 import { toast } from "react-toastify";
 
 
@@ -26,6 +28,13 @@ const PatientRecordTwo = () =>{
             });
     }, [patientId]);
               
+  const [buttonPopUp,setButtonPopUp]=useState(false);
+  const openPopup = () => {
+          setButtonPopUp(true);
+      };
+      const closePopup = () => {
+        setButtonPopUp(false);
+      };
 
     return(
         <div className="patient-record-two-table-outter-con">
@@ -52,6 +61,7 @@ const PatientRecordTwo = () =>{
                 <tr key={index}>
                     <td>{medicalLog.dateCreated}</td>
                     <td>{medicalLog.lastTimeUpdated}</td>
+                    <td >{patientsRecords.patientIdentificationNumber}</td>
                     <td>{medicalLog.hospitalName}</td>
                     <td><a href="link to backend here">
                       <img src={action}/></a>
@@ -59,10 +69,9 @@ const PatientRecordTwo = () =>{
                 </tr>
               </tbody>
           ))}
-          
         </table>
           </div>
-        
+          {buttonPopUp && <PatientPopUp onClose={closePopup}/>}
     </div>
     )
     

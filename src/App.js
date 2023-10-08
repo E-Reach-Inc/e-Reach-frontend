@@ -22,9 +22,11 @@ import PatientProfile from "./ritch/views/PatientProfile"
 import PatientAppointment from "./ritch/views/PatientAppointment"
 import {MedicalLogModal} from "./coco/views/patient/MedicalLogPopUp";
 import MedicalLog from "./ritch/medicalLog/MedicalLog";
+import PatientPopUp from "./ritch/views/PatientPopUp";
 import { LandingPageMainBody } from "./favour/views/landingPage/landingPageMainBody";
 import {ActiveLogsTableOne} from "./coco/views/doctor/doctorViewActiveLogsOne"
 import RouteToDashbaord from "./ritch/views/routeToDashbaord";
+
 
 
 function App() {
@@ -33,11 +35,13 @@ function App() {
       
         <Router>
             <Routes>
-              <Route path="/landing-page" element={<LandingPageMainBody/>}/>
+              <Route path="/" element={<LandingPageMainBody/>}/>
+              <Route path="landing-page" element={<LandingPageMainBody/>}/>
 
               <Route path='*' element={<p>Page Not Found</p>}/>
-              <Route path='/' element={<LandingPageMainBody/>}/>
-                <Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>
+              <Route path='/' element={<Lan/>}/>
+              <Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>
+
               <Route path='/activate-hospital-account/:token' element={<ActivateHospitalAccount/>}/>
               <Route path='/activate-hospital-admin-account/:token' element={<ActivateHospitalAdminAccount/>}/>
               <Route path={"hospital-admin-signup"} element={<HospitalAdminSignUp/>}/>
@@ -63,6 +67,8 @@ function App() {
 
                 
               <Route path='/patient-view' element={<PatientView/>}/>
+
+              <Route path='/patient-log-view' element={<PatientPopUp/>}/>
               <Route path='/patient-profile' element={<PatientProfile/>}/>
               <Route path='/patient-record' element={<PatientRecord/>}/>
               <Route path='/patient-appointment' element={<PatientAppointment/>}/>
