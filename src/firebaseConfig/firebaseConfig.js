@@ -1,12 +1,13 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyCJI4gnrU7m-COv3hdxNEgsXZ4qqUbqAI8",
-    authDomain: "e-reach-502ff.firebaseapp.com",
-    databaseURL: "https://e-reach-502ff-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "e-reach-502ff",
-    storageBucket: "e-reach-502ff.appspot.com",
-    messagingSenderId: "652088009335",
-    appId: "1:652088009335:web:440c2a46d7f093a7705c72",
-    measurementId: "G-3PLMBN35SJ"
-};
-
-export default firebaseConfig
+    apiKey: "AIzaSyDyfhUt2qsaXc_RQfAZoLYUyf8C_P95NJg",
+    authDomain: "e-reach-fb20e.firebaseapp.com",
+    databaseURL: "https://e-reach-fb20e-default-rtdb.firebaseio.com",
+    projectId: "e-reach-fb20e",
+    storageBucket: "e-reach-fb20e.appspot.com",
+    messagingSenderId: "655653759296",
+    appId: "1:655653759296:web:39707d9bb2b5497b8d32a5",
+    measurementId: "G-SM0BNL9VJB"
+  };
+  
+export default firebaseConfig;
+  
