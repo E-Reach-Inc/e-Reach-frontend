@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PatientNavBar from "./PatientNavBar";
 import action from '../patient-icons/patient-eye-view.svg'
 import '../styles/PatientRecordTwo.css'
@@ -47,7 +47,7 @@ const PatientRecordTwo = () =>{
 
     useEffect(()=>{
         axios.get("http://localhost:8080/api/v1/patient/view-records/"+patientId)
-              .then((response) => {
+            .then((response) => {
                 setMedicalLogs(response.data.medicalLogResponses);
                 if(response.status === 200)
                     toast.success("logs found", {})

@@ -17,6 +17,7 @@ export const ActiveLogsTableOne = () => {
     const hospitalEmail = localStorage.getItem("hospitalEmail");
 
     useEffect(() => {
+        localStorage.setItem("hospitalEmail", "richardsakaabiam@gmail.com")
         console.log("hello tue tue")
         const fetchData = async () => {
             const logsRef = ref(db, "active_logs");
@@ -25,13 +26,14 @@ export const ActiveLogsTableOne = () => {
             try {
                 const snapshot = await get(logsQuery);
                 if (snapshot.exists()) {
-                    console.log('exists')
                     const logsArray = [];
                     snapshot.forEach((childSnapshot) => {
                         const logData = childSnapshot.val();
                         logsArray.push(logData);
                     });
                     setActiveLogsData(logsArray);
+                    toast.info("medical logs found", {position: toast.POSITION.TOP_CENTER, autoClose:3000})
+                    console.log("This is active logs data::: ", activeLogsData)
                 }
                 toast.info("you hospital has not created any medical log(s)", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
             } catch (error) {
@@ -85,9 +87,9 @@ export const ActiveLogsTableOne = () => {
                             <tbody>
                             {activeLogsData.map((activeLogsData, index) => (
                                 <tr key={index}>
-                                    <td >{activeLogsData.date}</td>
-                                    <td >{activeLogsData.time}</td>
-                                    <td >{activeLogsData.patientId}</td>
+                                    <td >{activeLogsData.dateCreated}</td>
+                                    <td >{activeLogsData.timeCreated}</td>
+                                    <td >{activeLogsData.patientIdentificationNumber}</td>
                                     <td >
                                         <img onClick={() => (openActiveLogsPopUp(activeLogsData))}
                                              id="log-action-buttons" src={ViewLog} alt="view">
