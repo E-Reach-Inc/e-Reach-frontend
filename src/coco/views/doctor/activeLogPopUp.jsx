@@ -12,9 +12,9 @@ const ActiveLogPopUp = ({isOpen, isClose, activeLogsData}) => {
                 <div>
                     <h1>Active Log</h1>
                     <div>
-                        <p> Date: {activeLogsData.date}</p>
-                        <p> Time: {activeLogsData.time}</p>
-                        <p> Patient Id: {activeLogsData.patientId}</p>
+                        <p> Date: {activeLogsData.dateCreated}</p>
+                        <p> Time: {activeLogsData.timeCreated}</p>
+                        <p> Patient Id: {activeLogsData.patientIdentificationNumber}</p>
                         {/*<div className="active-logtext-box">*/}
                         {/*    <textarea*/}
                         {/*        placeholder= "      Enter Log Here:"*/}

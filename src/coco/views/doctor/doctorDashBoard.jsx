@@ -6,8 +6,45 @@ import {DoctorProfileTwo} from "./doctorProfileTwo";
 import {ActiveLogsTableTwo} from "./doctorViewActiveLogsTwo";
 import {PatientAppointmentTwo} from "./viewPatientAppointmentTwo";
 import {ViewPatientRecordTwo} from "./viewPatientRecordTwo";
+import {get, ref, query, orderByChild, equalTo } from 'firebase/database';
+import {db} from "../../../firebaseConfig/firebase.js"
+import { useState, useEffect } from 'react';
+
 
 export const DoctorDashboard = () =>{
+
+    const [activeLogsData, setActiveLogsData] = useState([])
+    const hospitalEmail = localStorage.getItem("hospitalEmail");
+
+    useEffect(()=>{
+        async function fetchLogs(){
+            const databaseRef = ref(db, "active_logs")
+            const logsQuery = query(databaseRef, orderByChild("hospitalEmail"), equalTo(hospitalEmail));
+        
+            try {
+                const snapshot = await get(logsQuery);
+                if (snapshot.exists()) {
+                    const logsArray = [];
+                    let i = 0;
+                    snapshot.forEach((childSnapshot) => {
+                        if(i < 5){
+                            const logData = childSnapshot.val();
+                            logsArray.push(logData);
+                            i++;
+                        }
+                    });
+                    setActiveLogsData(logsArray);
+                    console.log("This is active logs data::: ", activeLogsData)
+                }
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        };
+
+        fetchLogs()
+        
+    }, [hospitalEmail])
+
     return(
         <div className="Main-Dash-Frame">
             <div><DoctorSideBar/></div>
@@ -25,7 +62,7 @@ export const DoctorDashboard = () =>{
                     </div>
                     <div className="second-sub-activity">
                         <div className="view-active-logs-frame">
-                            <ActiveLogsTableTwo/>
+                            <ActiveLogsTableTwo activeLogsData={activeLogsData}/>
                         </div>
                         <div className="view-patient-records-frame">
                             <ViewPatientRecordTwo/>
