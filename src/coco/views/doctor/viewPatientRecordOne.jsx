@@ -19,6 +19,7 @@ export const ViewPatientRecordOne= () => {
         try{axios.get("http://localhost:8080/api/v1/doctor/view-patients-records/"+hospitalEmail)
             .then(successResponse => {
                 setPatientRecordData(successResponse.data);
+                toast.info("medical logs found ", {position: toast.POSITION.TOP_CENTER, autoClose: 3000})
             })
             .catch(failureResponse => {
                 toast.error("could not fetch logs", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
