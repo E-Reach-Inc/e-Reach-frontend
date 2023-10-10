@@ -165,6 +165,9 @@ const PatientSignUp = () => {
         <input className="input-style" name="phoneNumber" type="text" value={data.phoneNumber} onChange={onChangeHandler} />
         <label className="name-tag-number">House Number</label>
         <input className="input-style" name="houseNumber" type="text" value={data.houseNumber} onChange={onChangeHandler} />
+        <label className="name-tag-number">Hospital Email</label>
+        <input className="input-style" name="hospitalEmail" type="text" value={data.hospitalEmail} onChange={onChangeHandler} />
+
         <div className="patient-info-double-btns" ><button id="patient-next-btn" onClick={handlePrev}>previous</button>
         <button id="patient-next-btn" onClick={handleNext} >next</button>
         </div>

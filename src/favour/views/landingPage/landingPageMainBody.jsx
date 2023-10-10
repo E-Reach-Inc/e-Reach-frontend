@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import backgroundImg from "../../assets/landingPageImage/image2.svg"
 import {LandingPageNavbar} from "./landingPageNavBar.jsx"
 import {LandingPageFooter} from "./landingPageFooter"
-import {LandingPageAboutUs} from "./landingPageAboutUs";
+import {LandingPageAboutUs} from "../landingPage/landingPageAboutUs";
 
 export const LandingPageMainBody = () => {
     const [text, setText] = useState('Health');
