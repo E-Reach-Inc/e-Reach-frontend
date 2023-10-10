@@ -40,19 +40,26 @@ function App() {
               <Route path="landing-page" element={<LandingPageMainBody/>}/>
 
               <Route path='*' element={<p>Page Not Found</p>}/>
-              <Route path='/' element={<Lan/>}/>
+            
+              <Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>
+              <Route path="/landing-page" element={<LandingPageMainBody/>}/>
+
+              <Route path='*' element={<p>Page Not Found</p>}/>
+              <Route path='/' element={<LandingPageMainBody/>}/>
               <Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>
 
               <Route path='/activate-hospital-account/:token' element={<ActivateHospitalAccount/>}/>
               <Route path='/activate-hospital-admin-account/:token' element={<ActivateHospitalAdminAccount/>}/>
               <Route path={"hospital-admin-signup"} element={<HospitalAdminSignUp/>}/>
+              <Route path={'/admin-create-medical-log'} element={<MedicalLogModal/>}/>
+
                 
                 
               <Route path='/doctor-dashboard' element={<DoctorDashboard/>}/>
               <Route path={"/doctor-active-logs-one"} element={<ActiveLogsTableOne/>}/>
               <Route path={"/doctor-patient-appointment-one"} element={<PatientAppointmentOne/>}/>
               <Route path={"/doctor-patient-record-one"} element={<ViewPatientRecordOne/>}/>
-              <Route path={"/doctor-dashboard"} element={<DoctorProfileOne/>}/>
+              <Route path={"/doctor-profile-one"} element={<DoctorProfileOne/>}/>
                 
 
               <Route path='/pharmacist-default-dashboard' element={<PharmacistDefaultDashboard/>}/>
@@ -77,7 +84,6 @@ function App() {
               <Route path='/patient-signUp' element={<PatientSignUp/>}/>
               <Route path="/patient-dashboard" element={<PatientView/>}/>
               <Route path="/route-to-dashboard/:pin" element={RouteToDashbaord}/>
-              <Route path={'/admin-create-medical-log'} element={<MedicalLogModal/>}/>
 
               <Route path='/medical-log' element={<MedicalLog/>}/>
               <Route path='/patient-registration' element={<PatientSignUp/>}/>  

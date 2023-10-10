@@ -5,6 +5,7 @@ import action from '../patient-icons/patient-eye-view.svg'
 import '../styles/PatientRecordTwo.css'
 import axios from "axios";
 import PatientPopUp from "./PatientPopUp";
+import axios from "axios";
 import { toast } from "react-toastify";
 
 
@@ -28,14 +29,32 @@ const PatientRecordTwo = () =>{
             });
     }, [patientId]);
               
-  const [buttonPopUp,setButtonPopUp]=useState(false);
-  const openPopup = () => {
-          setButtonPopUp(true);
-      };
-      const closePopup = () => {
+    const [buttonPopUp,setButtonPopUp]=useState(false);
+    const openPopup = () => {
+        setButtonPopUp(true);
+    };
+    const closePopup = () => {
         setButtonPopUp(false);
-      };
+    };
 
+
+    const [medicalLogs, setMedicalLogs] = useState([])
+    const patientId = localStorage.getItem("patientIdentificationNumber")
+
+    useEffect(()=>{
+        axios.get("http://localhost:8080/api/v1/patient/view-records/"+patientId)
+            .then((response) => {
+                setMedicalLogs(response.data.medicalLogResponses);
+                if(response.status === 200)
+                    toast.success("logs found", {})
+                else toast.info("no logs found")
+            })
+            .catch((error) => {
+                toast.error(error)
+                console.error("Error fetching medical logs:", error);
+            });
+    }, [patientId]);
+  
     return(
         <div className="patient-record-two-table-outter-con">
 
@@ -45,32 +64,33 @@ const PatientRecordTwo = () =>{
           </div>
           
           <div className="patient-record-two-inner-con">
-         
-        <table className="patient-record-two-table">
+              <table className="patient-record-two-table">
 
-          <thead className="patient-record-two-table-header">
-            <tr>
-              <th>Date Created</th>
-              <th>Last Time Updated</th>
-              <th>Hospital Name</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          {medicalLogs.map((medicalLog, index)=>(
-              <tbody className="patient-record-two-table-data">
-                <tr key={index}>
-                    <td>{medicalLog.dateCreated}</td>
-                    <td>{medicalLog.lastTimeUpdated}</td>
-                    <td >{patientsRecords.patientIdentificationNumber}</td>
-                    <td>{medicalLog.hospitalName}</td>
-                    <td><a href="link to backend here">
-                      <img src={action}/></a>
-                     </td>
-                </tr>
-              </tbody>
-          ))}
-        </table>
-          </div>
+                <thead className="patient-record-two-table-header">
+                  <tr>
+                    <th>Date Created</th>
+                    <th>Last Time Updated</th>
+                    <th>Hospital Name</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+
+                {medicalLogs.map((medicalLog, index)=>(
+                    <tbody className="patient-record-two-table-data">
+                      <tr key={index}>
+                          <td>{medicalLog.dateCreated}</td>
+                          <td>{medicalLog.lastTimeUpdated}</td>
+                          <td >{patientsRecords.patientIdentificationNumber}</td>
+                          <td>{medicalLog.hospitalName}</td>
+                          <td><a href="link to backend here">
+                            <img src={action}/></a>
+                           </td>
+                      </tr>
+                    </tbody>
+                ))}
+
+              </table>
+            </div>
           {buttonPopUp && <PatientPopUp onClose={closePopup}/>}
     </div>
     )
