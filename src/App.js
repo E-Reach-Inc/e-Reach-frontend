@@ -46,6 +46,7 @@ function App() {
               <Route path='*' element={<p>Page Not Found</p>}/>
               <Route path='/' element={<LandingPageMainBody/>}/>
               <Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>
+
               <Route path='/activate-hospital-account/:token' element={<ActivateHospitalAccount/>}/>
               <Route path='/activate-hospital-admin-account/:token' element={<ActivateHospitalAdminAccount/>}/>
               <Route path={"hospital-admin-signup"} element={<HospitalAdminSignUp/>}/>

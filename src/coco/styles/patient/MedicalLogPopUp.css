@@ -67,6 +67,17 @@
     height: 100%;
     font-size: 20px;
 }
+=======
+    row-gap: 7px;
+    flex-direction: column;
+}
+.Pin-Frame .Email-Frame{
+    row-gap: 7px;
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+}
+
 /*.pop-up-save-button{*/
 /*    display: block;*/
 /*
