@@ -54,10 +54,12 @@ const PatientProfileTwo= () =>{
                 )}
 
                 <div >
-                  <form onClick={openUploadWidget}>
+                  <form>
                     <button className="patient-profile-two-upload-btn">Upload</button>
                   </form>
+                  
                 </div>
+                <openUploadWidget/>
               </div>
     
               <div className="patient-two-biodata-input">

@@ -25,6 +25,7 @@ import MedicalLog from "./ritch/medicalLog/MedicalLog";
 import { LandingPageMainBody } from "./favour/views/landingPage/landingPageMainBody";
 import {ActiveLogsTableOne} from "./coco/views/doctor/doctorViewActiveLogsOne"
 import RouteToDashbaord from "./ritch/views/routeToDashbaord";
+import PatientProfileTwo from "./ritch/views/PatientProfileTwo";
 
 
 function App() {
@@ -64,6 +65,7 @@ function App() {
                 
               <Route path='/patient-view' element={<PatientView/>}/>
               <Route path='/patient-profile' element={<PatientProfile/>}/>
+              <Route path="patient-profile-two" element={<PatientProfileTwo/>}/>
               <Route path='/patient-record' element={<PatientRecord/>}/>
               <Route path='/patient-appointment' element={<PatientAppointment/>}/>
               <Route path='/patient-signUp' element={<PatientSignUp/>}/>
