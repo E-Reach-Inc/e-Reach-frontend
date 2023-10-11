@@ -10,7 +10,7 @@ const PatientAppointmentTwo = () =>{
         
       <div className="patient-appointment-two-table-outer-con">
          <div className="patient-appointment-two-table-top">
-        <h1 className="patient-appointment-two-title">Appointment(s)</h1>
+        <h3 className="patient-appointment-two-title">Appointment(s)</h3>
         <button>Browse All</button>
         </div>
 

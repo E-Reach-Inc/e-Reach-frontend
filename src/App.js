@@ -9,7 +9,6 @@ import PatientRecord from './ritch/views/PatientRecord';
 import HospitalAdminSignUp from "./bola/views/auth/hospitalAdminSignUp";
 import {DoctorDashboard} from "./coco/views/doctor/doctorDashBoard";
 import {PractitionerRegistration} from "./coco/views/auth/PractitionerRegistration";
-//import {HospitalAdminDashboard} from "./coco/views/administration/HospitalAdminDashboard";
 import ActivateHospitalAdminAccount from "./bola/views/auth/activateHospitalAdminAccount";
 import ActivateHospitalAccount from "./bola/views/auth/activateHospitalAccount";
 import PatientSignUp from "./ritch/views/PatientSignUp";

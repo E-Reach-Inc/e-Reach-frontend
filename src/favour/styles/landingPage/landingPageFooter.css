@@ -45,6 +45,52 @@
     margin-bottom: 20px;
 }
 .footer-copyright p {
-    /* margin-top: 10px; */
     color: white;
+}
+
+@media only screen and (max-width: 390px) {
+    .footer {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .logo img {
+        margin-top: 10px;
+        margin-left: 0; 
+        width: 120px; 
+    }
+
+    .explore,
+    .services,
+    .contact {
+        margin: 10px 0; 
+        text-align: center; 
+    }
+
+    #hr {
+        margin-top: 10px;
+    }
+}
+@media only screen and (max-width:414px) {
+    .footer {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .logo img {
+        margin-top: 10px; 
+        margin-left: 0; 
+        width: 120px; 
+    }
+
+    .explore,
+    .services,
+    .contact {
+        margin: 10px 0; 
+        text-align: center; 
+    }
+
+    #hr {
+        margin-top: 10px; 
+    }
 }
