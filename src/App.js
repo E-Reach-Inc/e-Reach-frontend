@@ -44,7 +44,7 @@ function App() {
               <Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>
               <Route path="/landing-page" element={<LandingPageMainBody/>}/>
 
-              <Route path='*' element={<p>Page Not Found</p>}/>
+                <Route path='*' element={<p>Page Not Found</p>}/>
               <Route path='/' element={<LandingPageMainBody/>}/>
               <Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>
 

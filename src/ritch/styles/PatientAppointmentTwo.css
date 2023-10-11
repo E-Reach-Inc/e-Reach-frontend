@@ -55,20 +55,22 @@
 
 
 .patient-appointment-two-title{
-    margin-top: 2px;
+    margin-top: 10px;
     margin-left: 20px;
 }
 
 .patient-appointment-two-table-header{
-    font-weight: bold; 
+    /* font-weight: bold;  */
     height: 30px;
     position: sticky;
     background-color: #368db2;
     padding: 10px; 
-    text-align: center; 
+    text-align: center;
     border: 1px solid whitesmoke;
 }
-
+.patient-appointment-two-table-header th{
+    font-size: 14px;
+}
 
 .patient-appointment-two-table-data{
     /* padding: 10px;  */
@@ -84,7 +86,6 @@
 .patient-appointment-two-table-data td{
     white-space: normal; 
     word-wrap: break-word; 
-   
     max-width: 50px; 
 }
 

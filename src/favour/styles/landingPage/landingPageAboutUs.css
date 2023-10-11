@@ -33,9 +33,6 @@
     font-weight: 700;
     margin-left: 10rem;
 }
-.writeUp{
-
-}
 #about-us{
     color: #368db2;
     font-size: 1.5rem;
@@ -60,6 +57,11 @@
     margin-top: 60px;
     font-weight: 700;
 }
+#electronic-one{
+    width: 500px;
+    margin-top: 20px;
+    line-height: 30px;
+}
 #electronic{
     width: 500px;
     margin-top: 20px;
@@ -68,3 +70,131 @@
 .our-service-image{
     width: 60vw;
 }
+
+/* media query */
+
+@media only screen and (max-width: 390px){
+    .about-Image {
+        display: none;
+    }
+    #who-we-are{
+        font-size: 20px;
+        width: 22rem;
+        text-align: center;      
+    }
+    #about-us{
+        font-size: 30px;
+        margin-left: 29%;
+    }
+
+    #who-started{
+        font-size: 20px;
+        width: 22rem;
+        text-align: center; 
+    }
+    #our-story{
+        font-size: 28px;
+        margin-left: 29%;
+    }
+    #who-promise{
+        font-size: 20px;
+        width: 23rem;
+        text-align: center;
+    }
+    #what-we-promise{
+        font-size: 28px;
+        margin-left: 10%;
+    }
+    #our{
+        color: #368db2;
+        font-size: 28px;
+        margin-top: 25px;
+    }
+    #our-service{
+        color: #368db2;
+        font-size: 28px;
+        margin-left: 2px;
+    }
+    #electronic{
+        font-size: 20px;
+        width: 25rem;
+        display: inline;
+        text-align: center;
+    }
+    .our-service-image{
+        display: none;
+    }
+    #electronic-one{
+        font-size: 20px;
+        width: 20rem;
+        display: inline;
+        text-align: center;
+        align-items: center;
+    }
+    .holder{
+        margin-right: 45px;
+    }
+}
+@media only screen and (max-width:414px) {
+    .about-Image {
+        display: none;
+    }
+    #who-we-are{
+        font-size: 20px;
+        width: 22rem;
+        text-align: center;      
+    }
+    #about-us{
+        font-size: 30px;
+        margin-left: 29%;
+    }
+
+    #who-started{
+        font-size: 20px;
+        width: 22rem;
+        text-align: center; 
+    }
+    #our-story{
+        font-size: 28px;
+        margin-left: 29%;
+    }
+    #who-promise{
+        font-size: 20px;
+        width: 23rem;
+        text-align: center;
+    }
+    #what-we-promise{
+        font-size: 28px;
+        margin-left: 10%;
+    }
+    #our{
+        color: #368db2;
+        font-size: 28px;
+        margin-top: 25px;
+    }
+    #our-service{
+        color: #368db2;
+        font-size: 28px;
+        margin-left: 2px;
+    }
+    #electronic{
+        font-size: 20px;
+        width: 25rem;
+        display: inline;
+        text-align: center;
+    }
+    .our-service-image{
+        display: none;
+    }
+    #electronic-one{
+        font-size: 20px;
+        width: 20rem;
+        display: inline;
+        text-align: center;
+        align-items: center;
+    }
+    .holder{
+        margin-right: 45px;
+    }
+}
+

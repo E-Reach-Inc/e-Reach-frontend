@@ -12,6 +12,7 @@
     z-index: 1000;
     width: 600px;
     height: 520px;
+    overflow-y: auto;
 }
 .namePrescriptionHolder{
     display: flex;

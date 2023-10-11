@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import PatientNavBar from "./PatientNavBar";
 import action from '../patient-icons/patient-eye-view.svg'
@@ -8,26 +7,25 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 
-
 const PatientRecordTwo = () =>{
 
-    const [medicalLogs, setMedicalLogs] = useState([])
-    const patientId = localStorage.getItem("patientIdentificationNumber")
+  const [medicalLogs, setMedicalLogs] = useState([])
+  const patientId = localStorage.getItem("patientIdentificationNumber")
 
-    useEffect(()=>{
-        axios.get("http://localhost:8080/api/v1/patient/view-records/"+patientId)
-            .then((response) => {
-                setMedicalLogs(response.data.medicalLogResponses);
-                if(response.status === 200)
-                    toast.success("logs found", {})
-                else toast.info("no logs found")
-            })
-            .catch((error) => {
-                toast.error(error)
-                console.error("Error fetching medical logs:", error);
-            });
-    }, [patientId]);
-  
+  useEffect(()=>{
+      axios.get("http://localhost:8080/api/v1/patient/view-records/"+patientId)
+          .then((response) => {
+              setMedicalLogs(response.data.medicalLogResponses);
+              if(response.status === 200)
+                  toast.success("logs found", {})
+              else toast.info("no logs found")
+          })
+          .catch((error) => {
+              toast.error(error)
+              console.error("Error fetching medical logs:", error);
+          });
+  }, [patientId]);
+
 
     const [buttonPopUp,setButtonPopUp]=useState(false);
     const openPopup = () => {
@@ -37,18 +35,15 @@ const PatientRecordTwo = () =>{
         setButtonPopUp(false);
     };
 
-
-    return(
+  return(
         <div className="patient-record-two-table-outter-con">
 
           <div className="patient-record-two-med-logs">
-          <h2 className="patient-med-logs-two">Records</h2>
+          <h3 className="patient-med-logs-two">Records</h3>
           <button>Browse All</button>
           </div>
-          
           <div className="patient-record-two-inner-con">
               <table className="patient-record-two-table">
-
                 <thead className="patient-record-two-table-header">
                   <tr>
                     <th>Date Created</th>

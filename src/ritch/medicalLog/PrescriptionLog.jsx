@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import PopUp from './doctorsModal';
 import '../medicalLog/medicalLogStyle/prescriptionLog.css'
 
 const PrescriptionLog = (prescription) => {
   console.log(prescription)
-  const [buttonPopUp,setButtonPopUp]=useState(false);
   
   // useEffect(() => {
   //   // Fetch prescription data from the backend 
@@ -65,18 +63,12 @@ const PrescriptionLog = (prescription) => {
 
 
   
-  const openPopUp =() =>{
-    setButtonPopUp(true);
-  }
-  const closePopUp = () =>{
-    setButtonPopUp(false)
-  }
+ 
   return (
     <div className="prescription-log-modal-two">
         <p>Medication Name{/*{prescription.medicationName}*/}</p>
-        <button onClick={openPopUp}>Add New Prescription</button>
+        <button>Add New Prescription</button>
 
-       {buttonPopUp && <PopUp onClose={closePopUp} />}
     </div>
   );
 };
