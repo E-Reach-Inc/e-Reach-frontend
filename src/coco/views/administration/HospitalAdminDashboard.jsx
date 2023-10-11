@@ -67,7 +67,7 @@ const HospitalAdminDashboard = () => {
                     </div>
                 </div>
             </div>
-            {buttonPopUp && <MedicalLogModal onClose={closePopUp} />}
+            {buttonPopUp && <MedicalLogModal onClose={closePopUp} isModalOpen={true}/>}
         </div>
     )
 }

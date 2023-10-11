@@ -26,7 +26,7 @@ const PatientRecordTwo = () =>{
           });
   }, [patientId]);
 
-              
+
     const [buttonPopUp,setButtonPopUp]=useState(false);
     const openPopup = () => {
         setButtonPopUp(true);
@@ -35,8 +35,6 @@ const PatientRecordTwo = () =>{
         setButtonPopUp(false);
     };
 
-
-      
   return(
         <div className="patient-record-two-table-outter-con">
 
