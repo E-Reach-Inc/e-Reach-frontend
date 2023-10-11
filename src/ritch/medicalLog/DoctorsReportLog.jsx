@@ -29,10 +29,12 @@ const DoctorsReport = () => {
 
   return (
     <div className="doctors-report-component">
-      <h2>Doctor's Report</h2>
+     
       <div className="report-inputs">
         <div className="report-section">
-          <div className="section-tabs">
+        <h2> Report</h2>
+          <div className="report-section-tabs">
+        
             <button
               onClick={() => switchToSection('diagnosis')}
               className={activeSection === 'diagnosis' ? 'active' : ''}
@@ -64,7 +66,7 @@ const DoctorsReport = () => {
           />
         </div>
       </div>
-      <button onClick={saveReport}>Save Report</button>
+      <button className='save-report-comp-btn' onClick={saveReport}>Save Report</button>
     </div>
   );
 };

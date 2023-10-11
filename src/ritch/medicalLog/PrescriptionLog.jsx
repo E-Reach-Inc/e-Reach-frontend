@@ -5,6 +5,8 @@ import '../medicalLog/medicalLogStyle/prescriptionLog.css'
 const PrescriptionLog = (prescription) => {
   console.log(prescription)
   const [buttonPopUp,setButtonPopUp]=useState(false);
+
+
   
   // useEffect(() => {
   //   // Fetch prescription data from the backend 
@@ -72,12 +74,33 @@ const PrescriptionLog = (prescription) => {
     setButtonPopUp(false)
   }
   return (
+  
     <div className="prescription-log-modal-two">
-        <p>Medication Name{/*{prescription.medicationName}*/}</p>
-        <button onClick={openPopUp}>Add New Prescription</button>
-
+      <div className='prescription-main-con'>
+      <div className='add-prescription-con'>
+      <h2>Prescription</h2>
+        <button className='add-prescription-btn' onClick={openPopUp}>Add</button>
        {buttonPopUp && <PopUp onClose={closePopUp} />}
+      </div>
+
+     
+      <div className='view-prescription-con'>
+     <p>Medication name</p>
+     <button>View</button>
+     
+      </div>
+  
+      </div>
+      
+     
     </div>
+  
+    
+  
+
+    
+
+    
   );
 };
 

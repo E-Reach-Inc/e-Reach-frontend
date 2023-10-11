@@ -4,6 +4,7 @@ import TestLog from "./TestLog";
 import DoctorsReport from "./DoctorsReportLog";
 import { ref, query, orderByChild, equalTo, get } from "firebase/database";
 import {db} from '../../firebaseConfig/firebase'
+import '../medicalLog/medicalLogStyle/MedicalLog.css'
 
 const prescriptions =  {
     medicationName: 'paracetamol',
@@ -38,7 +39,7 @@ const logData = {
         hospitalEmail: ''
     }
 
-const MedicalLog = () => {
+const MedicalLog = ({patientLog}) => {
   const [allLogs, setAllLogs] = useState([]);
   useEffect(() => {
     // localStorage.setItem("hospitalEmail", "gloryHealth")
@@ -75,10 +76,17 @@ const MedicalLog = () => {
           <div key={log.id}>
           </div>
         ))}
+          <div className="medical-log-main-con">
+            <div className="medical-log-inner-con">
+            <h2>Medical Log</h2>
+                <TestLog />
+                <PrescriptionLog prescriptions={prescriptions} />
+                <DoctorsReport />
+                <button className="medical-log-back-btn">Back</button>
+            </div>
        
-        <TestLog />
-        <PrescriptionLog prescriptions={prescriptions} />
-        <DoctorsReport />
+          </div>
+       
       </div>
     </div>
   );
