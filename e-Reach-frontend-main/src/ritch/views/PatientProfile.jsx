@@ -53,15 +53,15 @@ const PatientProfile= () =>{
             <div className="patient-biodata">
               <div className="patient-profile-image">
                 {patientData.gender == "male" ? (
-                  <img src={openUploadWidget} alt="Patient" />
+                  <img src={openUploadWidget} alt="PatientsTab" />
                 ) : (
-                  <img src={maleImage} alt="Patient" />
+                  <img src={maleImage} alt="PatientsTab" />
                 )}
                 <UploadWidget/>
 
                 {/* <div >
                   <form onClick={openUploadWidget}>
-                    <button onClick={()=>{console.log("hello")}} className="patient-profile-img-upload-btn">Upload</button>
+                    <button onClick={()=>{console.log("hello")}} className="patientTab-profile-img-upload-btn">Upload</button>
                   </form>
                 </div> */}
               </div>
@@ -69,7 +69,7 @@ const PatientProfile= () =>{
               <div className="patient-biodata-input">
 
               <div className="patient-biodata-field">
-                  <label >Patient Identification Number :</label>
+                  <label >PatientsTab Identification Number :</label>
                   <span>{patientData.patientIdentificationNumber}</span>
                 </div>
 

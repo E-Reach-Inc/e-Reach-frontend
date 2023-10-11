@@ -36,7 +36,7 @@ export const DoctorProfileTwo =()=>{
                     <div className= "doc-profile-holder-section2">
                         <div>
                             <div className= 'doc-profile-image2'>
-                                <img src={DoctorProfilePic} alt={'doctor'}/>
+                                <img src={DoctorProfilePic} alt={'doctorTab'}/>
                             </div>
                             <button id="upload-profile-image-doc">upload</button>
                         </div>

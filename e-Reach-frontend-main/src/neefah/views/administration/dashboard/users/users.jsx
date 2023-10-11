@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 // import './style.css';
-import '../styles/user/user.css';
-import {AdminSideBar} from "../../coco/views/administration/AdminSideBar";
-import {AdminSearchBar} from "../../coco/views/administration/AdminSearchBar";
-import Patient from "./user/patient/patient";
+import '../../../../styles/administration/dashboard/users/user.css';
+import {AdminSideBar} from "../../../../../coco/views/administration/AdminSideBar";
+import {AdminSearchBar} from "../../../../../coco/views/administration/AdminSearchBar";
+import PatientsTab from "./patientTab/patientsTab";
 import {GiHamburgerMenu} from "react-icons/gi";
-import Doctor from "./user/doctor/doctor";
-import Pharmacy from "./user/pharmacy/pharmacy";
+import DoctorsTab from "./doctorTab/doctorsTab";
+import PharmacistsTab from "./pharmacistsTab/pharmacistsTab";
 
-function User() {
+function Users() {
     const [selectedTab, setSelectedTab] = useState('patients');
     const [isHamburger, setHamburger] = useState(false);
 
@@ -47,8 +47,8 @@ function User() {
                                 Doctors
                             </div>
                             <div
-                                className={`tab ${selectedTab === 'pharmacy' ? 'active' : ''}`}
-                                onClick={() => handleTabClick('pharmacy')}
+                                className={`tab ${selectedTab === 'pharmacistsTab' ? 'active' : ''}`}
+                                onClick={() => handleTabClick('pharmacistsTab')}
                             >
                                 Pharmacy
                             </div>
@@ -56,17 +56,17 @@ function User() {
                         <div className="tabs">
                             {selectedTab === 'patients' && (
                                 <div>
-                                    <Patient/>
+                                    <PatientsTab/>
                                 </div>
                             )}
                             {selectedTab === 'doctors' && (
                                 <div>
-                                    <Doctor/>
+                                    <DoctorsTab/>
                                 </div>
                             )}
-                            {selectedTab === 'pharmacy' && (
+                            {selectedTab === 'pharmacistsTab' && (
                                 <div>
-                                    <Pharmacy/>
+                                    <PharmacistsTab/>
                                 </div>
                             )}
                         </div>
@@ -77,4 +77,4 @@ function User() {
     );
 }
 
-export default User;
+export default Users;

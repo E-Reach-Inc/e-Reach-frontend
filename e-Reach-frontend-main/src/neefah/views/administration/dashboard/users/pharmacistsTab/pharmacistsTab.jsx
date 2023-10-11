@@ -1,7 +1,7 @@
 import React from 'react';
 import {IoEyeOutline} from "react-icons/io5";
 import {BsPencilFill} from "react-icons/bs";
-import '../../../styles/user/pharmacy/pharmacy.css'
+import '../../../../../styles/administration/dashboard/users/pharmacistsTab/pharmacistsTab.css'
 
 const PharmacyProfileTable = () => {
     const pharmacyDetail = {
@@ -60,7 +60,7 @@ const PharmacyProfileTable = () => {
         </div>
     );
 };
-function Pharmacy() {
+function PharmacistsTab() {
     return (
         <div>
             <p>Pharmacy</p>
@@ -69,4 +69,4 @@ function Pharmacy() {
     );
 }
 
-export default Pharmacy;
+export default PharmacistsTab;

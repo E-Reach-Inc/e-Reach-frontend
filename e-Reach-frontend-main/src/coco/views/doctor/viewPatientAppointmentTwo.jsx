@@ -10,7 +10,7 @@ export const PatientAppointmentTwo = () => {
     ];
     const navigateToAppointments = useNavigate();
     const handleButtonClick =()=>{
-        navigateToAppointments("/doctor-patient-appointment-one")
+        navigateToAppointments("/doctorTab-patientTab-appointment-one")
     }
 
     return(

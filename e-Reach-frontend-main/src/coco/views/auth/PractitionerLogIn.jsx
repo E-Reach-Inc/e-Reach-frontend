@@ -40,8 +40,8 @@ function LoginPage() {
 
             })
             .finally(()=>{
-                if(role === "doctor")
-                    navigate("doctor-dashboard")
+                if(role === "doctorTab")
+                    navigate("doctorTab-dashboard")
                 else if(role === "pharmacist")
                     navigate("pharmacist-dashboard")
             })

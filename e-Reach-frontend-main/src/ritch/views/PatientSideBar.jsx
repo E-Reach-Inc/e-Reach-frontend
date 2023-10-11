@@ -26,24 +26,24 @@ const PatientSideBar  = () => {
              
                 <div className="patient-menu-item"  id="patient-dashboard-icon">
                 <img src={dashboard} alt=""   />
-                <Link className="side-text"to = {"/patient-view"}>Dashboard</Link>
+                <Link className="side-text"to = {"/patientTab-view"}>Dashboard</Link>
                 </div>
 
                 <div className="patient-menu-item">
                     <img src={profile} alt="" />
-                    <Link className="side-text"to = {"/patient-profile"}>Profile</Link>
+                    <Link className="side-text"to = {"/patientTab-profile"}>Profile</Link>
  
                 </div>
 
                 <div className="patient-menu-item" >
                 <img src={record} alt="" />
-                <Link className="side-text" to = {"/patient-record"} >Medical Record</Link>
+                <Link className="side-text" to = {"/patientTab-record"} >Medical Record</Link>
 
                 </div>
 
                 <div className="patient-menu-item">
                 <img src={appointment} alt=""/>
-                <Link className="side-text"to= {"/patient-appointment"}>Appointment</Link>
+                <Link className="side-text"to= {"/patientTab-appointment"}>Appointment</Link>
                 </div>
 
             

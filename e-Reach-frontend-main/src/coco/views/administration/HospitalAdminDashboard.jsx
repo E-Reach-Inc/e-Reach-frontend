@@ -14,13 +14,13 @@ const HospitalAdminDashboard = () => {
     const [buttonPopUp, setButtonPopUp] = useState(false)
     const navigate = useNavigate()
     function handleClickForPatient(){
-        navigate("/patient-registration")
+        navigate("/patientTab-registration")
     }
     function handleClickForPractitioner(){
         navigate("/register-practitioner")
     }
     function handleClickForRecords(){
-        navigate("/patient-record")
+        navigate("/patientTab-record")
     }
 
     function handleClickForCreateNewLog(){

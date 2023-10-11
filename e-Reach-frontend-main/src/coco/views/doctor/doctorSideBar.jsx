@@ -18,23 +18,23 @@ export  const DoctorSideBar = () =>{
                 <div className= "doc-inner-side-bar">
                     <div className= "doc-dashboard">
                         <img src={docDashboard} alt={"dashboard"}/>
-                        <Link to={"/doctor-dashboard"} id= "link-doc-dashboard">Dashboard</Link></div>
+                        <Link to={"/doctorTab-dashboard"} id= "link-doc-dashboard">Dashboard</Link></div>
 
                     <div className= "doc-Profile">
                         <img src={docProfile} alt={"profile"}/>
-                        <Link to={"/doctor-profile-one"} id="link-to-doc-profile">Profile</Link></div>
+                        <Link to={"/doctorTab-profile-one"} id="link-to-doc-profile">Profile</Link></div>
 
                     <div className= "doc-Appointment">
                         <img src={docAppointment} alt={"appointment"}/>
-                        <Link to={"/doctor-patient-appointment-one"} id="link-to-Appointment">Appointment</Link></div>
+                        <Link to={"/doctorTab-patientTab-appointment-one"} id="link-to-Appointment">Appointment</Link></div>
 
                     <div className= "doc-View-Patient-Record">
-                        <img src={docPatientRecord} alt={"patient record"}/>
-                        <Link to={"/doctor-patient-record-one"} id="link-to-patient-record">Patient Records</Link></div>
+                        <img src={docPatientRecord} alt={"patientTab record"}/>
+                        <Link to={"/doctorTab-patientTab-record-one"} id="link-to-patient-record">PatientsTab Records</Link></div>
 
                     <div className= "doc-View-Active-Logs">
                         <img src={docActiveLogs} alt={"active logs"}/>
-                        <Link to={"/doctor-active-logs-one"} id="link-to-active-logs">Active Logs</Link></div>
+                        <Link to={"/doctorTab-active-logs-one"} id="link-to-active-logs">Active Logs</Link></div>
 
                     <div className= "doc-Messaging">
                         <img src={docMessaging} alt={"messages"}/>

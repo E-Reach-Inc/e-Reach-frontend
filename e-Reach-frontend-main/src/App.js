@@ -25,7 +25,7 @@ import MedicalLog from "./ritch/medicalLog/MedicalLog";
 import PatientPopUp from "./ritch/views/PatientPopUp";
 import { LandingPageMainBody } from "./favour/views/landingPage/landingPageMainBody";
 import {ActiveLogsTableOne} from "./coco/views/doctor/doctorViewActiveLogsOne"
-import User from "./neefah/views/user";
+import Users from "./neefah/views/administration/dashboard/users/users";
 
 
 
@@ -41,17 +41,17 @@ function App() {
               <Route path='*' element={<p>Page Not Found</p>}/>
               {/*<Route path='/' element={<Lan/>}/>*/}
               <Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>
-              <Route path='/user' element={<User/>}/>
+              <Route path='/user' element={<Users/>}/>
               <Route path='/activate-hospital-account/:token' element={<ActivateHospitalAccount/>}/>
               <Route path='/activate-hospital-admin-account/:token' element={<ActivateHospitalAdminAccount/>}/>
               <Route path={"hospital-admin-signup"} element={<HospitalAdminSignUp/>}/>
                 
                 
               <Route path='/doctor-dashboard' element={<DoctorDashboard/>}/>
-              <Route path={"/doctor-active-logs-one"} element={<ActiveLogsTableOne/>}/>
-              <Route path={"/doctor-patient-appointment-one"} element={<PatientAppointmentOne/>}/>
-              <Route path={"/doctor-patient-record-one"} element={<ViewPatientRecordOne/>}/>
-              <Route path={"/doctor-dashboard"} element={<DoctorProfileOne/>}/>
+              <Route path={"/doctorTab-active-logs-one"} element={<ActiveLogsTableOne/>}/>
+              <Route path={"/doctorTab-patientTab-appointment-one"} element={<PatientAppointmentOne/>}/>
+              <Route path={"/doctorTab-patientTab-record-one"} element={<ViewPatientRecordOne/>}/>
+              <Route path={"/doctorTab-dashboard"} element={<DoctorProfileOne/>}/>
                 
 
               <Route path='/pharmacist-default-dashboard' element={<PharmacistDefaultDashboard/>}/>

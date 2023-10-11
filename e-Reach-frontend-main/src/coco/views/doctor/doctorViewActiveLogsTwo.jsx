@@ -16,7 +16,7 @@ export const ActiveLogsTableTwo = () => {
 
     const navigateToLogs = useNavigate();
     const handleButtonClick =()=>{
-        navigateToLogs("/doctor-active-logs-one")
+        navigateToLogs("/doctorTab-active-logs-one")
     }
     return(
         <div className= 'major-log-frame'>
