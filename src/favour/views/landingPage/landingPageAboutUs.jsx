@@ -33,7 +33,7 @@ export const LandingPageAboutUs = () => {
                 <div className= "holder">
                     <p id= "our">Our Services</p>
                     <p id= "our-service">Electronic Health Records (EHR)</p>
-                    <p id= "electronic">Revolutionize your practice with our state-of-the-art EHR system. Our user-friendly platform allows healthcare providers to manage patient records seamlessly, improve clinical workflows, and enhance patient engagement.</p>
+                    <p id= "electronic-one">Revolutionize your practice with our state-of-the-art EHR system. Our user-friendly platform allows healthcare providers to manage patient records seamlessly, improve clinical workflows, and enhance patient engagement.</p>
 
                     <p id= "our-service">Data Security and Compliance</p>
                     <p id= "electronic">Protect your patients' sensitive information with our robust data security and compliance solutions. We help you navigate the complex regulatory landscape while maintaining the highest standards of data protection.</p>

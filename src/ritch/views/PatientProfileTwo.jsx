@@ -42,7 +42,7 @@ const PatientProfileTwo= () =>{
     
             <div className="patient-two-biodata">
             <div className="patient-two-title">
-              <h2>Bio Data</h2>
+              <h3>Bio Data</h3>
             </div>
             <div className="patient-two-profile-mid-con">
               

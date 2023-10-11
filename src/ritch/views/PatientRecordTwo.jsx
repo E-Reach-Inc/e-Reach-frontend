@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import PatientNavBar from "./PatientNavBar";
 import action from '../patient-icons/patient-eye-view.svg'
@@ -7,7 +6,6 @@ import axios from "axios";
 import PatientPopUp from "./PatientPopUp";
 import axios from "axios";
 import { toast } from "react-toastify";
-
 
 
 const PatientRecordTwo = () =>{
@@ -55,17 +53,15 @@ const PatientRecordTwo = () =>{
             });
     }, [patientId]);
   
-    return(
+  return(
         <div className="patient-record-two-table-outter-con">
 
           <div className="patient-record-two-med-logs">
-          <h2 className="patient-med-logs-two">Records</h2>
+          <h3 className="patient-med-logs-two">Records</h3>
           <button>Browse All</button>
           </div>
-          
           <div className="patient-record-two-inner-con">
               <table className="patient-record-two-table">
-
                 <thead className="patient-record-two-table-header">
                   <tr>
                     <th>Date Created</th>

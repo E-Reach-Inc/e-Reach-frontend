@@ -4,7 +4,6 @@
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    background-color: #e0ecef;
 }
 
 .patient-nav-bar-icons{
@@ -21,7 +20,9 @@
 }
 .patient-current-date{
     border: 1px solid #ccc;
-    border-radius: 5px;
+    background-color: white;
+    border-radius: 7px;
+    border: none;
     height: 2rem;
     width: 15rem;
 }
@@ -29,6 +30,7 @@
 .patient-search-input{
    
     border: 1px solid #ccc;
+    border: none;
     border-radius: 5px;
     outline: none;
     height: 2rem;
