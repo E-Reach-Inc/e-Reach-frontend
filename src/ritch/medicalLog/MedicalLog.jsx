@@ -5,15 +5,7 @@ import DoctorsReport from "./DoctorsReportLog";
 import { ref, query, orderByChild, equalTo, get } from "firebase/database";
 import {db} from '../../firebaseConfig/firebase'
 import { LogContext } from "../../coco/views/doctor/doctorViewActiveLogsOne";
-
-const prescriptions =  {
-    medicationName: 'paracetamol',
-    dosage: '2 tablets',
-    dosageFrequecy: 'Morning and night',
-    startDate: '',
-    prescriptionDate: '',
-    practitionerEmail: ''
-  }
+import '../medicalLog/medicalLogStyle/MedicalLog.css'
 
 const logData = {
         doctorReportDTO: {
@@ -39,7 +31,7 @@ const logData = {
         hospitalEmail: ''
     }
 
-const MedicalLog = () => {
+const MedicalLog = ({patientLog}) => {
   const [allLogs, setAllLogs] = useState([]);
   const logData = useContext(LogContext)
   useEffect(() => {
@@ -50,15 +42,21 @@ const MedicalLog = () => {
   return (
     <div className="medical-log-holder-con">
       <div>
-        {/* Render your medical logs here using the filtered data in 'allLogs' */}
         {allLogs.map((log) => (
           <div key={log.id}>
           </div>
         ))}
+          <div className="medical-log-main-con">
+            <div className="medical-log-inner-con">
+            <h2>Medical Log</h2>
+                <TestLog />
+                <PrescriptionLog />
+                <DoctorsReport />
+                <button className="medical-log-back-btn">Back</button>
+            </div>
        
-        <TestLog />
-        <PrescriptionLog prescriptions={prescriptions} />
-        <DoctorsReport />
+          </div>
+       
       </div>
     </div>
   );

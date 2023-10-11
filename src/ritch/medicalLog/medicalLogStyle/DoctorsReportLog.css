@@ -1,0 +1,67 @@
+/* .report-inputs{
+   
+} */
+
+.report-section-tabs button{
+    background-color: rgba(242, 242, 248, 0.82);
+    width: 100px;
+    border: 1px solid#368db2;
+    font-size: large;
+    border-radius: 5px;
+
+    
+}
+
+.report-section{
+    text-align: left;
+}
+.report-section-tabs button:hover{
+    box-shadow: inset 550px 0 0 0 #368db2;
+    color: white;
+
+}
+
+.report-section textarea{
+    width: 100%;
+    height: 10vh;
+}
+
+.report-section-tabs{
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+.doctors-report-component{
+    margin: 40px auto;
+    width: 455px;
+   
+    border-radius: 10px;
+    margin-top: 20px;
+    border-top: 1px solid#368db2;
+    padding: 5px;
+};
+  
+   
+
+
+.save-report-comp-btn{
+    background-color: rgba(242, 242, 248, 0.82);
+    width: 110px;
+    border: 1px solid#368db2;
+    font-size: large;
+    border-radius: 5px;
+    margin-top: 10px;
+    
+    
+}
+
+.save-report-comp-btn:hover{
+    box-shadow: inset 550px 0 0 0 #368db2;
+    color: white;
+}

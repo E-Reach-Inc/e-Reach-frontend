@@ -8,6 +8,7 @@ import ActiveLogPopUp from "./activeLogPopUp";
 import { ToastContainer, toast } from "react-toastify";
 import { getDatabase, get, ref, query, orderByChild, equalTo } from 'firebase/database'; // Import Firebase database functions
 import { db } from "../../../firebaseConfig/firebase";
+import MedicalLog from "../../../ritch/medicalLog/MedicalLog";
 import { useNavigate } from "react-router";
 
 export const LogContext = React.createContext();
@@ -34,7 +35,6 @@ export const ActiveLogsTableOne = () => {
                     });
                     setActiveLogsData(logsArray);
                     toast.info("medical logs found", {position: toast.POSITION.TOP_CENTER, autoClose:3000})
-                    console.log("This is active logs data::: ", activeLogsData)
                 }
             } catch (error) {
                 toast.error("could not fetch logs", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
@@ -43,8 +43,22 @@ export const ActiveLogsTableOne = () => {
         };
 
         fetchData();
-    }, [hospitalEmail]);
+    }, []);
 
+
+    function openMedicalLog(event){
+        const patientId = event.target.parentElement.parentElement.id;
+        let patientLog = null;
+        activeLogsData.map((log, index)=>{
+            if(patientId === log.patientIdentificationNumber){
+                patientLog = log;
+            }
+        });
+        console.log(patientLog)
+        // navigate("/medical-log/")
+        // <MedicalLog patientLog={patientLog}/>
+
+    }
 
     const openActiveLogsPopUp = (event) => {
         event.preventDefault();
@@ -101,11 +115,11 @@ export const ActiveLogsTableOne = () => {
                             </tr>
                             </thead>
                             <tbody>
-                            {activeLogsData.map((activeLogsData, index) => (
-                                <tr key={index} id={activeLogsData.patientIdentificationNumber}>
-                                    <td >{activeLogsData.dateCreated}</td>
-                                    <td >{activeLogsData.timeCreated}</td>
-                                    <td >{activeLogsData.patientIdentificationNumber}</td>
+                            {activeLogsData.map((activeLog, index) => (
+                                <tr key={index} id={activeLog.patientIdentificationNumber}>
+                                    <td >{activeLog.dateCreated}</td>
+                                    <td >{activeLog.timeCreated}</td>
+                                    <td >{activeLog.patientIdentificationNumber}</td>
                                     <td >
                                         <img onClick={(event) => (openActiveLogsPopUp(event))}
                                              id="log-action-buttons" src={ViewLog} alt="view">

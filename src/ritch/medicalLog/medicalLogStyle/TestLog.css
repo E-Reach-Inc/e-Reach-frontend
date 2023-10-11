@@ -1,0 +1,76 @@
+.test-component{
+    justify-content: center;
+    margin: 40px auto;
+    width: 455px;
+    justify-content: center;  
+    border-radius: 10px;
+    height: 15vh;
+    
+}
+.test-component-content-con{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+    padding: 5px;
+}
+
+
+
+.test-inputs button{
+    background-color: rgba(242, 242, 248, 0.82);
+    width: 150px;
+    margin-top: 20px;
+    margin-left: 130px;
+    border: 1px solid#368db2;
+    justify-content: center;
+    font-size: large;
+    display: flex;
+    border-radius: 5px;
+}
+
+.test-inputs button:hover{
+    box-shadow: inset 550px 0 0 0 #368db2;
+    color: white;
+}
+
+
+.test-component-content{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.test-component-btn{
+        background-color: rgba(242, 242, 248, 0.82);
+        width: 100px;
+        border: 1px solid#368db2;
+        font-size: large;
+        border-radius: 5px;
+    }
+    
+    .test-component-btn:hover{
+        box-shadow: inset 550px 0 0 0 #368db2;
+        color: white;
+    
+    }
+
+    .test-output-con{
+        display: flex;
+        margin-top: 10px;
+        justify-content: space-between;
+    }
+    .test-output-con button{
+        background-color: rgba(242, 242, 248, 0.82);
+        width: 100px;
+       
+        border: 1px solid#368db2;
+        font-size: large;
+        border-radius: 5px;
+    }
+
+    .test-output-con button:hover{
+        box-shadow: inset 550px 0 0 0 #368db2;
+        color: white;
+    }
+
+    

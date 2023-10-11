@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
-import PatientNavBar from "./PatientNavBar";
 import action from '../patient-icons/patient-eye-view.svg'
 import '../styles/PatientRecordTwo.css'
 import PatientPopUp from "./PatientPopUp";
 import axios from "axios";
 import { toast } from "react-toastify";
-
 
 const PatientRecordTwo = () =>{
 
@@ -71,7 +69,7 @@ const PatientRecordTwo = () =>{
             </div>
           {buttonPopUp && <PatientPopUp onClose={closePopup}/>}
     </div>
-    )
-    
-}
+  );
+};
+
 export default PatientRecordTwo;
