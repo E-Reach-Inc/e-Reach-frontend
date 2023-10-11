@@ -5,7 +5,7 @@ import {useState} from "react";
 import "../../styles/patient/MedicalLogPopUp.css"
 import { ToastContainer, toast } from 'react-toastify';
 
-export function MedicalLogModal({ closeModal }) {
+export function MedicalLogModal({ closeModal: onClose, isModalOpen }) {
 
     const requiredData ={
         patientId: "",
@@ -67,15 +67,15 @@ export function MedicalLogModal({ closeModal }) {
 
     function handleSubmit(event){
         event.preventDefault()
-        closePopUp(event)
+        
         try{
             const medicalLogRef = push(ref(db, 'active_logs'));
             set(medicalLogRef, medicalLog)
                 .then(successResponse => {
                     console.log(medicalLog)
-                    console.log(successResponse)
                     toast.success('log created successfully', 
                     {position: toast.POSITION.TOP_CENTER, autoClose: 3000})
+                    isModalOpen = true;
                     console.log('Data has been successfully written to Firebase!');
                 })
                 .catch((error) => {
@@ -92,7 +92,7 @@ export function MedicalLogModal({ closeModal }) {
     }
 
     return (
-        <div className='popUp-overlay'>
+        isModalOpen && (<div className='popUp-overlay'>
             <ToastContainer/>
                 <h2>  Patient Log</h2>
                 <form onSubmit={handleSubmit} className='Medical-Log-Form'>
@@ -112,6 +112,6 @@ export function MedicalLogModal({ closeModal }) {
                         </div>
                     </div>
                 </form>
-        </div>
+        </div>)
     );
 }

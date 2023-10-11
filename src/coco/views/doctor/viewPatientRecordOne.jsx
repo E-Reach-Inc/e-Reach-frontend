@@ -93,8 +93,9 @@ export const ViewPatientRecordOne= () => {
                         onClick={() => openRecordPopUp(record)}
                         id="records-action-buttons"
                         src={ViewLog}
-                        alt="view"
-                      ></img>
+                        alt="view">
+                            
+                        </img>
                       
                       {/* <img
                         onClick={() => editRecord(record.patientId)}

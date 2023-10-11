@@ -26,6 +26,7 @@ import PatientPopUp from "./ritch/views/PatientPopUp";
 import { LandingPageMainBody } from "./favour/views/landingPage/landingPageMainBody";
 import {ActiveLogsTableOne} from "./coco/views/doctor/doctorViewActiveLogsOne"
 import RouteToDashbaord from "./ritch/views/routeToDashbaord";
+import PatientProfileTwo from "./ritch/views/PatientProfileTwo";
 
 
 
@@ -43,7 +44,7 @@ function App() {
               <Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>
               <Route path="/landing-page" element={<LandingPageMainBody/>}/>
 
-              <Route path='*' element={<p>Page Not Found</p>}/>
+                <Route path='*' element={<p>Page Not Found</p>}/>
               <Route path='/' element={<LandingPageMainBody/>}/>
               <Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>
 
@@ -77,6 +78,7 @@ function App() {
 
               <Route path='/patient-log-view' element={<PatientPopUp/>}/>
               <Route path='/patient-profile' element={<PatientProfile/>}/>
+              <Route path="patient-profile-two" element={<PatientProfileTwo/>}/>
               <Route path='/patient-record' element={<PatientRecord/>}/>
               <Route path='/patient-appointment' element={<PatientAppointment/>}/>
               <Route path='/patient-signUp' element={<PatientSignUp/>}/>

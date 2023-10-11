@@ -128,7 +128,7 @@ export  const PharmacistMedication =()=>{
                                 <th>Condition</th>
                             </tr>
                             </thead>
-                            <tbody>
+                           <tbody>
                             {medicine.map((medicine, index) => (
                                 <tr key={index}>
                                     <td >{medicine.MedicationName}</td>
@@ -137,7 +137,7 @@ export  const PharmacistMedication =()=>{
                                     <td >{medicine.Condition}</td>
                                 </tr>
                             ))}
-                            </tbody>
+                           </tbody>
                         </table>
                     </div>
                 </div>

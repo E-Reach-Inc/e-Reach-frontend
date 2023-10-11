@@ -19,7 +19,7 @@
     margin-top: 20px;
     margin-left: 230px;
 }
-.link-bars {
+.link-bars{
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
@@ -36,8 +36,7 @@
     font-size: medium;
     font-weight: normal;
     text-decoration: none;
-    justify-content: space-between;
-    margin-left: 50px;
+    margin-left: 10rem; 
 }
 
 .link-bars a:hover{
@@ -46,7 +45,6 @@
 }
 
 #Register-button{
-    /*background-color: rgba(242, 242, 248, 0.82);*/
     color:#368db2;
     border-color: #368db2;
     transition: background-color;
@@ -55,15 +53,365 @@
     background: transparent;
     height: 50px;
     width: 200px;
-    left: 181px;
+    /* left: 181px; */
     margin-top: 15px;
-    margin-left: 175px;
+    /* margin-left: 175px; */
     border-radius: 10px;
     padding: 8px 16px 8px 16px;
     font-weight: bolder;
     font-size: large;
 }
 #Register-button:hover{
-    /*box-shadow: inset 200px 0 0 0 #368db2;*/
     background-color: #e6f7fa;
+}
+#hamburger-button{
+    display: none;
+}
+
+
+/* media query */
+@media only screen and (max-width: 1024px){
+    #hamburger-button {
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: rgba(15, 15, 97,  0.82);
+        display: block; 
+    }
+     .link-bars.show-links {
+        position: absolute; 
+        top: 80px;  
+        left: 1rem;
+        background-color: white;
+        padding: 10px;
+        border: 1px solid #ccc;
+        z-index: 100;
+    }
+    .link-bars.show-links a {
+        color: rgba(15, 15, 97,  0.82);
+        text-decoration-style: solid;
+        font-size: medium;
+        font-weight: normal;
+        text-decoration: none;
+        margin: 5px 0;
+    }
+    .link-bars{
+        flex-direction: column;
+        width: 100px;
+    }
+    .link-bars.hide-links {
+        display: none;
+    }
+    #Register-button{
+        width: 9rem;
+        padding: 10px;
+        margin-top: 30px;
+        margin-left: 38rem;
+    }
+    
+}
+
+@media only screen and (max-width: 926px){
+    #hamburger-button {
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: rgba(15, 15, 97,  0.82);
+        display: block; 
+    }
+     .link-bars.show-links {
+        position: absolute; 
+        top: 80px;  
+        left: 1rem;
+        background-color: white;
+        padding: 10px;
+        border: 1px solid #ccc;
+        z-index: 100;
+    }
+    .link-bars.show-links a {
+        color: rgba(15, 15, 97,  0.82);
+        text-decoration-style: solid;
+        font-size: medium;
+        font-weight: normal;
+        text-decoration: none;
+        margin: 5px 0;
+    }
+    .link-bars{
+        flex-direction: column;
+        width: 100px;
+    }
+    .link-bars.hide-links {
+        display: none;
+    }
+    #Register-button{
+        width: 9rem;
+        padding: 10px;
+        margin-top: 30px;
+        margin-left: 25rem;
+    }
+}
+
+
+@media only screen and (max-width: 820px){
+    #hamburger-button {
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: rgba(15, 15, 97,  0.82);
+        display: block; 
+    }
+     .link-bars.show-links {
+        position: absolute; 
+        top: 80px;  
+        left: 1rem;
+        background-color: white;
+        padding: 10px;
+        border: 1px solid #ccc;
+        z-index: 100;
+    }
+    .link-bars.show-links a {
+        color: rgba(15, 15, 97,  0.82);
+        text-decoration-style: solid;
+        font-size: medium;
+        font-weight: normal;
+        text-decoration: none;
+        margin: 5px 0;
+    }
+    .link-bars{
+        flex-direction: column;
+        width: 100px;
+    }
+    .link-bars.hide-links {
+        display: none;
+    }
+    #Register-button{
+        width: 9rem;
+        padding: 10px;
+        margin-top: 30px;
+        margin-left: 25rem;
+    }
+}
+@media only screen and (max-width: 888px){
+    #hamburger-button {
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: rgba(15, 15, 97,  0.82);
+        display: block; 
+    }
+     .link-bars.show-links {
+        position: absolute; 
+        top: 80px;  
+        left: 1rem;
+        background-color: white;
+        padding: 10px;
+        border: 1px solid #ccc;
+        z-index: 100;
+    }
+    .link-bars.show-links a {
+        color: rgba(15, 15, 97,  0.82);
+        text-decoration-style: solid;
+        font-size: medium;
+        font-weight: normal;
+        text-decoration: none;
+        margin: 5px 0;
+    }
+    .link-bars{
+        flex-direction: column;
+        width: 100px;
+    }
+    .link-bars.hide-links {
+        display: none;
+    }
+    #Register-button{
+        width: 9rem;
+        padding: 10px;
+        margin-top: 30px;
+        margin-left: 25rem;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #hamburger-button {
+     background: transparent;
+     border: none;
+     font-size: 24px;
+     cursor: pointer;
+     color: rgba(15, 15, 97,  0.82);
+     display: block; 
+ }
+  .link-bars.show-links {
+     position: absolute; 
+     top: 80px;  
+     left: 1rem;
+     background-color: white;
+     padding: 10px;
+     border: 1px solid #ccc;
+     z-index: 100;
+ }
+ .link-bars.show-links a {
+     color: rgba(15, 15, 97,  0.82);
+     text-decoration-style: solid;
+     font-size: medium;
+     font-weight: normal;
+     text-decoration: none;
+     margin: 5px 0;
+ }
+ .link-bars{
+     flex-direction: column;
+     width: 100px;
+ }
+ .link-bars.hide-links {
+     display: none;
+ }
+ #Register-button{
+     width: 9rem;
+     padding: 10px;
+     margin-top: 30px;
+     margin-left: 25rem;
+ }
+}
+
+
+@media only screen and (max-width: 414px) {
+    #hamburger-button {
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: rgba(15, 15, 97,  0.82);
+        display: block; 
+    }
+     .link-bars.show-links {
+        position: absolute; 
+        top: 80px;  
+        left: 1rem;
+        background-color: white;
+        padding: 10px;
+        border: 1px solid #ccc;
+        z-index: 100;
+    }
+    .link-bars.show-links a {
+        color: rgba(15, 15, 97,  0.82);
+        text-decoration-style: solid;
+        font-size: medium;
+        font-weight: normal;
+        text-decoration: none;
+        margin: 5px 0;
+    }
+    .link-bars{
+        flex-direction: column;
+        width: 100px;
+    }
+    .link-bars.hide-links {
+        display: none;
+    }
+    .Logo-div img{
+       display: none;
+    }
+     #Register-button{
+      width: 9rem;
+      padding: 10px;
+      height: 40px;
+      margin-top: 30px;
+      margin-left: 15rem;
+  }
+}
+
+@media only screen and (max-width: 390px){
+    #hamburger-button {
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: rgba(15, 15, 97,  0.82);
+        display: block; 
+    }
+     .link-bars.show-links {
+        position: absolute; 
+        top: 80px;  
+        left: 1rem;
+        background-color: white;
+        padding: 10px;
+        border: 1px solid #ccc;
+        z-index: 100;
+    }
+    .link-bars.show-links a {
+        color: rgba(15, 15, 97,  0.82);
+        text-decoration-style: solid;
+        font-size: medium;
+        font-weight: normal;
+        text-decoration: none;
+        margin: 5px 0;
+    }
+    .link-bars{
+        flex-direction: column;
+        width: 100px;
+    }
+    .link-bars.hide-links {
+        display: none;
+    }
+    .Logo-div img{
+       display: none;
+    }
+    #Register-button{
+        width: 9rem;
+        padding: 10px;
+        height: 40px;
+        margin-top: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 375px){
+    #hamburger-button {
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: rgba(15, 15, 97,  0.82);
+        display: block; 
+    }
+     .link-bars.show-links {
+        position: absolute; 
+        top: 80px;  
+        left: 1rem;
+        background-color: white;
+        padding: 10px;
+        border: 1px solid #ccc;
+        z-index: 100;
+    }
+    .link-bars.show-links a {
+        color: rgba(15, 15, 97,  0.82);
+        text-decoration-style: solid;
+        font-size: medium;
+        font-weight: normal;
+        text-decoration: none;
+        margin: 5px 0;
+    }
+    .link-bars{
+        flex-direction: column;
+        width: 100px;
+    }
+    .link-bars.hide-links {
+        display: none;
+    }
+    #Register-button{
+        width: 9rem;
+        padding: 10px;
+        height: 40px;
+        margin-top: 30px;
+        margin-left: 135%;
+    }
 }
