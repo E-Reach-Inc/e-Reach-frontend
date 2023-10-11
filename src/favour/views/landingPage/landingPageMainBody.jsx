@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import backgroundImg from "../../assets/landingPageImage/image2.svg"
 import {LandingPageNavbar} from "./landingPageNavBar.jsx"
 import {LandingPageFooter} from "./landingPageFooter"
-import {LandingPageAboutUs} from "./landingPageAboutUs";
+import {LandingPageAboutUs} from "../landingPage/landingPageAboutUs";
 
 export const LandingPageMainBody = () => {
     const [text, setText] = useState('Health');
@@ -40,7 +40,7 @@ export const LandingPageMainBody = () => {
                                 <span className="text sec-text">{text}</span>
                             </div>
                             <div>
-                                <a href="https://github.com" ><button id="Register-button2">Get Started</button></a>
+                                <a href="/hospital-admin-signup" ><button id="Register-button2">Get Started</button></a>
                             </div>
                         </div>
                         <div className="Image-div">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import '../styles/PatientProfile.css'
 // import femaleImage from '../patient-icons/patient-female.svg'
 import maleImage from '../patient-icons/patient-male.svg'
@@ -22,6 +22,11 @@ const PatientProfileTwo= () =>{
         gender: "",
         patientIdentificationNumber : "",
       });
+
+      const patientId = localStorage.getItem("patientIdentificationNumber")
+      useEffect(()=>{
+
+      })
 
 
      const openUploadWidget = () => {
@@ -49,10 +54,12 @@ const PatientProfileTwo= () =>{
                 )}
 
                 <div >
-                  <form onClick={openUploadWidget}>
+                  <form>
                     <button className="patient-profile-two-upload-btn">Upload</button>
                   </form>
+                  
                 </div>
+                <openUploadWidget/>
               </div>
     
               <div className="patient-two-biodata-input">

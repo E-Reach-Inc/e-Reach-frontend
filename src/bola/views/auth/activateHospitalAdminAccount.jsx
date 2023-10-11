@@ -18,7 +18,7 @@ const ActivateHospitalAdminAccount = () => {
                 localStorage.setItem("adminEmail", onFulfilled.data.adminEmail)
              })
              .catch(onRejected => {
-                toast.error(onRejected.message, {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
+                // toast.error(onRejected.message, {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
              })
              .finally(()=>{
 

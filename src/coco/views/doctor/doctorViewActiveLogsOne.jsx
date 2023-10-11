@@ -17,7 +17,6 @@ export const ActiveLogsTableOne = () => {
     const hospitalEmail = localStorage.getItem("hospitalEmail");
 
     useEffect(() => {
-        console.log("hello tue tue")
         const fetchData = async () => {
             const logsRef = ref(db, "active_logs");
             const logsQuery = query(logsRef, orderByChild("hospitalEmail"), equalTo(hospitalEmail));
@@ -25,18 +24,18 @@ export const ActiveLogsTableOne = () => {
             try {
                 const snapshot = await get(logsQuery);
                 if (snapshot.exists()) {
-                    console.log('exists')
                     const logsArray = [];
                     snapshot.forEach((childSnapshot) => {
                         const logData = childSnapshot.val();
                         logsArray.push(logData);
                     });
                     setActiveLogsData(logsArray);
+                    toast.info("medical logs found", {position: toast.POSITION.TOP_CENTER, autoClose:3000})
+                    console.log("This is active logs data::: ", activeLogsData)
                 }
-                toast.info("you hospital has not created any medical log(s)", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
             } catch (error) {
                 toast.error("could not fetch logs", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
-                console.error("Error fetching data:", error);
+                console.error("Error fetching data::: ", error);
             }
         };
 
@@ -44,8 +43,18 @@ export const ActiveLogsTableOne = () => {
     }, [hospitalEmail]);
 
 
-    const openActiveLogsPopUp = (activeLogsData) => {
-        setSelectedActiveLogs(activeLogsData);
+    const openActiveLogsPopUp = (event) => {
+        const patientId = event.target.parentElement.parentElement.id;
+        const patientLog = null;
+        activeLogsData.map((log, index)=>{
+            if(patientId === log.patientIdentificationNumber){
+                patientLog = log;
+                return patientLog;
+            }
+        });
+        <ActiveLogPopUp isOpen={activeLogsButtonPopUp} isClose={closeActiveLogsPopUp} activeLogsData={patientLog}/>
+
+        setSelectedActiveLogs(patientLog);
         setActiveLogsButtonPopUp(true);
     }
 
@@ -53,10 +62,6 @@ export const ActiveLogsTableOne = () => {
         setSelectedActiveLogs(null);
         setActiveLogsButtonPopUp(false);
     }
-    // const activeLogsData = [
-    //     { date: '2023-09-27', time: '10:00 AM', patientId: 1 },
-    //     { date: '2023-09-26', time: '03:30 PM', patientId: 2 },
-    // ];
 
     return(
         <div className="Doc-Log-Main-Frame">
@@ -85,11 +90,11 @@ export const ActiveLogsTableOne = () => {
                             <tbody>
                             {activeLogsData.map((activeLogsData, index) => (
                                 <tr key={index}>
-                                    <td >{activeLogsData.date}</td>
-                                    <td >{activeLogsData.time}</td>
-                                    <td >{activeLogsData.patientId}</td>
+                                    <td >{activeLogsData.dateCreated}</td>
+                                    <td >{activeLogsData.timeCreated}</td>
+                                    <td >{activeLogsData.patientIdentificationNumber}</td>
                                     <td >
-                                        <img onClick={() => (openActiveLogsPopUp(activeLogsData))}
+                                        <img onClick={(event) => (openActiveLogsPopUp(event))}
                                              id="log-action-buttons" src={ViewLog} alt="view">
                                         </img>
                                         <img onClick={() => (openActiveLogsPopUp(activeLogsData))}

@@ -1,19 +1,15 @@
 
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useNavigate} from "react-router-dom";
 import "../../../coco/styles/doctor/doctorViewActiveLogsTwo.css"
+import {get, ref, query, orderByChild, equalTo } from 'firebase/database';
+import {db} from "../../../firebaseConfig/firebase.js"
 
-export const ActiveLogsTableTwo = () => {
 
-    // useEffect(()=>{
-    //     const databaseRef ´=
-    // }, [])
 
-    const activeLogsData = [
-        { date: '2023-09-27', time: '10:00 AM', patientId: 1 },
-        { date: '2023-09-26', time: '03:30 PM', patientId: 2 },
-    ];
+export const ActiveLogsTableTwo = ({activeLogsData}) => {
 
+    console.log("here is active logs data:::> ", activeLogsData)
     const navigateToLogs = useNavigate();
     const handleButtonClick =()=>{
         navigateToLogs("/doctor-active-logs-one")
@@ -37,11 +33,11 @@ export const ActiveLogsTableTwo = () => {
                 </tr>
                 </thead>
                 <tbody>
-                {activeLogsData.map((activeLogsData, index) => (
+                {activeLogsData.map((activeLog, index) => (
                     <tr key={index}>
-                        <td >{activeLogsData.date}</td>
-                        <td >{activeLogsData.time}</td>
-                        <td >{activeLogsData.patientId}</td>
+                        <td >{activeLog.dateCreated}</td>
+                        <td >{activeLog.timeCreated}</td>
+                        <td >{activeLog.patientIdentificationNumber}</td>
                     </tr>
                 ))}
                 </tbody>
