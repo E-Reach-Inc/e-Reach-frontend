@@ -1,9 +1,7 @@
 import React,{useState, useEffect}from 'react'
 import '../medicalLog/medicalLogStyle/doctorsModal.css'
 
- const PopUp = ({ onClose}) => {
-
-
+ export const PopUp = ({ onClose}) => {
 
   const [prescriptions, setPrescriptions] = useState([]);
   const [selectedMedication, setSelectedMedication] = useState('');

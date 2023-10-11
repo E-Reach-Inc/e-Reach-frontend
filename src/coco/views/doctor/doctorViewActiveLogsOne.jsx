@@ -8,13 +8,16 @@ import ActiveLogPopUp from "./activeLogPopUp";
 import { ToastContainer, toast } from "react-toastify";
 import { getDatabase, get, ref, query, orderByChild, equalTo } from 'firebase/database'; // Import Firebase database functions
 import { db } from "../../../firebaseConfig/firebase";
+import { useNavigate } from "react-router";
 
+export const LogContext = React.createContext();
 
 export const ActiveLogsTableOne = () => {
     const [activeLogsButtonPopUp, setActiveLogsButtonPopUp] = useState(false);
     const [selectedActiveLogs, setSelectedActiveLogs] = useState(null);
     const [activeLogsData, setActiveLogsData] = useState([]); 
     const hospitalEmail = localStorage.getItem("hospitalEmail");
+    const navigate = useNavigate()
 
     useEffect(() => {
         const fetchData = async () => {
@@ -44,18 +47,28 @@ export const ActiveLogsTableOne = () => {
 
 
     const openActiveLogsPopUp = (event) => {
+        event.preventDefault();
         const patientId = event.target.parentElement.parentElement.id;
-        const patientLog = null;
-        activeLogsData.map((log, index)=>{
-            if(patientId === log.patientIdentificationNumber){
-                patientLog = log;
-                return patientLog;
-            }
+        const patientLog = activeLogsData.filter((log, index) => {
+            return log.patientIdentificationNumber === patientId;
         });
-        <ActiveLogPopUp isOpen={activeLogsButtonPopUp} isClose={closeActiveLogsPopUp} activeLogsData={patientLog}/>
-
+        <LogContext.Provider value={patientLog}>
+            <ActiveLogPopUp isOpen={activeLogsButtonPopUp} isClose={closeActiveLogsPopUp} activeLogsData={patientLog}/>
+        </LogContext.Provider>
         setSelectedActiveLogs(patientLog);
         setActiveLogsButtonPopUp(true);
+    }
+
+    function navigateToEditMedicalLog(event){
+        event.preventDefault()
+        const patientId = event.target.parentElement.parentElement.id;
+        const patientLog = activeLogsData.filter((log, index) => {
+            return log.patientIdentificationNumber === patientId;
+        });
+        <LogContext.Provider value={patientLog}>
+            <ActiveLogPopUp isOpen={activeLogsButtonPopUp} isClose={closeActiveLogsPopUp} activeLogsData={patientLog}/>
+        </LogContext.Provider>
+        navigate("/medical-log")
     }
 
     const closeActiveLogsPopUp = () => {
@@ -89,7 +102,7 @@ export const ActiveLogsTableOne = () => {
                             </thead>
                             <tbody>
                             {activeLogsData.map((activeLogsData, index) => (
-                                <tr key={index}>
+                                <tr key={index} id={activeLogsData.patientIdentificationNumber}>
                                     <td >{activeLogsData.dateCreated}</td>
                                     <td >{activeLogsData.timeCreated}</td>
                                     <td >{activeLogsData.patientIdentificationNumber}</td>
@@ -97,7 +110,7 @@ export const ActiveLogsTableOne = () => {
                                         <img onClick={(event) => (openActiveLogsPopUp(event))}
                                              id="log-action-buttons" src={ViewLog} alt="view">
                                         </img>
-                                        <img onClick={() => (openActiveLogsPopUp(activeLogsData))}
+                                        <img onClick={(event) => (navigateToEditMedicalLog(event))}
                                              id="log-action-buttons" src={EditLog} alt="edit">
                                         </img>
                                     </td>

@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import PrescriptionLog from "./PrescriptionLog";
 import TestLog from "./TestLog";
 import DoctorsReport from "./DoctorsReportLog";
 import { ref, query, orderByChild, equalTo, get } from "firebase/database";
 import {db} from '../../firebaseConfig/firebase'
+import { LogContext } from "../../coco/views/doctor/doctorViewActiveLogsOne";
 
 const prescriptions =  {
     medicationName: 'paracetamol',
@@ -40,31 +41,10 @@ const logData = {
 
 const MedicalLog = () => {
   const [allLogs, setAllLogs] = useState([]);
+  const logData = useContext(LogContext)
   useEffect(() => {
-    // localStorage.setItem("hospitalEmail", "gloryHealth")
-    const logsRef = ref(db, "medicalLogs");
-    const logsQuery = query(
-      logsRef,
-      orderByChild("hospitalEmail"),
-      equalTo(localStorage.getItem("hospitalEmail"))
-    );
-    get(logsQuery)
-      .then((snapshot) => {
-        if (snapshot.exists()) {
-          const logs = [];
-          snapshot.forEach((childSnapshot) => {
-            logs.push(childSnapshot.val());
-          });
-          setAllLogs(logs);
-          console.log(logs)
-        } else {
-            console.log("nope")
-          setAllLogs([]);
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching logs:", error);
-      });
+      console.log("log data => ", logData)
+    
   }, []);
 
   return (
