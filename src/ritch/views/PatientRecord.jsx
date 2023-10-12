@@ -10,23 +10,26 @@ import { ToastContainer, toast } from "react-toastify";
 
 const PatientRecord = () =>{
 
-    const patientsRecords = [
+    const medicalLogs = [
         {
             date: "25th/dec/2023",
-            lastTimeUpdated: '12:00:00',
-            patientIdentificationNumber: 'e123456789990',
+            // lastTimeUpdated: '12:00:00',
+            // patientIdentificationNumber: 'e123456789990',
+            hospitalEmail: 'gloryHealth@gmail.com'
             // action: {action},
         },
         {
           date: "25th/dec/2023",
-          lastTimeUpdated: '12:00:00',
-          patientIdentificationNumber: 'e123456789990',
+          // lastTimeUpdated: '12:00:00',
+          // patientIdentificationNumber: 'e123456789990',
+          hospitalEmail: 'gloryHealth@gmail.com'
           // action: {action},
       },
       {
         date: "25th/dec/2023",
-        lastTimeUpdated: '12:00:00',
-        patientIdentificationNumber: 'e123456789990',
+        // lastTimeUpdated: '12:00:00',
+        // patientIdentificationNumber: 'e123456789990',
+        hospitalEmail: 'gloryHealth@gmail.com'
         // action: {action},
     },
         
@@ -44,7 +47,7 @@ const PatientRecord = () =>{
                 if(!response.data)
                   toast.info("No records found", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
                 else {
-                    patientsRecords.push(response.data)
+                    medicalLogs.push(response.data)
                     localStorage.setItem("records", JSON.stringify(response.data));
 
                 }
@@ -61,7 +64,7 @@ const PatientRecord = () =>{
               if(!response.data)
                 toast.info("No records found", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
               else {
-                  patientsRecords.push(response.data)
+                  medicalLogs.push(response.data)
                   localStorage.setItem("records", JSON.stringify(response.data));
 
               }
@@ -89,23 +92,25 @@ const PatientRecord = () =>{
               <div  className="patient-record-inner-con">
 
              
-    <h3 className="patient-med-logs">Records</h3>
+    <h3 className="patient-med-logs">Medical logs</h3>
         <table className="patient-record-table">
 
           <thead className="patient-record-table-header">
             <tr>
               <th>Date Created</th>
-              <th>Last Time Updated</th>
-              <th>Patient Identification Number</th>
+              {/* <th>Last Time Updated</th>
+              <th>Patient Identification Number</th> */}
+              <th>Hospital Email</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody className="patient-record-table-data">               
-                {patientsRecords.map((patientsRecords, index) => (
+                {medicalLogs.map((medicalLogss, index) => (
                                 <tr key={index}>
-                                    <td >{patientsRecords.date}</td>
-                                    <td >{patientsRecords.lastTimeUpdated}</td>
-                                    <td >{patientsRecords.patientIdentificationNumber}</td>
+                                    <td >{medicalLogs.date}</td>
+                                    {/* <td >{patientsRecords.lastTimeUpdated}</td>
+                                    <td >{patientsRecords.patientIdentificationNumber}</td> */}
+                                    <td>{medicalLogs.hospitalEmail}</td>
                                     <td><a href="open popup"><img src={action} /></a></td>
                                 </tr>
                   ))}

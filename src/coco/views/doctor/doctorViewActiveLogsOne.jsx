@@ -5,16 +5,19 @@ import "../../../coco/styles/doctor/doctorViewActiveLogsOne.css"
 import ViewLog from "../../../coco/assets/icons/doc-view-log.svg"
 import EditLog from "../../../coco/assets/icons/doc-edit-log.svg"
 import ActiveLogPopUp from "./activeLogPopUp";
-import { ToastContainer, toast } from "react-toastify";
-import { getDatabase, get, ref, query, orderByChild, equalTo } from 'firebase/database'; // Import Firebase database functions
-import { db } from "../../../firebaseConfig/firebase";
+import {toast, ToastContainer} from "react-toastify";
+import {equalTo, get, orderByChild, query, ref} from 'firebase/database';
+import {db} from "../../../firebaseConfig/firebase";
+import {useNavigate} from "react-router";
 
+export const LogContext = React.createContext();
 
 export const ActiveLogsTableOne = () => {
     const [activeLogsButtonPopUp, setActiveLogsButtonPopUp] = useState(false);
     const [selectedActiveLogs, setSelectedActiveLogs] = useState(null);
     const [activeLogsData, setActiveLogsData] = useState([]); 
     const hospitalEmail = localStorage.getItem("hospitalEmail");
+    const navigate = useNavigate()
 
     useEffect(() => {
         const fetchData = async () => {
@@ -31,7 +34,6 @@ export const ActiveLogsTableOne = () => {
                     });
                     setActiveLogsData(logsArray);
                     toast.info("medical logs found", {position: toast.POSITION.TOP_CENTER, autoClose:3000})
-                    console.log("This is active logs data::: ", activeLogsData)
                 }
             } catch (error) {
                 toast.error("could not fetch logs", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
@@ -39,23 +41,26 @@ export const ActiveLogsTableOne = () => {
             }
         };
 
-        fetchData();
+        fetchData().then(response=>{console.log(response)}).catch(error => {console.log(error)});
     }, [hospitalEmail]);
 
+    function findMedicalLog(event) {
+        event.preventDefault();
+        const patientId = event.target.parentElement.parentElement.id;
+        return activeLogsData.filter((log) => {
+            return log.patientIdentificationNumber === patientId;
+        });
+    }
 
     const openActiveLogsPopUp = (event) => {
-        const patientId = event.target.parentElement.parentElement.id;
-        const patientLog = null;
-        activeLogsData.map((log, index)=>{
-            if(patientId === log.patientIdentificationNumber){
-                patientLog = log;
-                return patientLog;
-            }
-        });
-        <ActiveLogPopUp isOpen={activeLogsButtonPopUp} isClose={closeActiveLogsPopUp} activeLogsData={patientLog}/>
-
+        const patientLog = findMedicalLog(event);
         setSelectedActiveLogs(patientLog);
         setActiveLogsButtonPopUp(true);
+    }
+
+    function navigateToEditMedicalLog(event){
+        const patientLog = findMedicalLog(event);
+        navigate("/medical-log")
     }
 
     const closeActiveLogsPopUp = () => {
@@ -64,52 +69,54 @@ export const ActiveLogsTableOne = () => {
     }
 
     return(
-        <div className="Doc-Log-Main-Frame">
-            <ToastContainer/>
-            <div className="doc-log-side-bar-hold">
-                <DoctorSideBar/>
-            </div>
-            <div className="doc-log-second-side">
-                <div className="doc-search-bar-hold">
-                    <SearchBar/>
+       <LogContext.Provider value={selectedActiveLogs}>
+            <div className="Doc-Log-Main-Frame">
+                <ToastContainer/>
+                <div className="doc-log-side-bar-hold">
+                    <DoctorSideBar/>
                 </div>
-                <div className="doc-log-details-holder">
-                    <div className="log-left-profile">
-                        <div className="log-title" >
-                            <h2>Active Logs</h2>
-                        </div>
-                        <table className= 'log-table2'>
-                            <thead>
-                            <tr>
-                                <th >Date</th>
-                                <th>Time</th>
-                                <th >Patient Id</th>
-                                <th >Actions</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            {activeLogsData.map((activeLogsData, index) => (
-                                <tr key={index}>
-                                    <td >{activeLogsData.dateCreated}</td>
-                                    <td >{activeLogsData.timeCreated}</td>
-                                    <td >{activeLogsData.patientIdentificationNumber}</td>
-                                    <td >
-                                        <img onClick={(event) => (openActiveLogsPopUp(event))}
-                                             id="log-action-buttons" src={ViewLog} alt="view">
-                                        </img>
-                                        <img onClick={() => (openActiveLogsPopUp(activeLogsData))}
-                                             id="log-action-buttons" src={EditLog} alt="edit">
-                                        </img>
-                                    </td>
+                <div className="doc-log-second-side">
+                    <div className="doc-search-bar-hold">
+                        <SearchBar/>
+                    </div>
+                    <div className="doc-log-details-holder">
+                        <div className="log-left-profile">
+                            <div className="log-title" >
+                                <h2>Active Logs</h2>
+                            </div>
+                            <table className= 'log-table2'>
+                                <thead>
+                                <tr>
+                                    <th >Date</th>
+                                    <th>Time</th>
+                                    <th >Patient Id</th>
+                                    <th >Actions</th>
                                 </tr>
-                            ))}
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                {activeLogsData.map((activeLog, index) => (
+                                    <tr key={index} id={activeLog.patientIdentificationNumber}>
+                                        <td >{activeLog.dateCreated}</td>
+                                        <td >{activeLog.timeCreated}</td>
+                                        <td >{activeLog.patientIdentificationNumber}</td>
+                                        <td >
+                                            <img onClick={(event) => (openActiveLogsPopUp(event))}
+                                                 id="log-action-buttons" src={ViewLog} alt="view">
+                                            </img>
+                                            <img onClick={(event) => (navigateToEditMedicalLog(event))}
+                                                 id="log-action-buttons" src={EditLog} alt="edit">
+                                            </img>
+                                        </td>
+                                    </tr>
+                                ))}
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
+                <ActiveLogPopUp isOpen={activeLogsButtonPopUp} isClose={closeActiveLogsPopUp} activeLogsData={selectedActiveLogs}/>
             </div>
-            <ActiveLogPopUp isOpen={activeLogsButtonPopUp} isClose={closeActiveLogsPopUp} activeLogsData={selectedActiveLogs}/>
-        </div>
+       </LogContext.Provider>
     )
 };
 

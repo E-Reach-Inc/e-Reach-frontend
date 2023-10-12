@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import '../styles/PatientProfile.css'
-// import femaleImage from '../patient-icons/patient-female.svg'
 import maleImage from '../patient-icons/patient-male.svg'
 import PatientNavBar from "./PatientNavBar";
 import UploadWidget from "../../cloudinary/uploadWidget";

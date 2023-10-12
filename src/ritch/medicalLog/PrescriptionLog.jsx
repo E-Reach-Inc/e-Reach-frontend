@@ -1,75 +1,53 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import PopUp from "./doctorsModal"
 import '../medicalLog/medicalLogStyle/prescriptionLog.css'
+import { LogContext } from '../../coco/views/doctor/doctorViewActiveLogsOne';
 
-const PrescriptionLog = (prescription) => {
-  console.log(prescription)
+const PrescriptionLog = () => {
+
+  const logData = useContext(LogContext)
+
+  console.log("This is log data  ==> ", logData)
+  const [buttonPopUp,setButtonPopUp]=useState(false);
+
+  const openPopUp = () =>{
+    setButtonPopUp(true)
+  }
+
+  const closePopUp = () => {
+    setButtonPopUp(false)
+  }
+
+  return (
   
-  // useEffect(() => {
-  //   // Fetch prescription data from the backend 
-  //   fetch('/api/prescriptions')
-  //     .then((response) => response.json())
-  //     .then((data) => setPrescriptions(data));
-  // }, []);
+    <div className="prescription-log-modal-two">
 
-  // const handleMedicationChange = (event) => {
-  //   setSelectedMedication(event.target.value);
-  // };
-
-  // const handleDosageChange = (event) => {
-  //   setDosage(event.target.value);
-  // };
-
-  // const handleDosageFrequencyChange = (event) => {
-  //   setDosageFrequency(event.target.value);
-  // };
-
-  // const handleStartDateChange = (event) => {
-  //   setStartDate(event.target.value);
-  // };
-
-  // const handlePrescriptionDateChange = (event) => {
-  //   setPrescriptionDate(event.target.value);
-  // };
-
-  // const handleAddPrescription = () => {
-  //   if (selectedMedication && dosage && dosageFrequency && startDate && prescriptionDate) {
-      
-  //     const newPrescription = {
-  //       medicationName: medicationName,
-  //       dosage,
-  //       dosageFrequency,
-  //       startDate,
-  //       prescriptionDate,
-  //       checked: false,
-  //       practitionersEmail: localStorage.getItem("practitionerEmail"),
-  //     };
-  //     setPrescriptions([...prescriptions, newPrescription]);
+      <div className='prescription-main-con'>
+      <div className='add-prescription-con'>
+      <h2>Prescription</h2>
+        <button className='add-prescription-btn' onClick={openPopUp}>Add</button>
+       {buttonPopUp && <PopUp onClose={closePopUp} />}
+      </div>
 
      
-  //     setSelectedMedication('');
-  //     setDosage('');
-  //     setDosageFrequency('');
-  //     setStartDate('');
-  //     setPrescriptionDate('');
-  //   }
-  // };
-  // const handlePrescriptionToggle = (index) => {
-  //   const updatedPrescriptions = [...prescriptions];
-  //   updatedPrescriptions[index].checked = !updatedPrescriptions[index].checked;
-  //   setPrescriptions(updatedPrescriptions);
-  // };
-
-
-
-
+      <div className='view-prescription-con'>
+     <p>Medication name</p>
+     <button>View</button>
+     
+      </div>
   
- 
-  return (
-    <div className="prescription-log-modal-two">
+      </div>
+  
         <p>Medication Name{/*{prescription.medicationName}*/}</p>
         <button>Add New Prescription</button>
-
     </div>
+  
+    
+  
+
+    
+
+    
   );
 };
 
