@@ -1,9 +1,7 @@
 import React,{useState, useEffect}from 'react'
 import '../medicalLog/medicalLogStyle/doctorsModal.css'
 
-
-
- export const PopUp = ({ onClose}) => {
+ export const PopUp = ({onClose,notprescriptions}) => {
 
   const newPrescription = {
     medicationName: '',
@@ -44,6 +42,8 @@ import '../medicalLog/medicalLogStyle/doctorsModal.css'
         checked: false,
         practitionersEmail: recentPresc.practitionersEmail,
       };
+
+
       setPrescriptions([...prescriptions, newPrescription]);  
     
   };
@@ -106,7 +106,7 @@ import '../medicalLog/medicalLogStyle/doctorsModal.css'
                />
                   <div className="add-presc-button">
                   <button onClick={handleAddPrescription}>Add</button>
-
+                  <button className='close-button' onClick={onClose}>Close</button>
                   </div>          
            <ul>
                {prescriptions.map((prescription, index) => (
@@ -126,7 +126,6 @@ import '../medicalLog/medicalLogStyle/doctorsModal.css'
            </ul>
         </div>
        </div>
-            <button className='close-button' onClick={onClose}>Close</button>
         </div>
     </div>
   )
