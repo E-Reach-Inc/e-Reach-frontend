@@ -30,14 +30,14 @@ export const PatientAppointmentTwo = () => {
                     <th >Patient Id</th>
                 </tr>
                 </thead>
-                <tbody>
+                {/* <tbody>
                 {patientAppointmentData.map((patientAppointmentData, index) => (
                     <tr key={index}>
                         <td >{patientAppointmentData.dateTime}</td>
                         <td >{patientAppointmentData.patientId}</td>
                     </tr>
                 ))}
-                </tbody>
+                </tbody> */}
             </table>
         </div>
     )

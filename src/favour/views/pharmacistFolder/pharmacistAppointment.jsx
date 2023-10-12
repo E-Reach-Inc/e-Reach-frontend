@@ -116,7 +116,7 @@ export const PharmacistAppointment = () => {
 									<th>Doctors name</th>
 								</tr>
 							</thead>
-							<tbody>
+							{/* <tbody>
 								{appointments.map((appointment, index) => (
 									<tr key={index}>
 										<td>{appointment.patientName}</td>
@@ -126,15 +126,15 @@ export const PharmacistAppointment = () => {
 										<td>{appointment.doctorsName}</td>
 									</tr>
 								))}
-							</tbody>
+							</tbody> */}
 						</table>
-						<div
+						{/* <div
 							style={{
 								display: "flex",
 								flexDirection: "column",
 							}}
-						>
-							{appointments.map((item) => (
+						> */}
+							{/* {appointments.map((item) => (
 								<div
 									style={{
 										width: "200px",
@@ -149,8 +149,8 @@ export const PharmacistAppointment = () => {
 									<li>{item.account}</li>
 									<li>{item.doctorsName}</li>
 								</div>
-							))}
-						</div>
+							))} */}
+						{/* </div> */}
 					</div>
 				</div>
 			</div>
