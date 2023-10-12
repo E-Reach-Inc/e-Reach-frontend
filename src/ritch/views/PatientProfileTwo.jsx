@@ -70,23 +70,23 @@ const PatientProfileTwo= () =>{
 
                 <div className="patient-two-biodata-field">
                   <label >First Name :</label>
-                  <span>{patientData.firstName}</span>
+                  <span>{"Richards"}</span>
                 </div>
                 <div className="patient-two-biodata-field">
                   <label>Last Name :</label>
-                  <span>{patientData.lastName}</span>
+                  <span>{"Akaabiam"}</span>
                 </div>
                 <div className="patient-two-biodata-field">
                   <label>N.I.N :</label>
-                  <span>{patientData.nin}</span>
+                  <span>{"20222222222"}</span>
                 </div>
                 <div className="patient-two-biodata-field">
                   <label>Email :</label>
-                  <span>{patientData.email}</span>
+                  <span>{"richardsakaabiam@gmail.com"}</span>
                 </div>
                 <div className="patient-two-biodata-field">
                   <label>Phone Number :</label>
-                  <span>{patientData.email}</span>
+                  <span>{"08144263789"}</span>
                 </div>
                 <div className="patient-two-biodata-field">
                   <label>House Number :</label>
