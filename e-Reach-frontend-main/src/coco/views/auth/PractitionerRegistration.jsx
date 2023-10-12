@@ -24,7 +24,7 @@ export const PractitionerRegistration = () => {
         const practitionerDetails= {
             firstName: formData.firstName,
             lastName: formData.lastName,
-            role: 'doctor',
+            role: 'doctorsTab',
             phoneNumber: formData.phoneNumber,
             email: formData.email,
             hospitalEmail: localStorage.getItem("hospitalEmail")

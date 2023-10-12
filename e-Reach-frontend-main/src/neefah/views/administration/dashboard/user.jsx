@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 // import './style.css';
-import '../styles/user/user.css';
-import {AdminSideBar} from "../../coco/views/administration/AdminSideBar";
-import {AdminSearchBar} from "../../coco/views/administration/AdminSearchBar";
-import Patient from "./user/patient/patient";
+import '../../../styles/administration/userSideAndNavBar/user.css';
+import '../../../styles/administration/userSideAndNavBar/userSearchBar.css'
+import PatientsTab from "./users/patientsTab/patientsTab";
 import {GiHamburgerMenu} from "react-icons/gi";
-import Doctor from "./user/doctor/doctor";
-import Pharmacy from "./user/pharmacy/pharmacy";
+import DoctorsTab from "./users/doctorsTab/doctorsTab";
+import PharmacistTab from "./users/pharmacistTab/pharmacistTab";
+import UserSideBar from "../userSearchAndNavBar/userSideBar";
+import UserSearchBar from "../userSearchAndNavBar/userSearchBar";
 
 function User() {
     const [selectedTab, setSelectedTab] = useState('patients');
@@ -22,18 +23,17 @@ function User() {
                 <div
                     className={isHamburger ? "side-bar-open" : "side-bar-closed"}
                 >
-                    <AdminSideBar />
+                    <UserSideBar />
                 </div>
                 <div style={{"width": "100%"}}>
 
-                    <AdminSearchBar
+                    <UserSearchBar
                         toggleSideBar={()=>{
                             setHamburger(!isHamburger)
                         }}
                     />
                     <div className="Admin-Activity-Frame">
-                        <div className="tab-container">
-                            {/* Tabs */}
+                        <div className="Tabs">
                             <div
                                 className={`tab ${selectedTab === 'patients' ? 'active' : ''}`}
                                 onClick={() => handleTabClick('patients')}
@@ -47,8 +47,8 @@ function User() {
                                 Doctors
                             </div>
                             <div
-                                className={`tab ${selectedTab === 'pharmacy' ? 'active' : ''}`}
-                                onClick={() => handleTabClick('pharmacy')}
+                                className={`tab ${selectedTab === 'pharmacistTab'? 'active' : ''}`}
+                                onClick={() => handleTabClick('pharmacistTab')}
                             >
                                 Pharmacy
                             </div>
@@ -56,17 +56,17 @@ function User() {
                         <div className="tabs">
                             {selectedTab === 'patients' && (
                                 <div>
-                                    <Patient/>
+                                    <PatientsTab/>
                                 </div>
                             )}
                             {selectedTab === 'doctors' && (
                                 <div>
-                                    <Doctor/>
+                                    <DoctorsTab/>
                                 </div>
                             )}
-                            {selectedTab === 'pharmacy' && (
+                            {selectedTab === 'pharmacistTab' && (
                                 <div>
-                                    <Pharmacy/>
+                                    <PharmacistTab/>
                                 </div>
                             )}
                         </div>

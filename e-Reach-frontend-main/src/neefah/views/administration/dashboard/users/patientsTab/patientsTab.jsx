@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../styles/user/patient/patient.css'
+import '../../../../../styles/administration/dashboard/users/patientsTab/patientsTab.css'
 import {IoEyeOutline} from "react-icons/io5";
 import {BsPencilFill} from "react-icons/bs";
 
@@ -23,7 +23,7 @@ const PatientProfileTable = () => {
     ]
     return (
         <div className="patient-profile">
-            {/*<h2>Patient Profile</h2>*/}
+            {/*<h2>PatientsTab Profile</h2>*/}
             <table className="profile-table">
                 <thead>
                     <tr>
@@ -54,7 +54,7 @@ const PatientProfileTable = () => {
         </div>
     );
 };
-function Patient() {
+function PatientsTab() {
     return (
         <div>
             <p>Patient</p>
@@ -63,7 +63,7 @@ function Patient() {
     );
 }
 
-export default Patient;
+export default PatientsTab;
 
 
 

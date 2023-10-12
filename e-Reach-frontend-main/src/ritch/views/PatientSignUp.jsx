@@ -50,7 +50,7 @@ const PatientSignUp = () => {
     
       const response = await axios.post("http://localhost:8080/api/v1/patient/create-patient/", patientDetails);
       if(response.status === 200){
-          toast.success("Patient Registration Successful")
+          toast.success("PatientsTab Registration Successful")
           console.log(response);
           console.log(response.data);
       }

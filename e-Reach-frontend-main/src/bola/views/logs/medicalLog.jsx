@@ -74,7 +74,7 @@ function MedicalLog() {
     <div>
       <h1>Medical Log</h1>
       <form onSubmit={handleSubmit}>
-        <input placeholder={"patient id"}/>
+        <input placeholder={"patientsTab id"}/>
         <button type={"submit"}>Create</button>
       </form>
     </div>

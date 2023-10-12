@@ -1,7 +1,12 @@
 .tab-container {
     padding-left: 30px;
     display: flex;
-    border-bottom: 1px solid #ccc;
+    /*border-bottom: 1px solid #ccc;*/
+}
+
+.Tabs{
+    /*border-style: solid;*/
+    display: flex;
 }
 
 .tab {

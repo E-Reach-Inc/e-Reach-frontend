@@ -30,8 +30,8 @@
     justify-content: space-evenly;
     background: linear-gradient(to right, rgb(54, 141, 178), rgb(227, 239, 239));
     /*background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),*/
-    /*background-image: url("/src/assets/images/background/image2.svg");*/
-    /*background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("/src/assets/images/background-image.svg");*/
+    /*background-image: url("/src/icons/images/background/image2.svg");*/
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("/src/icons/images/background-image.svg");*/
 }
 
 /*.Word-div h3{*/

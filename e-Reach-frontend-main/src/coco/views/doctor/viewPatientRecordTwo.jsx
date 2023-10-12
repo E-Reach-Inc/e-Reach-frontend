@@ -12,7 +12,7 @@ export const ViewPatientRecordTwo = () => {
 
     const navigateToRecords = useNavigate();
     const handleButtonClick =()=>{
-        navigateToRecords("/doctor-patient-record-one")
+        navigateToRecords("/doctorsTab-patientsTab-record-one")
     }
 
     return(

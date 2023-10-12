@@ -25,7 +25,7 @@ import MedicalLog from "./ritch/medicalLog/MedicalLog";
 import PatientPopUp from "./ritch/views/PatientPopUp";
 import { LandingPageMainBody } from "./favour/views/landingPage/landingPageMainBody";
 import {ActiveLogsTableOne} from "./coco/views/doctor/doctorViewActiveLogsOne"
-import User from "./neefah/views/user";
+import User from "./neefah/views/administration/dashboard/user";
 
 
 
@@ -48,10 +48,10 @@ function App() {
                 
                 
               <Route path='/doctor-dashboard' element={<DoctorDashboard/>}/>
-              <Route path={"/doctor-active-logs-one"} element={<ActiveLogsTableOne/>}/>
-              <Route path={"/doctor-patient-appointment-one"} element={<PatientAppointmentOne/>}/>
-              <Route path={"/doctor-patient-record-one"} element={<ViewPatientRecordOne/>}/>
-              <Route path={"/doctor-dashboard"} element={<DoctorProfileOne/>}/>
+              <Route path={"/doctorsTab-active-logs-one"} element={<ActiveLogsTableOne/>}/>
+              <Route path={"/doctorsTab-patientsTab-appointment-one"} element={<PatientAppointmentOne/>}/>
+              <Route path={"/doctorsTab-patientsTab-record-one"} element={<ViewPatientRecordOne/>}/>
+              <Route path={"/doctorsTab-dashboard"} element={<DoctorProfileOne/>}/>
                 
 
               <Route path='/pharmacist-default-dashboard' element={<PharmacistDefaultDashboard/>}/>

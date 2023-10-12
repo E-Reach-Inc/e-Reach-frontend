@@ -74,7 +74,7 @@ const PatientNavBar = () =>{
         
                   <div className="patient-profile-icon">
                   <div className="patient-nav-bar-profile-image">
-                          {patientData.gender == "male" ? (<img src={femaleImage} alt="Patient"  className="nav-icons" />): (<img src={maleImage} alt="Patient"  className="nav-icons"/>)}
+                          {patientData.gender == "male" ? (<img src={femaleImage} alt="PatientsTab"  className="nav-icons" />): (<img src={maleImage} alt="PatientsTab"  className="nav-icons"/>)}
                       
                     </div>
                   

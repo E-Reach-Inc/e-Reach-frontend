@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import '../styles/PatientProfile.css'
-// import femaleImage from '../patient-icons/patient-female.svg'
+// import femaleImage from '../patientsTab-icons/patientsTab-female.svg'
 import maleImage from '../patient-icons/patient-male.svg'
 import PatientNavBar from "./PatientNavBar";
 import UploadWidget from "../../cloudinary/uploadWidget";
@@ -43,9 +43,9 @@ const PatientProfileTwo= () =>{
               
             <div className="patient-two-profile-image">
                 {patientData.gender == "male" ? (
-                  <img src={openUploadWidget} alt="Patient" />
+                  <img src={openUploadWidget} alt="PatientsTab" />
                 ) : (
-                  <img src={maleImage} alt="Patient" />
+                  <img src={maleImage} alt="PatientsTab" />
                 )}
 
                 <div >
