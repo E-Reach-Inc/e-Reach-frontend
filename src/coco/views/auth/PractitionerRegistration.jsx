@@ -42,10 +42,7 @@ export const PractitionerRegistration = () => {
                 })
                 .catch(failureResponse => {
                     console.log("hello girls tue tue")
-                    toast.error(
-                        failureResponse+' Registration failed. Please try again.',
-                        {position: toast.POSITION.TOP_CENTER, autoClose: 5000}
-                    );
+                    toast.error();
                 })
                 .finally(()=>{
 
