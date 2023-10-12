@@ -20,13 +20,14 @@ export const DoctorDashboard = () =>{
         async function fetchLogs(){
             const databaseRef = ref(db, "active_logs")
             const logsQuery = query(databaseRef, orderByChild("hospitalEmail"), equalTo(hospitalEmail));
-        
+            console.log(hospitalEmail)
             try {
                 const snapshot = await get(logsQuery);
                 if (snapshot.exists()) {
                     const logsArray = [];
                     let i = 0;
                     snapshot.forEach((childSnapshot) => {
+                        console.log("child snapshot ree o", childSnapshot)
                         if(i < 5){
                             const logData = childSnapshot.val();
                             logsArray.push(logData);
@@ -39,11 +40,11 @@ export const DoctorDashboard = () =>{
             } catch (error) {
                 console.error("Error fetching data:", error);
             }
-        };
+        }
 
         fetchLogs()
         
-    }, [hospitalEmail])
+    }, [activeLogsData, hospitalEmail])
 
     return(
         <div className="Main-Dash-Frame">

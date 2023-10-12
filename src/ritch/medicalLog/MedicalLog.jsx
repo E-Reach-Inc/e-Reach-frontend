@@ -1,19 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import PrescriptionLog from "./PrescriptionLog";
 import TestLog from "./TestLog";
 import DoctorsReport from "./DoctorsReportLog";
-import { ref, query, orderByChild, equalTo, get } from "firebase/database";
-import {db} from '../../firebaseConfig/firebase'
+import { LogContext } from "../../coco/views/doctor/doctorViewActiveLogsOne";
 import '../medicalLog/medicalLogStyle/MedicalLog.css'
-
-const prescriptions =  {
-    medicationName: 'paracetamol',
-    dosage: '2 tablets',
-    dosageFrequecy: 'Morning and night',
-    startDate: '',
-    prescriptionDate: '',
-    practitionerEmail: ''
-  }
 
 const logData = {
         doctorReportDTO: {
@@ -39,39 +29,20 @@ const logData = {
         hospitalEmail: ''
     }
 
-const MedicalLog = ({patientLog}) => {
+const MedicalLog = () => {
   const [allLogs, setAllLogs] = useState([]);
+  const logData = useContext(LogContext)
+
+  console.log("log data in medical log ==> ", logData)
+
   useEffect(() => {
-    // localStorage.setItem("hospitalEmail", "gloryHealth")
-    const logsRef = ref(db, "medicalLogs");
-    const logsQuery = query(
-      logsRef,
-      orderByChild("hospitalEmail"),
-      equalTo(localStorage.getItem("hospitalEmail"))
-    );
-    get(logsQuery)
-      .then((snapshot) => {
-        if (snapshot.exists()) {
-          const logs = [];
-          snapshot.forEach((childSnapshot) => {
-            logs.push(childSnapshot.val());
-          });
-          setAllLogs(logs);
-          console.log(logs)
-        } else {
-            console.log("nope")
-          setAllLogs([]);
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching logs:", error);
-      });
-  }, []);
+      console.log("log data => ", logData)
+    
+  }, [logData]);
 
   return (
     <div className="medical-log-holder-con">
       <div>
-        {/* Render your medical logs here using the filtered data in 'allLogs' */}
         {allLogs.map((log) => (
           <div key={log.id}>
           </div>
@@ -80,7 +51,7 @@ const MedicalLog = ({patientLog}) => {
             <div className="medical-log-inner-con">
             <h2>Medical Log</h2>
                 <TestLog />
-                <PrescriptionLog prescriptions={prescriptions} />
+                <PrescriptionLog />
                 <DoctorsReport />
                 <button className="medical-log-back-btn">Back</button>
             </div>

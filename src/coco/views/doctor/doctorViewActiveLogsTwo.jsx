@@ -1,9 +1,6 @@
-
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {useNavigate} from "react-router-dom";
 import "../../../coco/styles/doctor/doctorViewActiveLogsTwo.css"
-import {get, ref, query, orderByChild, equalTo } from 'firebase/database';
-import {db} from "../../../firebaseConfig/firebase.js"
 
 
 

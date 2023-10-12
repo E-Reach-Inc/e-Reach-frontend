@@ -41,7 +41,7 @@ const PatientProfileTwo= () =>{
     
             <div className="patient-two-biodata">
             <div className="patient-two-title">
-              <h2>Bio Data</h2>
+              <h3>Bio Data</h3>
             </div>
             <div className="patient-two-profile-mid-con">
               
@@ -53,10 +53,12 @@ const PatientProfileTwo= () =>{
                 )}
 
                 <div >
-                  <form onClick={openUploadWidget}>
+                  <form>
                     <button className="patient-profile-two-upload-btn">Upload</button>
                   </form>
+                  
                 </div>
+                <openUploadWidget/>
               </div>
     
               <div className="patient-two-biodata-input">
