@@ -48,15 +48,15 @@ function HospitalAdminSignUp() {
             country: data.country,
             postCode: data.postCode
         }
-        
+        //
         try {
             axios.post("https://e-reach-prod.up.railway.app/api/v1/hospital-admin/register-hospital/", hospitalSignUpDetails)
                  .then(successResponse => {
                      console.log(successResponse)
                      console.log("hospital email is: "+successResponse.data.hospitalEmail);
-                     setRegistrationCompleted(true)
                      localStorage.setItem("hospitalEmail", successResponse.data.hospitalEmail)
-                     toast.success(successResponse.data.message, {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
+                     setRegistrationCompleted(true)
+                     toast.success(successResponse.data.data.message, {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
                 })
                  .catch(failureResponse => {
                      toast.error("Registration Failed", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
