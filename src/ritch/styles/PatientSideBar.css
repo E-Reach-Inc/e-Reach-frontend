@@ -1,6 +1,6 @@
 .patient-sidebar-outer-con{
   height: 97vh;
-  width: 230px;
+  width: 220px;
 }
 .patient-sidebar-inner-con{
     width: 100%;
@@ -20,9 +20,8 @@
 .patient-menu-item{
     padding: 10px;
     cursor: pointer;
-    transition: background-color 0.2s;
     color: #000000;
-    font-size: larger;
+    margin-left: 20px;
     display: flex;
 }
 
@@ -39,20 +38,20 @@
   }
 
  .side-text{
-  color: #000000;
+  color: #368db2;
   text-decoration-line: none;
  }
  
 
   #patient-settings-icon{
-    font-size: large ;
+    /* font-size: large ; */
    margin-top: 190px;
   
   } 
 
   #patient-log-out-icon{
     margin-top: 15px;
-    font-size: large ;
+    /* font-size: large ; */
   }
 
   #patient-dashboard-icon{

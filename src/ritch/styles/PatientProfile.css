@@ -2,19 +2,17 @@
     display: flex;
     height: 100vh;
     background-color: #e0ecef;
-
 }
 .patient-profile-inner-con{
-width: 100%;
-
-
+width: 100%;  
 }
 .patient-profile-inner-div{
     margin-left: 80px;
     margin-bottom: 60px;
+    margin-top: 35px;
     border-radius: 7px;
     border: 1px solid #368db2;
-    width: 85%;
+    width: 68%;
     background-color:#FFFFFF;
 }
 
@@ -32,8 +30,6 @@ width: 100%;
   background-color: #ADD8E6;
   color: white;
 }
-
-
 .patient-profile-image{
     width: 10rem;
     height: 10rem; 
@@ -42,46 +38,36 @@ width: 100%;
     padding: 0.2rem;
     margin: 1rem;
 }
-
 .patient-profile-image img{
-   
     width: 10rem;
     height:10rem; 
     border-radius: 50%;
     margin: 0%;
     background-color: rgb(203, 206, 211);
-      }
-      
-
+  }
 .patient-biodata{
   display: flex;
   height: 55vh;
   border-radius: 10px;
+  margin-left: 50px;
   background-color: white;       
 }
-
 .patient-biodata-input{
   margin-left: 40px;
   width: 500px;
-  
-  
 }
-
 .patient-biodata-input label{
   /* color: #368db2; */
   /* font-size: larger; */
   
 }
-
-
 .patient-biodata-field {
     margin-top: 10px;
-    font-size: larger;
-
+    font-size: 17px;
 }
-
 .patient-title{
-    font-size: 20px;
-    margin-left: 50px;  
+    /* font-size: 20px; */
+    margin-left: 50px;
+    margin-top: 24px;  
 }
   

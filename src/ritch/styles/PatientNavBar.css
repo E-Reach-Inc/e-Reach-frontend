@@ -9,7 +9,7 @@
 .patient-nav-bar-icons{
     display: flex;
     width: 200px;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-right:15px ;
     cursor: pointer;  
 }
@@ -26,26 +26,25 @@
     height: 2rem;
     width: 15rem;
 }
-
 .patient-search-input{
-   
-    border: 1px solid #ccc;
+    padding: 6px;
+    flex: 1;
+    margin-top: 10px;
+    margin-left: 40px;
+    height: 30px;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     outline: none;
-    height: 2rem;
-    margin-left: 20px;
-    position: absolute;
 }
 .patient-search-button{
-    background-color: #2196F3; 
+    background-color: #368db2;
+    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
+    height: 35px;
+    width: 3.6rem;
+    padding: 5px 10px;
     cursor: pointer;
-    padding: 5px 8px;
-    position: relative;
-    margin-top: 3.5px;
-    margin-left: 158px;
 }
 
 .patient-nav-bar-logo{
@@ -55,7 +54,7 @@
 }
 
 .patient-notification-icon{
-    border: solid 2pt #fff;
+    border: 2px solid #368db2;
     height: 2.5rem;
     width: 2.5rem;
     background-color:transparent;
@@ -64,7 +63,7 @@
 }
 
 .patient-message-icon{
-    border: solid 2pt #fff;
+    border: 2px solid #368db2;
     background-color: transparent;
     height: 2.5rem;
     width: 2.5rem;
@@ -72,7 +71,7 @@
 }
 
 .patient-profile-icon{
-    border: solid 2pt#fff;
+    border: 2px solid #368db2;
     border-radius: 70%;
     height: 2.5rem;
     width: 2.5rem;

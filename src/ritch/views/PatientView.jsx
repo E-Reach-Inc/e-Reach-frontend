@@ -13,17 +13,14 @@ const PatientView = () =>{
    
     return(
         <div className="patient-view-outer-container">
-          
             <div>
                 <PatientSideBar/> 
-            </div>
-                
+            </div>   
             <div  className="patient-view-main-body" >
 
                 <div className="patient-view-side-bar-div">
                 <PatientNavBar/>
                  </div> 
-
                 <div className="patient-view-central-body">
                     <div className="patient-view-top-body-div">
                         <div className="patient-view-profile-two-div"> 

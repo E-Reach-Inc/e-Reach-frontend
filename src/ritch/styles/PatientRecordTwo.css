@@ -3,41 +3,31 @@
 .patient-record-two-table{
     width: 100%;
 }
-
 .patient-record-two-table-outter-con{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.22);
     border-radius: 5px;
-    width: 100%;
+    /* width: 100%; */
     background-color: white;
-    overflow-y: auto;
-   
-
-   
+    width: 66rem;
+    margin-top: 35px;
+    margin-left: 28px;
+    overflow-y: auto;   
 }
 .patient-table-two-top-con{
     display: flex;
-    justify-content: space-between;
-   
+    justify-content: space-between;  
 }
-
 .patient-med-logs-two{
-    margin-left: 20px;
-   
-    
+    margin-left: 30px; 
 }
 .patient-med-logs-two h2{
-  
-   font-size: 15px;
-    
+   font-size: 11px;   
 }
-
-
 .patient-record-two-med-logs{
     display: flex;
+    margin-top: 20px;
     justify-content: space-between;
-    padding:5px;
-   
-   
+    padding:5px;   
 }
 ::-webkit-scrollbar{
     width: 2px;
@@ -47,21 +37,18 @@
     background: transparent;
     border-radius: 10px;
 }
-
 ::-webkit-scrollbar-thumb{
     background: transparent;
     border-radius: inherit;
 }
-
 ::-webkit-scrollbar-thumb:hover{
     background:#368db2;
 }
-
 .patient-record-two-med-logs button{
     background-color: #2196F3; 
     border-radius: 5px;
     height: 25px;
-    margin-top: 5px;
+    /* margin-top: 5px; */
     margin-right: 5px;
     width: 80px;
     cursor: pointer;
@@ -73,11 +60,9 @@
     color: white;
 }
 .patient-record-two-inner-con{
-   
     border-radius: 10px;
-    max-height: 180px;
-    
-    
+    margin-top: 10px;
+    max-height: 180px;   
 }
 
 .patient-record-two-table-header{
@@ -87,22 +72,14 @@
     background-color: #368db2;
     text-align: center; 
     border: 1px solid whitesmoke;
-    
-
 }
-
-
-
 .patient-record-two-table-data{
     text-align: left; 
     border: 1px solid whitesmoke;
-
 }
-
 .patient-record-two-table-data tr:nth-child(even){
     background-color: #e7e5f1f6;
 }
-
 .patient-record-two-table-data td{
     white-space: normal; 
     word-wrap: break-word; 

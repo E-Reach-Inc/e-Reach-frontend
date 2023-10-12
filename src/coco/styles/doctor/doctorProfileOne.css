@@ -54,7 +54,6 @@
 
 .doc-biodata-field label {
     font-weight: bold;
-    font-family: "DM SANS", sans-serif;
     /*color: #368db2;*/
 }
 #doc-name{
@@ -67,7 +66,6 @@
     margin-top: 40px;
 }
 .doc-title h2{
-    font-family: "DM SANS", sans-serif;
     font-weight: bold;
     font-size: xx-large;
 }
