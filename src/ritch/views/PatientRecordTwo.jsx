@@ -11,7 +11,7 @@ const PatientRecordTwo = () =>{
   const patientId = localStorage.getItem("patientIdentificationNumber")
 
   useEffect(()=>{
-      axios.get("http://localhost:8080/api/v1/patient/view-records/"+patientId)
+      axios.get("https://e-reach-prod.up.railway.app/api/v1/patient/view-records/"+patientId)
           .then((response) => {
               setMedicalLogs(response.data.medicalLogResponses);
               if(response.status === 200)
