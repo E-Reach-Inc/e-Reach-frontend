@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 // import './style.css';
 import '../../../../styles/administration/dashboard/users/user.css';
-import {AdminSideBar} from "../../../../../coco/views/administration/AdminSideBar";
-import {AdminSearchBar} from "../../../../../coco/views/administration/AdminSearchBar";
+import {UserSideBar} from "../../AdminNavAndSideBar/UserSideBar";
+// import {UserSearchBar} from "../../../../../coco/views/administration/UserSearchBar";
+import {UserSearchBar} from "../../AdminNavAndSideBar/UserSearchBar";
 import PatientsTab from "./patientTab/patientsTab";
 import {GiHamburgerMenu} from "react-icons/gi";
 import DoctorsTab from "./doctorTab/doctorsTab";
@@ -22,11 +23,11 @@ function Users() {
                 <div
                     className={isHamburger ? "side-bar-open" : "side-bar-closed"}
                 >
-                    <AdminSideBar />
+                    <UserSideBar />
                 </div>
                 <div style={{"width": "100%"}}>
 
-                    <AdminSearchBar
+                    <UserSearchBar
                         toggleSideBar={()=>{
                             setHamburger(!isHamburger)
                         }}

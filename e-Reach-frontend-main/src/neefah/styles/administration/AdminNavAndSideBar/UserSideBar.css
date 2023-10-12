@@ -107,4 +107,8 @@
     text-decoration: none;
 }
 
-
+@media screen and(max-width: 425px){
+    .admin-main-container{
+        display: none;
+    }
+}
