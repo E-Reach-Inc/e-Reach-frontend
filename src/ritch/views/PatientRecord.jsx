@@ -42,7 +42,7 @@ const PatientRecord = () =>{
 
     if(patientIdentificationNumber){
 
-        axios.get(" http://localhost:8080/api/v1/patient/view-records/"+patientIdentificationNumber)
+        axios.get(" http://e-reach-prod.up.railway.app/api/v1/patient/view-records/"+patientIdentificationNumber)
             .then(response => {
                 if(!response.data)
                   toast.info("No records found", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
@@ -59,7 +59,7 @@ const PatientRecord = () =>{
     }
 
     else if(hospitalEmail){
-        axios.get("http://localhost:8080/api/v1/hospital/view-records/"+hospitalEmail)
+        axios.get("http://e-reach-prod.up.railway.app/api/v1/hospital/view-records/"+hospitalEmail)
             .then(response => {
               if(!response.data)
                 toast.info("No records found", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
