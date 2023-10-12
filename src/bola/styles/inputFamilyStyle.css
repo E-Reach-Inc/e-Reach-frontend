@@ -13,7 +13,7 @@
     width: 100%;
 }
 .User_Info_Div label{
-    text-align: start;
+    text-align: center;
     font-size: 18px;
     font-weight: 600;
     color: #368db2;
@@ -24,7 +24,7 @@
     border-radius: 10px;
     outline: none;
     border: 1px solid #aaa;
-    box-shadow: 0 0 3px 2px #aaaaaa;
+    /* box-shadow: 0 0 3px 2px #aaaaaa; */
     position: relative;
     font-size: 15px;
 }
@@ -55,13 +55,13 @@
     justify-content: end;
 }
 .Input_Style:focus{
-    background-color: #368db2;
-    color: aliceblue;
+    /* background-color: #368db2;
+    color: aliceblue; */
     font-size: 20px;
 }
-.Input_Style:valid{
+/* .Input_Style:valid{
     border-color: #368db2;
-}
-.Invalid_Input:focus{
+} */
+/* .Invalid_Input:focus{
     border-color: #ff000f;
-}
+} */
