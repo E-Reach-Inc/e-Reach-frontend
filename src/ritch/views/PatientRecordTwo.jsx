@@ -58,8 +58,8 @@ const PatientRecordTwo = () =>{
                           <td>{medicalLog.lastTimeUpdated}</td>
                           <td >{medicalLog.patientIdentificationNumber}</td>
                           <td>{medicalLog.hospitalName}</td>
-                          <td><a href="link to backend here">
-                            <img src={action}/></a>
+                          <td>
+                            <img src={action}/>
                            </td>
                       </tr>
                     </tbody>
