@@ -69,7 +69,7 @@ function LoginPage() {
                     <img src={eReachLogo} alt={"e-Reach logo"}/>
                 </div>
                 <div className="Doc-login-Header-frame">
-                    <h1> PRACTITIONER'S LOGIN</h1>
+                    <h1> PRACTITIONER'S LOGIN </h1>
                 </div>
                 <div className="Doc-login-Form-frame">
                     <form onSubmit={handleSubmit}>
