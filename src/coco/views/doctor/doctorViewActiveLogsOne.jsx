@@ -23,7 +23,7 @@ export const ActiveLogsTableOne = () => {
         const fetchData = async () => {
             const logsRef = ref(db, "active_logs");
             const logsQuery = query(logsRef, orderByChild("hospitalEmail"), equalTo(hospitalEmail));
-        
+            console.log("local store email is:: ", localStorage.getItem("hospitalEmail"))
             try {
                 const snapshot = await get(logsQuery);
                 if (snapshot.exists()) {
