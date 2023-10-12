@@ -1,0 +1,97 @@
+
+
+.patient-profile-two-main-con{
+  background-color: white;
+  
+}
+
+/* .patientsTab-profile-two-main-con{
+      height: 40vh;
+      width: 37%;
+      border: 1px solid#368db2;
+      border-radius: 5px;
+     
+  } */
+  .patient-profile-two-upload-btn{
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: -6px;
+    height: 19px;
+    width: 60px;
+    cursor: pointer;
+  
+    border: 1px solid#368db2;
+  }
+ 
+
+ 
+  .patient-profile-two-upload-btn:hover{
+    background-color: #ADD8E6;
+    color: white;
+  }
+  
+  
+  .patient-two-profile-image{
+      width: 3rem;
+      height: 3rem; 
+      border: solid 3pt #e0ecef; 
+      border-radius: 50%;
+      padding: 0.2rem;
+      margin: 1rem;
+     
+      
+  }
+  
+  .patient-two-profile-image img{
+     
+      width: 3rem;
+      height: 3rem; 
+      border-radius: 50%;
+      margin: 0%;
+      background-color: rgb(203, 206, 211);
+        }
+        
+  
+        .patient-two-biodata{
+          /* display: flex; */
+          margin-top: 2px;
+          width: 100%;
+       
+         
+          
+    
+        }
+        .patient-two-profile-mid-con{
+          display: flex;
+       
+        }
+  
+        .patient-two-biodata-input{
+          margin-left: 40px;
+          width: 100%;
+         
+         
+         
+        }
+        
+    
+  
+      .patient-two-title{
+          font-size: 17px;
+          margin-left:25px;
+         
+          
+      }
+
+      .patient-profile-two-inner-con{
+        height: 42.4vh;
+        border-radius: 5px;
+        border-bottom-left-radius: 10px;
+        border: 1px solid white;
+        
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.22);
+       
+        
+       
+      }
+    

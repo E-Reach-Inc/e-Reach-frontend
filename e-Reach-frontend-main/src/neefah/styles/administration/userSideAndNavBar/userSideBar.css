@@ -1,0 +1,114 @@
+.admin-side-bar{
+    border: 1px solid #368db2;
+    box-shadow: 0px 0 5px rgba(173, 216, 230, 0.5);
+    border-radius: 0 10px 10px 0;
+    padding: 2px;
+    background-color: white;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    height: 99vh;
+    width:  230px;
+}
+
+.admin-side-bar img {
+    width: 100px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.admin-dashboard:hover:after,.admin-Profile:hover:after, .admin-Messaging:hover:after,
+.admin-Settings:hover:after, .admin-Logout:hover:after, .admin-Users:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.admin-dashboard:after,.admin-Profile:after, .admin-Messaging:after,
+.admin-Settings:after, .admin-Logout:after, .admin-Users:after{
+    content: '';
+    position: absolute;
+    border-spacing: 30px;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ADD8E6;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.admin-dashboard, .admin-Profile,
+.admin-Messaging, .admin-Users,
+.admin-Settings, .admin-Logout{
+    cursor: pointer;
+    margin-top: 3px;
+    justify-content: space-evenly;
+    display: flex;
+    position: relative;
+    color: #ADD8E6;
+}
+
+.admin-Settings{
+    cursor: pointer;
+    display: flex;
+    margin-top: 120px;
+    justify-content: space-evenly;
+}
+
+.admin-dashboard img, .admin-Profile img,
+.admin-Messaging img, .admin-Users img,
+.admin-Settings img, .admin-Logout img{
+    width: 25px;
+    margin-right: 8px;
+}
+
+#link-admin-dashboard{
+    margin-top: 23px;
+    color: #368db2;
+    font-weight: bolder;
+    margin-right: 60px;
+    text-decoration: none;
+}
+
+#link-to-admin-profile{
+    margin-top: 23px;
+    color: #368db2;
+    font-weight: bolder;
+    margin-right: 90px;
+    text-decoration: none;
+}
+#link-to-messaging{
+    margin-top: 23px;
+    color: #368db2;
+    font-weight: bolder;
+    margin-right: 72px;
+    text-decoration: none;
+}
+
+#link-to-settings{
+    margin-top: 23px;
+    color: #368db2;
+    font-weight: bolder;
+    margin-right: 72px;
+    text-decoration: none;
+}
+
+#link-to-logout {
+    margin-top: 23px;
+    color: #368db2;
+    font-weight: bolder;
+    margin-right: 68px;
+    text-decoration: none;
+}
+
+#link-to-users{
+    margin-top: 23px;
+    color: #368db2;
+    font-weight: bolder;
+    margin-right: 104px;
+    text-decoration: none;
+}
+
+@media screen and(max-width: 425px){
+    .admin-main-container{
+        display: none;
+    }
+}

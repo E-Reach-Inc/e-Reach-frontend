@@ -1,0 +1,87 @@
+
+
+.patient-record-table{
+    margin-top: 10px;
+    width: 100%; 
+  
+}
+.patient-record-outter-div{
+    display: flex;
+    /* height: 500px; */
+    overflow-y: auto;
+}
+.patient-record-inner-div{
+    width: 100%;
+    
+}
+.patient-record-inner-con{
+    margin-left: 80px;
+    height: 500px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    border-radius: 25px;
+    border: 1px solid #368db2;
+    width: 85%;
+    max-height: 450px;
+    background-color: #FFFFFF;
+
+    
+}
+
+.patient-record-table-header{
+    font-weight: bold; 
+    height: 40px;
+    position: sticky;
+    background-color: #368db2;
+    padding: 10px; 
+    text-align: center; 
+    border: 1px solid whitesmoke;
+
+}
+
+.patient-record-title{
+    margin-top: 15px;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.patient-med-logs{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.patient-record-table-data{
+    padding: 10px; 
+    text-align: left; 
+    border: 1px solid whitesmoke;
+
+}
+
+.patient-record-table-data tr:nth-child(even){
+    background-color: #e7e5f1f6;
+}
+
+.patient-record-table-data td{
+    white-space: normal; 
+    word-wrap: break-word; 
+    max-width: 200px; 
+}
+
+::-webkit-scrollbar{
+    width: 2px;
+    height: 2px;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: transparent;
+    border-radius: inherit;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #368db2;
+}
+
