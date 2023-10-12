@@ -83,8 +83,6 @@ const PatientRecord = () =>{
             </div>
            
            <div className="patient-record-inner-div">
-
-
               <div>
               <PatientNavBar/>
               </div>

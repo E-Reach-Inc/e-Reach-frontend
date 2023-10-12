@@ -9,7 +9,7 @@ const PatientAppointmentTwo = () =>{
     return(
         
       <div className="patient-appointment-two-table-outer-con">
-         <div className="patient-appointment-two-table-top">
+        <div className="patient-appointment-two-table-top">
         <h3 className="patient-appointment-two-title">Appointment(s)</h3>
         <button>Browse All</button>
         </div>
@@ -17,8 +17,8 @@ const PatientAppointmentTwo = () =>{
         <div className="patient-appointment-two-table-inner-con">
         <table className="patient-appointment-two-table">
 
-<thead className="patient-appointment-two-table-header">
-  <tr>
+        <thead className="patient-appointment-two-table-header">
+        <tr>
     <th id="patient-th">Date</th>
     <th>Type</th>
     <th>Hospital Name</th>

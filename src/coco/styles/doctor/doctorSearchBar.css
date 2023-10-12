@@ -7,9 +7,10 @@
     flex: 1;
     margin-top: 10px;
     margin-left: 40px;
-    height: 45px;
+    height: 40px;
     outline: none;
-    border: 1px solid #368db2;
+    border: none;
+    /* border: 1px solid #368db2; */
     border-radius: 35px;
 }
 
@@ -29,7 +30,6 @@
     margin-left: 100px;
     width: 255px;
     padding: 5px;
-    border: 1px solid #368db2;
     height: 35px;
     border-radius: 10px;
     background-color: white;
@@ -39,7 +39,6 @@
     margin-top: 7px;
     font-weight: bold;
     font-size: 12px;
-    font-family: "DM SANS", sans-serif;
     color: black;
 }
 

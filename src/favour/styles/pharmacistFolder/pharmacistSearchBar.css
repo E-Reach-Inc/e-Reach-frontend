@@ -5,20 +5,22 @@
     margin-left: 40px;
     height: 30px;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     outline: none;
 }
 .search-button{
     background-color: #368db2;
     color: white;
     border: none;
-    border-radius: 20px;
+    border-radius: 25px;
+    height: 35px;
+    width: 3.6rem;
     padding: 5px 10px;
     cursor: pointer;
 }
 .date-time{
     margin-top: 12px;
-    margin-left: 30px;
+    margin-left: 59px;
 }
 .date-time p{
     margin-top: 7px;

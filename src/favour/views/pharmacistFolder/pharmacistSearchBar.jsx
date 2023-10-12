@@ -1,31 +1,31 @@
 import React, {useState, useEffect}from "react";
-import notification from "../../assets/pharmacistimage/notification.svg";
+import notification from "../../assets/pharmacistimage/notificationnew.svg";
 import '../../styles/pharmacistFolder/pharmacistSearchBar.css'
-import message from "../../assets/pharmacistimage/message.svg";
-import shedoctor from "../../assets/pharmacistimage/shedocto.jpg";
+import message from "../../assets/pharmacistimage/messagesnew.svg";
+import shedoctor from "../../assets/pharmacistimage/profilenew.svg";
 
 
 export const PharmacistSearchBar =()=>{
-    const [currentDateTime, setCurrentDateTime] = useState("");
+    const[time, setTime] = useState("");
+  useEffect(()=>{
+    setInterval(() => {
+      setTime(getTime());
+    }, 1000);
 
-    useEffect(() => {
-        const fetchCurrentTimeAndDate = async () => {
-            try {
-                const response = await fetch("http://worldtimeapi.org/api/timezone/Africa/Lagos");
-                if (response.ok) {
-                    const data = await response.json();
-                    const dateTimeString = new Date(data.utc_datetime).toLocaleString();
-                    setCurrentDateTime(dateTimeString);
-                } else {
-                    throw new Error("Failed to fetch time and date");
-                }
-            } catch (error) {
-                console.error("Error fetching time and date:", error);
-            }
-        };
-        fetchCurrentTimeAndDate();
+  },[]);
+  
 
-    }, []);
+  function getTime(){
+    const now = new Date();
+    return now.toLocaleString("en-Us", {
+      day :"numeric",
+      month: "long",
+      year : "numeric",
+      hour: "numeric",
+      minute : "numeric",
+      second : "numeric"
+    })
+}
 
 
         return (
@@ -44,7 +44,7 @@ export const PharmacistSearchBar =()=>{
                     </button>
                 </div>
                 <div className="date-time">
-                    <p>{currentDateTime}</p>
+                    <p>{time}</p>
                 </div>
                 <div className="notifications">
                     <img className="not" src={notification} alt="notification"/>

@@ -150,7 +150,7 @@ const PatientSignUp = () => {
         <input className="input-style" name="firstName" type="text" value={data.firstName} onChange={onChangeHandler} />
         <label className="name-tag-p">Last Name</label>
         <input className="input-style" name="lastName" type="text" value={data.lastName} onChange={onChangeHandler} />
-        <label className="name-tag-nin">N.I.N</label>
+        <label className="name-tag-p">N.I.N</label>
         <input className="input-style" name="nin" type="text" value={data.nin} onChange={onChangeHandler} />
         <div><button  onClick={handleNext}>next</button></div>
         </div>
@@ -219,7 +219,7 @@ const PatientSignUp = () => {
      
         </div>
       ) : (
-        <div className="Registration-Complete-Frame">
+        <div className="Registration-Complete-Frame-two">
               <div className="Inner-Registration">
                   <h3>Registration completed </h3>
                   <p id="reg-two">You will receive an email shortly to activate your hospital's account, please click the activate button to your the account.</p>

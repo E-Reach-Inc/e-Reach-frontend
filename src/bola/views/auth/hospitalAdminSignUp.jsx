@@ -168,7 +168,7 @@ function HospitalAdminSignUp() {
                       <img src={eReachLogo} alt={"e-Reach logo"}/>
                   </div>
                   <div className="Inner-Header-Frame">
-                      <h2 className="text-center_">Hospital Admin SignUp</h2>
+                      <p className="text-center">Hospital Admin SignUp</p>
                       <p> Please fill the form below carefully and with precision.<br/>free to add as much detail as needed</p>
                   </div>
               </div>
