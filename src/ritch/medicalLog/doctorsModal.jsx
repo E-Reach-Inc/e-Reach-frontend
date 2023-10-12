@@ -3,9 +3,7 @@ import '../medicalLog/medicalLogStyle/doctorsModal.css'
 import { db } from '../../firebaseConfig/firebase';
 import { ref } from 'firebase/database';
 
-
-
- export const PopUp = ({ onClose}) => {
+ export const PopUp = ({onClose,notprescriptions}) => {
 
   const initialPrescription = {
     medicationName: '',
@@ -118,7 +116,7 @@ import { ref } from 'firebase/database';
                />
                   <div className="add-presc-button">
                   <button onClick={handleAddPrescription}>Add</button>
-
+                  <button className='close-button' onClick={onClose}>Close</button>
                   </div>          
            <ul>
                {prescriptions.map((prescription, index) => (
@@ -138,7 +136,6 @@ import { ref } from 'firebase/database';
            </ul>
         </div>
        </div>
-            <button className='close-button' onClick={onClose}>Close</button>
         </div>
     </div>
   )
