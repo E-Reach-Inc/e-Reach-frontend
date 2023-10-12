@@ -50,7 +50,7 @@ const PatientSignUp = () => {
 
       console.log( patientDetails);
     
-      const response = await axios.post("http://e-reach-prod.up.railway.app/api/v1/patient/create-patient/", patientDetails);
+      const response = await axios.post("http://localhost:8080/api/v1/patient/create-patient/", patientDetails);
       if(response.status === 200){
           setRegistrationCompleted(true)
           toast.success("Patient Registration Successful")

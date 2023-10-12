@@ -8,7 +8,7 @@ const PatientPopUp = ({onClose, isModalOpen}) => {
   return (
     <div className='patientPopUp'>
             <div className="patient-inner-pop-up">
-                dfdsdvdjsbskbddcjkjljljl
+               
             </div>
       <button className='patient-close-button' onClick={onClose}>Close</button>
     </div>
