@@ -13,6 +13,7 @@ const PrescriptionLog = () => {
 
   const openPopUp = () =>{
     setButtonPopUp(true)
+    
   }
 
   const closePopUp = () => {

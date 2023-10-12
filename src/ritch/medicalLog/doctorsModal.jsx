@@ -3,14 +3,20 @@ import '../medicalLog/medicalLogStyle/doctorsModal.css'
 
  export const PopUp = ({onClose,notprescriptions}) => {
 
+  const newPrescription = {
+    medicationName: '',
+    dosage: '',
+    dosageFrequency: '',
+    startDate: '',
+    prescriptionDate: '',
+    checked: false,
+    practitionersEmail: '',
+  };
+
   const [prescriptions, setPrescriptions] = useState([]);
+  const [recentPresc, setRecentPresc] = useState(newPrescription);
   const [selectedMedication, setSelectedMedication] = useState('');
-  const [dosage, setDosage] = useState('');
-  const [dosageFrequency, setDosageFrequency] = useState('');
-  const [startDate, setStartDate] = useState('');
-  const [prescriptionDate, setPrescriptionDate] = useState('');
-  const [medicationName, setMedicationName] = useState('');
-  
+    
   useEffect(() => {
    
     fetch('/api/prescriptions')
@@ -21,44 +27,25 @@ import '../medicalLog/medicalLogStyle/doctorsModal.css'
   const handleMedicationChange = (event) => {
     setSelectedMedication(event.target.value);
   };
-
-  const handleDosageChange = (event) => {
-    setDosage(event.target.value);
+  const handleChange = (event) => {
+    setRecentPresc((previousValue)=>({...previousValue, [event.target.id]: event.target.value}))
   };
 
-  const handleDosageFrequencyChange = (event) => {
-    setDosageFrequency(event.target.value);
-  };
-
-  const handleStartDateChange = (event) => {
-    setStartDate(event.target.value);
-  };
-
-  const handlePrescriptionDateChange = (event) => {
-    setPrescriptionDate(event.target.value);
-  };
   const handleAddPrescription = () => {
-    if (selectedMedication && dosage && dosageFrequency && startDate && prescriptionDate) {
       
       const newPrescription = {
-        medicationName: selectedMedication,
-        dosage,
-        dosageFrequency,
-        startDate,
-        prescriptionDate,
+        medicationName: recentPresc.medicationName,
+        dosage: recentPresc.dosage,
+        dosageFrequency: recentPresc.dosageFrequency,
+        startDate: recentPresc.startDate,
+        prescriptionDate: recentPresc.prescriptionDate,
         checked: false,
-        practitionersEmail: localStorage.getItem("practitionerEmail"),
+        practitionersEmail: recentPresc.practitionersEmail,
       };
 
 
       setPrescriptions([...prescriptions, newPrescription]);  
-     setSelectedMedication('');
-      setMedicationName('')
-      setDosage('');
-      setDosageFrequency('');
-      setStartDate('');
-      setPrescriptionDate('');
-    }
+    
   };
   const handlePrescriptionToggle = (index) => {
     const updatedPrescriptions = [...prescriptions];
@@ -86,8 +73,7 @@ import '../medicalLog/medicalLogStyle/doctorsModal.css'
                       type="text"
                       placeholder="Dosage"
                       id='dosage'
-                     value={dosage}
-                    onChange={handleDosageChange}
+                    onChange={handleChange}
                     />
                   </div>
                  <div className="input-frequency">
@@ -95,25 +81,28 @@ import '../medicalLog/medicalLogStyle/doctorsModal.css'
                    type="text"
                    placeholder="Dosage Frequency"
                    id='dosageFrequency'
-                   value={dosageFrequency}
-                   onChange={handleDosageFrequencyChange}
+                   onChange={handleChange}
                   />
                  </div>
                  <p id='start'>Start date</p>
                 <input
                   type="date"
                   placeholder="Start Date "
-                  value={startDate}
-                  id='startdate'
-                  onChange={handleStartDateChange}
+                  id='startDate'
+                  onChange={handleChange}
                 />
                 <p id='start'>Prescription date</p>
                <input
                  type="date"
                 placeholder="Prescription Date"
-                value={prescriptionDate}
-                id='prescriptiondate'
-                onChange={handlePrescriptionDateChange}
+                id='prescriptionDate'
+                onChange={handleChange}
+               />
+                <input
+                 type="email"
+                placeholder="your email"
+                id='practitionerEmail'
+                onChange={handleChange}
                />
                   <div className="add-presc-button">
                   <button onClick={handleAddPrescription}>Add</button>

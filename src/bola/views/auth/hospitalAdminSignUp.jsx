@@ -30,7 +30,7 @@ function HospitalAdminSignUp() {
     const [currentStep, setCurrentStep] = useState(0);
     const steps = ['Admin Details', 'hospital details 1', 'hospital details 2'];
 
-    function handleSignUpFormSubmission(event) {
+    async function handleSignUpFormSubmission(event) {
         event.preventDefault();
         setRegistrationCompleted(true);
         const hospitalSignUpDetails = {
@@ -48,9 +48,9 @@ function HospitalAdminSignUp() {
             country: data.country,
             postCode: data.postCode
         }
-        //
+        //https://e-reach-prod.up.railway.app
         try {
-            axios.post("https://e-reach-prod.up.railway.app/api/v1/hospital-admin/register-hospital/", hospitalSignUpDetails)
+            await axios.post("https://e-reach-prod.up.railway.app/hospital-admin/register-hospital/", hospitalSignUpDetails)
                  .then(successResponse => {
                      console.log(successResponse)
                      console.log("hospital email is: "+successResponse.data.hospitalEmail);
@@ -59,6 +59,8 @@ function HospitalAdminSignUp() {
                      toast.success(successResponse.data.data.message, {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
                 })
                  .catch(failureResponse => {
+                    console.log("failed:: message is==>>", failureResponse.message)
+                    console.log(failureResponse)
                      toast.error("Registration Failed", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
                  })
                  .finally(recovery => {

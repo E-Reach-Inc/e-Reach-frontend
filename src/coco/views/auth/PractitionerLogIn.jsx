@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import eReachLogo from "../../assets/images/EReachLogoNoB.svg";
 import "../../../coco/styles/auth/PractionerLogin.css"
 import { useNavigate, useParams } from 'react-router';
@@ -8,48 +8,59 @@ import { ToastContainer, toast } from 'react-toastify';
 
 function LoginPage() {
 
+    useEffect(()=>{
+        console.log("Hi")
+        console.log("hello")
+    }, [])
+
     const navigate = useNavigate()
-    const parameter = useParams()
-    const role = parameter.role
 
     const [formData, setFormData] = useState({
-        username: '',
-        identityNumber: '',
+        email: '',
+        patientIdentificationNumber: '',
     });
 
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value,
-        });
+    const handleInputChange = (event) => {
+        setFormData((previousValue)=>({...previousValue, [event.target.id]: event.target.value}))
     };
 
     const handleSubmit = (e) => {
-        const loginData = {
-            username: formData.username,
-            identityNumber: formData.identityNumber,
-            role: role
-        }
-        e.preventDefault();
-       try{ axios.post("http://e-reach-prod.up.railway.app/api/v1/practitioner/login", formData)
-            .then(successResponse => {
-                toast.success("Login Successful", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
-            })
-            .catch(failureResponse => {
-
-            })
-            .finally(()=>{
-                if(role === "doctor")
-                    navigate("doctor-dashboard")
-                else if(role === "pharmacist")
-                    navigate("pharmacist-dashboard")
-            })
-        console.log('Form Data:', formData);
+        try{ 
+            const loginData = {
+                username: formData.email,
+                patientIdentificationNumber: formData.patientIdentificationNumber,
+            }
+            e.preventDefault();
+            const practitionerData = null;
+            axios.post("http://localhost:8080/api/v1/practitioner/login", loginData)
+                .then(successResponse => {    
+                    try{ 
+                        localStorage.setItem("practitionerData", successResponse.data)
+                        toast.success("Login Successful", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
+                        practitionerData = successResponse.data;
+                    }catch(error){
+                        console.error(error)
+                    }
+                })
+                .catch(failureResponse => {
+                    console.error(failureResponse)
+                })
+                .finally(()=>{
+                    try{
+                        if(practitionerData.data.role === "doctor")
+                            navigate("/doctors-dashboard")
+                        else if(practitionerData.data.role === "pharmacist")
+                            navigate("pharmacist-dashboard")
+                    }
+                    catch(error){
+                        console.error(error)
+                    }
+                })
+            console.log('Form Data:', formData);
         }catch(error){
             toast.info(error, {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
-    };
-
+        };
+    }
     return (
         <div className="Doc-login-Main-Reg-Frame">
             <ToastContainer/>
@@ -63,27 +74,26 @@ function LoginPage() {
                 <div className="Doc-login-Form-frame">
                     <form onSubmit={handleSubmit}>
                         <div className="Doc-login-user-info">
-                            <p className="Doc-name-tag-input-email">Username:</p>
+                            <p className="Doc-name-tag-input-email">Email:</p>
                             <label htmlFor="username"></label>
-                            <input className="Doc-login-input-style" type="email" id="email_address"
-                                   value={formData.username}
+                            <input className="Doc-login-input-style" type="email" id="email"
                                    onChange={handleInputChange}
                                    placeholder="example: sample@gmail.com" required/>
 
                             <p className="Doc-name-tag-input-email">Identity Number:</p>
                             <label htmlFor="identity_number"></label>
-                            <input className="Doc-login-input-style" type="text" id="identity_number"
-                                   value={formData.identityNumber}
+                            <input className="Doc-login-input-style" type="text" id="patientIdentificationNumber"
                                    onChange={handleInputChange}
-                                   placeholder="enter your identity number" required/>
+                                   placeholder="enter your identity number" required
+                            />
                         </div>
-                        <button  id="Doc-login-submit-button" onSubmit={handleSubmit} type="submit">Login</button>
+                        <button  id="Doc-login-submit-button" type="submit">Login</button>
                     </form>
                 </div>
             </div>
         </div>
     );
-    }
+    
 }
 
 export default LoginPage;
