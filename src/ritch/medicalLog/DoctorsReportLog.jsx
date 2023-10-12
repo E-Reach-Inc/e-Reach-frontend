@@ -23,8 +23,8 @@ const DoctorsReport = () => {
   };
 
   const saveReport = () => {
-    // Send the entire report object to the server for saving.
-    console.log(report); // Replace with an HTTP POST request to the server.
+  
+    console.log(report); 
   };
 
   return (
@@ -65,8 +65,9 @@ const DoctorsReport = () => {
             onChange={handleReportChange}
           />
         </div>
+        <button type='button' id='save-report-comp-btn' onClick={saveReport}>Save Report</button>
       </div>
-      <button className='save-report-comp-btn' onClick={saveReport}>Save Report</button>
+    
     </div>
   );
 };

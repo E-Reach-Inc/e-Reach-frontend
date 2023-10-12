@@ -24,6 +24,7 @@
 .report-section textarea{
     width: 100%;
     height: 10vh;
+    border:1px solid#368db2;
 }
 
 .report-section-tabs{
@@ -46,22 +47,20 @@
     border-top: 1px solid#368db2;
     padding: 5px;
 };
-  
-   
 
-
-.save-report-comp-btn{
-    background-color: rgba(242, 242, 248, 0.82);
+.doctors-report-component button{
     width: 110px;
     border: 1px solid#368db2;
     font-size: large;
     border-radius: 5px;
     margin-top: 10px;
-    
-    
 }
+  
+   
 
-.save-report-comp-btn:hover{
+
+ 
+#save-report-comp-btn:hover{
     box-shadow: inset 550px 0 0 0 #368db2;
     color: white;
-}
+} 

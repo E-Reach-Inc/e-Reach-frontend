@@ -12,6 +12,8 @@
     flex-direction: column;
     margin-top: 4px;
     padding: 5px;
+    border-top:1px solid#368db2;
+    border-radius: 5px;
 }
 
 
@@ -37,6 +39,10 @@
 .test-component-content{
     display: flex;
     justify-content: space-between;
+   
+
+   
+    
 
 }
 
@@ -58,6 +64,8 @@
         display: flex;
         margin-top: 10px;
         justify-content: space-between;
+        border: 1px solid#368db2;
+        border-radius: 5px;
     }
     .test-output-con button{
         background-color: rgba(242, 242, 248, 0.82);

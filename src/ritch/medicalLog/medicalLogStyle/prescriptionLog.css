@@ -15,38 +15,8 @@
    
 }
 
-
-.add-prescription-con{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    margin-top: 4px;
-    border-top: 1px solid#368db2;
-    border-radius: 5px;
-    padding-top: 5px
-    
-};
    
-    
 
-
-.add-prescription-con button{
-    background-color: red;
-    background-color: rgba(242, 242, 248, 0.82);
-    width: 100px;
-    border: 1px solid#368db2;
-    font-size: large;
-    border-radius: 5px;
-}
-
-.add-prescription-btn button{
-    background-color: rgba(242, 242, 248, 0.82);
-    width: 100px;
-    border: 1px solid#368db2;
-    font-size: large;
-    border-radius: 5px;
-
-}
 
 .add-prescription-con button:hover{
     box-shadow: inset 550px 0 0 0 #368db2;
@@ -56,8 +26,9 @@
 
 .view-prescription-con{
     display: flex;
-    
     justify-content: space-between;
+    border:1px solid#368db2;
+    border-radius: 5px;
    
 }
 
@@ -66,12 +37,36 @@
     width: 100px;
     /* margin-top: 20px; */
     border: 1px solid#368db2;
-    background-color: red;
     font-size: large;
     border-radius: 5px;
 
 }
 .view-prescription-con button:hover{
+    box-shadow: inset 550px 0 0 0 #368db2;
+    color: white;   
+}
+
+.add-presc-con{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 4px;
+    border-top: 1px solid#368db2;
+    border-radius: 5px;
+    padding-top: 5px
+
+}
+
+.add-presc-con button{
+    background-color: rgba(242, 242, 248, 0.82);
+    width: 100px;
+    /* margin-top: 20px; */
+    border: 1px solid#368db2;
+    font-size: large;
+    border-radius: 5px;
+}
+
+.add-presc-con button:hover{
     box-shadow: inset 550px 0 0 0 #368db2;
     color: white;   
 }

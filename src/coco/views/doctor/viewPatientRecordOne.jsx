@@ -16,7 +16,8 @@ export const ViewPatientRecordOne= () => {
 
     useEffect(()=>{
         const hospitalEmail = localStorage.getItem("hospitalEmail");
-        try{axios.get("http://localhost:8080/api/v1/doctor/view-patients-records/"+hospitalEmail)
+        const role = localStorage.getItem("role")
+        try{axios.get("http://localhost:8080/api/v1/practitioner/view-patients-records/"+hospitalEmail+"/"+role)
             .then(successResponse => {
                 setPatientRecordData(successResponse.data);
                 toast.info("medical logs found ", {position: toast.POSITION.TOP_CENTER, autoClose: 3000})

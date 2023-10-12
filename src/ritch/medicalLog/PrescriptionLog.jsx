@@ -23,9 +23,9 @@ const PrescriptionLog = () => {
     <div className="prescription-log-modal-two">
 
       <div className='prescription-main-con'>
-      <div className='add-prescription-con'>
+      <div className='add-presc-con'>
       <h2>Prescription</h2>
-        <button className='add-prescription-btn' onClick={openPopUp}>Add</button>
+        <button type='button' className='add-prescription-btn' onClick={openPopUp}>Add</button>
        {buttonPopUp && <PopUp onClose={closePopUp} />}
       </div>
 

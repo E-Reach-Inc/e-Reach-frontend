@@ -24,11 +24,12 @@ export const PractitionerRegistration = () => {
         const practitionerDetails= {
             firstName: formData.firstName,
             lastName: formData.lastName,
-            role: 'doctor',
+            role: formData.role,
             phoneNumber: formData.phoneNumber,
             email: formData.email,
             hospitalEmail: localStorage.getItem("hospitalEmail")
         }
+        
         try {
             console.log("hello boys tue tue")
             axios.post('http://localhost:8080/api/v1/hospital-admin/invite-practitioner/', practitionerDetails)
