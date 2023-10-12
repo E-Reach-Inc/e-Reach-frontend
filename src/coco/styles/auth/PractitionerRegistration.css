@@ -83,27 +83,34 @@
     margin-bottom: 20px;
 }
 .Doc-name-tag{
-    font-size: small;
+    font-size: 18px;
     margin-right: 140px;
     color: #010C80;
 }
 .Doc-name-join-tag{
-    font-size: small;
+    font-size: 18px;
     margin-right: 390px;
     color: #010C80;
 }
 .Doc-name-tag-input-password{
-    font-size: small;
+    font-size: 18px;
     margin-right: 435px;
     color: #010C80;
 }
 .Doc-name-tag-input-email, .Doc-name-tag-input-phoneNumber{
-    font-size: small;
+    font-size: 18px;
     margin-right: 410px;
+    /* margin-top: 20px; */
     color: #010C80;
 }
+.Doc-name-tag-email{
+    font-size: 18px;
+    margin-right: 410px;
+    color: #010C80;
+    margin-top: 20px;
+}
 .Doc-name-tag-input-confirm-password{
-    font-size: small;
+    font-size: 18px;
     margin-right: 385px;
     color: #010C80;
 }

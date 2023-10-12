@@ -9,15 +9,14 @@
     margin-left: 650px;
     transform: translate(-50%, -50%);
     background-color: white;
-    /* border: 1px solid #ccc; */
     border-radius: 20px;
     padding: 20px;
     height: 490px;
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    border-style: solid;
 }
 .Medical-Log-Form{
     height: 90%;
@@ -39,23 +38,25 @@
     justify-content: space-evenly;
 }
 .Log-Data-Frame p{
-    font-size: 23px;
+    font-size: 20px;
+    margin-top: 20px;
 }
 .Pin-Frame .Email-Frame{
     display: flex;
     flex-direction: column;
     /* align-items: center; */
     justify-content: space-between;
-    row-gap: 20px;
+    /* row-gap: 40px; */
 
 }
 .Pin-Frame input, .Email-Frame input{
     width: 100%;
     height: 40px;
+    margin-top: 20px;
     font-size: 20px;
 }
 .Pin-Frame label, .Email-Frame label{
-    font-size: 18px;
+    font-size: 19px;
 }
 .pop-up-submit-button{
     display: flex;
@@ -63,8 +64,9 @@
     height: 40px;
 }
 .pop-up-submit-button button{
-    width: 30%;
+    width: 20%;
     height: 100%;
+    margin-top: 30px;
     font-size: 20px;
 }
 .Pin-Frame .Email-Frame{
