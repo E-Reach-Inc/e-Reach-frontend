@@ -47,35 +47,24 @@ function App() {
                 <Route path='*' element={<p>Page Not Found</p>}/>
               <Route path='/' element={<LandingPageMainBody/>}/>
               <Route path='/admin-dashboard' element={<HospitalAdminDashboard/>}/>
-
               <Route path='/activate-hospital-account/:token' element={<ActivateHospitalAccount/>}/>
               <Route path='/activate-hospital-admin-account/:token' element={<ActivateHospitalAdminAccount/>}/>
               <Route path={"hospital-admin-signup"} element={<HospitalAdminSignUp/>}/>
               <Route path={'/admin-create-medical-log'} element={<MedicalLogModal/>}/>
-
-                
-                
               <Route path='/doctor-dashboard' element={<DoctorDashboard/>}/>
               <Route path={"/doctor-active-logs-one"} element={<ActiveLogsTableOne/>}/>
               <Route path={"/doctor-patient-appointment-one"} element={<PatientAppointmentOne/>}/>
               <Route path={"/doctor-patient-record-one"} element={<ViewPatientRecordOne/>}/>
               <Route path={"/doctor-profile-one"} element={<DoctorProfileOne/>}/>
-                
-
               <Route path='/pharmacist-default-dashboard' element={<PharmacistDefaultDashboard/>}/>
               <Route path={"/pharmacist-profile"} element={<PharmacistProfile/>}></Route>
               <Route path={"/pharmacist-appointment"} element={<PharmacistAppointment/>}></Route>
               <Route path={"/pharmacist-view-records"} element={<PharmacistViewRecord/>}></Route>
               <Route path={"/pharmacist-medication"} element={<PharmacistMedication/>}></Route>
-              <Route path='/pharmacist-dashboard' element={<PharmacistDashboard/>}/>
-  
-                
+              <Route path='/pharmacist-dashboard' element={<PharmacistDashboard/>}/>  
               <Route path='/register-practitioner' element={<PractitionerRegistration/>}/>
-              <Route path={"/practitioner-login"} element={<LoginPage/>}/>
-
-                
+              <Route path={"/practitioner-login"} element={<LoginPage/>}/>   
               <Route path='/patient-view' element={<PatientView/>}/>
-
               <Route path='/patient-log-view' element={<PatientPopUp/>}/>
               <Route path='/patient-profile' element={<PatientProfile/>}/>
               <Route path="patient-profile-two" element={<PatientProfileTwo/>}/>
@@ -84,7 +73,6 @@ function App() {
               <Route path='/patient-signUp' element={<PatientSignUp/>}/>
               <Route path="/patient-dashboard" element={<PatientView/>}/>
               <Route path="/route-to-dashboard/:pin" element={RouteToDashbaord}/>
-
               <Route path='/medical-log' element={<MedicalLog/>}/>
               <Route path='/patient-registration' element={<PatientSignUp/>}/>  
             </Routes>

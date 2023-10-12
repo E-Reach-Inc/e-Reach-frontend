@@ -1,38 +1,31 @@
 .medical-log-main-con{
-    /* background: radial-gradient(#FFFFFF, rgb(227, 239, 239), rgb(54, 141, 178)); */
     flex-direction: column;
     text-align: center;
     height: 100vh;
- 
- 
- 
-  
- 
+    background:  #ADD8E6;
 }
 .medical-log-inner-con{
     border: 1px solid #368db2;
-    width: 465px;
+    width: 49rem;
+    height: 40rem;
     margin: auto;
     border-radius: 10px;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
 }
-
+.medical-log-inner-con #mmm{
+    font-size: 20px;
+}
 .medical-log-holder-con{
     padding-top: 10px;
-    background-color: #368db2;
 }
-
 .medical-log-back-btn{
     border: 1px solid#368db2;
     font-size: large;
     width: 100px;
     border-radius: 5px;
     margin-bottom: 5px;
-    
 }
-
 .medical-log-back-btn:hover{
     box-shadow: inset 550px 0 0 0 #368db2;
     color: white;

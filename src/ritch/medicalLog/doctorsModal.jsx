@@ -1,7 +1,7 @@
 import React,{useState, useEffect}from 'react'
 import '../medicalLog/medicalLogStyle/doctorsModal.css'
 
- export const PopUp = ({ onClose}) => {
+ export const PopUp = ({onClose,notprescriptions}) => {
 
   const [prescriptions, setPrescriptions] = useState([]);
   const [selectedMedication, setSelectedMedication] = useState('');
@@ -41,7 +41,7 @@ import '../medicalLog/medicalLogStyle/doctorsModal.css'
     if (selectedMedication && dosage && dosageFrequency && startDate && prescriptionDate) {
       
       const newPrescription = {
-        medicationName: medicationName,
+        medicationName: selectedMedication,
         dosage,
         dosageFrequency,
         startDate,
@@ -49,6 +49,8 @@ import '../medicalLog/medicalLogStyle/doctorsModal.css'
         checked: false,
         practitionersEmail: localStorage.getItem("practitionerEmail"),
       };
+
+
       setPrescriptions([...prescriptions, newPrescription]);  
      setSelectedMedication('');
       setMedicationName('')
@@ -115,7 +117,7 @@ import '../medicalLog/medicalLogStyle/doctorsModal.css'
                />
                   <div className="add-presc-button">
                   <button onClick={handleAddPrescription}>Add</button>
-
+                  <button className='close-button' onClick={onClose}>Close</button>
                   </div>          
            <ul>
                {prescriptions.map((prescription, index) => (
@@ -135,7 +137,6 @@ import '../medicalLog/medicalLogStyle/doctorsModal.css'
            </ul>
         </div>
        </div>
-            <button className='close-button' onClick={onClose}>Close</button>
         </div>
     </div>
   )
