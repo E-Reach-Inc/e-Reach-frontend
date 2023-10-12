@@ -1,6 +1,6 @@
 import "../../styles/auth/activateHospitalAccount.css"
 import axios from 'axios'
-import React from 'react'
+import React, { useEffect } from 'react'
 import {useParams } from 'react-router'
 import { toast } from 'react-toastify'
 
@@ -10,17 +10,23 @@ const ActivateHospitalAccount = () => {
         const wholeToken = parameter.token;
         const token = wholeToken.split("=");
         console.log(token[1]);
-        axios.post("http://localhost:8080/api/v1/hospital/activate-account/"+token[1])
-             .then(onfulfilled => {
-                toast.success(onfulfilled.message, {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
-                localStorage.setItem("hospitalEmail", onfulfilled.data.data.hospitalEmail)
-             })
-             .catch(onRejected => {
-                toast.error(onRejected.message, {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
-             })
-             .finally(()=>{
-
-             })
+        useEffect(()=>{
+                console.log("hello world hello")
+                axios.post("http://localhost:8080/api/v1/hospital/activate-account/"+token[1])
+                .then(onfulfilled => {
+                        console.log(onfulfilled)
+                        console.log(onfulfilled.data.data)
+                        toast.success(onfulfilled.message, {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
+                        localStorage.setItem("hospitalEmail", onfulfilled.data.data.hospitalEmail)
+                })
+                .catch(onRejected => {
+                   toast.error(onRejected.message, {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
+                })
+                .finally(()=>{
+   
+                })
+        }, [])
+       
              const styles = {
 
              }

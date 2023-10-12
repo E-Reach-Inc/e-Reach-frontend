@@ -9,7 +9,8 @@
     margin-left: 40px;
     height: 45px;
     outline: none;
-    border: 1px solid #368db2;
+    border: none;
+    /* border: 1px solid #368db2; */
     border-radius: 35px;
 }
 
@@ -29,7 +30,7 @@
     margin-left: 70px;
     width: 255px;
     padding: 5px;
-    border: 1px solid #368db2;
+    /* border: 1px solid #368db2; */
     height: 35px;
     border-radius: 10px;
     background-color: white;
@@ -39,13 +40,12 @@
     margin-top: 7px;
     font-weight: bold;
     font-size: 12px;
-    font-family: "DM SANS", sans-serif;
     color: black;
 }
 
 .admin-notifications{
     margin-top: 10px;
-    margin-left: 250px;
+    margin-left: 350px;
 }
 
 .admin-notifications .message{

@@ -2,21 +2,20 @@
 .Main-Div{
     flex-direction: column;
     place-content: center;
-    margin: 0;
     align-items: center;
     align-content: center;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     width: 100%;
     height: 100vh;
     display: grid;
     justify-content: center;
     overflow: hidden;
-    background: radial-gradient(#FFFFFF, rgb(227, 239, 239),rgb(54, 141, 178) );
+    background:  #ADD8E6;
 }
 
 .Main-Registration-Form{
     width: 50vw;
-    height: 90vh;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -24,10 +23,10 @@
     align-items: center;
     border-style: solid;
     background-color: #FFFFFF;
-    box-shadow: rgba(3, 3, 50, 0.72) 0 3px 10px;
+    box-shadow: rgba(3, 3, 10, 0.72) 0 3px 10px;
     text-align: center;
     overflow-x: hidden;
-    border-color: #368db2;
+    border: none;
     border-radius: 20px;
 }
 
@@ -59,14 +58,12 @@
 .Inner-Header-Frame p{
     margin-top: 15px;
     color: #368db2;
-    font-size: 20px;
-    font-weight: 550;
+    font-size: 15px;
 }
-.Inner-Header-Frame .text-center_{
+.Inner-Header-Frame .text-center{
     color: #368db2;
     line-height: 28px;
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 25px;
     margin-right: 10px;
 }
 /* STEP PROGRESS BAR */
@@ -79,8 +76,9 @@
 .progress-bar{
     display: flex;
     justify-content: space-around;
-    width: 85%;
-    height: 10%;
+    margin-top: 8px;
+    width: 55%;
+    /* height: 10%; */
     /* border-style: solid; */
 }
 
@@ -89,15 +87,16 @@
     align-items: center;
 }
 .progress-bar-circle{
-    height: 40px;
-    width: 35px; 
-    border-radius: 50%;
+    height: 34px;
+    width: 30px; 
+    border-radius: 45%;
     background-color: #dcdcdc;
+    border: 3px solid #368db2;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    font-size: 30px;
+    text-align: center;
+    font-size: 20px;
     text-align: center;
     white-space: nowrap;
     overflow: visible; /* Show overflow text */
@@ -109,7 +108,7 @@
 }
 
 .progress-bar-circle::after{
-    font-size: 15px;
+    font-size: 10px;
     content: attr(data-title);
     position: absolute;
     top: calc(37% + 0.75rem);
@@ -118,14 +117,14 @@
     text-align: center;
     white-space: nowrap;
     overflow:visible;
-    text-overflow: ellipsis; /* Add ellipsis (...) for overflow text */    
+    text-overflow: ellipsis;    
 }
 
 .progress-horizontal-bar{
-    height: 40%;
-    background-color: #dcdcdc;
-    width:270px;
-    /* border-style: solid; */
+    height: 19%;
+    border: 1px solid #368db2;
+    margin: 2% 0.5% 0 0.5%;
+    width:150px;
     border-width: 1px;
     border-radius: 20px;
 }
@@ -134,14 +133,16 @@
     color: #fff;
     background-color: #368db2;
 }
+
+
+
 /* INPUTS AND FORM */
 
 .Registration-Form-Element{
    display: flex;
    flex-direction: column;
-   /* border-style: solid; */
-   height: 60%;
-   margin-top: 50px;
+
+   /* margin-top: 50px; */
    width: 85%;
 }
 
@@ -149,13 +150,12 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-top: 10px;
     width: 100%;
-    /*border-style: solid;     TO BE REMOVED     */
 }
 .Action-Buttons-Div{
     display: flex;
     justify-content: space-between;
-    /* border-style: solid; */
 }
 .Movement-And-Submit-Button{
     display: flex;
@@ -168,13 +168,14 @@
     width: 100px;
     height: 40px;
     background-color: #368db2;
+    border: none;
+    padding: 10px;
     color: #fff;
     border-radius: 15px;
     font-size: 20px;
 }
 .Movement-And-Submit-Button button:hover{
     background-color: #dcdcdc;
-    color: #000;
 }
 .Registration-Complete-Frame{
     width: 50vw;
@@ -182,20 +183,18 @@
     display: grid;
     border-style: solid;
     background-color: #FFFFFF;
-    box-shadow: rgba(3, 3, 50, 0.72) 0 3px 10px;
+    border: none;
     text-align: center;
     align-items: center;
     overflow-x: hidden;
-    border-color: #368db2;
     border-radius: 20px;
 }
 
-.Inner-Registration p{
+/* .Inner-Registration p{
     margin-top: 15px;
     color: #368db2;
     font-size: 20px;
     font-weight: 550;
-    font-family: Roboto, sans-serif;
 }
 .Inner-Registration h3{
     color: #368db2;
@@ -203,5 +202,4 @@
     font-size: 30px;
     font-weight: 700;
     margin-right: 10px;
-    font-family: Roboto, sans-serif;
-}
+} */

@@ -1,10 +1,16 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import DoctorProfilePic from "../../../coco/assets/icons/doc-profile-man.svg"
 import {DoctorSideBar} from "./doctorSideBar";
 import {SearchBar} from "./doctorSearchBar";
 import "../../../coco/styles/doctor/doctorProfileOne.css"
 
 export const DoctorProfileOne =()=>{
+
+
+    useEffect(() => {
+        
+    }, [])
+
     const [doctorData, setDoctorData] = useState({
         firstName: "",
         lastName: "",

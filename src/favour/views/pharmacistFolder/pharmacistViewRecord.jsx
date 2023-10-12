@@ -52,11 +52,6 @@ export const PharmacistViewRecord = () => {
             Name: 'Consultation',
             Result: '22/12/2023',
         },
-        {
-            Date: 'Favour chiemela',
-            Name: 'Consultation',
-            Result: '22/12/2023',
-        }
       ]
 
       viewLog.push(myObj)
@@ -81,6 +76,41 @@ export const PharmacistViewRecord = () => {
           dosageFrequency: 'Once daily',
           startDate: '12/10/2023',
           prescriptionDate:'12/10/2023'
+        },
+        {
+            medicationName: 'Codine',
+            dosage: '500mg',
+            dosageFrequency: 'Once daily',
+            startDate: '12/10/2023',
+            prescriptionDate:'12/10/2023'
+        },
+        {
+            medicationName: 'Codine',
+            dosage: '500mg',
+            dosageFrequency: 'Once daily',
+            startDate: '12/10/2023',
+            prescriptionDate:'12/10/2023'
+        },
+        {
+            medicationName: 'Codine',
+            dosage: '500mg',
+            dosageFrequency: 'Once daily',
+            startDate: '12/10/2023',
+            prescriptionDate:'12/10/2023'
+        },
+        {
+            medicationName: 'Codine',
+            dosage: '500mg',
+            dosageFrequency: 'Once daily',
+            startDate: '12/10/2023',
+            prescriptionDate:'12/10/2023'
+        },
+        {
+            medicationName: 'Codine',
+            dosage: '500mg',
+            dosageFrequency: 'Once daily',
+            startDate: '12/10/2023',
+            prescriptionDate:'12/10/2023'
         },
         {
             medicationName: 'Codine',
@@ -173,6 +203,7 @@ export const PharmacistViewRecord = () => {
                             ))}
                             </tbody>
                         </table>
+                       
                     </div>
                 </div>
             </div>

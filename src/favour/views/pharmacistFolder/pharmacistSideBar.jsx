@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../styles/pharmacistFolder/pharmacistSideBar.css'
-import eReach from '../../assets/pharmacistimage/eReachLogoNoB.svg'
+import eReach from '../../assets/pharmacistimage/ereachLogo.svg'
 import dashboard from '../../assets/pharmacistimage/dashboard-fill.svg'
 import profile from '../../assets/pharmacistimage/profile.svg'
 import schedule from '../../assets/pharmacistimage/appointment.svg'

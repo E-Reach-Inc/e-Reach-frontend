@@ -139,6 +139,7 @@ export  const PharmacistMedication =()=>{
                             ))}
                            </tbody>
                         </table>
+                        
                     </div>
                 </div>
             </div>

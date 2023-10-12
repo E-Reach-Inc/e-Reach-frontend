@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 
 const PatientSideBar  = () => {
 
-    return(
+   return(
         <div className="patient-sidebar-outer-con">
         <div className="patient-sidebar-inner-con">
 
@@ -49,12 +49,12 @@ const PatientSideBar  = () => {
             
                 <div className="patient-menu-item" id="patient-settings-icon"> 
                 <img  src={settings} alt="" />
-                <span>Settings</span>
+                <span className="side-text">Settings</span>
                 </div>
 
                 <div className="patient-menu-item" id="patient-log-out-icon">
                 <img src={logout} alt="" />
-                <span>Log Out</span>
+                <span className="side-text">Log Out</span>
                 </div>
         </div>
 
