@@ -26,7 +26,7 @@ const PatientAppointmentTwo = () =>{
     <th>Action</th>
   </tr>
 </thead>
-<tbody className="patient-appointment-two-table-data">
+{/* <tbody className="patient-appointment-two-table-data">
      <tr>
       <td>hhhhhhh</td>
       <td>gggg</td>
@@ -82,7 +82,7 @@ const PatientAppointmentTwo = () =>{
         <img src={action}/></a>
     </td>
     </tr>
-</tbody>
+</tbody> */}
 </table>
         </div>
 

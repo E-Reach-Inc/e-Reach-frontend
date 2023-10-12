@@ -5,8 +5,8 @@ import {useState} from "react";
 import "../../styles/patient/MedicalLogPopUp.css"
 import { ToastContainer, toast } from 'react-toastify';
 
-export function MedicalLogModal({ closeModal: onClose, isModalOpen }) {
-
+export function MedicalLogModal({ onClose, isModalOpen }) {
+    
     const requiredData ={
         patientId: "",
         hospitalEmail: ""
@@ -109,6 +109,7 @@ export function MedicalLogModal({ closeModal: onClose, isModalOpen }) {
                         
                         <div className="pop-up-submit-button">
                             <button type={'submit'} className="pop-up-close-button">Create</button>
+                            <button className='pop-up-close-button' onClick={onClose}>Close</button>
                         </div>
                     </div>
                 </form>

@@ -57,7 +57,7 @@ export const PatientAppointmentOne = () => {
                                 <th >Actions</th>
                             </tr>
                             </thead>
-                            <tbody>
+                            {/* <tbody>
                             {patientAppointmentData.map((patientAppointmentData, index) => (
                                 <tr key={index}>
                                     <td >{patientAppointmentData.dateTime}</td>
@@ -66,13 +66,10 @@ export const PatientAppointmentOne = () => {
                                         <img onClick={() => (openAppointPopUp(patientAppointmentData))}
                                              id="action-buttons" src={ViewLog} alt="view">
                                         </img>
-                                        {/*<img onClick={() => (patientAppointmentData.patientId)}*/}
-                                        {/*     id="action-buttons" src={EditLog} alt="edit">*/}
-                                        {/*</img>*/}
                                     </td>
                                 </tr>
                             ))}
-                            </tbody>
+                            </tbody> */}
                         </table>
                     </div>
                 </div>

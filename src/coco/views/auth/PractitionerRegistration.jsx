@@ -32,7 +32,7 @@ export const PractitionerRegistration = () => {
         
         try {
             console.log("hello boys tue tue")
-            axios.post('http://localhost:8080/api/v1/hospital-admin/invite-practitioner/', practitionerDetails)
+            axios.post('http://e-reach-prod.up.railway.app/api/v1/hospital-admin/invite-practitioner/', practitionerDetails)
                 .then(successResponse => {
                     toast.success(
                         successResponse+' Registration successful. Ready for submission.',
@@ -110,7 +110,7 @@ export const PractitionerRegistration = () => {
                             <label htmlFor="phone_number"></label>
                             <input name='phoneNumber' className="Doc-input-style" onChange={handleChangeForInputs} type="text" id="phone_number" placeholder="example: 07000000000" required/>
 
-                            <p className="Doc-name-tag-input-email">Email address:</p>
+                            <p className="Doc-name-tag-email">Email address:</p>
                             <label htmlFor="email_address"></label>
                             <input name='email' className="Doc-input-style" onChange={handleChangeForInputs} type="email" id="email_address" placeholder="example: sample@gmail.com" required/>
                         </div>

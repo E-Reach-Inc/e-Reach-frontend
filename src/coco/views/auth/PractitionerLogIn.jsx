@@ -32,7 +32,7 @@ function LoginPage() {
             role: role
         }
         e.preventDefault();
-       try{ axios.post("http://localhost:8080/api/v1/practitioner/login", formData)
+       try{ axios.post("http://e-reach-prod.up.railway.app/api/v1/practitioner/login", formData)
             .then(successResponse => {
                 toast.success("Login Successful", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
             })

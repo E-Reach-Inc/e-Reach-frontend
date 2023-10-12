@@ -1,0 +1,72 @@
+.con{
+    background-color: #e0ecef;
+    /*height: 99vh;*/
+}
+.border-hold{
+    display: flex;
+}
+#pro{
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: bolder;
+    margin-top: 19px;
+}
+.pro-holder{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.profile-pro-holder{
+    margin: 1px 5px 10px 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.22);    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    border-radius: 10px;
+    height: 60vh;
+    width: 78%;
+}
+.pro-image-doc {
+    text-align: center;
+}
+.pro-image-doc input[type="file"] {
+    display: none;
+}
+.pro-image-doc button {
+    background-color: #368db2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    margin: 16px auto 0;
+    font-size: 16px;
+}
+.pro-image-doc p {
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.pro-image-doc img {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    object-fit: cover;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+.pro-image-doc{
+    margin-top: 30px;
+}
+
+.pro-text-container{
+    margin-top: 50px;
+}
+.pro-text{
+    margin-top: 20px;
+    font-size: 18px;
+}
+.pro-text .label{
+    font-weight: 500;
+    margin-right:5px;
+}
