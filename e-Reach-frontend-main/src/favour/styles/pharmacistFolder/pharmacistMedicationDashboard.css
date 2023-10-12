@@ -1,0 +1,77 @@
+.med-con{
+    display: flex;
+}
+.med-holder{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.22);
+    margin: 11px 5px 10px 19px;
+    overflow-y: auto;
+    background-color: white;
+    border-radius: 10px;
+    height: 14rem;
+    width: 29rem;
+}
+.med-button{
+    display: flex;
+    margin-top: 20px;
+}
+.search-bar-two{
+    background-color: #e0ecef;
+    padding: 6px;
+    flex: 1;
+    margin-left: 190px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+.search-button-two{
+    background-color: #368db2;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.med-text{
+    margin-left: 10px;
+}
+.browse-all-med{
+    margin-left: auto;
+    margin-right: 10px;
+}
+.browse-all-med button{
+    width: 100px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: #368db2;
+    color: white;
+    padding: 5px;
+}
+.med-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0 20px;
+    margin-top: 20px;
+}
+
+.med-table th,
+.med-table td {
+    border: 1px solid whitesmoke;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.med-table th {
+    background-color: #368db2;
+    color: white;
+}
+.med-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+    font-size: 12px;
+}
+.med-table tr:nth-child(odd) {
+    font-size: 12px;
+    background-color: white;
+}

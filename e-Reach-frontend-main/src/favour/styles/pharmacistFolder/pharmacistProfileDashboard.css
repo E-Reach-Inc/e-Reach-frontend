@@ -1,0 +1,47 @@
+#pro{
+    margin-left: 20px;
+    margin-top: 19px;
+}
+.pro-hold{
+    margin-top: 20px;
+}
+.pro-pro-holder{
+    margin: 1px 5px 10px 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.22);
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    border-radius: 10px;
+    height: 17rem;
+    width: 29rem;
+}
+.pro-pro-image-doc img{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+.pro-pro-text-container{
+    margin-top: 30px;
+}
+.pro-pro-text{
+    margin-top: 10px;
+    font-size: 14px;
+}
+.pro-pro-text .label{
+    font-weight: 500;
+    margin-right:3px;
+}
+.pro-pro-image-doc button {
+    background-color: #368db2;
+    color: white;
+    border: none;
+    width: 70px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: 10px;
+}

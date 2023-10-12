@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.Doc-Main-Reg-Frame{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: radial-gradient(#FFFFFF, rgb(227, 239, 239),rgb(54, 141, 178) );
+}
+.Doc-Sub-Main-Reg-Frame{
+    width: 100vh;
+    height: 90vh;
+    background-color: #FFFFFF;
+    /*background: linear-gradient(to left, rgb(54, 141, 178), rgb(227, 239, 239));*/
+    box-shadow: rgba(3, 3, 50, 0.72) 0px 3px 10px;
+    /*border: 2px solid rgba(5, 5, 55, 0.82);*/
+    border-radius: 10px;
+    text-align: center;
+    overflow-x: hidden;
+}
+.Doc-Logo-frame{
+    display: grid;
+}
+.Doc-Logo-frame img{
+    margin-top: 20px;
+    width: 110px;
+    margin-left: 20px;
+    margin-bottom: -60px;
+}
+.Doc-Header-frame{
+    margin-top: 5px;
+    height: 80px;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 40px;
+}
+.Doc-Header-frame h1{
+    margin-left: 170px;
+    color: #368db2;
+    width: 315px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+}
+.Doc-Header-frame h2{
+    margin-left: 177px;
+    color: #010C80;
+    width: 300px;
+    font-size: 15px;
+    font-weight: 20;
+    line-height: 20px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+
+.Doc-first-and-last-name-div{
+    display: flex;
+    justify-content: space-between;
+    width: 530px;
+    margin-left: 65px;
+}
+.Doc-input-name-style{
+    width:210px;
+    border-radius: 6px;
+    padding: 10px 20px 10px 20px;
+    box-shadow: none;
+    border: 1px solid #368db2;
+    margin-bottom: 20px;
+}
+
+.Doc-input-style{
+    width:390px;
+    border-radius: 6px;
+    padding: 10px 70px 10px 70px;
+    box-shadow: none;
+    border: 1px solid #368db2;
+    margin-bottom: 20px;
+}
+
+.Doc-input-role-style{
+    width:530px;
+    border-radius: 6px;
+    padding: 10px 70px 10px 70px;
+    box-shadow: none;
+    border: 1px solid #368db2;
+    margin-bottom: 20px;
+}
+.Doc-name-tag{
+    font-family: "DM SANS", sans-serif;
+    font-size: small;
+    margin-right: 140px;
+    color: #010C80;
+}
+.Doc-name-join-tag{
+    font-family: "DM SANS", sans-serif;
+    font-size: small;
+    margin-right: 390px;
+    color: #010C80;
+}
+.Doc-name-tag-input-password{
+    font-family: "DM SANS", sans-serif;
+    font-size: small;
+    margin-right: 435px;
+    color: #010C80;
+}
+.Doc-name-tag-input-email, .Doc-name-tag-input-phoneNumber{
+    font-family: "DM SANS", sans-serif;
+    font-size: small;
+    margin-right: 410px;
+    color: #010C80;
+}
+.Doc-name-tag-input-confirm-password{
+    font-family: "DM SANS", sans-serif;
+    font-size: small;
+    margin-right: 385px;
+    color: #010C80;
+}
+#Doc-submit-button{
+    background-color: rgba(242, 242, 248, 0.82);
+    color:#368db2 ;
+    width: 300px;
+    border-radius: 8px;
+    padding: 8px 40px 8px 40px;
+    font-size: large;
+    justify-content: center;
+    align-content: center;
+    margin-left: 170px;
+    margin-top: 10px ;
+    margin-bottom: 5px;
+    display: flex;
+    border: 1px solid grey;
+}
+
+#Doc-submit-button:hover{
+    box-shadow: inset 550px 0 0 0 #368db2;
+    color: white;
+}
+
+.Main-Registration-Complete-Frame{
+    width: 50vw;
+    height: 90vh;
+    display: grid;
+    border-style: solid;
+    background-color: #FFFFFF;
+    box-shadow: rgba(3, 3, 50, 0.72) 0 3px 10px;
+    text-align: center;
+    align-items: center;
+    overflow-x: hidden;
+    border-color: #368db2;
+    border-radius: 20px;
+}
+
+.Inner-Registration_Ptag{
+    margin-top: 15px;
+    color: #368db2;
+    font-size: 20px;
+    font-weight: 550;
+    font-family: Roboto, sans-serif;
+}
+.Inner-Registration_h3{
+    color: #368db2;
+    line-height: 28px;
+    font-size: 30px;
+    font-weight: 700;
+    margin-right: 10px;
+    font-family: Roboto, sans-serif;
+}

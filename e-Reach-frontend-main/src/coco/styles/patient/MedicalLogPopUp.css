@@ -1,0 +1,51 @@
+.popUp-overlay{
+    position: fixed;
+    top: 50%;
+    left: 10%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow-y: auto;
+    width: 600px;
+    margin-left: 650px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    height: 490px;
+}
+
+.popUp-overlay h2{
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+}
+.pop-up-submit-button{
+    align-content: space-evenly;
+}
+/*.pop-up-save-button{*/
+/*    display: block;*/
+/*
+/*    padding: 10px 20px;*/
+/*    background-color: #368db2;*/
+/*    margin-top: 19rem;*/
+/*    margin-left: 30px;*/
+/*    color: white;*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.pop-up-save-button:hover{*/
+/*    background-color: #98a9bd;*/
+/*}*/
+/*.pop-up-close-button{*/
+/*    display: block;*/
+/*
+/*    padding: 10px 20px;*/
+/*    background-color: #368db2;*/
+/*    margin-top: 19rem;*/
+/*    margin-left: 330px;*/
+/*    color: white;*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*}*/
