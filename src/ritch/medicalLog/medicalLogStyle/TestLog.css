@@ -4,8 +4,7 @@
     width: 455px;
     justify-content: center;  
     border-radius: 10px;
-    height: 15vh;
-    
+    height: 15vh;   
 }
 .test-component-content-con{
     display: flex;
@@ -15,9 +14,10 @@
     border-top:1px solid#368db2;
     border-radius: 5px;
 }
-
-
-
+.test-component-content #test{
+    font-size: 20px;
+    font-weight: bold;
+}
 .test-inputs button{
     background-color: rgba(242, 242, 248, 0.82);
     width: 150px;
@@ -29,7 +29,6 @@
     display: flex;
     border-radius: 5px;
 }
-
 .test-inputs button:hover{
     box-shadow: inset 550px 0 0 0 #368db2;
     color: white;

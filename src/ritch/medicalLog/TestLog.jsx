@@ -36,7 +36,7 @@ const TestLog = () => {
     <div className="test-component">
       <div className='test-component-content-con'>
       <div className='test-component-content'>
-      <h2>Tests</h2>
+      <p id='test'>Tests</p>
       <button className='test-component-btn'>Add</button>
       </div>
 

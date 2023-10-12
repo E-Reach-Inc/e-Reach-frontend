@@ -39,7 +39,7 @@ export const PractitionerRegistration = () => {
                         {position: toast.POSITION.TOP_CENTER, autoClose: 5000}
                     );
                     setRegistrationCompleted(true)
-                })
+                })  
                 .catch(failureResponse => {
                     console.log("hello girls tue tue")
                     toast.error(

@@ -70,39 +70,9 @@ function HospitalAdminSignUp() {
     }
 
     function handleChangeForAllInputs(event){
-    
         let eventTarget = event.target;
         setData((previousValue)=>({...previousValue, [eventTarget.id]: eventTarget.value}))
-        // if(event.target.id === 'adminEmail' || event.target.id === 'hospitalEmail'){
-        //     const emailPattern = /^(?=.*@)(?=.{6,}$)(gmail\.com|outlook\.com|yahoo\.com|mail\.ru|qq\.com|live\.com|163\.com|163\.net|icloud\.com|aol\.com|hotmail\.com|yandex\.com|zoho\.com|protonmail\.com|gmx\.com|gmx\.net|mail\.com|rediff\.com|naver\.com|web\.de)$/i
-        //     console.log("It is ==> ", emailPattern.test( "alaabdulmalik03@gmail.com"))
-        //     let currently = eventTarget.checkValidity();
-        //     console.log('currently', currently);
-        //     if (currently) {
-        //         let regExp = new RegExp(emailPattern, 'i');
-        //         if (regExp.test(eventTarget.value) === false) { 
-        //           eventTarget.setCustomValidity(`
-        //                                           Invalid email:: criteria for a valid email includes the following
-        //                                           1.) email must not contain any space
-        //                                           2.)
-        //                                           email domain must be a valid domain and valid domain which are accepted by our system includes gmai.com,
-        //                                           yahoo.com
-        //                                           outlook.com, mail.ru,
-        //                                           qq.com, live.com, 163.com, 163.net, icloud.com,aol.com, hotmail.com,
-        //                                           yandex.com, zoho.com,
-        //                                           protonmail.com, gmx.com, gmx.net, mail.com, rediff.com, naver.com, web.de
-        //                                           3.)
-        //                                           email must be a valid email syntax, like contain an '@', which separate
-        //                                           4.)
-        //                                           the domain from the username.
-        //                                         `);
-        //           eventTarget.reportValidity();
-        //           setData((previousValue)=>({...previousValue, [eventTarget.id]: eventTarget.value}))
-        //         }
-        //         setData((previousValue)=>({...previousValue, [eventTarget.id]: eventTarget.value}))
-        //     }
-        // }
-        /*else*/ if (event.target.name === 'Password'){
+          if (event.target.name === 'Password'){
             let eventTarget = event.target;
             const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$<%&()?*!]).{8,12}$/
             let currently = eventTarget.checkValidity();

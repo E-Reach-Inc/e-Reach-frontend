@@ -49,7 +49,7 @@ const MedicalLog = () => {
         ))}
           <div className="medical-log-main-con">
             <div className="medical-log-inner-con">
-            <h2>Medical Log</h2>
+            <h2 id="mmm">Medical Log</h2>
                 <TestLog />
                 <PrescriptionLog />
                 <DoctorsReport />

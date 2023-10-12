@@ -9,6 +9,7 @@ const PrescriptionLog = () => {
 
   console.log("This is log data  ==> ", logData)
   const [buttonPopUp,setButtonPopUp]=useState(false);
+  const [prescriptions, setPrescriptions] = useState([]);
 
   const openPopUp = () =>{
     setButtonPopUp(true)
@@ -37,9 +38,6 @@ const PrescriptionLog = () => {
       </div>
   
       </div>
-  
-        <p>Medication Name{/*{prescription.medicationName}*/}</p>
-        <button>Add New Prescription</button>
     </div>
   
     
