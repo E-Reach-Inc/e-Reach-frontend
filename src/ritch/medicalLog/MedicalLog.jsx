@@ -2,8 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import PrescriptionLog from "./PrescriptionLog";
 import TestLog from "./TestLog";
 import DoctorsReport from "./DoctorsReportLog";
-import { ref, query, orderByChild, equalTo, get } from "firebase/database";
-import {db} from '../../firebaseConfig/firebase'
 import { LogContext } from "../../coco/views/doctor/doctorViewActiveLogsOne";
 import '../medicalLog/medicalLogStyle/MedicalLog.css'
 
@@ -31,13 +29,16 @@ const logData = {
         hospitalEmail: ''
     }
 
-const MedicalLog = ({patientLog}) => {
+const MedicalLog = () => {
   const [allLogs, setAllLogs] = useState([]);
   const logData = useContext(LogContext)
+
+  console.log("log data in medical log ==> ", logData)
+
   useEffect(() => {
       console.log("log data => ", logData)
     
-  }, []);
+  }, [logData]);
 
   return (
     <div className="medical-log-holder-con">
