@@ -5,11 +5,16 @@ import PatientSideBar from "./PatientSideBar";
 import PatientProfileTwo from "./PatientProfileTwo";
 import PatientAppointmentTwo from "./PatientAppointmentTwo";
 import PatientRecordTwo from "./PatientRecordTwo";
+import { useParams } from "react-router";
 
 
 
 
 const PatientView = () =>{
+
+    const param = useParams()
+
+    console.log(param.pin)
    
     return(
         <div className="patient-view-outer-container">
@@ -24,7 +29,7 @@ const PatientView = () =>{
                 <div className="patient-view-central-body">
                     <div className="patient-view-top-body-div">
                         <div className="patient-view-profile-two-div"> 
-                            <PatientProfileTwo/>
+                            <PatientProfileTwo pin={param.pin}/>
                         </div>
                         <div className="patient-view-appointment-two-table">    
                             <PatientAppointmentTwo/> 

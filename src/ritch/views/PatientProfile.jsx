@@ -5,7 +5,7 @@ import PatientNavBar from "./PatientNavBar";
 import PatientSideBar from "./PatientSideBar";
 import axios from "axios";
 
-const PatientProfile = () => {
+const PatientProfile = ({pin}) => {
   const [patientData, setPatientData] = useState({
     firstName:  "",
     lastName: "",
@@ -19,32 +19,17 @@ const PatientProfile = () => {
     gender:"",
     patientIdentificationNumber: "",
   });
-
+  console.log("HI HI")
   useEffect(() => {
-    // const patientIdentificationNumber = '9818a6c8d9';
-    const apiUrl = "http://localhost:8080/api/v1/patient/get/"+"9818a6c8d9";
+    const apiUrl = "https://e-reach-prod.up.railway.app/api/v1/patient/get/"+"pin";
   
-   
-
+  
     axios.get(apiUrl)
       .then(response => {
         const data = response.data;
         console.log(response)
         setPatientData(data);
         console.log('Response:', JSON.stringify(data));
-        
-        
-        // localStorage.setItem("firstName", data.firstName);
-        // localStorage.setItem("lastName", data.lastName);
-        // localStorage.setItem("nin", data.nin);
-        // localStorage.setItem("email", data.email);
-        // localStorage.setItem("phoneNumber", data.phoneNumber);
-        // localStorage.setItem("houseNumber", data.houseNumber);
-        // localStorage.setItem("streetName", data.streetName);
-        // localStorage.setItem("state", data.state);
-        // localStorage.setItem("country", data.country);
-        // localStorage.setItem("gender", data.gender);
-        // localStorage.setItem("patientIdentificationNumber", data.patientIdentificationNumber);
       })
       .catch(error => {
         console.error("Error fetching patient data:", error);

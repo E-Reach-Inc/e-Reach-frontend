@@ -4,10 +4,11 @@ import maleImage from '../patient-icons/patient-male.svg'
 import PatientNavBar from "./PatientNavBar";
 import UploadWidget from "../../cloudinary/uploadWidget";
 import '../styles/PatientProfileTwo.css'
+import axios from "axios";
 
 
 
-const PatientProfileTwo= () =>{
+const PatientProfileTwo= ({pin}) =>{
     const [patientData, setPatientData] = useState({
         firstName: "",
         lastName: "",
@@ -22,15 +23,24 @@ const PatientProfileTwo= () =>{
         patientIdentificationNumber : "",
       });
 
-      const patientId = localStorage.getItem("patientIdentificationNumber")
       useEffect(()=>{
+          try{
+              axios.get("https://e-reach-prod.up.railway.app/api/v1/patient/get"+"/"+pin)
+                    .then((response) => {
+                        console.log("response is:: ", response)
+                        console.log(response.data)
+                        setPatientData(response.data)
+                    }).catch((error) => {
+                        console.error(error)
+                    })
+          }catch(error){
 
-      })
+          }
+      }, [])
 
 
      const openUploadWidget = () => {
-       const imageUrl = <UploadWidget/>
-        return imageUrl
+       
      }
     
       return (
@@ -70,23 +80,23 @@ const PatientProfileTwo= () =>{
 
                 <div className="patient-two-biodata-field">
                   <label >First Name :</label>
-                  <span>{"Richards"}</span>
+                  <span>{patientData.firstName}</span>
                 </div>
                 <div className="patient-two-biodata-field">
                   <label>Last Name :</label>
-                  <span>{"Akaabiam"}</span>
+                  <span>{patientData.lastName}</span>
                 </div>
                 <div className="patient-two-biodata-field">
                   <label>N.I.N :</label>
-                  <span>{"20222222222"}</span>
+                  <span>{patientData.nin}</span>
                 </div>
                 <div className="patient-two-biodata-field">
                   <label>Email :</label>
-                  <span>{"richardsakaabiam@gmail.com"}</span>
+                  <span>{patientData.email}</span>
                 </div>
                 <div className="patient-two-biodata-field">
                   <label>Phone Number :</label>
-                  <span>{"08144263789"}</span>
+                  <span>{patientData.phoneNumber}</span>
                 </div>
                 <div className="patient-two-biodata-field">
                   <label>House Number :</label>
