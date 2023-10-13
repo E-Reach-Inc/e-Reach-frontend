@@ -3,7 +3,10 @@ import '../medicalLog/medicalLogStyle/doctorsModal.css'
 import { db } from '../../firebaseConfig/firebase';
 import { ref, query, orderByChild, equalTo } from 'firebase/database';
 
- export const PopUp = ({onClose,notprescriptions}) => {
+ export const PopUp = ({onClose,  notprescriptions}) => {
+  const [prescriptions, setPrescriptions] = useState([]);
+  const [recentPresc, setRecentPresc] = useState();
+  const [selectedMedication, setSelectedMedication] = useState('');
 
   const initialPrescription = {
     medicationName: '',
@@ -15,9 +18,6 @@ import { ref, query, orderByChild, equalTo } from 'firebase/database';
     practitionersEmail: '',
   };
 
-  const [prescriptions, setPrescriptions] = useState([]);
-  const [recentPresc, setRecentPresc] = useState(initialPrescription);
-  const [selectedMedication, setSelectedMedication] = useState('');
   const medicalLogRef = ref(db, 'active_logs')
 
   const handleMedicationChange = (event) => {
@@ -119,11 +119,6 @@ import { ref, query, orderByChild, equalTo } from 'firebase/database';
            <ul>
                {prescriptions.map((prescription, index) => (
              <li key={index}>
-              <input
-                type="checkbox"
-                checked={prescription.checked}
-                onChange={() => handlePrescriptionToggle(index)}
-              />
               <span className="medication-name">{prescription.medicationName}</span>
               <span className="medication-dosage">{prescription.dosage}</span>
               <span className="medication-frequency">{prescription.dosageFrequency}</span>
