@@ -8,9 +8,10 @@ import { toast } from "react-toastify";
 const PatientRecordTwo = () =>{
 
   const [buttonPopUp, setButtonPopUp] = useState(false);
-  const [selectedMedicalLog, setSelectedMedicalLog] = useState(null);
+  const [selectedMedicalLog, setSelectedMedicalLog] = useState();
 
   const openPopup = (medicalLog) => {
+    console.log("valuePatient value --> ", medicalLog.lastTimeUpdated);
     setSelectedMedicalLog(medicalLog);
     setButtonPopUp(true);
   };
@@ -20,22 +21,28 @@ const PatientRecordTwo = () =>{
     setButtonPopUp(false);
   };
 
-
   const medicalLogs = [
     {
-        date: "",
-        // lastTimeUpdated: '12:00:00',
-        // patientIdentificationNumber: 'e123456789990',
-        hospitalEmail: ''
-        // action: {action},
-    },
-    {
-      date: "",
-      // lastTimeUpdated: '12:00:00',
-      // patientIdentificationNumber: 'e123456789990',
-      hospitalEmail: ''
+      date: "12:00:00",
+      lastTimeUpdated: "12:00:00",
+      patientIdentificationNumber: "e123456789990",
+      hospitalEmail: "Eexampl@email.com",
       // action: {action},
-  }
+    },
+    // {
+    //   date: "12:00:00",
+    //   lastTimeUpdated: "12:00:00",
+    //   patientIdentificationNumber: "e123456789990",
+    //   hospitalEmail: "Eexampl@email.com",
+    //   // action: {action},
+    // },
+    // {
+    //   date: "12:00:00",
+    //   lastTimeUpdated: "12:00:00",
+    //   patientIdentificationNumber: "e123456789990",
+    //   hospitalEmail: "Eexampl@email.com",
+    //   action: "",
+    // },
 ];
 
 useEffect(()=>{
@@ -44,41 +51,49 @@ useEffect(()=>{
   console.log("hi pin")
   console.log("hi email")
 
-  if(patientIdentificationNumber){
-
-      axios.get(" http://localhost:8080/api/v1/patient/view-records/"+patientIdentificationNumber)
-          .then(response => {
-              if(!response.data)
-                toast.info("No records found", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
-              else {
-                  medicalLogs.push(response.data)
-                  localStorage.setItem("records", JSON.stringify(response.data));
-
-              }
-          })
-          .catch(failureResponse => {
-
-          })
-          .finally()
+  if (patientIdentificationNumber) {
+    axios
+      .get(
+        " http://e-reach-prod.up.railway.app/api/v1/patient/view-records/" +
+          patientIdentificationNumber
+      )
+      .then((response) => {
+        console.log(response)
+        if (!response.data)
+          toast.info("No records found", {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: 5000,
+          });
+        else {
+          console.log("response.data ==> ", response.data);
+          medicalLogs.push(response.data);
+          localStorage.setItem("records", JSON.stringify(response.data));
+        }
+      })
+      .catch((failureResponse) => {})
+      .finally();
+  } else if (hospitalEmail) {
+    axios
+      .get(
+        "http://e-reach-prod.up.railway.app/api/v1/hospital/view-records/" +
+          hospitalEmail
+      )
+      .then((response) => {
+        if (!response.data)
+          toast.info("No records found", {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: 5000,
+          });
+        else {
+          console.log("Record --> ", response.data);
+          medicalLogs.push(response.data);
+          localStorage.setItem("records", JSON.stringify(response.data));
+        }
+      })
+      .catch((failureResponse) => {})
+      .finally();
   }
-
-  else if(hospitalEmail){
-      axios.get("http://localhost:8080/api/v1/hospital/view-records/"+hospitalEmail)
-          .then(response => {
-            if(!response.data)
-              toast.info("No records found", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
-            else {
-                medicalLogs.push(response.data)
-                localStorage.setItem("records", JSON.stringify(response.data));
-
-            }
-          })
-          .catch(failureResponse => {
-
-          })
-          .finally() 
-  }
-}, [])
+}, []);
 
   return(
         <div className="patient-record-two-table-outter-con">
@@ -96,23 +111,37 @@ useEffect(()=>{
                   </tr>
                 </thead>
 
-                {medicalLogs.map((medicalLog, index) => (
-        <tbody className="patient-record-two-table-data" key={index}>
-          <tr>
-            <td>{medicalLog.dateCreated}</td>
-            <td>{medicalLog.hospitalEmail}</td>
-            <td onClick={() => openPopup(medicalLog)}>
-              {medicalLog.action} <img src={action} alt="Open Popup" />
-            </td>
-          </tr>
+                
+        <tbody className="patient-record-two-table-data">
+        {medicalLogs.map((value, index) => (
+                <tr key={index}>
+                  <td>{value.date}</td>
+                  {/* <td >{patientsRecords.lastTimeUpdated}</td>
+                                    <td >{patientsRecords.patientIdentificationNumber}</td> */}
+                  <td>{value.hospitalEmail}</td>
+                  <td onClick={() => openPopup(value)}>
+                    {value.action} <img src={action} alt="Open Popup" />
+                  </td>
+                </tr>
+              ))}
         </tbody>
-      ))}
+      
       {buttonPopUp && (
         <PatientPopUp onClose={closePopup} isModalOpen={true} medicalLog={selectedMedicalLog} />
       )}
               </table>
             </div>
-            {buttonPopUp && <PatientPopUp onClose={closePopup} isModalOpen={true}/>}
+            {buttonPopUp && (
+            <PatientPopUp
+              onClose={closePopup}
+              isModalOpen={true}
+              lastTimeUpdated={selectedMedicalLog.lastTimeUpdated}
+              hospitalEmail={selectedMedicalLog.hospitalEmail}
+              patientIdentificationNumber={selectedMedicalLog.patientIdentificationNumber}
+              date={selectedMedicalLog.date}
+              // patientDetail={selectedMedicalLog}
+            />
+          )}
     </div>
   );
 };
