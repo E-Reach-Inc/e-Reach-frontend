@@ -50,7 +50,7 @@ function HospitalAdminSignUp() {
         }
         
         try {
-            axios.post("http://e-reach-prod.up.railway.app/api/v1/hospital-admin/register-hospital/", hospitalSignUpDetails)
+            axios.post("http://localhost:8080/api/v1/hospital-admin/register-hospital/", hospitalSignUpDetails)
                  .then(successResponse => {
                      console.log(successResponse)
                      console.log("hospital email is: "+successResponse.data.hospitalEmail);

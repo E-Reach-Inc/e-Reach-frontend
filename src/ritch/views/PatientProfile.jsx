@@ -22,7 +22,7 @@ const PatientProfile = () => {
 
   useEffect(() => {
     // const patientIdentificationNumber = '9818a6c8d9';
-    const apiUrl = `http://localhost:8080/api/v1/patient/get/${'9818a6c8d9'}`;
+    const apiUrl = "http://localhost:8080/api/v1/patient/get/"+"9818a6c8d9";
   
    
 
