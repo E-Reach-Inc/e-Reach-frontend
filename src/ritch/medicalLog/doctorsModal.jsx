@@ -114,14 +114,8 @@ import { ref, query, orderByChild, equalTo } from 'firebase/database';
                 id='practitionerEmail'
                 onChange={handleChange}
                />
-               />
-                <input
-                 type="email"
-                placeholder="your hospital email"
-                id='hospitalEmail'
-                onChange={handleChange}
-               />
-
+              
+              
                   <div className="add-presc-button">
                   <button onClick={handleAddPrescription}>Add</button>
                   <button className='close-button' onClick={onClose}>Close</button>
