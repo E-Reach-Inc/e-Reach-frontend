@@ -32,7 +32,7 @@ export const PractitionerRegistration = () => {
         //https
         try {
             console.log("hello boys tue tue")
-            axios.post('http://localhost:8080/api/v1/hospital-admin/invite-practitioner/', practitionerDetails)
+            axios.post('https://e-reach.vercel.app/api/v1/hospital-admin/invite-practitioner/', practitionerDetails)
                 .then(successResponse => {
                     toast.success(
                         successResponse+' Registration successful. Ready for submission.',
