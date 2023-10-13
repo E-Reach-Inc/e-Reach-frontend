@@ -1,0 +1,49 @@
+
+.patient-profile {
+    margin: 20px;
+    overflow-x: auto;
+}
+
+.profile-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.profile-table th, .profile-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.profile-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+div p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
