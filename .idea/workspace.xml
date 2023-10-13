@@ -1,486 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8100ef4c-d712-49de-acdd-8bf4d3076774" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/.idea/e_reach.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/assets/icons/doc-active-logs.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/assets/icons/doc-appointment.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/assets/icons/doc-dashboard-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/assets/icons/doc-edit-log.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/assets/icons/doc-logout.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/assets/icons/doc-messaging.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/assets/icons/doc-notification.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/assets/icons/doc-patient-record.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/assets/icons/doc-profile.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/assets/icons/doc-settings.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/assets/icons/doc-view-log.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/assets/images/EReachLogoNoB.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/styles/auth/activateHospitalAccount.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/styles/auth/activateHospitalAdminAccount.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/styles/auth/hospitalAdminSIgnUp.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/styles/inputFamilyStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/views/auth/activateHospitalAccount.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/views/auth/activateHospitalAdminAccount.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/views/auth/hospitalAdminSignUp.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/views/auth/inputFamily.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/views/logs/doctorReports.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/views/logs/medLog.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/views/logs/medicalLog.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/views/logs/prescriptionsEntry.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/views/logs/testEntry.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/bola/views/logs/vitalsEntry.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/cloudinary/cloudinaryConfig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/cloudinary/uploadWidget.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/cloudinary/uploadWidget.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/assets/icons/admin-create-patient.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/assets/icons/admin-logs.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/assets/icons/admin-users.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/assets/icons/doc-active-logs.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/assets/icons/doc-appointment.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/assets/icons/doc-dashboard-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/assets/icons/doc-edit-log.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/assets/icons/doc-logout.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/assets/icons/doc-messaging.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/assets/icons/doc-notification.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/assets/icons/doc-patient-record.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/assets/icons/doc-profile-man.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/assets/icons/doc-profile.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/assets/icons/doc-settings.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/assets/icons/doc-upload-image.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/assets/icons/doc-view-log.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/assets/images/EReachLogoNoB.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/assets/images/doctor.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/assets/images/patient.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/assets/images/records.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/styles/administration/AdminSearchBar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/styles/administration/AdminSideBar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/styles/administration/HospitalAdminDashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/styles/auth/PatientRegistration.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/styles/auth/PractionerLogin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/styles/auth/PractitionerRegistration.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/styles/doctor/activeLogPopUp.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/styles/doctor/appointmentPopUp.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/styles/doctor/doctorDashBoard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/styles/doctor/doctorProfileOne.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/styles/doctor/doctorProfileTwo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/styles/doctor/doctorSearchBar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/styles/doctor/doctorSideBar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/styles/doctor/doctorViewActiveLogsOne.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/styles/doctor/doctorViewActiveLogsTwo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/styles/doctor/recordPopUp.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/styles/doctor/viewPatientAppointmentOne.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/styles/doctor/viewPatientAppointmentTwo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/styles/doctor/viewPatientRecordOne.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/styles/doctor/viewPatientRecordTwo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/styles/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/styles/patient/MedicalLogPopUp.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/administration/AdminSearchBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/administration/AdminSideBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/administration/HospitalAdminDashboard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/administration/adminProfile.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/auth/PatientRegistration.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/auth/PractitionerLogIn.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/auth/PractitionerRegistration.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/doctor/activeLogPopUp.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/doctor/appointmentPopUp.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/doctor/doctorDashBoard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/doctor/doctorProfileOne.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/doctor/doctorProfileTwo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/doctor/doctorSearchBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/doctor/doctorSideBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/doctor/doctorViewActiveLogsOne.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/doctor/doctorViewActiveLogsTwo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/doctor/recordPopUp.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/doctor/viewPatientAppointmentOne.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/doctor/viewPatientAppointmentTwo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/doctor/viewPatientRecordOne.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/doctor/viewPatientRecordTwo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/patient/MedicalLogPopUp.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/coco/views/patient/PatientMedicalLog.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/landingPageImage/aboutus.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/landingPageImage/aboutus2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/landingPageImage/image2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/pharmacistimage/appointment.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/pharmacistimage/baseline-medication-liquid.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/pharmacistimage/book-medical.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/pharmacistimage/calender.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/pharmacistimage/dashboard-fill.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/pharmacistimage/dashboard.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/pharmacistimage/dommy-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/pharmacistimage/drugs.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/pharmacistimage/eReachLogoNoB.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/pharmacistimage/ereachLogo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/pharmacistimage/googlemessages.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/pharmacistimage/log-out.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/pharmacistimage/message.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/pharmacistimage/notification.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/pharmacistimage/prescriptions-outline-sharp.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/pharmacistimage/profile.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/pharmacistimage/records.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/pharmacistimage/search-thin.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/pharmacistimage/settings.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/pharmacistimage/sharp-circle-notifications.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/pharmacistimage/shedocto.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/assets/pharmacistimage/viewLogIcon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/styles/landingPage/landingPageAboutUs.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/styles/landingPage/landingPageFooter.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/styles/landingPage/landingPageMainBody.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/styles/landingPage/landingPageNavbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/styles/pharmacistFolder/pharmacistAppointment.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/styles/pharmacistFolder/pharmacistAppointmentDashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/styles/pharmacistFolder/pharmacistDashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/styles/pharmacistFolder/pharmacistDefaultDashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/styles/pharmacistFolder/pharmacistMedication.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/styles/pharmacistFolder/pharmacistMedicationDashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/styles/pharmacistFolder/pharmacistPopUp.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/styles/pharmacistFolder/pharmacistProfile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/styles/pharmacistFolder/pharmacistProfileDashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/styles/pharmacistFolder/pharmacistSearchBar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/styles/pharmacistFolder/pharmacistSideBar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/styles/pharmacistFolder/pharmacistViewRecord.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/styles/pharmacistFolder/pharmacistViewRecordDashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/views/landingPage/landingPageAboutUs.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/views/landingPage/landingPageFooter.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/views/landingPage/landingPageMainBody.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/views/landingPage/landingPageNavBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/views/pharmacistFolder/pharmacistAppointment.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/views/pharmacistFolder/pharmacistAppointmentDashboard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/views/pharmacistFolder/pharmacistDashboard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/views/pharmacistFolder/pharmacistDefaultDashboard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/views/pharmacistFolder/pharmacistMedication.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/views/pharmacistFolder/pharmacistMedicationDashBoard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/views/pharmacistFolder/pharmacistPopUp.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/views/pharmacistFolder/pharmacistProfile.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/views/pharmacistFolder/pharmacistProfileDashboard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/views/pharmacistFolder/pharmacistSearchBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/views/pharmacistFolder/pharmacistSideBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/views/pharmacistFolder/pharmacistViewRecord.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/favour/views/pharmacistFolder/pharmacistViewRecordsDashboard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/firebaseConfig/firebase.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/firebaseConfig/firebaseConfig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/neefah/styles/user/doctor/doctor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/neefah/styles/user/patient/patient.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/neefah/styles/user/pharmacy/pharmacy.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/neefah/styles/user/user.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/neefah/views/pharmacy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/neefah/views/user.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/neefah/views/user/doctor/doctor.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/neefah/views/user/patient/patient.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/neefah/views/user/pharmacy/pharmacy.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/medicalLog/DoctorsReportLog.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/medicalLog/MedicalLog.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/medicalLog/MedicationDetailsModal.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/medicalLog/PrescriptionLog.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/medicalLog/TestLog.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/medicalLog/doctorsModal.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/medicalLog/medicalLogStyle/DoctorsReportLog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/medicalLog/medicalLogStyle/TestLog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/medicalLog/medicalLogStyle/doctorsModal.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/medicalLog/medicalLogStyle/prescriptionLog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/medicalLog/modal.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/patient-icons/e-Reach-Logo-NoB.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/patient-icons/paitient-notification.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/patient-icons/patient-appointment-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/patient-icons/patient-dash-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/patient-icons/patient-drugs.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/patient-icons/patient-envelope.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/patient-icons/patient-eye-view.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/patient-icons/patient-female.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/patient-icons/patient-log-out.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/patient-icons/patient-mainlogo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/patient-icons/patient-male.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/patient-icons/patient-profile.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/patient-icons/patient-record-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/patient-icons/patient-search-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/patient-icons/patient-settings.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/styles/PatientAppointment.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/styles/PatientAppointmentTwo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/styles/PatientNavBar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/styles/PatientPopUp.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/styles/PatientProfile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/styles/PatientProfileTwo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/styles/PatientRecord.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/styles/PatientRecordTwo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/styles/PatientSideBar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/styles/PatientSignUp.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/styles/PatientView.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/views/PatientAppointment.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/views/PatientAppointmentTwo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/views/PatientNavBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/views/PatientPopUp.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/views/PatientProfile.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/views/PatientProfileTwo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/views/PatientRecord.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/views/PatientRecordTwo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/views/PatientSideBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/views/PatientSignUp.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/ritch/views/PatientView.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-Reach-frontend-main/src/setupTests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flowconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/e_reach.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/assets/icons/doc-active-logs.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/assets/icons/doc-appointment.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/assets/icons/doc-dashboard-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/assets/icons/doc-edit-log.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/assets/icons/doc-logout.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/assets/icons/doc-messaging.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/assets/icons/doc-notification.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/assets/icons/doc-patient-record.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/assets/icons/doc-profile.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/assets/icons/doc-settings.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/assets/icons/doc-view-log.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/assets/images/EReachLogoNoB.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/styles/auth/activateHospitalAccount.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/styles/auth/activateHospitalAdminAccount.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/styles/auth/hospitalAdminSIgnUp.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/styles/inputFamilyStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/views/auth/activateHospitalAccount.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/views/auth/activateHospitalAdminAccount.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/views/auth/hospitalAdminSignUp.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/views/auth/inputFamily.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/views/logs/doctorReports.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/views/logs/medLog.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/views/logs/medicalLog.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/views/logs/prescriptionsEntry.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/views/logs/testEntry.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/views/logs/vitalsEntry.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloudinary/cloudinaryConfig.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloudinary/uploadWidget.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cloudinary/uploadWidget.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/assets/icons/admin-create-patient.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/assets/icons/admin-logs.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/assets/icons/admin-users.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/assets/icons/doc-active-logs.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/assets/icons/doc-appointment.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/assets/icons/doc-dashboard-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/assets/icons/doc-edit-log.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/assets/icons/doc-logout.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/assets/icons/doc-messaging.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/assets/icons/doc-notification.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/assets/icons/doc-patient-record.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/assets/icons/doc-profile-man.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/assets/icons/doc-profile.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/assets/icons/doc-settings.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/assets/icons/doc-upload-image.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/assets/icons/doc-view-log.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/assets/images/EReachLogoNoB.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/assets/images/doctor.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/assets/images/patient.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/assets/images/records.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/administration/AdminSearchBar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/administration/AdminSideBar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/administration/HospitalAdminDashboard.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/auth/PatientRegistration.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/auth/PractionerLogin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/auth/PractitionerRegistration.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/doctor/activeLogPopUp.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/doctor/appointmentPopUp.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/doctor/doctorDashBoard.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/doctor/doctorProfileOne.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/doctor/doctorProfileTwo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/doctor/doctorSearchBar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/doctor/doctorSideBar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/doctor/doctorViewActiveLogsOne.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/doctor/doctorViewActiveLogsTwo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/doctor/recordPopUp.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/doctor/viewPatientAppointmentOne.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/doctor/viewPatientAppointmentTwo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/doctor/viewPatientRecordOne.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/doctor/viewPatientRecordTwo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/patient/MedicalLogPopUp.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/administration/AdminSearchBar.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/administration/AdminSideBar.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/administration/HospitalAdminDashboard.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/administration/adminProfile.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/auth/PatientRegistration.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/auth/PractitionerLogIn.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/auth/PractitionerRegistration.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/doctor/activeLogPopUp.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/doctor/appointmentPopUp.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/doctor/doctorDashBoard.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/doctor/doctorProfileOne.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/doctor/doctorProfileTwo.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/doctor/doctorSearchBar.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/doctor/doctorSideBar.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/doctor/doctorViewActiveLogsOne.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/doctor/doctorViewActiveLogsTwo.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/doctor/recordPopUp.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/doctor/viewPatientAppointmentOne.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/doctor/viewPatientAppointmentTwo.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/doctor/viewPatientRecordOne.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/doctor/viewPatientRecordTwo.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/patient/MedicalLogPopUp.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/patient/PatientMedicalLog.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/landingPageImage/aboutus.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/landingPageImage/aboutus2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/landingPageImage/image2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/pharmacistimage/appointment.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/pharmacistimage/baseline-medication-liquid.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/pharmacistimage/book-medical.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/pharmacistimage/calender.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/pharmacistimage/dashboard-fill.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/pharmacistimage/dashboard.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/pharmacistimage/dommy-image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/pharmacistimage/drugs.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/pharmacistimage/eReachLogoNoB.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/pharmacistimage/ereachLogo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/pharmacistimage/googlemessages.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/pharmacistimage/log-out.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/pharmacistimage/message.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/pharmacistimage/notification.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/pharmacistimage/prescriptions-outline-sharp.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/pharmacistimage/profile.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/pharmacistimage/records.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/pharmacistimage/search-thin.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/pharmacistimage/settings.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/pharmacistimage/sharp-circle-notifications.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/pharmacistimage/shedocto.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/assets/pharmacistimage/viewLogIcon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/styles/landingPage/landingPageAboutUs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/styles/landingPage/landingPageFooter.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/styles/landingPage/landingPageMainBody.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/styles/landingPage/landingPageNavbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/styles/pharmacistFolder/pharmacistAppointment.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/styles/pharmacistFolder/pharmacistAppointmentDashboard.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/styles/pharmacistFolder/pharmacistDashboard.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/styles/pharmacistFolder/pharmacistDefaultDashboard.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/styles/pharmacistFolder/pharmacistMedication.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/styles/pharmacistFolder/pharmacistMedicationDashboard.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/styles/pharmacistFolder/pharmacistPopUp.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/styles/pharmacistFolder/pharmacistProfile.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/styles/pharmacistFolder/pharmacistProfileDashboard.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/styles/pharmacistFolder/pharmacistSearchBar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/styles/pharmacistFolder/pharmacistSideBar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/styles/pharmacistFolder/pharmacistViewRecord.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/styles/pharmacistFolder/pharmacistViewRecordDashboard.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/views/landingPage/landingPageAboutUs.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/views/landingPage/landingPageFooter.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/views/landingPage/landingPageMainBody.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/views/landingPage/landingPageNavBar.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/views/pharmacistFolder/pharmacistAppointment.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/views/pharmacistFolder/pharmacistAppointmentDashboard.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/views/pharmacistFolder/pharmacistDashboard.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/views/pharmacistFolder/pharmacistDefaultDashboard.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/views/pharmacistFolder/pharmacistMedication.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/views/pharmacistFolder/pharmacistMedicationDashBoard.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/views/pharmacistFolder/pharmacistPopUp.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/views/pharmacistFolder/pharmacistProfile.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/views/pharmacistFolder/pharmacistProfileDashboard.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/views/pharmacistFolder/pharmacistSearchBar.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/views/pharmacistFolder/pharmacistSideBar.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/views/pharmacistFolder/pharmacistViewRecord.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/views/pharmacistFolder/pharmacistViewRecordsDashboard.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/firebaseConfig/firebase.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/firebaseConfig/firebaseConfig.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/neefah/styles/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/neefah/views/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/DoctorsReportLog.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/MedicalLog.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/MedicationDetailsModal.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/PrescriptionLog.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/TestLog.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/doctorsModal.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/medicalLogStyle/DoctorsReportLog.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/medicalLogStyle/MedicalLog.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/medicalLogStyle/TestLog.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/medicalLogStyle/doctorsModal.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/medicalLogStyle/prescriptionLog.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/patient-icons/e-Reach-Logo-NoB.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/patient-icons/paitient-notification.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/patient-icons/patient-appointment-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/patient-icons/patient-dash-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/patient-icons/patient-drugs.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/patient-icons/patient-envelope.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/patient-icons/patient-eye-view.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/patient-icons/patient-female.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/patient-icons/patient-log-out.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/patient-icons/patient-mainlogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/patient-icons/patient-male.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/patient-icons/patient-profile.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/patient-icons/patient-record-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/patient-icons/patient-search-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/patient-icons/patient-settings.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/styles/PatientAppointment.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/styles/PatientAppointmentTwo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/styles/PatientNavBar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/styles/PatientPopUp.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/styles/PatientProfile.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/styles/PatientProfileTwo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/styles/PatientRecord.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/styles/PatientRecordTwo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/styles/PatientSideBar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/styles/PatientSignUp.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/styles/PatientView.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientAppointment.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientAppointmentTwo.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientNavBar.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientPopUp.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientProfile.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientProfileTwo.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientRecord.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientRecordTwo.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientSideBar.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientSignUp.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientView.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/views/routeToDashbaord.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/e-Reach-frontend-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/e-Reach-frontend-main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bola/styles/auth/activateHospitalAccount.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/bola/styles/auth/activateHospitalAccount.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bola/views/auth/activateHospitalAccount.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/bola/views/auth/activateHospitalAccount.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bola/views/auth/hospitalAdminSignUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/bola/views/auth/hospitalAdminSignUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coco/styles/auth/PractionerLogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/coco/styles/auth/PractionerLogin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coco/views/auth/PractitionerLogIn.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/coco/views/auth/PractitionerLogIn.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coco/views/auth/PractitionerRegistration.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/coco/views/auth/PractitionerRegistration.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coco/views/doctor/activeLogPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/coco/views/doctor/activeLogPopUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coco/views/doctor/doctorProfileTwo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/coco/views/doctor/doctorProfileTwo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coco/views/doctor/doctorViewActiveLogsOne.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/coco/views/doctor/doctorViewActiveLogsOne.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/favour/views/pharmacistFolder/pharmacistProfileDashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/favour/views/pharmacistFolder/pharmacistProfileDashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/favour/views/pharmacistFolder/pharmacistViewRecord.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/favour/views/pharmacistFolder/pharmacistViewRecord.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/neefah/assets/icons/userDashboard.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/assets/icons/userDashboard.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/neefah/assets/icons/userLogout.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/assets/icons/userLogout.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/neefah/assets/icons/userMessaging.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/assets/icons/userMessaging.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/neefah/assets/icons/userNotification.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/assets/icons/userNotification.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/neefah/assets/icons/userProfile.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/assets/icons/userProfile.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/neefah/assets/icons/userSettings.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/assets/icons/userSettings.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/neefah/assets/icons/users.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/assets/icons/users.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/neefah/assets/images/EReachlogoNoB.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/assets/images/EReachlogoNoB.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/neefah/styles/administration/dashboard/users/doctorsTab/doctorsTab.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/styles/administration/dashboard/users/doctorsTab/doctorsTab.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/neefah/styles/administration/dashboard/users/patientsTab/patientsTab.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/styles/administration/dashboard/users/patientsTab/patientsTab.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/neefah/styles/administration/dashboard/users/pharmacistTab/pharmacistsTab.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/styles/administration/dashboard/users/pharmacistTab/pharmacistsTab.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/neefah/styles/administration/userSideAndNavBar/user.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/styles/administration/userSideAndNavBar/user.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/neefah/styles/administration/userSideAndNavBar/userSearchBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/styles/administration/userSideAndNavBar/userSearchBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/neefah/styles/administration/userSideAndNavBar/userSideBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/styles/administration/userSideAndNavBar/userSideBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/neefah/views/administration/dashboard/user.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/views/administration/dashboard/user.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/neefah/views/administration/dashboard/users/doctorsTab/doctorsTab.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/views/administration/dashboard/users/doctorsTab/doctorsTab.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/neefah/views/administration/dashboard/users/patientsTab/patientsTab.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/views/administration/dashboard/users/patientsTab/patientsTab.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/neefah/views/administration/dashboard/users/pharmacistTab/pharmacistTab.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/views/administration/dashboard/users/pharmacistTab/pharmacistTab.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/neefah/views/administration/userSearchAndNavBar/userSearchBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/views/administration/userSearchAndNavBar/userSearchBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/neefah/views/administration/userSearchAndNavBar/userSideBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/views/administration/userSearchAndNavBar/userSideBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/MedicalLog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/medicalLog/MedicalLog.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/PrescriptionLog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/medicalLog/PrescriptionLog.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/TestLog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/medicalLog/TestLog.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/doctorsModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/medicalLog/doctorsModal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/medicalLogStyle/MedicalLog.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/medicalLog/medicalLogStyle/MedicalLog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/medicalLogStyle/TestLog.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/medicalLog/medicalLogStyle/TestLog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/medicalLogStyle/doctorsModal.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/medicalLog/medicalLogStyle/doctorsModal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/medicalLogStyle/prescriptionLog.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/medicalLog/medicalLogStyle/prescriptionLog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/views/PatientPopUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/views/PatientProfile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientProfileTwo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/views/PatientProfileTwo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientRecord.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/views/PatientRecord.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientRecordTwo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/views/PatientRecordTwo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientSignUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/views/PatientSignUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/views/PatientView.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2WepKMZcbZcQZ2agGbroQ9MYJ6O" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -491,7 +80,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Mrs Amusa/Downloads/e-Reach-frontend-main/e-Reach-frontend-main",
+    "git-widget-placeholder": "Merging haneefah",
+    "last_opened_file_path": "C:/Users/Mrs Amusa/Downloads/e-Reach-frontend-main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -505,6 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1697102842139</updated>
       <workItem from="1697102846048" duration="43000" />
+      <workItem from="1697173147094" duration="695000" />
     </task>
     <servers />
   </component>

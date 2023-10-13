@@ -11,11 +11,6 @@ export const PharmacistViewRecord = () => {
     const [selectedLog, setSelectedLog] = useState(null);
     const [prescriptions, setPrescriptions] = useState([])
     // const [viewLog, setViewLog] = useState([]); // Initialize viewLog as an empty array
-    const myObj = {
-        Date: '',
-        Name: '',
-        Result: ''
-    }
     const viewLog= [
         {
             Date: 'Favour chiemela',
@@ -54,7 +49,7 @@ export const PharmacistViewRecord = () => {
         },
       ]
 
-      viewLog.push(myObj)
+
       const dummyPrescriptions = [
         {
           medicationName: 'Paracetamol',

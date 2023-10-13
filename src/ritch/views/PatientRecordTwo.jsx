@@ -7,35 +7,81 @@ import { toast } from "react-toastify";
 
 const PatientRecordTwo = () =>{
 
-  const [medicalLogs, setMedicalLogs] = useState([])
-  const patientId = localStorage.getItem("patientIdentificationNumber")
+  const [buttonPopUp, setButtonPopUp] = useState(false);
+  const [selectedMedicalLog, setSelectedMedicalLog] = useState(null);
 
-  useEffect(()=>{
-      axios.get("https://e-reach-prod.up.railway.app/api/v1/patient/view-records/"+patientId)
-          .then((response) => {
-              setMedicalLogs(response.data.medicalLogResponses);
-              if(response.status === 200)
-                  toast.success("logs found", {})
-              else toast.info("no logs found")
+  const openPopup = (medicalLog) => {
+    setSelectedMedicalLog(medicalLog);
+    setButtonPopUp(true);
+  };
+
+  const closePopup = () => {
+    setSelectedMedicalLog(null);
+    setButtonPopUp(false);
+  };
+
+
+  const medicalLogs = [
+    {
+        date: "",
+        // lastTimeUpdated: '12:00:00',
+        // patientIdentificationNumber: 'e123456789990',
+        hospitalEmail: ''
+        // action: {action},
+    },
+    {
+      date: "",
+      // lastTimeUpdated: '12:00:00',
+      // patientIdentificationNumber: 'e123456789990',
+      hospitalEmail: ''
+      // action: {action},
+  }
+];
+
+useEffect(()=>{
+  const patientIdentificationNumber = localStorage.getItem("patientIdentificationNumber")
+  const hospitalEmail = localStorage.getItem("hospitalEmail")
+  console.log("hi pin")
+  console.log("hi email")
+
+  if(patientIdentificationNumber){
+
+      axios.get(" http://localhost:8080/api/v1/patient/view-records/"+patientIdentificationNumber)
+          .then(response => {
+              if(!response.data)
+                toast.info("No records found", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
+              else {
+                  medicalLogs.push(response.data)
+                  localStorage.setItem("records", JSON.stringify(response.data));
+
+              }
           })
-          .catch((error) => {
-              toast.error(error)
-              console.error("Error fetching medical logs:", error);
-          });
-  }, [patientId]);
+          .catch(failureResponse => {
 
+          })
+          .finally()
+  }
 
-    const [buttonPopUp,setButtonPopUp]=useState(false);
-    const openPopup = () => {
-        setButtonPopUp(true);
-    };
-    const closePopup = () => {
-        setButtonPopUp(false);
-    };
+  else if(hospitalEmail){
+      axios.get("http://localhost:8080/api/v1/hospital/view-records/"+hospitalEmail)
+          .then(response => {
+            if(!response.data)
+              toast.info("No records found", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
+            else {
+                medicalLogs.push(response.data)
+                localStorage.setItem("records", JSON.stringify(response.data));
+
+            }
+          })
+          .catch(failureResponse => {
+
+          })
+          .finally() 
+  }
+}, [])
 
   return(
         <div className="patient-record-two-table-outter-con">
-
           <div className="patient-record-two-med-logs">
           <h3 className="patient-med-logs-two">Records</h3>
           <button>Browse All</button>
@@ -45,29 +91,28 @@ const PatientRecordTwo = () =>{
                 <thead className="patient-record-two-table-header">
                   <tr>
                     <th>Date Created</th>
-                    <th>Last Time Updated</th>
-                    <th>Hospital Name</th>
+                    <th>Hospital Email</th>
                     <th>Action</th>
                   </tr>
                 </thead>
 
-                {medicalLogs.map((medicalLog, index)=>(
-                    <tbody className="patient-record-two-table-data">
-                      <tr key={index}>
-                          <td>{medicalLog.dateCreated}</td>
-                          <td>{medicalLog.lastTimeUpdated}</td>
-                          <td >{medicalLog.patientIdentificationNumber}</td>
-                          <td>{medicalLog.hospitalName}</td>
-                          <td>
-                            <img src={action}/>
-                           </td>
-                      </tr>
-                    </tbody>
-                ))}
-
+                {medicalLogs.map((medicalLog, index) => (
+        <tbody className="patient-record-two-table-data" key={index}>
+          <tr>
+            <td>{medicalLog.dateCreated}</td>
+            <td>{medicalLog.hospitalEmail}</td>
+            <td onClick={() => openPopup(medicalLog)}>
+              {medicalLog.action} <img src={action} alt="Open Popup" />
+            </td>
+          </tr>
+        </tbody>
+      ))}
+      {buttonPopUp && (
+        <PatientPopUp onClose={closePopup} isModalOpen={true} medicalLog={selectedMedicalLog} />
+      )}
               </table>
             </div>
-          {buttonPopUp && <PatientPopUp onClose={closePopup}/>}
+            {buttonPopUp && <PatientPopUp onClose={closePopup} isModalOpen={true}/>}
     </div>
   );
 };

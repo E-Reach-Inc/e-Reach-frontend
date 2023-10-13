@@ -1,36 +1,51 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import PatientNavBar from "./PatientNavBar";
 import action from '../patient-icons/patient-eye-view.svg'
 import '../styles/PatientRecord.css'
 import PatientSideBar from "./PatientSideBar";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
+import PatientPopUp from "./PatientPopUp";
 
 
 
 const PatientRecord = () =>{
 
+  const [buttonPopUp, setButtonPopUp] = useState(false);
+  const [selectedMedicalLog, setSelectedMedicalLog] = useState(null);
+
+  const openPopup = (medicalLog) => {
+    setSelectedMedicalLog(medicalLog);
+    setButtonPopUp(true);
+  };
+
+  const closePopup = () => {
+    setSelectedMedicalLog(null);
+    setButtonPopUp(false);
+  };
+
+
     const medicalLogs = [
         {
-            date: "25th/dec/2023",
+            date: "",
             // lastTimeUpdated: '12:00:00',
             // patientIdentificationNumber: 'e123456789990',
-            hospitalEmail: 'gloryHealth@gmail.com'
+            hospitalEmail: ''
             // action: {action},
         },
         {
-          date: "25th/dec/2023",
+          date: "",
           // lastTimeUpdated: '12:00:00',
           // patientIdentificationNumber: 'e123456789990',
-          hospitalEmail: 'gloryHealth@gmail.com'
+          hospitalEmail: ''
           // action: {action},
       },
       {
-        date: "25th/dec/2023",
+        date: "",
         // lastTimeUpdated: '12:00:00',
         // patientIdentificationNumber: 'e123456789990',
-        hospitalEmail: 'gloryHealth@gmail.com'
-        // action: {action},
+        hospitalEmail: '',
+       action: "",
     },
         
     ];
@@ -103,21 +118,25 @@ const PatientRecord = () =>{
             </tr>
           </thead>
           <tbody className="patient-record-table-data">               
-                {medicalLogs.map((medicalLogss, index) => (
+                {medicalLogs.map((medicalLogs, index) => (
                                 <tr key={index}>
                                     <td >{medicalLogs.date}</td>
                                     {/* <td >{patientsRecords.lastTimeUpdated}</td>
                                     <td >{patientsRecords.patientIdentificationNumber}</td> */}
                                     <td>{medicalLogs.hospitalEmail}</td>
-                                    <td><a href="open popup"><img src={action} /></a></td>
+                                    <td onClick={() => openPopup(medicalLogs)}>
+                                      {medicalLogs.action} <img src={action} alt="Open Popup" />
+                                        </td>
                                 </tr>
                   ))}
-                  
-              
               </tbody>
     
-
+              {buttonPopUp && (
+        <PatientPopUp onClose={closePopup} isModalOpen={true} medicalLog={selectedMedicalLog} />
+      )}
+         
           </table>
+          {buttonPopUp && <PatientPopUp onClose={closePopup} isModalOpen={true}/>}
         </div>
            
     
@@ -128,21 +147,3 @@ const PatientRecord = () =>{
     
 }
 export default PatientRecord;
-/*
- <tr>
-  <td>scvh653rghngg</td>
-  <td>asd345tyhjoo</td>
-  <td>sdfhhjjj</td>
-  <td><a href="link to backend here">
-    <img src={action}/></a>
-</td>
-  </tr>
-  <tr>
-  <td>scvh653rghngg</td>
-  <td>asd345tyhjoo</td>
-  <td>sdfhhjjj</td>
-  <td><a href="link to backend here">
-    <img src={action}/></a>
-</td>
-  </tr>
-  */
