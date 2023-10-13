@@ -32,7 +32,7 @@ function LoginPage() {
             }
             e.preventDefault();
             const practitionerData = null;
-            axios.post("http://localhost:8080/api/v1/practitioner/login", loginData)
+            axios.post("https://e-reach-prod.up.railway.app/api/v1/practitioner/login", loginData)
                 .then(successResponse => {    
                     try{ 
                         localStorage.setItem("practitionerData", successResponse.data)
