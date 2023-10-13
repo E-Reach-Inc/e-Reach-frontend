@@ -13,6 +13,7 @@ const ActivateHospitalAccount = () => {
         console.log(token[1]);
         useEffect(()=>{
                 console.log("hello world hello")
+                //http://localhost:8080/
                 axios.post("https://e-reach-prod.up.railway.app/api/v1/hospital/activate-account/"+token[1])
                 .then(onfulfilled => {
                         console.log(onfulfilled)

@@ -32,7 +32,7 @@ export const PractitionerRegistration = () => {
         //https
         try {
             console.log("hello boys tue tue")
-            axios.post('https://e-reach-prod.up.railway.app/api/v1/hospital-admin/invite-practitioner/', practitionerDetails)
+            axios.post('https://e-reach-prod.up.railway.app/v1/hospital-admin/invite-practitioner/', practitionerDetails)
                 .then(successResponse => {
                     toast.success(
                         successResponse+' Registration successful. Ready for submission.',
@@ -42,6 +42,7 @@ export const PractitionerRegistration = () => {
                 })  
                 .catch(failureResponse => {
                     console.log("hello girls tue tue")
+                    console.log(failureResponse)
                     toast.error(
                         failureResponse+' Registration failed. Please try again.',
                         {position: toast.POSITION.TOP_CENTER, autoClose: 5000}
@@ -64,6 +65,9 @@ export const PractitionerRegistration = () => {
         ...prevData,
         [name]: value,
         }));
+        console.log("value is ", value)
+        console.log("id is ", name)
+
     }
 
     return(
@@ -96,7 +100,7 @@ export const PractitionerRegistration = () => {
                         <div id="Doc-user_info">
                             <p className="Doc-name-join-tag">You Are Joining As?</p>
                             <label htmlFor="role" id="role">
-                                <select name='role' className="Doc-input-role-style" onSelect={handleChangeForInputs}>
+                                <select name='role' className="Doc-input-role-style" onChange={handleChangeForInputs}>
                                     <option disabled>Role</option>
                                     <option>Doctor</option>
                                     <option>Pharmacist</option>

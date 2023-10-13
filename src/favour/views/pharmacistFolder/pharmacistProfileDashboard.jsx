@@ -1,29 +1,22 @@
 import React, {useRef, useState, useEffect} from 'react'
 import '../../styles/pharmacistFolder/pharmacistProfileDashboard.css'
 import dommy from "../../assets/pharmacistimage/dommy-image.png";
+import Axios from "axios";
 
-export const PharmacistProfileDashboard =()=>{
+
+export const PharmacistProfileDashboard =({props})=>{
     const [selectedFile, setSelectedFile] = useState(null);
     const [imageSrc, setImageSrc] = useState(null);
     const fileInputRef = useRef(null);
+    const [profileData, setProfileData] = useState(null)
 
 
-    const [pharmacistData, setPharmacistData] = useState({
-        name: '',
-        role: '',
-        email: '',
-        age: '',
-        pharmacistId: '',
-        hospitalId: '',
-    });
 
-    useEffect(() => {
-        const storedData = localStorage.getItem('pharmacistData');
-        if (storedData) {
-          setPharmacistData(JSON.parse(storedData));
-        }
-      }, []);
+    const data = JSON.parse(localStorage.getItem("practitionerDa"))    
+        const {firstName, lastName, email, practitionerIdentificationNumber, role, phoneNumber} = data
+        console.log("message --> ", firstName) 
 
+        console.log(profileData)
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
@@ -36,10 +29,24 @@ export const PharmacistProfileDashboard =()=>{
     const handleImageClick = () => {
         fileInputRef.current.click();
     };
+    const uploadImage = () => {
+        if (selectedFile) {
+            const formData = new FormData();
+            formData.append('multipartFile', selectedFile);
 
-    useEffect(() => {
-        localStorage.setItem('pharmacistData', JSON.stringify(pharmacistData));
-      }, [pharmacistData]);
+            Axios.post('/api/v1/upload-profile/', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            })
+                .then((response) => {
+                    console.log('Image upload successful:', response.data);
+                })
+                .catch((error) => {
+                    console.error('Error uploading image:', error);
+                });
+        }
+    };
 
       
     return(
@@ -60,22 +67,22 @@ export const PharmacistProfileDashboard =()=>{
                         </div>
                     </div>
                     <div className= 'pro-pro-text-container'>
-                        <h3>{pharmacistData.name}</h3>
+                    <h3>{firstName}</h3>
                         <div className= 'pro-pro-text'>
-                            <span className="label">Role: </span> <span>{pharmacistData.role}</span>
+                        <span className="label">Role: </span> <span>{role}</span>
                         </div>
                         <div className= 'pro-pro-text'>
-                            <span className="label">Email: </span> <span>{pharmacistData.email}</span>
+                        <span className="label">Email: </span> <span>{email}</span>
                         </div>
                         <div className= 'pro-pro-text'>
-                            <span className="label">Age: </span><span>{pharmacistData.age}</span>
+                        <span className="label">Phone Number: </span><span>{phoneNumber}</span>
                         </div>
                         <div className= 'pro-pro-text'>
-                            <span className="label">Pharmacist ID:</span> <span>{pharmacistData.pharmacistId}</span>
+                        <span className="label">Pharmacist ID:</span> <span>{practitionerIdentificationNumber}</span>
                         </div>
-                        <div className= 'pro-pro-text'>
+                        {/* <div className= 'pro-pro-text'>
                             <span className="label">Hospital ID: </span> <span>{pharmacistData.hospitalId}</span>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
