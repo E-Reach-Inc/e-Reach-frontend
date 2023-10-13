@@ -27,10 +27,18 @@ import { LandingPageMainBody } from "./favour/views/landingPage/landingPageMainB
 import {ActiveLogsTableOne} from "./coco/views/doctor/doctorViewActiveLogsOne"
 import RouteToDashbaord from "./ritch/views/routeToDashbaord";
 import PatientProfileTwo from "./ritch/views/PatientProfileTwo";
+import { useState } from "react";
 
 
 
-function App() {
+function App(props) {
+
+  const [details, setDetails] = useState([]);
+
+  const handleData = (data) =>{
+    setDetails(data)
+    console.log("data in app", details)
+  }
 
   return (
       
@@ -56,7 +64,7 @@ function App() {
                 
                 
               <Route path='/doctor-dashboard' element={<DoctorDashboard/>}/>
-              <Route path={"/doctor-active-logs-one"} element={<ActiveLogsTableOne/>}/>
+              <Route path={"/doctor-active-logs-one"} element={<ActiveLogsTableOne data={handleData}/>}/>
               <Route path={"/doctor-patient-appointment-one"} element={<PatientAppointmentOne/>}/>
               <Route path={"/doctor-patient-record-one"} element={<ViewPatientRecordOne/>}/>
               <Route path={"/doctor-profile-one"} element={<DoctorProfileOne/>}/>
@@ -85,7 +93,7 @@ function App() {
               <Route path="/patient-dashboard" element={<PatientView/>}/>
               <Route path="/route-to-dashboard/:pin" element={RouteToDashbaord}/>
 
-              <Route path='/medical-log' element={<MedicalLog/>}/>
+              <Route path='/medical-log' element={<MedicalLog props={details}/>}/>
               <Route path='/patient-registration' element={<PatientSignUp/>}/>  
             </Routes>
         </Router>

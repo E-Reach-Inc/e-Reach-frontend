@@ -52,9 +52,9 @@
 
 .Doc-name-tag-input-email{
     font-family: "DM SANS", sans-serif;
-    font-size: small;
+    font-size: 18px;
     margin-right: 410px;
-    color: #010C80;
+    color: #368db2;
 }
 
 .Doc-login-input-style{
@@ -62,8 +62,9 @@
     border-radius: 6px;
     padding: 10px 70px 10px 70px;
     box-shadow: none;
-    border: 1px solid #368db2;
+    border: 1px solid hsl(198, 53%, 45%);
     margin-bottom: 20px;
+    font-size: 20px;
 }
 
 #Doc-login-submit-button{

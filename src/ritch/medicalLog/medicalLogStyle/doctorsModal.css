@@ -1,35 +1,70 @@
 .popup-container {
     position: fixed;
-    top: 17%;
-    left: 10%;
+    top: 10%;
+    left: 7%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
     z-index: 1000; 
     overflow-y: auto;
-    width: 600px;
-    margin-left: 350px;
+    overflow-x: hidden;
+    width: 550px;
+    margin-left: 330px;
     
   }
   .popup-inner {
     background-color: white;
-    /* padding: 20px; */
-    margin-left: 187px;
+    margin-top: 20px;
+    margin-left: auto;
     border-radius: 5px;
     width: 590px; 
-    height: 550px;
+    height: 500px;
     
+  }
+  #dosage{
+    height: 45px;
+    margin-top: 30px;
+    width: 19rem;
+  }
+  #dosageFrequency{
+    height: 45px;
+    margin-top: 30px;
+    width: 19rem
+  }
+  #start{
+    margin-top: 20px;
+  }
+  #startdate{
+    height: 45px;
+    margin-top: 10px;
+    width: 15rem
+  }
+  #prescriptiondate{
+    height: 45px;
+    margin-top: 10px;
+    width: 15rem
+  }
+  .prescription-inputs{
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 5.5rem;
+    width: 15rem;
   }
   .add-presc-button button{
     width: 250px;
     margin-top: 20px;
-    height: 50px; 
+    height: 30px; 
     background-color: #2196F3; 
     cursor: pointer;
     border-radius: 10px;
   }
+  .add-presc-button{
+    display: flex;
+    justify-content: space-evenly;
+  }
   .close-button {
     width: 250px;
     margin-top: 20px;
-    height: 50px;
+    height: 30px;
     background-color: #2196F3; 
     cursor: pointer;
     border-radius: 10px;

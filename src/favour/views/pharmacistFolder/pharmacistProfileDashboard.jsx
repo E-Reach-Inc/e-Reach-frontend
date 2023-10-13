@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react'
+import React, {useRef, useState, useEffect} from 'react'
 import '../../styles/pharmacistFolder/pharmacistProfileDashboard.css'
 import dommy from "../../assets/pharmacistimage/dommy-image.png";
 
@@ -6,6 +6,24 @@ export const PharmacistProfileDashboard =()=>{
     const [selectedFile, setSelectedFile] = useState(null);
     const [imageSrc, setImageSrc] = useState(null);
     const fileInputRef = useRef(null);
+
+
+    const [pharmacistData, setPharmacistData] = useState({
+        name: '',
+        role: '',
+        email: '',
+        age: '',
+        pharmacistId: '',
+        hospitalId: '',
+    });
+
+    useEffect(() => {
+        const storedData = localStorage.getItem('pharmacistData');
+        if (storedData) {
+          setPharmacistData(JSON.parse(storedData));
+        }
+      }, []);
+
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
@@ -15,17 +33,15 @@ export const PharmacistProfileDashboard =()=>{
         setImageSrc(imageUrl);
     };
 
-    const handleCustomButtonClick = () => {
+    const handleImageClick = () => {
         fileInputRef.current.click();
     };
-    const profileData = {
-        name: 'JOHN CIENA',
-        role: 'Pharmacist',
-        email: 'desyfavour54@gmail.com',
-        age: '54',
-        pharmacistId: '111222',
-        hospitalId: '111222',
-    };
+
+    useEffect(() => {
+        localStorage.setItem('pharmacistData', JSON.stringify(pharmacistData));
+      }, [pharmacistData]);
+
+      
     return(
         <div>
             <div className= 'pro-hold'>
@@ -40,25 +56,25 @@ export const PharmacistProfileDashboard =()=>{
                                 onChange={handleFileChange}
                                 accept=".jpg, .jepeg, .png"
                             />
-                            <button onClick={handleCustomButtonClick}>{!imageSrc ? "Upload" : "Change"} Photo</button>
+                            <button onClick={handleImageClick}>{!imageSrc ? "Upload" : "Change"} Photo</button>
                         </div>
                     </div>
                     <div className= 'pro-pro-text-container'>
-                        <h3>{profileData.name}</h3>
+                        <h3>{pharmacistData.name}</h3>
                         <div className= 'pro-pro-text'>
-                            <span className="label">Role: </span> <span>{profileData.role}</span>
+                            <span className="label">Role: </span> <span>{pharmacistData.role}</span>
                         </div>
                         <div className= 'pro-pro-text'>
-                            <span className="label">Email: </span> <span>{profileData.email}</span>
+                            <span className="label">Email: </span> <span>{pharmacistData.email}</span>
                         </div>
                         <div className= 'pro-pro-text'>
-                            <span className="label">Age: </span><span>{profileData.age}</span>
+                            <span className="label">Age: </span><span>{pharmacistData.age}</span>
                         </div>
                         <div className= 'pro-pro-text'>
-                            <span className="label">Pharmacist ID:</span> <span>{profileData.pharmacistId}</span>
+                            <span className="label">Pharmacist ID:</span> <span>{pharmacistData.pharmacistId}</span>
                         </div>
                         <div className= 'pro-pro-text'>
-                            <span className="label">Hospital ID: </span> <span>{profileData.hospitalId}</span>
+                            <span className="label">Hospital ID: </span> <span>{pharmacistData.hospitalId}</span>
                         </div>
                     </div>
                 </div>

@@ -42,18 +42,18 @@ export const DoctorProfileTwo =()=>{
                         </div>
 
                         <div className="doc-bio-input-dash">
-                            <h3>Full Name:{doctorData.firstName}{doctorData.lastName}</h3>
+                            <h3>Full Name:{" Alayande Abdulmalik"}{doctorData.lastName}</h3>
                             <div className= 'doc-profile-role-text'>
                                 <p>Role: {doctorData.role}</p>
                             </div>
                             <div className= 'doc-profile-email-text'>
-                                <p>Email: {doctorData.email}</p>
+                                <p>Email: {" alaabdulmalik03@gmail.com"}</p>
                             </div>
                             <div className= 'doc-profile-phone-text'>
-                                <p>Phone Number:{doctorData.phoneNumber}</p>
+                                <p>Phone Number:{" 09087653412"}</p>
                             </div>
                             <div className= 'doc-profile-docId-text'>
-                                <p>Doctor id: {doctorData.doctorId}</p>
+                                <p>Doctor id: {"e-Reach-57890P4"}</p>
                             </div>
                             <div className= 'doc-profile-hospital-text'>
                                 <p>Hospital id: {doctorData.hospitalId}</p>
