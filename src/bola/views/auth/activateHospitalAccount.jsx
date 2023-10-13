@@ -1,11 +1,12 @@
 import "../../styles/auth/activateHospitalAccount.css"
 import axios from 'axios'
 import React, { useEffect } from 'react'
-import {useParams } from 'react-router'
+import {useNavigate, useParams } from 'react-router'
 import { toast } from 'react-toastify'
 
 const ActivateHospitalAccount = () => {
 
+        const navigate = useNavigate()
         const parameter = useParams();
         const wholeToken = parameter.token;
         const token = wholeToken.split("=");
@@ -27,16 +28,19 @@ const ActivateHospitalAccount = () => {
                 })
         }, [])
        
-             const styles = {
-
-             }
+        const navigateToDashboard = (event) => {
+                event.preventDefault()
+                navigate("/admin-dashboard")
+        }
         return (
                 <div className="Main-Body">
-                        <div className="Activation-Successful-Frame" style={styles}>
+                        <div className="Activation-Successful-Frame">
                                 <div className="Inner-Activation-Successful-Frame">
                                         <h3>Account Activation Successful </h3>
                                         <p id="Activation-Successful-Frame-Ptag">You will receive an email shortly to activate your own personal account as the 
                                         hospital admin, click the activate button to your own the account.</p>
+                                        <button onClick={navigateToDashboard}>Go To Dashbaord</button>
+
                                 </div>
                         </div>
                 </div>

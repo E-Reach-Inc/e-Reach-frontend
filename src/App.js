@@ -90,8 +90,8 @@ function App(props) {
               <Route path='/patient-record' element={<PatientRecord/>}/>
               <Route path='/patient-appointment' element={<PatientAppointment/>}/>
               <Route path='/patient-signUp' element={<PatientSignUp/>}/>
-              <Route path="/patient-dashboard" element={<PatientView/>}/>
-              <Route path="/route-to-dashboard/:pin" element={RouteToDashbaord}/>
+              <Route path="/patient-dashboard/:pin" element={<PatientView/>}/>
+              <Route path="/route-to-dashboard/:pin" element={<RouteToDashbaord/>}/>
 
               <Route path='/medical-log' element={<MedicalLog props={details}/>}/>
               <Route path='/patient-registration' element={<PatientSignUp/>}/>  
