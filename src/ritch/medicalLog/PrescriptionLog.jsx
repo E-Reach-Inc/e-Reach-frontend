@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import PopUp from "./doctorsModal"
 import '../medicalLog/medicalLogStyle/prescriptionLog.css'
-import { LogContext } from '../../coco/views/doctor/doctorViewActiveLogsOne';
+import { LogContext } from './MedicalLog';
 
 const PrescriptionLog = () => {
 

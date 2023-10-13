@@ -10,7 +10,6 @@ import {equalTo, get, orderByChild, query, ref} from 'firebase/database';
 import {db} from "../../../firebaseConfig/firebase";
 import {useNavigate} from "react-router";
 
-export const LogContext = React.createContext();
 
 export const ActiveLogsTableOne = (props) => {
     const [activeLogsButtonPopUp, setActiveLogsButtonPopUp] = useState(false);
@@ -54,11 +53,10 @@ export const ActiveLogsTableOne = (props) => {
 
     const openActiveLogsPopUp = (event) => {
         const patientLog = findMedicalLog(event);
-        // selectedActiveLogs = patientLog;
         console.log("selected active logs data", selectedActiveLogs)
         console.log("selected active logs data outside func", selectedActiveLogs)
         setSelectedActiveLogs(patientLog)
-        props.data(selectedActiveLogs)
+        props.data(patientLog)
         setActiveLogsButtonPopUp(true);
     }
 
@@ -66,9 +64,7 @@ export const ActiveLogsTableOne = (props) => {
         const patientLog = findMedicalLog(event);
         setSelectedActiveLogs(patientLog)
         console.log("selected active logs data", selectedActiveLogs)
-        props.data(selectedActiveLogs)
-        // console.log("selected active logs data outside func", selectedActiveLogs)
-        // props.data(selectedActiveLogs)
+        props.data(patientLog)
         navigate("/medical-log")
     }
 

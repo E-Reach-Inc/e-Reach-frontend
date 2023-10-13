@@ -2,8 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import PrescriptionLog from "./PrescriptionLog";
 import TestLog from "./TestLog";
 import DoctorsReport from "./DoctorsReportLog";
-import { LogContext } from "../../coco/views/doctor/doctorViewActiveLogsOne";
 import '../medicalLog/medicalLogStyle/MedicalLog.css'
+
+export const LogContext = React.createContext();
 
 const logData = {
         doctorReportDTO: {
@@ -31,16 +32,17 @@ const logData = {
 
 const MedicalLog = (props) => {
   const [allLogs, setAllLogs] = useState([]);
-  const logData = useContext(LogContext)
 
   console.log("log data in medical log ==> ", props)
 
   useEffect(() => {
-      console.log("log data => ", logData)
+      console.log("log data => ", props)
     
-  }, [logData]);
+  }, [props]);
 
   return (
+
+    <LogContext.Provider value={props}>
     <div className="medical-log-holder-con">
       <div>
         {allLogs.map((log) => (
@@ -60,6 +62,7 @@ const MedicalLog = (props) => {
        
       </div>
     </div>
+    </LogContext.Provider>
   );
 };
 
