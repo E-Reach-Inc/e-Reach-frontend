@@ -83,36 +83,39 @@
     margin-bottom: 20px;
 }
 .Doc-name-tag{
-    font-size: 18px;
+    font-size: 15px;
     margin-right: 140px;
-    color: #010C80;
+    color: #368db2;
 }
 .Doc-name-join-tag{
-    font-size: 18px;
+    font-size: 15px;
     margin-right: 390px;
-    color: #010C80;
+    color: #368db2;
 }
 .Doc-name-tag-input-password{
-    font-size: 18px;
+    font-size: 15px;
     margin-right: 435px;
-    color: #010C80;
+    color: #368db2;
 }
-.Doc-name-tag-input-email, .Doc-name-tag-input-phoneNumber{
-    font-size: 18px;
+.Doc-name-tag-input-phoneNumber{
+    font-size: 15px;
     margin-right: 410px;
-    /* margin-top: 20px; */
-    color: #010C80;
+    color: #368db2;
 }
-.Doc-name-tag-email{
-    font-size: 18px;
+.Doc-name-tag-hospital-input-email{
+    font-size: 15px;
     margin-right: 410px;
-    color: #010C80;
-    margin-top: 20px;
+    color: #368db2;
+}
+.Doc-name-tag-practitioner-input-email{
+    font-size: 15px;
+    margin-right: 410px;
+    color: #368db2;
 }
 .Doc-name-tag-input-confirm-password{
-    font-size: 18px;
+    font-size: 15px;
     margin-right: 385px;
-    color: #010C80;
+    color: #368db2;
 }
 #Doc-submit-button{
     background-color: rgba(242, 242, 248, 0.82);
