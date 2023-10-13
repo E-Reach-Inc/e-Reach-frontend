@@ -1,7 +1,10 @@
 import React,{useState, useEffect}from 'react'
 import '../medicalLog/medicalLogStyle/doctorsModal.css'
 
- export const PopUp = ({onClose,notprescriptions}) => {
+ export const PopUp = ({onClose,  notprescriptions}) => {
+  const [prescriptions, setPrescriptions] = useState([]);
+  const [recentPresc, setRecentPresc] = useState(newPrescription);
+  const [selectedMedication, setSelectedMedication] = useState('');
 
   const newPrescription = {
     medicationName: '',
@@ -12,16 +15,9 @@ import '../medicalLog/medicalLogStyle/doctorsModal.css'
     checked: false,
     practitionersEmail: '',
   };
-
-  const [prescriptions, setPrescriptions] = useState([]);
-  const [recentPresc, setRecentPresc] = useState(newPrescription);
-  const [selectedMedication, setSelectedMedication] = useState('');
     
   useEffect(() => {
    
-    fetch('/api/prescriptions')
-      .then((response) => response.json())
-      .then((data) => setPrescriptions(data));
   }, []);
 
   const handleMedicationChange = (event) => {
@@ -39,7 +35,6 @@ import '../medicalLog/medicalLogStyle/doctorsModal.css'
         dosageFrequency: recentPresc.dosageFrequency,
         startDate: recentPresc.startDate,
         prescriptionDate: recentPresc.prescriptionDate,
-        checked: false,
         practitionersEmail: recentPresc.practitionersEmail,
       };
 
@@ -111,11 +106,6 @@ import '../medicalLog/medicalLogStyle/doctorsModal.css'
            <ul>
                {prescriptions.map((prescription, index) => (
              <li key={index}>
-              <input
-                type="checkbox"
-                checked={prescription.checked}
-                onChange={() => handlePrescriptionToggle(index)}
-              />
               <span className="medication-name">{prescription.medicationName}</span>
               <span className="medication-dosage">{prescription.dosage}</span>
               <span className="medication-frequency">{prescription.dosageFrequency}</span>

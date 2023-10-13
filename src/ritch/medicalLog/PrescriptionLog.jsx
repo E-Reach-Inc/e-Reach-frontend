@@ -11,24 +11,21 @@ const PrescriptionLog = () => {
   const [buttonPopUp,setButtonPopUp]=useState(false);
   const [prescriptions, setPrescriptions] = useState([]);
 
+
   const openPopUp = () =>{
     setButtonPopUp(true)
-    
   }
-
   const closePopUp = () => {
     setButtonPopUp(false)
   }
 
   return (
-  
     <div className="prescription-log-modal-two">
 
       <div className='prescription-main-con'>
       <div className='add-presc-con'>
       <h2>Prescription</h2>
         <button type='button' className='add-prescription-btn' onClick={openPopUp}>Add</button>
-       {buttonPopUp && <PopUp onClose={closePopUp} />}
       </div>
 
      
@@ -37,8 +34,8 @@ const PrescriptionLog = () => {
      <button>View</button>
      
       </div>
-  
       </div>
+      {buttonPopUp && <PopUp onClose={closePopUp} />}
     </div>
   
     
