@@ -4,57 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8100ef4c-d712-49de-acdd-8bf4d3076774" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/e-Reach-frontend-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/e-Reach-frontend-main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/styles/auth/activateHospitalAccount.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/bola/styles/auth/activateHospitalAccount.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/views/auth/activateHospitalAccount.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/bola/views/auth/activateHospitalAccount.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bola/views/auth/hospitalAdminSignUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/bola/views/auth/hospitalAdminSignUp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/styles/auth/PractionerLogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/coco/styles/auth/PractionerLogin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/auth/PractitionerLogIn.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/coco/views/auth/PractitionerLogIn.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/auth/PractitionerRegistration.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/coco/views/auth/PractitionerRegistration.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/doctor/activeLogPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/coco/views/doctor/activeLogPopUp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/doctor/doctorProfileTwo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/coco/views/doctor/doctorProfileTwo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coco/views/doctor/doctorViewActiveLogsOne.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/coco/views/doctor/doctorViewActiveLogsOne.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/views/pharmacistFolder/pharmacistProfileDashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/favour/views/pharmacistFolder/pharmacistProfileDashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favour/views/pharmacistFolder/pharmacistViewRecord.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/favour/views/pharmacistFolder/pharmacistViewRecord.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/neefah/assets/icons/userDashboard.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/assets/icons/userDashboard.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/neefah/assets/icons/userLogout.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/assets/icons/userLogout.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/neefah/assets/icons/userMessaging.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/assets/icons/userMessaging.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/neefah/assets/icons/userNotification.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/assets/icons/userNotification.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/neefah/assets/icons/userProfile.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/assets/icons/userProfile.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/neefah/assets/icons/userSettings.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/assets/icons/userSettings.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/neefah/assets/icons/users.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/assets/icons/users.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/neefah/assets/images/EReachlogoNoB.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/assets/images/EReachlogoNoB.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/neefah/styles/administration/dashboard/users/doctorsTab/doctorsTab.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/styles/administration/dashboard/users/doctorsTab/doctorsTab.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/neefah/styles/administration/dashboard/users/patientsTab/patientsTab.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/styles/administration/dashboard/users/patientsTab/patientsTab.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/neefah/styles/administration/dashboard/users/pharmacistTab/pharmacistsTab.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/styles/administration/dashboard/users/pharmacistTab/pharmacistsTab.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/neefah/styles/administration/userSideAndNavBar/user.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/styles/administration/userSideAndNavBar/user.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/neefah/styles/administration/userSideAndNavBar/userSearchBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/styles/administration/userSideAndNavBar/userSearchBar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/neefah/styles/administration/userSideAndNavBar/userSideBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/styles/administration/userSideAndNavBar/userSideBar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/neefah/views/administration/dashboard/user.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/views/administration/dashboard/user.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/neefah/views/administration/dashboard/users/doctorsTab/doctorsTab.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/views/administration/dashboard/users/doctorsTab/doctorsTab.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/neefah/views/administration/dashboard/users/patientsTab/patientsTab.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/views/administration/dashboard/users/patientsTab/patientsTab.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/neefah/views/administration/dashboard/users/pharmacistTab/pharmacistTab.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/views/administration/dashboard/users/pharmacistTab/pharmacistTab.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/neefah/views/administration/userSearchAndNavBar/userSearchBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/views/administration/userSearchAndNavBar/userSearchBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/neefah/views/administration/userSearchAndNavBar/userSideBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/neefah/views/administration/userSearchAndNavBar/userSideBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/MedicalLog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/medicalLog/MedicalLog.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/PrescriptionLog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/medicalLog/PrescriptionLog.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/TestLog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/medicalLog/TestLog.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/doctorsModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/medicalLog/doctorsModal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/medicalLogStyle/MedicalLog.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/medicalLog/medicalLogStyle/MedicalLog.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/medicalLogStyle/TestLog.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/medicalLog/medicalLogStyle/TestLog.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/medicalLogStyle/doctorsModal.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/medicalLog/medicalLogStyle/doctorsModal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/medicalLog/medicalLogStyle/prescriptionLog.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/medicalLog/medicalLogStyle/prescriptionLog.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientPopUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/views/PatientPopUp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/views/PatientProfile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientProfileTwo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/views/PatientProfileTwo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientRecord.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/views/PatientRecord.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientRecordTwo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/views/PatientRecordTwo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientSignUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/views/PatientSignUp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ritch/views/PatientView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ritch/views/PatientView.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="8100ef4c-d712-49de-acdd-8bf4d3076774" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,21 +25,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Merging haneefah",
-    "last_opened_file_path": "C:/Users/Mrs Amusa/Downloads/e-Reach-frontend-main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Rebasing haneefah&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mrs Amusa/Downloads/e-Reach-frontend-main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -100,6 +67,7 @@
       <updated>1697102842139</updated>
       <workItem from="1697102846048" duration="43000" />
       <workItem from="1697173147094" duration="695000" />
+      <workItem from="1697179395250" duration="458000" />
     </task>
     <servers />
   </component>
