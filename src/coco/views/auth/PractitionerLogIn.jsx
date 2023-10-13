@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import eReachLogo from "../../assets/images/EReachLogoNoB.svg";
 import "../../../coco/styles/auth/PractionerLogin.css"
-import { useNavigate, useParams } from 'react-router';
+import { useNavigate } from 'react-router';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -32,8 +32,8 @@ function LoginPage() {
             }
             e.preventDefault();
             let practitionerData = null;
-            axios.post("http://localhost:8080/api/v1/practitioner/login", loginData)
-                .then(successResponse => {    
+            axios.post("https://e-reach-prod.up.railway.app/api/v1/practitioner/login", loginData)
+                .then(successResponse => {
                     try{ 
                         localStorage.setItem("practitionerData", successResponse.data)
                         toast.success("Login Successful", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
@@ -59,7 +59,7 @@ function LoginPage() {
             console.log('Form Data:', formData);
         }catch(error){
             toast.info(error, {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
-        };
+        }
     }
     return (
         <div className="Doc-login-Main-Reg-Frame">
