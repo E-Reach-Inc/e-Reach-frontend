@@ -9,6 +9,17 @@ export const PharmacistProfile =()=>{
     const [selectedFile, setSelectedFile] = useState(null);
     const [imageSrc, setImageSrc] = useState(null);
     const fileInputRef = useRef(null);
+    const [profileData, setProfileData] = useState(null)
+    
+
+        const data = JSON.parse(localStorage.getItem("practitionerDa"))    
+        const {firstName, lastName, email, practitionerIdentificationNumber, role, phoneNumber} = data
+        console.log("message --> ", firstName) 
+
+
+       
+        console.log(profileData)
+
     const handleFileChange = (event) => {
         const file = event.target.files[0];
         setSelectedFile(file);
@@ -38,14 +49,6 @@ export const PharmacistProfile =()=>{
                 });
         }
     };
-    const profileData = {
-        name: 'JOHN CENA',
-        role: 'Pharmacist',
-        email: 'desyfavour54@gmail.com',
-        age: '54',
-        pharmacistId: '111222',
-        hospitalId: '111222',
-    };
     return(
         <div className= 'con'>
             <div className= "border-hold">
@@ -70,22 +73,22 @@ export const PharmacistProfile =()=>{
                                 </div>
                             </div>
                             <div className= 'pro-text-container'>
-                                <h3>{profileData.name}</h3>
+                                <h3>{firstName}</h3>
                                 <div className= 'pro-text'>
-                                    <span className="label">Role: </span> <span>{profileData.role}</span>
+                                    <span className="label">Role: </span> <span>{role}</span>
                                 </div>
                                 <div className= 'pro-text'>
-                                    <span className="label">Email: </span> <span>{profileData.email}</span>
+                                    <span className="label">Email: </span> <span>{email}</span>
                                 </div>
                                 <div className= 'pro-text'>
-                                    <span className="label">Age: </span><span>{profileData.age}</span>
+                                    <span className="label">Phone Number: </span><span>{phoneNumber}</span>
                                 </div>
                                 <div className= 'pro-text'>
-                                    <span className="label">Pharmacist ID:</span> <span>{profileData.pharmacistId}</span>
+                                    <span className="label">Pharmacist ID:</span> <span>{practitionerIdentificationNumber}</span>
                                 </div>
-                                <div className= 'pro-text'>
+                                {/* <div className= 'pro-text'>
                                     <span className="label">Hospital ID: </span> <span>{profileData.hospitalId}</span>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                 </div>

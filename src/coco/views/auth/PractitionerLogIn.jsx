@@ -5,39 +5,50 @@ import { useNavigate, useParams } from 'react-router';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 
-
+const initialData = {
+    email: '',
+    practitionerIdentificationNumber: '',
+}
 function LoginPage() {
 
     useEffect(()=>{
-        console.log("Hi")
-        console.log("hello")
+       
     }, [])
 
-    const navigate = useNavigate()
+    const navigate = useNavigate(initialData)
 
-    const [formData, setFormData] = useState({
-        email: '',
-        patientIdentificationNumber: '',
-    });
+    const [formData, setFormData] = useState();
 
     const handleInputChange = (event) => {
+        // const { id, value } = event.target;
+        // setFormData((prevData) => ({
+        // ...prevData,
+        // [id]: value,
+        // }));
         setFormData((previousValue)=>({...previousValue, [event.target.id]: event.target.value}))
     };
 
     const handleSubmit = (e) => {
         try{ 
             const loginData = {
-                username: formData.email,
-                patientIdentificationNumber: formData.patientIdentificationNumber,
+                email: formData.email,
+                practitionerIdentificationNumber: formData.practitionerIdentificationNumber,
             }
             e.preventDefault();
-            const practitionerData = null;
-            axios.post("https://e-reach-prod.up.railway.app/api/v1/practitioner/login", loginData)
+            // const practitionerData = null;
+            //
+            //
+            axios.post("http://localhost:8080/api/v1/practitioner/login/", loginData)
                 .then(successResponse => {    
                     try{ 
-                        localStorage.setItem("practitionerData", successResponse.data)
+                        localStorage.setItem("practitionerDa", JSON.stringify(successResponse.data))    
                         toast.success("Login Successful", {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
-                        practitionerData = successResponse.data;
+                        if(successResponse.data.role === "DOCTOR")
+                            {console.log(successResponse.data.role)
+                            navigate("/doctors-dashboard")}
+                        else if(successResponse.data.role === "PHARMACIST")
+                          {  console.log(successResponse.data.role)
+                            navigate("/pharmacist-dashboard")}
                     }catch(error){
                         console.error(error)
                     }
@@ -46,21 +57,13 @@ function LoginPage() {
                     console.error(failureResponse)
                 })
                 .finally(()=>{
-                    try{
-                        if(practitionerData.data.role === "doctor")
-                            navigate("/doctors-dashboard")
-                        else if(practitionerData.data.role === "pharmacist")
-                            navigate("pharmacist-dashboard")
-                    }
-                    catch(error){
-                        console.error(error)
-                    }
+                   
                 })
-            console.log('Form Data:', formData);
         }catch(error){
             toast.info(error, {position: toast.POSITION.TOP_CENTER, autoClose: 5000})
         };
     }
+    
     return (
         <div className="Doc-login-Main-Reg-Frame">
             <ToastContainer/>
@@ -82,7 +85,7 @@ function LoginPage() {
 
                             <p className="Doc-name-tag-input-email">Identity Number:</p>
                             <label htmlFor="identity_number"></label>
-                            <input className="Doc-login-input-style" type="text" id="patientIdentificationNumber"
+                            <input className="Doc-login-input-style" type="text" id="practitionerIdentificationNumber"
                                    onChange={handleInputChange}
                                    placeholder="enter your identity number" required
                             />

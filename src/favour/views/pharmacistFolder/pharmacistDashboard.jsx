@@ -8,6 +8,7 @@ import {PharmacistMedicineDashBoard} from "./pharmacistMedicationDashBoard";
 import {PharmacistViewRecordsDashboard} from "./pharmacistViewRecordsDashboard";
 
 export const PharmacistDashboard = () => {
+                
     return(
 
         <div className= 'main-con'>
@@ -18,7 +19,9 @@ export const PharmacistDashboard = () => {
                     <p id='dash'>Dashboard</p>
                     <div className= 'proapp'>
                         <div className='protwo'>
-                            <PharmacistProfileDashboard/>
+                            <PharmacistProfileDashboard
+                            //  props={practitionerData}
+                             />
                         </div>
                         <div className='apptwo'>
                             <PharmacistAppointmentDashboard/>
