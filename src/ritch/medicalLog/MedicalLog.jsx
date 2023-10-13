@@ -29,11 +29,11 @@ const logData = {
         hospitalEmail: ''
     }
 
-const MedicalLog = () => {
+const MedicalLog = (props) => {
   const [allLogs, setAllLogs] = useState([]);
   const logData = useContext(LogContext)
 
-  console.log("log data in medical log ==> ", logData)
+  console.log("log data in medical log ==> ", props)
 
   useEffect(() => {
       console.log("log data => ", logData)

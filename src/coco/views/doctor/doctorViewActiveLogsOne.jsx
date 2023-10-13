@@ -12,9 +12,9 @@ import {useNavigate} from "react-router";
 
 export const LogContext = React.createContext();
 
-export const ActiveLogsTableOne = () => {
+export const ActiveLogsTableOne = (props) => {
     const [activeLogsButtonPopUp, setActiveLogsButtonPopUp] = useState(false);
-    const [selectedActiveLogs, setSelectedActiveLogs] = useState(null);
+    let [selectedActiveLogs, setSelectedActiveLogs] = useState(null);
     const [activeLogsData, setActiveLogsData] = useState([]); 
     const hospitalEmail = localStorage.getItem("hospitalEmail");
     const navigate = useNavigate()
@@ -23,7 +23,6 @@ export const ActiveLogsTableOne = () => {
         const fetchData = async () => {
             const logsRef = ref(db, "active_logs");
             const logsQuery = query(logsRef, orderByChild("hospitalEmail"), equalTo(hospitalEmail));
-            console.log("local store email is:: ", localStorage.getItem("hospitalEmail"))
             try {
                 const snapshot = await get(logsQuery);
                 if (snapshot.exists()) {
@@ -47,6 +46,7 @@ export const ActiveLogsTableOne = () => {
     function findMedicalLog(event) {
         event.preventDefault();
         const patientId = event.target.parentElement.parentElement.id;
+        console.log("active logs data", activeLogsData)
         return activeLogsData.filter((log) => {
             return log.patientIdentificationNumber === patientId;
         });
@@ -54,22 +54,30 @@ export const ActiveLogsTableOne = () => {
 
     const openActiveLogsPopUp = (event) => {
         const patientLog = findMedicalLog(event);
-        setSelectedActiveLogs(patientLog);
+        // selectedActiveLogs = patientLog;
+        console.log("selected active logs data", selectedActiveLogs)
+        console.log("selected active logs data outside func", selectedActiveLogs)
+        setSelectedActiveLogs(patientLog)
+        props.data(selectedActiveLogs)
         setActiveLogsButtonPopUp(true);
     }
 
     function navigateToEditMedicalLog(event){
         const patientLog = findMedicalLog(event);
+        setSelectedActiveLogs(patientLog)
+        console.log("selected active logs data", selectedActiveLogs)
+        props.data(selectedActiveLogs)
+        // console.log("selected active logs data outside func", selectedActiveLogs)
+        // props.data(selectedActiveLogs)
         navigate("/medical-log")
     }
 
     const closeActiveLogsPopUp = () => {
-        setSelectedActiveLogs(null);
         setActiveLogsButtonPopUp(false);
     }
 
+
     return(
-       <LogContext.Provider value={selectedActiveLogs}>
             <div className="Doc-Log-Main-Frame">
                 <ToastContainer/>
                 <div className="doc-log-side-bar-hold">
@@ -116,7 +124,6 @@ export const ActiveLogsTableOne = () => {
                 </div>
                 <ActiveLogPopUp isOpen={activeLogsButtonPopUp} isClose={closeActiveLogsPopUp} activeLogsData={selectedActiveLogs}/>
             </div>
-       </LogContext.Provider>
     )
 };
 
