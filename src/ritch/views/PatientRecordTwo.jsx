@@ -23,17 +23,17 @@ const PatientRecordTwo = () =>{
 
   const medicalLogs = [
     {
-        date: "25th/dec/2023",
+        date: "",
         // lastTimeUpdated: '12:00:00',
         // patientIdentificationNumber: 'e123456789990',
-        hospitalEmail: 'gloryHealth@gmail.com'
+        hospitalEmail: ''
         // action: {action},
     },
     {
-      date: "25th/dec/2023",
+      date: "",
       // lastTimeUpdated: '12:00:00',
       // patientIdentificationNumber: 'e123456789990',
-      hospitalEmail: 'gloryHealth@gmail.com'
+      hospitalEmail: ''
       // action: {action},
   }
 ];

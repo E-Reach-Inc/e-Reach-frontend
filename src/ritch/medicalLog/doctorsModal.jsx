@@ -1,12 +1,14 @@
 import React,{useState, useEffect}from 'react'
 import '../medicalLog/medicalLogStyle/doctorsModal.css'
+import { db } from '../../firebaseConfig/firebase';
+import { ref, query, orderByChild, equalTo } from 'firebase/database';
 
  export const PopUp = ({onClose,  notprescriptions}) => {
   const [prescriptions, setPrescriptions] = useState([]);
-  const [recentPresc, setRecentPresc] = useState(newPrescription);
+  const [recentPresc, setRecentPresc] = useState();
   const [selectedMedication, setSelectedMedication] = useState('');
 
-  const newPrescription = {
+  const initialPrescription = {
     medicationName: '',
     dosage: '',
     dosageFrequency: '',
@@ -15,10 +17,8 @@ import '../medicalLog/medicalLogStyle/doctorsModal.css'
     checked: false,
     practitionersEmail: '',
   };
-    
-  useEffect(() => {
-   
-  }, []);
+
+  const medicalLogRef = ref(db, 'active_logs')
 
   const handleMedicationChange = (event) => {
     setSelectedMedication(event.target.value);
@@ -29,18 +29,31 @@ import '../medicalLog/medicalLogStyle/doctorsModal.css'
 
   const handleAddPrescription = () => {
       
-      const newPrescription = {
-        medicationName: recentPresc.medicationName,
-        dosage: recentPresc.dosage,
-        dosageFrequency: recentPresc.dosageFrequency,
-        startDate: recentPresc.startDate,
-        prescriptionDate: recentPresc.prescriptionDate,
-        practitionersEmail: recentPresc.practitionersEmail,
-      };
+    const newPrescription = {
+      medicationName: recentPresc.medicationName,
+      dosage: recentPresc.dosage,
+      dosageFrequency: recentPresc.dosageFrequency,
+      startDate: recentPresc.startDate,
+      prescriptionDate: recentPresc.prescriptionDate,
+      checked: false,
+      practitionersEmail: recentPresc.practitionersEmail,
+    };
+    const snapshot = query(medicalLogRef, orderByChild("hospitalEmail"), equalTo('hospitalEmail'));
+    if (snapshot.exists()) {
+      let medicalLog = null;
+      snapshot.forEach((logSnapshot) => {
+        const medicalLog = logSnapshot.val();
+        if (medicalLog.hospitalEmail === "hospitalEmail") {
 
-
-      setPrescriptions([...prescriptions, newPrescription]);  
-    
+        }
+        if (!medicalLog.prescriptions) {
+          medicalLog.prescriptions = []; 
+        }
+        medicalLog.prescriptions.push(newPrescription);
+        medicalLogRef.child(logSnapshot.key).set(medicalLog);
+      }) 
+    }
+    setPrescriptions([...prescriptions, newPrescription]);
   };
   const handlePrescriptionToggle = (index) => {
     const updatedPrescriptions = [...prescriptions];

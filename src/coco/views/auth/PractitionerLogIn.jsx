@@ -32,7 +32,7 @@ function LoginPage() {
             }
             e.preventDefault();
             const practitionerData = null;
-            axios.post("http://localhost:8080/api/v1/practitioner/login", loginData)
+            axios.post("https://e-reach-prod.up.railway.app/api/v1/practitioner/login", loginData)
                 .then(successResponse => {    
                     try{ 
                         localStorage.setItem("practitionerData", successResponse.data)
@@ -69,7 +69,7 @@ function LoginPage() {
                     <img src={eReachLogo} alt={"e-Reach logo"}/>
                 </div>
                 <div className="Doc-login-Header-frame">
-                    <h1> PRACTITIONER'S LOGIN</h1>
+                    <h1> PRACTITIONER'S LOGIN </h1>
                 </div>
                 <div className="Doc-login-Form-frame">
                     <form onSubmit={handleSubmit}>
