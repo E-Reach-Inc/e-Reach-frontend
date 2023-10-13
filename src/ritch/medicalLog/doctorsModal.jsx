@@ -1,7 +1,7 @@
 import React,{useState, useEffect}from 'react'
 import '../medicalLog/medicalLogStyle/doctorsModal.css'
 import { db } from '../../firebaseConfig/firebase';
-import { ref } from 'firebase/database';
+import { ref, query, orderByChild, equalTo } from 'firebase/database';
 
  export const PopUp = ({onClose,notprescriptions}) => {
 
@@ -38,9 +38,7 @@ import { ref } from 'firebase/database';
       checked: false,
       practitionersEmail: recentPresc.practitionersEmail,
     };
-    const snapshot = medicalLogRef.orderByChild('patientIdentificationNumber')
-                                  .equalTo("patientIdentificationNumber")
-                                  .once('value');
+    const snapshot = query(medicalLogRef, orderByChild("hospitalEmail"), equalTo('hospitalEmail'));
     if (snapshot.exists()) {
       let medicalLog = null;
       snapshot.forEach((logSnapshot) => {

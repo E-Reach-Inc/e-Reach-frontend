@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import "../../../coco/styles/doctor/activeLogPopUp.css"
-import { LogContext } from "./doctorViewActiveLogsOne";
+
+import { LogContext } from "../../../ritch/medicalLog/MedicalLog";
 
 const ActiveLogPopUp = ({isOpen, isClose, activeLogsData}) => {
 
